@@ -1,0 +1,18 @@
+/* 
+    Overwrite Django Admin Site CSS
+    https://github.com/django/django/tree/main/django/contrib/admin/static/admin/css
+*/
+
+/* Exemple: */
+
+/* :root {
+    --primary: #e78484 !important;
+    --secondary: #f51616 !important;
+} */
+
+.header-links {
+    display: flex;
+    column-gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,0 +1,5 @@
+.language_selector>.btn.show,
+.btn.active,
+.btn:first-child:active {
+    border-color: transparent;
+}

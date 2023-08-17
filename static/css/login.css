@@ -1,0 +1,12 @@
+.logo {
+    width: 50%;
+}
+
+.background {
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: radial-gradient(circle closest-side,
+            rgb(245, 22, 22),
+            rgb(141, 1, 1));
+    height: 95vh;
+    width: 100vw;
+}
