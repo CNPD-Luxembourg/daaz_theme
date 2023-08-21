@@ -2,3 +2,13 @@
 {% block bootstrap5_title %}{% endblock %}
 {% block content %}
 {% endblock %}
+
+{% block bootstrap5_before_content %}
+    <header>
+        {% include "parts/header.html" %}
+    </header>
+{% endblock %}
+
+{% block bootstrap5_after_content %}
+    {% include "parts/footer.html" %}
+{% endblock %}
