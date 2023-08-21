@@ -2,9 +2,76 @@
 {% load i18n %}
 {% load static %}
 
+{% block bootstrap5_extra_head %}
+{{ block.super}}
+<script>
+    function toggleInfo(card) {
+        const cardBody = card.querySelector(".card-body");
+        const plotContainer = card.querySelector(".plot");
+        const objectivesContainer = card.querySelector(".objectives");
+        const requirementsContainer = card.querySelector(".requirements");
+        const durationContainer = card.querySelector(".duration");
+        
+        // Get the corresponding information from the level's card
+        const plot = plotContainer.innerHTML;
+        const objectives = objectivesContainer.innerHTML;
+        const requirements = requirementsContainer.innerHTML;
+        const duration = durationContainer.innerHTML;
+        
+        // Update the level info containers with the information
+        const levelInfoContainer = document.getElementById("level-info-container");
+        levelInfoContainer.innerHTML = `
+            <h3>Plot:</h3>
+            ${plot}
+            <h3>Objectives:</h3>
+            ${objectives}
+            <h3>Requirements:</h3>
+            ${requirements}
+            <h3>Duration:</h3>
+            ${duration}
+        `;
+    }
+
+    window.onload = function() {
+        const firstCard = document.querySelector(".card");
+        toggleInfo(firstCard);
+    };
+</script>
+{% endblock %}
+
 {% block content_area %}
-    <h2 class="text-primary"> {% translate "Mon parcours" %}</h2>
-    <p class="lead">
-        {% translate "Il est fortement recommandé de passer les niveaux par ordre croissant de difficulté." %}
-    </p>
+<h2 class="text-primary"> {% translate "Mon parcours" %}</h2>
+<p class="lead">
+    {% translate "Il est fortement recommandé de passer les niveaux par ordre croissant de difficulté." %}
+</p>
+
+
+<div class="d-flex justify-content-between">
+    {% for level in levels %}
+    <div class="flex card text-center mb-3" style="width: 18rem;">
+        <img src="" class=" card-img-top" alt="">
+        <div class="card-body d-flex flex-column justify-content-center" onclick="toggleInfo(this)">
+            <h5 class="card-title">{{ level.name }}</h5>
+            <a href="#" class="btn btn-primary mt-auto">{% translate "start" %}</a>
+            <div class="plot d-none">
+                {{ level.plot }}
+            </div>
+            <div class="objectives d-none">
+                {{ level.objectives }}
+            </div>
+            <div class="requirements d-none">
+                {{ level.requirements }}
+            </div>
+            <div class="duration d-none">
+                {{ level.duration }}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<!-- Container for displaying level info -->
+<div id="level-info-container" class="mt-3">
+</div>
+
+
 {% endblock %}
