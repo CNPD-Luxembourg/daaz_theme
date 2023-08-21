@@ -14,7 +14,7 @@
     <div class="container-fluid">
       <!-- Logo -->
       <a class="navbar-brand" href="/">
-        <img src="{% static 'images/logo.png' %}" alt="Logo" width="100px" class="d-inline-block align-text-top">
+        <img src="{% static 'media/images/logo.png' %}" alt="Logo" width="100px" class="d-inline-block align-text-top">
         {{ site_name }}
       </a>
   
@@ -26,17 +26,6 @@
       <!-- Navigation Menu -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          {% if is_regulator == True %}
-            {% include "regulator/menu.html" %}
-          {% endif %}
-          {% if is_regulator == False  %}
-            {% include "operateur/menu.html" %}
-          {% endif %}
-          {% if only_admin == False %}
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'admin:index' %}">{% translate "Administration" %}</a>
-            </li>
-          {% endif %}
           <li class="nav-item">
             {% include "home/language_selector.html" %}  
           </li>
