@@ -1,0 +1,53 @@
+{% load i18n %}
+{% load static %}
+{% block bootstrap5_extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/sidebar.css' %}" />
+{% endblock %}
+
+<nav class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-white">
+    <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 min-vh-100">
+        <a href="{% url 'index' %}" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-decoration-none">
+            <img src="{% static 'media/images/logo.png' %}" alt="Logo" width="100px" class="fs-5 d-none d-sm-inline">
+        </a>
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start">
+            <li>
+                <a href="#" class="nav-link px-0 align-middle">
+                    <i class="fs-4 bi-mortarboard"></i>
+                    <span class="ms-1 d-none d-sm-inline">{% translate "Formation" %}</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link px-0 align-middle">
+                    <i class="fs-4 bi-columns-gap"></i>
+                    <span class="ms-1 d-none d-sm-inline">{% translate "Résultats" %}</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link px-0 align-middle">
+                    <i class="fs-4 bi-folder"></i>
+                    <span class="ms-1 d-none d-sm-inline">{% translate "Ressources" %}</span>
+                </a>
+            </li>
+            <hr>
+            <li>
+                <a href="#" class="nav-link px-0 align-middle">
+                    <i class="fs-4 bi-gear"></i>
+                    <span class="ms-1 d-none d-sm-inline">{% translate "Paramètres" %}</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link px-0 align-middle">
+                    <i class="fs-4 bi-question-circle"></i>
+                    <span class="ms-1 d-none d-sm-inline">{% translate "Aide" %}</span>
+                </a>
+            </li>
+            <hr>
+            <li>
+                <a href="#" class="nav-link px-0 align-middle">
+                    <i class="fs-4 bi-box-arrow-right"></i>
+                    <span class="ms-1 d-none d-sm-inline">{% translate "Quiter" %}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
