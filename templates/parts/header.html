@@ -6,6 +6,8 @@
 <!-- <link rel="stylesheet" href="{% static 'css/header.css' %}"> -->
 <script src='{% static "npm_components/@popperjs/core/dist/umd/popper.min.js" %}'></script>
 <script src='{% static "npm_components/jquery/dist/jquery.min.js" %}'></script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
+
 {% endblock %}
 
 {% bootstrap_javascript %}
@@ -28,18 +30,18 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'index' %}">{% translate "Accueil" %}</a>
+          <a class="nav-link text-primary fw-bold" href="{% url 'index' %}">{% translate "Accueil" %}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">{% translate "A propos" %}</a>
+          <a class="nav-link text-primary fw-bold" href="#">{% translate "A propos" %}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">{% translate "Contact" %}</a>
+          <a class="nav-link text-primary fw-bold" href="#">{% translate "Contact" %}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-primary" href="{% url 'course' %}">{% translate "Commencer" %}</a>
+          <a class="nav-link btn btn-primary text-white fw-bold" href="{% url 'course' %}">{% translate "Commencer" %}</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item text-primary">
           {% include "home/language_selector.html" %}
         </li>
       </ul>
