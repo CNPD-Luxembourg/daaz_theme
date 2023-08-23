@@ -6,20 +6,19 @@
 {{ block.super}}
 <script>
     function toggleInfo(card) {
-        const cardBody = card.querySelector(".card-body");
         const plotData = card.querySelector(".plot");
         const objectivesData = card.querySelector(".objectives");
         const requirementsData = card.querySelector(".requirements");
         const durationData = card.querySelector(".duration");
         const complexityData = card.querySelector(".complexity");
-        
+
         // Get the corresponding information from the level's card
         const plot = plotData.innerHTML;
         const objectives = objectivesData.innerHTML;
         const requirements = requirementsData.innerHTML;
         const duration = durationData.innerHTML;
         const complexity = complexityData.innerHTML;
-        
+
         // Update the level info containers with the information
         const levelInfoContainer = document.getElementById("level-info-container");
         const plotContainer = document.getElementById("plot-container");
@@ -33,11 +32,9 @@
         durationContainer.innerHTML = `${duration} {% translate "hours" %}`;
         complexityContainer.innerHTML = complexity;
         requirementsContainer.innerHTML = requirements;
-
-
     }
 
-    window.onload = function() {
+    window.onload = function () {
         const firstCard = document.querySelector(".card");
         toggleInfo(firstCard);
     };
@@ -51,49 +48,55 @@
 </p>
 
 
-<div class="d-flex justify-content-between">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
     {% for level in levels %}
-    <div class="flex card text-center mb-5" style="width: 18rem;">
-        <img src="" class=" card-img-top" alt="">
-        <div class="card-body d-flex flex-column justify-content-center" onclick="toggleInfo(this)">
-            <h5 class="card-title">{{ level.name }}</h5>
-            <a href="#" class="btn btn-primary mt-auto text-white">{% translate "start" %}</a>
-            <div class="plot d-none">
-                {{ level.plot | linebreaks }}
-            </div>
-            <div class="objectives d-none">
-                {{ level.objectives | linebreaks }}
-            </div>
-            <div class="requirements d-none">
-                {{ level.requirements | linebreaks }}
-            </div>
-            <div class="duration d-none">
-                {{ level.duration }}
-            </div>
-            <div class="complexity d-none">
-                {{ level.get_complexity_display }}
+    <div class="col">
+        <div class="card text-center mb-3">
+            <img src="" class="card-img-top" alt="">
+            <div class="card-body d-flex flex-column justify-content-center" onclick="toggleInfo(this)">
+                <h5 class="card-title">{{ level.name }}</h5>
+                <a href="#" class="btn btn-primary mt-auto text-white">{% translate "start" %}</a>
+                <div class="plot d-none">
+                    {{ level.plot | linebreaks }}
+                </div>
+                <div class="objectives d-none">
+                    {{ level.objectives | linebreaks }}
+                </div>
+                <div class="requirements d-none">
+                    {{ level.requirements | linebreaks }}
+                </div>
+                <div class="duration d-none">
+                    {{ level.duration }}
+                </div>
+                <div class="complexity d-none">
+                    {{ level.get_complexity_display }}
+                </div>
             </div>
         </div>
     </div>
     {% endfor %}
 </div>
-<div class="container">
-    <div class="row justify-content-between">
-        <div class="col-5 card bg-secondary">
-            <div class="card-body d-flex flex-column">
+<div class="row mt-5">
+    <div class="col-md-6">
+        <div class="card bg-secondary h-100">
+            <div class="card-body m-2">
                 <h5 class="card-title">{% translate "Plot" %}</h5>
                 <div id="plot-container"></div>
             </div>
         </div>
-        <div class="col-3 card bg-secondary">
-            <div class="card-body d-flex flex-column">
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-secondary h-100">
+            <div class="card-body m-2">
                 <h5 class="card-title">{% translate "Objectives" %}</h5>
                 <div id="objectives-container">
                 </div>
             </div>
         </div>
-        <div class="col-3 card bg-secondary">
-            <div class="card-body d-flex flex-column">
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-secondary h-100">
+            <div class="card-body m-2">
                 <h5 class="card-title">{% translate "Duration" %}</h5>
                 <div id="duration-container"></div>
                 <h5 class="card-title">{% translate "Complexity" %}</h5>
