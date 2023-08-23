@@ -4,41 +4,7 @@
 
 {% block bootstrap5_extra_head %}
 {{ block.super}}
-<script>
-    function toggleInfo(card) {
-        const plotData = card.querySelector(".plot");
-        const objectivesData = card.querySelector(".objectives");
-        const requirementsData = card.querySelector(".requirements");
-        const durationData = card.querySelector(".duration");
-        const complexityData = card.querySelector(".complexity");
-
-        // Get the corresponding information from the level's card
-        const plot = plotData.innerHTML;
-        const objectives = objectivesData.innerHTML;
-        const requirements = requirementsData.innerHTML;
-        const duration = durationData.innerHTML;
-        const complexity = complexityData.innerHTML;
-
-        // Update the level info containers with the information
-        const levelInfoContainer = document.getElementById("level-info-container");
-        const plotContainer = document.getElementById("plot-container");
-        const objectivesContainer = document.getElementById("objectives-container");
-        const durationContainer = document.getElementById("duration-container");
-        const complexityContainer = document.getElementById("complexity-container");
-        const requirementsContainer = document.getElementById("requirements-container");
-
-        plotContainer.innerHTML = plot;
-        objectivesContainer.innerHTML = objectives;
-        durationContainer.innerHTML = `${duration} {% translate "hours" %}`;
-        complexityContainer.innerHTML = complexity;
-        requirementsContainer.innerHTML = requirements;
-    }
-
-    window.onload = function () {
-        const firstCard = document.querySelector(".card");
-        toggleInfo(firstCard);
-    };
-</script>
+<script src='{% static "js/course.js" %}'></script>
 {% endblock %}
 
 {% block content_area %}
@@ -81,7 +47,7 @@
         <div class="card bg-secondary h-100">
             <div class="card-body m-2">
                 <h5 class="card-title">{% translate "Plot" %}</h5>
-                <div id="plot-container"></div>
+                <span id="plot-container"></span>
             </div>
         </div>
     </div>
@@ -89,8 +55,7 @@
         <div class="card bg-secondary h-100">
             <div class="card-body m-2">
                 <h5 class="card-title">{% translate "Objectives" %}</h5>
-                <div id="objectives-container">
-                </div>
+                <span id="objectives-container"></span>
             </div>
         </div>
     </div>
@@ -98,14 +63,13 @@
         <div class="card bg-secondary h-100">
             <div class="card-body m-2">
                 <h5 class="card-title">{% translate "Duration" %}</h5>
-                <div id="duration-container"></div>
+                <span id="duration-container"></span><span>{% translate "hours" %}</span>
                 <h5 class="card-title">{% translate "Complexity" %}</h5>
-                <div id="complexity-container"></div>
+                <span id="complexity-container"></span>
                 <h5 class="card-title">{% translate "Requirements" %}</h5>
-                <div id="requirements-container"></div>
+                <span id="requirements-container"></span>
             </div>
         </div>
     </div>
 </div>
-
 {% endblock %}
