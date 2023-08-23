@@ -54,13 +54,13 @@
             <h5 class="card-title">{{ level.name }}</h5>
             <a href="#" class="btn btn-primary mt-auto">{% translate "start" %}</a>
             <div class="plot d-none">
-                {{ level.plot }}
+                {{ level.plot | linebreaks }}
             </div>
             <div class="objectives d-none">
-                {{ level.objectives }}
+                {{ level.objectives | linebreaks }}
             </div>
             <div class="requirements d-none">
-                {{ level.requirements }}
+                {{ level.requirements | linebreaks }}
             </div>
             <div class="duration d-none">
                 {{ level.duration }}
