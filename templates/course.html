@@ -7,29 +7,34 @@
 <script>
     function toggleInfo(card) {
         const cardBody = card.querySelector(".card-body");
-        const plotContainer = card.querySelector(".plot");
-        const objectivesContainer = card.querySelector(".objectives");
-        const requirementsContainer = card.querySelector(".requirements");
-        const durationContainer = card.querySelector(".duration");
+        const plotData = card.querySelector(".plot");
+        const objectivesData = card.querySelector(".objectives");
+        const requirementsData = card.querySelector(".requirements");
+        const durationData = card.querySelector(".duration");
+        const complexityData = card.querySelector(".complexity");
         
         // Get the corresponding information from the level's card
-        const plot = plotContainer.innerHTML;
-        const objectives = objectivesContainer.innerHTML;
-        const requirements = requirementsContainer.innerHTML;
-        const duration = durationContainer.innerHTML;
+        const plot = plotData.innerHTML;
+        const objectives = objectivesData.innerHTML;
+        const requirements = requirementsData.innerHTML;
+        const duration = durationData.innerHTML;
+        const complexity = complexityData.innerHTML;
         
         // Update the level info containers with the information
         const levelInfoContainer = document.getElementById("level-info-container");
-        levelInfoContainer.innerHTML = `
-            <h3>Plot:</h3>
-            ${plot}
-            <h3>Objectives:</h3>
-            ${objectives}
-            <h3>Requirements:</h3>
-            ${requirements}
-            <h3>Duration:</h3>
-            ${duration}
-        `;
+        const plotContainer = document.getElementById("plot-container");
+        const objectivesContainer = document.getElementById("objectives-container");
+        const durationContainer = document.getElementById("duration-container");
+        const complexityContainer = document.getElementById("complexity-container");
+        const requirementsContainer = document.getElementById("requirements-container");
+
+        plotContainer.innerHTML = plot;
+        objectivesContainer.innerHTML = objectives;
+        durationContainer.innerHTML = `${duration} {% translate "hours" %}`;
+        complexityContainer.innerHTML = complexity;
+        requirementsContainer.innerHTML = requirements;
+
+
     }
 
     window.onload = function() {
@@ -48,7 +53,7 @@
 
 <div class="d-flex justify-content-between">
     {% for level in levels %}
-    <div class="flex card text-center mb-3" style="width: 18rem;">
+    <div class="flex card text-center mb-5" style="width: 18rem;">
         <img src="" class=" card-img-top" alt="">
         <div class="card-body d-flex flex-column justify-content-center" onclick="toggleInfo(this)">
             <h5 class="card-title">{{ level.name }}</h5>
@@ -65,13 +70,39 @@
             <div class="duration d-none">
                 {{ level.duration }}
             </div>
+            <div class="complexity d-none">
+                {{ level.complexity }}
+            </div>
         </div>
     </div>
     {% endfor %}
 </div>
-<!-- Container for displaying level info -->
-<div id="level-info-container" class="mt-3">
+<div class="container">
+    <div class="row justify-content-between">
+        <div class="col-5 card bg-secondary">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">{% translate "Plot" %}</h5>
+                <div id="plot-container"></div>
+            </div>
+        </div>
+        <div class="col-3 card bg-secondary">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">{% translate "Objectives" %}</h5>
+                <div id="objectives-container">
+                </div>
+            </div>
+        </div>
+        <div class="col-3 card bg-secondary">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">{% translate "Duration" %}</h5>
+                <div id="duration-container"></div>
+                <h5 class="card-title">{% translate "Complexity" %}</h5>
+                <div id="complexity-container"></div>
+                <h5 class="card-title">{% translate "Requirements" %}</h5>
+                <div id="requirements-container"></div>
+            </div>
+        </div>
+    </div>
 </div>
-
 
 {% endblock %}
