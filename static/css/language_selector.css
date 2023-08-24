@@ -3,3 +3,7 @@
 .btn:first-child:active {
     border-color: transparent;
 }
+
+.language_selector_form {
+    display: contents;
+}
