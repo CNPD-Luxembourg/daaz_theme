@@ -1,14 +1,15 @@
 {% load i18n %}
 {% load static %}
 {% block bootstrap5_extra_head %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/sidebar.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/sidebar.css' %}">
 {% endblock %}
 
 <nav class="col-auto col-md-2 col-lg-2 px-sm-2 px-0 bg-white sticky-sidebar">
     <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 min-vh-100">
         <div class="d-flex flex-row">
             <a href="{% url 'index' %}" class="d-flex align-items-center p-2 mb-md-0 me-md-auto text-decoration-none">
-                <img src="{% static 'media/images/logo.png' %}" alt="Logo" width="100px" class="fs-5 d-none d-sm-inline">
+                <img src="{% static 'media/images/logo.png' %}" alt="Logo" width="100px"
+                    class="fs-5 d-none d-sm-inline">
             </a>
             <div class="p-2">
                 {% include "home/language_selector.html" %}
@@ -17,7 +18,8 @@
 
         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start">
             <li>
-                <a href="#" class="nav-link px-0 align-middle">
+                <a href="{% url 'course' %}"
+                    class="nav-link px-0 align-middle {% if request.path == '/course' %}text-primary fw-bold{% endif %}">
                     <i class="fs-4 bi-mortarboard"></i>
                     <span class="ms-1 d-none d-sm-inline">{% translate "Formation" %}</span>
                 </a>
@@ -29,7 +31,8 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link px-0 align-middle">
+                <a href="{% url 'resources' %}"
+                    class="nav-link px-0 align-middle {% if request.path == '/resources' %}text-primary fw-bold{% endif %}">
                     <i class="fs-4 bi-folder"></i>
                     <span class="ms-1 d-none d-sm-inline">{% translate "Ressources" %}</span>
                 </a>
