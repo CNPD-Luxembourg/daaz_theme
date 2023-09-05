@@ -10720,7 +10720,18 @@ textarea.form-control-lg {
   }
 }
 :root {
-  --bs-light-blue: #E0F3FF;
+  --bs-light-blue: 224, 243, 255;
+}
+
+h1, .h1 {
+  font-weight: 700;
+}
+
+button {
+  padding: 16px;
+  background: var(--Daaz-Blue, #09F);
+  border-radius: var(--bs-border-radius-lg, 5px);
+  color: var(--bs-white, white);
 }
 
 .bg-light-blue {

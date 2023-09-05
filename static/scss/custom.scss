@@ -11,7 +11,11 @@ $gray-600: #D9D9D9;
 // To compile scss file, run this command at root project ** npm run compile-scss ** 
 
 :root {
-  --bs-light-blue: #E0F3FF;
+  --bs-light-blue: 224, 243, 255;
+}
+
+h1 {
+  font-weight: 700;
 }
 
 .bg-light-blue {
