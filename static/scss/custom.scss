@@ -9,3 +9,12 @@ $gray-600: #D9D9D9;
 // Then add additional custom code here
 
 // To compile scss file, run this command at root project ** npm run compile-scss ** 
+
+:root {
+  --bs-light-blue: #E0F3FF;
+}
+
+.bg-light-blue {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-light-blue), var(--bs-bg-opacity)) !important;
+}

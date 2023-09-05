@@ -1,6 +1,230 @@
 {% extends 'home/base.html' %}
+{% load static %}
+{% load i18n %}
 {% block bootstrap5_title %}{% endblock %}
 {% block content %}
+<div>
+    <div class="bg-white">
+        <div class="container-xl">
+            <div class="row">
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1>Le chemin intuitif vers la protection des données</h1>
+
+                            <p>Une formation sur mesure pour les PME basée sur des exemples réels</p>
+                        </div>
+                        <div class="col-5">
+                            <button class="w-100">Lancer le parcours</button>
+                        </div>
+                        <div class="col-7">
+                            Conçu par la Commission Nationale pour la Protection des Données
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5 offset-1">
+                    <img
+                        class="w-100"
+                        src="{% static 'media/images/img-eu-flag-waving.svg' %}"
+                        alt="Waving EU privacy flag"
+                        class="d-inline-block align-text-top"
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-light-blue">
+        <div class="container-wl">
+            <div class="row">
+                <div class="col-8 offset-2">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1>{% translate "Le RGPD de A à Zen !" %}</h1>
+                        </div>
+                        <div class="col-6">
+                            dded
+                        </div>
+                        <div class="col-6">
+                            dded
+                        </div>
+                        <div class="col-6">
+                            dded
+                        </div>
+                        <div class="col-6">
+                            dded
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-white">
+        <div class="container-xl">
+            <div class="row">
+                <div className="col-12">
+                    <h1>En route vers la conformité !</h1>
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>Une histoire de PME</h3>
+
+                            <p>Suivez l’aventure de notre héros Didier Schummer, un entrepreneur dynamique confronté au Règlement Général sur la Protection des Données, dit aussi “RGPD”.</p>
+
+                            <p>Soutenu par son équipe, Didier découvrira et mettra en pratique le RGPD pour garantir un traitement de données respectueux des personnes concernées.</p>
+
+                            <p>Explorez la protection des données personnelles aux côtés de Didier et montez en compétences !</p>
+                        </div>
+                        <div class="col-12">
+                            <button>Lancer le parcours</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5 offset-1">
+                    <img
+                        class="w-100"
+                        src="{% static 'media/images/img-compliance-phone.svg' %}"
+                        alt="Compliance officer on phone"
+                        class="d-inline-block align-text-top"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-light-blue">
+        <div class="container-wl">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1>{% translate "Un parcours de 4 niveaux" %}</h1>
+                        </div>
+
+                        <div class="col-xl-2 col-lg-3 col-md-12">
+                            <div class="bg-primary border-white rounded-3 p-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <img
+                                            class="w-100"
+                                            src="{% static 'media/images/img-compliance-phone.svg' %}"
+                                            alt="Compliance officer on phone"
+                                            class="d-inline-block align-text-top"
+                                        />
+                                    </div>
+                                    <div class="col-12">
+                                        <h1>{% translate "Niveau 1" %}</h1>
+                                    </div>
+                                    <div class="col-12">
+                                        <h3>{% translate "Bases" %}</h3>
+                                    </div>
+                                    <div class="col-12">
+                                        <ul>
+                                            <li>{% translate "Données à caractère personnel" %}</li>
+                                            <li>{% translate "Cartographie des données" %}</li>
+                                            <li>{% translate "Données à caractère personnel" %}</li>
+                                            <li>{% translate "Données à caractère personnel" %}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-2 col-lg-3 col-md-12 offset-xl-1">
+                            <div class="bg-primary border-white rounded-3 p-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <img
+                                            class="w-100"
+                                            src="{% static 'media/images/img-compliance-phone.svg' %}"
+                                            alt="Compliance officer on phone"
+                                            class="d-inline-block align-text-top"
+                                        />
+                                    </div>
+                                    <div class="col-12">
+                                        <h1>{% translate "Niveau 1" %}</h1>
+                                    </div>
+                                    <div class="col-12">
+                                        <h3>{% translate "Bases" %}</h3>
+                                    </div>
+                                    <div class="col-12">
+                                        <ul>
+                                            <li>{% translate "Données à caractère personnel" %}</li>
+                                            <li>{% translate "Cartographie des données" %}</li>
+                                            <li>{% translate "Données à caractère personnel" %}</li>
+                                            <li>{% translate "Données à caractère personnel" %}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-2 col-lg-3 col-md-12 offset-xl-1">
+                            <div class="bg-primary border-white rounded-3 p-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <img
+                                            class="w-100"
+                                            src="{% static 'media/images/img-compliance-phone.svg' %}"
+                                            alt="Compliance officer on phone"
+                                            class="d-inline-block align-text-top"
+                                        />
+                                    </div>
+                                    <div class="col-12">
+                                        <h1>{% translate "Niveau 1" %}</h1>
+                                    </div>
+                                    <div class="col-12">
+                                        <h3>{% translate "Bases" %}</h3>
+                                    </div>
+                                    <div class="col-12">
+                                        <ul>
+                                            <li>{% translate "Données à caractère personnel" %}</li>
+                                            <li>{% translate "Cartographie des données" %}</li>
+                                            <li>{% translate "Données à caractère personnel" %}</li>
+                                            <li>{% translate "Données à caractère personnel" %}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-2 col-lg-3 col-md-12 offset-xl-1">
+                            <div class="bg-primary border-white rounded-3 p-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <img
+                                            class="w-100"
+                                            src="{% static 'media/images/img-compliance-phone.svg' %}"
+                                            alt="Compliance officer on phone"
+                                            class="d-inline-block align-text-top"
+                                        />
+                                    </div>
+                                    <div class="col-12">
+                                        <h1>{% translate "Niveau 1" %}</h1>
+                                    </div>
+                                    <div class="col-12">
+                                        <h3>{% translate "Bases" %}</h3>
+                                    </div>
+                                    <div class="col-12">
+                                        <ul>
+                                            <li>{% translate "Données à caractère personnel" %}</li>
+                                            <li>{% translate "Cartographie des données" %}</li>
+                                            <li>{% translate "Données à caractère personnel" %}</li>
+                                            <li>{% translate "Données à caractère personnel" %}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <button>Lancer le parcours</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block bootstrap5_before_content %}

@@ -10719,5 +10719,13 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+:root {
+  --bs-light-blue: #E0F3FF;
+}
+
+.bg-light-blue {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-light-blue), var(--bs-bg-opacity)) !important;
+}
 
 /*# sourceMappingURL=custom.css.map */
