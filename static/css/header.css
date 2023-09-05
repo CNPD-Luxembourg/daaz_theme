@@ -1,4 +1,15 @@
-.navbar-nav > li{
-    padding-left:5px;
-    padding-right:5px;
+
+header nav {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.05);
+}
+
+header nav img {
+    height: 50px;
+    width: auto;
+}
+
+.navbar-nav > li {
+    padding: 8px 16px;
 }
