@@ -22,3 +22,16 @@ h1 {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-light-blue), var(--bs-bg-opacity)) !important;
 }
+
+.light-blue {
+  color: rgb(var(--bs-light-blue));
+}
+
+.g-5,
+.gx-5 {
+  --bs-gutter-x: 5rem;
+}
+
+ul li {
+  margin-bottom: 4px;
+}

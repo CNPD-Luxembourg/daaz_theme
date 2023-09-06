@@ -4,11 +4,11 @@
 {% block bootstrap5_title %}{% endblock %}
 {% block content %}
 <div>
-    <div class="bg-white">
+    <div class="bg-white py-5">
         <div class="container-xl py-5">
             <div class="row align-items-center">
                 <div class="col-6 h-100">
-                    <div class="row">
+                    <div class="row align-items-center">
                         <div class="col-12">
                             <h1 class="text-primary py-2">Le chemin intuitif vers la protection des données</h1>
 
@@ -18,7 +18,7 @@
                             <button class="btn btn-primary text-white fw-bold w-100 py-2">Lancer le parcours</button>
                         </div>
                         <div class="col-7">
-                            <p class="py-2">Conçu par la Commission Nationale pour la Protection des Données</p>
+                            <span class="py-2">Conçu par la Commission Nationale pour la Protection des Données</span>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-light-blue">
+    <div class="bg-light-blue py-5">
         <div class="container-xl">
             <div class="row">
                 <div class="col-8 offset-2">
@@ -43,42 +43,42 @@
                         </div>
                         <div class="col-12 py-5">
                             <div class="row">
-                                <div class="col-6">
-                                    <div>
+                                <div class="col-6 d-flex align-items-center">
+                                    <div class="flex-grow-0">
                                         <i class="bi bi-person-video2 text-primary"></i>
                                     </div>
 
-                                    <div>
+                                    <div class="flex-grow-1 p-3">
                                         <h3>Story-Learning</h3>
                                         <p>Une histoire captivante avec des personnages</p>
                                     </div>
                                 </div>
-                                <div class="col-6">
-                                    <div>
+                                <div class="col-6 d-flex align-items-center">
+                                    <div class="flex-grow-0">
                                         <i class="bi bi-trophy text-primary"></i>
                                     </div>
 
-                                    <div>
+                                    <div class="flex-grow-1 p-3">
                                         <h3>Story-Learning</h3>
                                         <p>Une histoire captivante avec des personnages</p>
                                     </div>
                                 </div>
-                                <div class="col-6">
-                                    <div>
+                                <div class="col-6 d-flex align-items-center">
+                                    <div class="flex-grow-0">
                                         <i class="bi bi-envelope-paper text-primary"></i>
                                     </div>
 
-                                    <div>
+                                    <div class="flex-grow-1 p-3">
                                         <h3>Story-Learning</h3>
                                         <p>Une histoire captivante avec des personnages</p>
                                     </div>
                                 </div>
-                                <div class="col-6">
-                                    <div>
+                                <div class="col-6 d-flex align-items-center">
+                                    <div class="flex-grow-0">
                                         <i class="bi bi-card-heading text-primary"></i>
                                     </div>
 
-                                    <div>
+                                    <div class="flex-grow-1 p-3">
                                         <h3>Story-Learning</h3>
                                         <p>Une histoire captivante avec des personnages</p>
                                     </div>
@@ -90,7 +90,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-white">
+    <div class="bg-white py-5">
         <div class="container-sm">
             <div class="row align-items-center">
                 <div className="col-12">
@@ -112,7 +112,9 @@
                         </div>
 
                         <div class="col-12 py-2">
-                            <button class="btn btn-primary text-white fw-bold">Lancer le parcours</button>
+                            <button class="btn btn-primary p-2 text-white fw-semibold fs-4">
+                                Lancer le parcours
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -128,7 +130,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-light-blue">
+    <div class="bg-light-blue py-5">
         <div class="container-xl">
             <div class="row">
                 <div class="col-12">
@@ -143,23 +145,23 @@
                                     <div class="col-12">
                                         <img
                                             class="w-100"
-                                            src="{% static 'media/images/img-compliance-phone.svg' %}"
+                                            src="{% static 'media/images/img-level-1.svg' %}"
                                             alt="Compliance officer on phone"
                                             class="d-inline-block align-text-top"
                                         />
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-12 pt-2">
                                         <h1 class="text-primary text-center">{% translate "Niveau 1" %}</h1>
                                     </div>
-                                    <div class="col-12">
-                                        <h3 class="text-center">{% translate "Bases" %}</h3>
+                                    <div class="col-12 pb-4">
+                                        <h4 class="text-center fw-bold">{% translate "Bases" %}</h4>
                                     </div>
                                     <div class="col-12">
                                         <ul>
                                             <li>{% translate "Données à caractère personnel" %}</li>
                                             <li>{% translate "Cartographie des données" %}</li>
-                                            <li>{% translate "Données à caractère personnel" %}</li>
-                                            <li>{% translate "Données à caractère personnel" %}</li>
+                                            <li>{% translate "Demande d’exercice de droit par la personne concernée" %}</li>
+                                            <li>{% translate "Registre des traitements" %}</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -172,23 +174,24 @@
                                     <div class="col-12">
                                         <img
                                             class="w-100"
-                                            src="{% static 'media/images/img-compliance-phone.svg' %}"
+                                            src="{% static 'media/images/img-level-2.svg' %}"
                                             alt="Compliance officer on phone"
                                             class="d-inline-block align-text-top"
                                         />
                                     </div>
-                                    <div class="col-12">
-                                        <h1 class="text-primary text-center">{% translate "Niveau 1" %}</h1>
+                                    <div class="col-12 pt-2">
+                                        <h1 class="text-primary text-center">{% translate "Niveau 2" %}</h1>
                                     </div>
-                                    <div class="col-12">
-                                        <h3 class="text-center">{% translate "Bases" %}</h3>
+                                    <div class="col-12 pb-4">
+                                        <h4 class="text-center fw-bold">{% translate "Design" %}</h4>
                                     </div>
                                     <div class="col-12">
                                         <ul>
-                                            <li>{% translate "Données à caractère personnel" %}</li>
-                                            <li>{% translate "Cartographie des données" %}</li>
-                                            <li>{% translate "Données à caractère personnel" %}</li>
-                                            <li>{% translate "Données à caractère personnel" %}</li>
+                                            <li>{% translate "Obligation d’information" %}</li>
+                                            <li>{% translate "Traitement des données de salariés" %}</li>
+                                            <li>{% translate "Données sensibles" %}</li>
+                                            <li>{% translate "Vidéosurveillance" %}</li>
+                                            <li>{% translate "Géolocalisation" %}</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -201,23 +204,24 @@
                                     <div class="col-12">
                                         <img
                                             class="w-100"
-                                            src="{% static 'media/images/img-compliance-phone.svg' %}"
+                                            src="{% static 'media/images/img-level-3.svg' %}"
                                             alt="Compliance officer on phone"
                                             class="d-inline-block align-text-top"
                                         />
                                     </div>
-                                    <div class="col-12">
-                                        <h1 class="text-primary text-center">{% translate "Niveau 1" %}</h1>
+                                    <div class="col-12 pt-2">
+                                        <h1 class="text-primary text-center">{% translate "Niveau 3" %}</h1>
                                     </div>
-                                    <div class="col-12">
-                                        <h3 class="text-center">{% translate "Bases" %}</h3>
+                                    <div class="col-12 pb-4">
+                                        <h4 class="text-center fw-bold">{% translate "Mise en œuvre" %}</h4>
                                     </div>
                                     <div class="col-12">
                                         <ul>
-                                            <li>{% translate "Données à caractère personnel" %}</li>
-                                            <li>{% translate "Cartographie des données" %}</li>
-                                            <li>{% translate "Données à caractère personnel" %}</li>
-                                            <li>{% translate "Données à caractère personnel" %}</li>
+                                            <li>{% translate "Data Breach" %}</li>
+                                            <li>{% translate "Anonymisation" %}</li>
+                                            <li>{% translate "Sous-Traitance" %}</li>
+                                            <li>{% translate "Transfert hors E.E.E" %}</li>
+                                            <li>{% translate "Clauses contractuelles type" %}</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -230,23 +234,23 @@
                                     <div class="col-12">
                                         <img
                                             class="w-100"
-                                            src="{% static 'media/images/img-compliance-phone.svg' %}"
+                                            src="{% static 'media/images/img-level-4.svg' %}"
                                             alt="Compliance officer on phone"
                                             class="d-inline-block align-text-top"
                                         />
                                     </div>
-                                    <div class="col-12">
-                                        <h1 class="text-primary text-center">{% translate "Niveau 1" %}</h1>
+                                    <div class="col-12 pt-2">
+                                        <h1 class="text-primary text-center">{% translate "Niveau 4" %}</h1>
                                     </div>
-                                    <div class="col-12">
-                                        <h3 class="text-center">Governance 2.0</h3>
+                                    <div class="col-12 pb-4">
+                                        <h4 class="text-center fw-bold">Gouvernance 2.0</h4>
                                     </div>
                                     <div class="col-12">
                                         <ul>
-                                            <li>{% translate "Données à caractère personnel" %}</li>
-                                            <li>{% translate "Cartographie des données" %}</li>
-                                            <li>{% translate "Données à caractère personnel" %}</li>
-                                            <li>{% translate "Données à caractère personnel" %}</li>
+                                            <li>{% translate "Amélioration continue" %}</li>
+                                            <li>{% translate "Traitement de photos" %}</li>
+                                            <li>{% translate "Réclamation" %}</li>
+                                            <li>{% translate "Coopération européenne et protection des données" %}</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -254,49 +258,115 @@
                         </div>
 
                         <div class="col-12 py-5 text-center">
-                            <button class="btn btn-primary text-white fw-bold">Lancer le parcours</button>
+                            <button class="btn btn-primary p-2 text-white fw-semibold fs-4">
+                                Lancer le parcours
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="bg-white">
-        <div class="container-md">
+    <div class="bg-white py-5">
+        <div class="container-sm">
             <div class="row">
                 <div className="col-12 py-5">
                     <h1 class="text-primary text-center py-5">{% translate "Témoignages" %}</h1>
                 </div>
-                <div className="col-12">
-                    <h3 class="text-primary text-center py-2">{% translate "Ce qu’en disent les utilisateurs" %}</h3>
+                <div className="col-12 pb-4">
+                    <h4 class="text-center fw-bold">{% translate "Ce qu’en disent les utilisateurs" %}</h4>
                 </div>
-                <div class="col-6">
+                <div class="col-12 py-5">
                     <div class="row">
-                        <div class="col-12">
-                            <h3>Une histoire de PME</h3>
+                        <div class="col-4 gx-5">
+                            <div class="row">
+                                <div class="col-12 text-end">
+                                    <i class="bi bi-quote display-1 light-blue text-end"></i>
+                                </div>
 
-                            <p>Suivez l’aventure de notre héros Didier Schummer, un entrepreneur dynamique confronté au Règlement Général sur la Protection des Données, dit aussi “RGPD”.</p>
+                                <div class="col-12">
+                                    <p class="fst-italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
 
-                            <p>Soutenu par son équipe, Didier découvrira et mettra en pratique le RGPD pour garantir un traitement de données respectueux des personnes concernées.</p>
+                                <div class="col-12 d-flex align-items-center">
+                                    <img
+                                        class="flex-grow-0 rounded-circle align-items-center"
+                                        width="50px"
+                                        height="50px"
+                                        src="{% static 'media/images/img-level-3.svg' %}"
+                                        alt="Compliance officer on phone"
+                                        class="d-inline-block align-text-top"
+                                    />
 
-                            <p>Explorez la protection des données personnelles aux côtés de Didier et montez en compétences !</p>
+                                    <div class="flex-grow-1 p-3 align-items-center">
+                                        <div class="text-primary fw-bold">Superjhemp</div>
+                                        <div>Super héros</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-12">
-                            <button class="btn btn-primary text-white fw-bold">Lancer le parcours</button>
+                        
+                        <div class="col-4 gx-5">
+                            <div class="row">
+                                <div class="col-12 text-end">
+                                    <i class="bi bi-quote display-1 light-blue text-end"></i>
+                                </div>
+
+                                <div class="col-12">
+                                    <p class="fst-italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+
+                                <div class="col-12 d-flex align-items-center">
+                                    <img
+                                        class="flex-grow-0 rounded-circle align-items-center"
+                                        width="50px"
+                                        height="50px"
+                                        src="{% static 'media/images/img-level-3.svg' %}"
+                                        alt="Compliance officer on phone"
+                                        class="d-inline-block align-text-top"
+                                    />
+
+                                    <div class="flex-grow-1 p-3 align-items-center">
+                                        <div class="text-primary fw-bold">Superjhemp</div>
+                                        <div>Super héros</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-4 gx-5">
+                            <div class="row">
+                                <div class="col-12 text-end">
+                                    <i class="bi bi-quote display-1 light-blue text-end"></i>
+                                </div>
+
+                                <div class="col-12">
+                                    <p class="fst-italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+
+                                <div class="col-12 d-flex align-items-center">
+                                    <img
+                                        class="flex-grow-0 rounded-circle align-items-center"
+                                        width="50px"
+                                        height="50px"
+                                        src="{% static 'media/images/img-level-3.svg' %}"
+                                        alt="Compliance officer on phone"
+                                        class="d-inline-block align-text-top"
+                                    />
+
+                                    <div class="flex-grow-1 p-3 align-items-center">
+                                        <div class="text-primary fw-bold">Superjhemp</div>
+                                        <div>Super héros</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-5 offset-1">
-                    <img
-                        src="{% static 'media/images/img-compliance-phone.svg' %}"
-                        alt="Compliance officer on phone"
-                        class="d-inline-block align-text-top w-100"
-                    />
                 </div>
             </div>
         </div>
     </div>
-    <div class="bg-light-blue">
+    <div class="bg-light-blue py-5">
         <div class="container-xl">
             <div class="row">
                 <div class="col-12">

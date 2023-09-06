@@ -10727,16 +10727,22 @@ h1, .h1 {
   font-weight: 700;
 }
 
-button {
-  padding: 16px;
-  background: var(--Daaz-Blue, #09F);
-  border-radius: var(--bs-border-radius-lg, 5px);
-  color: var(--bs-white, white);
-}
-
 .bg-light-blue {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-light-blue), var(--bs-bg-opacity)) !important;
+}
+
+.light-blue {
+  color: rgb(var(--bs-light-blue));
+}
+
+.g-5,
+.gx-5 {
+  --bs-gutter-x: 5rem;
+}
+
+ul li {
+  margin-bottom: 4px;
 }
 
 /*# sourceMappingURL=custom.css.map */
