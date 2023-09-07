@@ -10736,6 +10736,10 @@ h1, .h1 {
   color: rgb(var(--bs-light-blue));
 }
 
+.bg-horizontal-white-and-light-blue {
+  background-image: linear-gradient(var(--bs-white) 50%, rgb(var(--bs-light-blue)) 0%);
+}
+
 .g-5,
 .gx-5 {
   --bs-gutter-x: 5rem;
