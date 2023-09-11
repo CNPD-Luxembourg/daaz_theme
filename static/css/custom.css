@@ -10723,6 +10723,10 @@ textarea.form-control-lg {
   --bs-light-blue: 224, 243, 255;
 }
 
+#hero {
+  margin-top: 62px;
+}
+
 h1, .h1 {
   font-weight: 700;
 }
