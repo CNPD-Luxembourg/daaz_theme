@@ -15,7 +15,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white">
   <div class="container-xxl">
     <!-- Logo -->
-    <a class="navbar-brand" href="{% url 'index' %}">
+    <a class="navbar-brand" href="{% url 'index' %}#hero">
       <img src="{% static 'media/images/logo-with-desc.png' %}" alt="Logo" width="100px" class="d-inline-block align-text-top">
       {{ site_name }}
     </a>
@@ -30,10 +30,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link text-primary fw-bold" href="{% url 'index' %}">{% translate "Accueil" %}</a>
+          <a class="nav-link text-primary fw-bold" href="{% url 'index' %}#hero">{% translate "Accueil" %}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-primary fw-bold" href="#">{% translate "A propos" %}</a>
+          <a class="nav-link text-primary fw-bold" href="{% url 'index' %}#about">{% translate "A propos" %}</a>
         </li>
         <li class="nav-item">
           <a class="nav-link btn btn-primary text-white fw-bold" href="{% url 'course' %}">{% translate "Commencer" %}</a>
