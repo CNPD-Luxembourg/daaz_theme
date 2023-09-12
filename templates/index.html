@@ -211,124 +211,35 @@
                         <div class="col-md-12 py-5">
                             <h1 class="text-primary text-center">{% translate "Un parcours de 4 niveaux" %}</h1>
                         </div>
-
+                        {% for level in levels %}
                         <div class="col-lg-3 col-md-12 gx-5 mb-3">
                             <div class="bg-white border-white rounded-3 p-4 h-100">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <img
                                             class="w-100"
-                                            src="{% static 'media/images/img-level-1.svg' %}"
+                                            src="{% static 'media/images/img-level-'%}{{level.index}}.svg" 
                                             alt="Compliance officer on phone"
                                             class="d-inline-block align-text-top"
                                         />
                                     </div>
                                     <div class="col-md-12 pt-2">
-                                        <h1 class="text-primary text-center">{% translate "Niveau 1" %}</h1>
+                                        <h1 class="text-primary text-center">{% translate "Niveau" %} {{ level.index }}</h1>
                                     </div>
                                     <div class="col-md-12 pb-4">
-                                        <h4 class="text-center fw-bold">{% translate "Bases" %}</h4>
+                                        <h4 class="text-center fw-bold">{{ level.name }}</h4>
                                     </div>
                                     <div class="col-md-12">
                                         <ul>
-                                            <li>{% translate "Données à caractère personnel" %}</li>
-                                            <li>{% translate "Cartographie des données" %}</li>
-                                            <li>{% translate "Demande d’exercice de droit par la personne concernée" %}</li>
-                                            <li>{% translate "Registre des traitements" %}</li>
+                                            {% for line in level.description_lines %}
+                                            <li>{{ line }}</li>
+                                            {% endfor %}
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-lg-3 col-md-12 gx-5 mb-3">
-                            <div class="bg-white border-white rounded-3 p-4 h-100">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <img
-                                            class="w-100"
-                                            src="{% static 'media/images/img-level-2.svg' %}"
-                                            alt="Compliance officer on phone"
-                                            class="d-inline-block align-text-top"
-                                        />
-                                    </div>
-                                    <div class="col-md-12 pt-2">
-                                        <h1 class="text-primary text-center">{% translate "Niveau 2" %}</h1>
-                                    </div>
-                                    <div class="col-md-12 pb-4">
-                                        <h4 class="text-center fw-bold">{% translate "Design" %}</h4>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <ul>
-                                            <li>{% translate "Obligation d’information" %}</li>
-                                            <li>{% translate "Traitement des données de salariés" %}</li>
-                                            <li>{% translate "Données sensibles" %}</li>
-                                            <li>{% translate "Vidéosurveillance" %}</li>
-                                            <li>{% translate "Géolocalisation" %}</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-12 gx-5 mb-3">
-                            <div class="bg-white border-white rounded-3 p-4 h-100">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <img
-                                            class="w-100"
-                                            src="{% static 'media/images/img-level-3.svg' %}"
-                                            alt="Compliance officer on phone"
-                                            class="d-inline-block align-text-top"
-                                        />
-                                    </div>
-                                    <div class="col-md-12 pt-2">
-                                        <h1 class="text-primary text-center">{% translate "Niveau 3" %}</h1>
-                                    </div>
-                                    <div class="col-md-12 pb-4">
-                                        <h4 class="text-center fw-bold">{% translate "Mise en œuvre" %}</h4>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <ul>
-                                            <li>{% translate "Data Breach" %}</li>
-                                            <li>{% translate "Anonymisation" %}</li>
-                                            <li>{% translate "Sous-Traitance" %}</li>
-                                            <li>{% translate "Transfert hors E.E.E" %}</li>
-                                            <li>{% translate "Clauses contractuelles type" %}</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-12 gx-5 mb-3">
-                            <div class="bg-white border-white rounded-3 p-4 h-100">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <img
-                                            class="w-100"
-                                            src="{% static 'media/images/img-level-4.svg' %}"
-                                            alt="Compliance officer on phone"
-                                            class="d-inline-block align-text-top"
-                                        />
-                                    </div>
-                                    <div class="col-md-12 pt-2">
-                                        <h1 class="text-primary text-center">{% translate "Niveau 4" %}</h1>
-                                    </div>
-                                    <div class="col-md-12 pb-4">
-                                        <h4 class="text-center fw-bold">Gouvernance 2.0</h4>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <ul>
-                                            <li>{% translate "Amélioration continue" %}</li>
-                                            <li>{% translate "Traitement de photos" %}</li>
-                                            <li>{% translate "Réclamation" %}</li>
-                                            <li>{% translate "Coopération européenne et protection des données" %}</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
 
                         <div class="col-md-12 py-5 text-center">
                             <button
