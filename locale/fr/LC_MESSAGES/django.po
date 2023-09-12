@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-12 11:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+#: theme/templates/course.html:11
+msgid "Mon parcours"
+msgstr ""
+
+#: theme/templates/course.html:13
+msgid ""
+"Il est fortement recommandé de passer les niveaux par ordre croissant de "
+"difficulté."
+msgstr ""
+
+#: theme/templates/course.html:24
+msgid "start"
+msgstr ""
+
+#: theme/templates/course.html:41
+msgid "Description"
+msgstr ""
+
+#: theme/templates/index.html:97
+msgid "Le RGPD de A à Zen !"
+msgstr ""
+
+#: theme/templates/index.html:212
+msgid "Un parcours de 4 niveaux"
+msgstr ""
+
+#: theme/templates/index.html:227
+msgid "Niveau"
+msgstr ""
+
+#: theme/templates/index.html:262
+msgid "Témoignages"
+msgstr ""
+
+#: theme/templates/index.html:265
+msgid "Ce qu’en disent les utilisateurs"
+msgstr ""
+
+#: theme/templates/index.html:365
+msgid "Nos partenaires"
+msgstr ""
+
+#: theme/templates/parts/header.html:33
+msgid "Accueil"
+msgstr ""
+
+#: theme/templates/parts/header.html:36
+msgid "A propos"
+msgstr ""
+
+#: theme/templates/parts/header.html:39
+msgid "Commencer"
+msgstr ""
+
+#: theme/templates/parts/sidebar.html:24
+msgid "Formation"
+msgstr ""
+
+#: theme/templates/parts/sidebar.html:30
+msgid "Résultats"
+msgstr ""
+
+#: theme/templates/parts/sidebar.html:37
+msgid "Ressources"
+msgstr ""
+
+#: theme/templates/parts/sidebar.html:44
+msgid "Paramètres"
+msgstr ""
+
+#: theme/templates/parts/sidebar.html:50
+msgid "Aide"
+msgstr ""
+
+#: theme/templates/parts/sidebar.html:57
+msgid "Log out"
+msgstr ""
+
+#: theme/templates/resources.html:6
+msgid "Mes ressources"
+msgstr ""
+
+#: theme/templates/resources.html:8
+msgid "Félicitations ! "
+msgstr ""
+
+#: theme/templates/resources.html:9
+msgid "Vous avez accès à de nouvelles ressources :"
+msgstr ""
