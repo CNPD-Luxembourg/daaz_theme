@@ -1,3 +1,63 @@
 {% load django_bootstrap5 %}
 {% load static %}
-{% load i18n %} 
+{% load i18n %}
+
+{% block bootstrap5_extra_head %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
+
+{% endblock %}
+
+{% bootstrap_javascript %}
+
+<footer>
+  <div class="container container-xxl py-5">
+    <div class="row py-4">
+      <div class="col-md-4 offset-md-1 d-flex">
+          <div class="flex-grow-0 me-3">
+              <img
+                  src="{% static 'media/images/logo-cnpd.png' %}"
+                  alt="Compliance officer on phone"
+                  class="d-inline-block align-text-top w-100"
+              />
+          </div>
+
+          <div class="flex-grow-1 lh-sm">
+              <p>Commission National de la Protection des Données</p>
+              <p>
+                15, boulevard du jazz<br/>
+                L-4370 Belvaux
+              </p>
+              <p>
+                Tél: <a class="text-primary" href="tel:+3522610601">(+352) 26 10 60-1</a><br/>
+                Courriel: <a class="text-primary" href="mailto:daaz@cnpd.lu">daaz@cnpd.lu</a>
+              </p>
+          </div>
+      </div>
+
+    	<div class="col-md-3 offset-md-1 py-2">
+    		<p>
+          <a class="text-decoration-none" href="">Mentions légales</a>
+        </p>
+        <p>
+          <a class="text-decoration-none" href="">Conditions générales d'utilisations</a>
+        </p>
+        <p>
+          <a class="text-decoration-none" href="">Politiques de confidentialité</a>
+        </p>
+        <p>
+          <a class="text-decoration-none" href="">Cookies</a>
+        </p>
+    	</div>
+
+    	<div class="col-md-3 py-2">
+    		<p>
+          <a class="text-decoration-none" href="">Déclarations d'accessibilité</a>
+        </p>
+        <p>
+          <a class="text-decoration-none" href="">Github</a>
+        </p>
+    	</div>
+    </div>
+  </div>
+</footer>

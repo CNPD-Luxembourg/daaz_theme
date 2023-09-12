@@ -1,3 +1,8 @@
-.regulator_logo {
-    width: 80px;
+
+footer p {
+    line-height: 25px !important;
+}
+
+footer a {
+    color: inherit;
 }

@@ -9,3 +9,37 @@ $gray-600: #D9D9D9;
 // Then add additional custom code here
 
 // To compile scss file, run this command at root project ** npm run compile-scss ** 
+
+:root {
+  --bs-light-blue: 224, 243, 255;
+}
+
+#hero {
+  margin-top: 62px;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+.bg-light-blue {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-light-blue), var(--bs-bg-opacity)) !important;
+}
+
+.light-blue {
+  color: rgb(var(--bs-light-blue));
+}
+
+.bg-horizontal-white-and-light-blue {
+  background-image: linear-gradient(var(--bs-white) 50%, rgb(var(--bs-light-blue)) 0%);
+}
+
+.g-5,
+.gx-5 {
+  --bs-gutter-x: 5rem;
+}
+
+ul li {
+  margin-bottom: 4px;
+}
