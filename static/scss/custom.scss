@@ -12,6 +12,7 @@ $gray-600: #D9D9D9;
 
 :root {
   --bs-light-blue: 224, 243, 255;
+  --bs-progress-height: 30px;
 }
 
 #hero {
@@ -42,4 +43,43 @@ h1 {
 
 ul li {
   margin-bottom: 4px;
+}
+
+/* class: completed-level-card */
+
+.completed-level-card h5 {
+  color: var(--Orange-Gold, #FFA600) !important;
+}
+
+/* class: progress */
+
+.progress {
+  position: relative;
+  background-color: var(--bs-white);
+  border: var(--bs-primary) 3px solid;
+  font-size: 16px;
+  height: 32px !important;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.progress > span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.progress-bar {
+  padding: 3px;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
+}
+
+.progress-completed {
+  border-color: var(--Orange-Gold, #FFA600) !important;
+}
+
+.progress-completed .progress-bar {
+  background-color: var(--Orange-Gold, #FFA600) !important;
 }
