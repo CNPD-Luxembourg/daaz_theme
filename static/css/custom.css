@@ -10791,4 +10791,12 @@ ul li {
   background-color: var(--Orange-Gold, #FFA600) !important;
 }
 
+.large-icon {
+  font-size: 80px;
+}
+
+.medium-icon {
+  font-size: 60px;
+}
+
 /*# sourceMappingURL=custom.css.map */
