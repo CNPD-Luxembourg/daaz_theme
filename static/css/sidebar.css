@@ -9,3 +9,11 @@
     height: 100vh;
     overflow-y: auto;
 }
+
+#sidebar {
+    width: auto; 
+}
+
+#sidebar.minimized {
+    width: fit-content;
+}
