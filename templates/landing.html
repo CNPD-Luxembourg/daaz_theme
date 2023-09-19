@@ -1,7 +1,9 @@
 {% extends 'index.html' %}
 {% load i18n %}
 {% load static %}
+{% load cookiebanner %}
 {% block content %}
+{% cookiebanner_modal 'bootstrap5' %}
 <div id="hero" class="bg-white">
     <div class="container-xl py-5">
         <div class="row align-items-center">
