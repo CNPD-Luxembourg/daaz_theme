@@ -37,16 +37,16 @@
 
     	<div class="col-md-3 offset-md-1 py-2">
     		<p>
-          <a class="text-decoration-none" href="">Mentions légales</a>
+          <a class="text-decoration-none" href="">{% translate "Mentions légales" %}</a>
         </p>
         <p>
-          <a class="text-decoration-none" href="">Conditions générales d'utilisations</a>
+          <a class="text-decoration-none" href="">{% translate "Conditions générales d'utilisations" %}</a>
         </p>
         <p>
-          <a class="text-decoration-none" href="">Politiques de confidentialité</a>
+          <a class="text-decoration-none" href="{% url 'privacy' %}">{% translate "Politiques de confidentialité" %}</a>
         </p>
         <p>
-          <a class="text-decoration-none" href="">Cookies</a>
+          <a class="text-decoration-none" href="{% url 'privacy' %}">{% translate "Cookies" %}</a>
         </p>
     	</div>
 
