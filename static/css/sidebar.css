@@ -11,9 +11,35 @@
 }
 
 #sidebar {
-    width: auto; 
+    width: auto;
 }
 
 #sidebar.minimized {
     width: fit-content;
+}
+
+#sidebar .nav-link:hover,
+#sidebar .nav-link:focus {
+    color: var(--bs-primary);
+
+}
+
+#sidebar .danger-link:hover,
+#sidebar .danger-link:focus {
+    color: var(--bs-danger);
+}
+
+
+@media (min-width: 576px) {
+
+    #sidebar:not(.minimized) li:hover,
+    #sidebar:not(.minimized) li:focus {
+        border: 2px solid var(--bs-primary);
+        border-radius: 8px;
+    }
+
+    #sidebar:not(.minimized) li:has(a.danger-link):hover,
+    #sidebar:not(.minimized) li:has(a.danger-link):focus {
+        border-color: var(--bs-danger);
+    }
 }
