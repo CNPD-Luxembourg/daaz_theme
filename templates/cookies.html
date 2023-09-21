@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load i18n %}
+{% block bootstrap5_title %}{% endblock %}
+{% block content %}
+<div class="container-xl py-5">
+  <h1 class="text-primary">{{ _('Cookie settings') }}</h1>
+  <p class="text-justify">
+    {% blocktranslate trimmed %}
+    A cookie is a text file sent to your browser and saved on the hard drive of your terminal (PC, laptop or smartphone,
+    for example) when visiting a website.
+    <br><br>
+    Cookies can for example be used to ensure the proper functioning of a site and to optimize its ergonomics and its
+    functionalities.
+    <br><br>
+    The cookies we use on this site are strictly necessary to ensure its proper functioning and to allow you to complete
+    the online form, namely:
+    {% endblocktranslate %}
+  </p>
+  <div class="p-3">
+    {% for cookiegroup in groups %}
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">{{ _('Name') }}</th>
+          <th scope="col">{{ _('Description') }}</th>
+          <th scope="col">{{ _('Content') }}</th>
+          <th scope="col">{{ _('Maximum term') }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for cookie in cookiegroup.cookies %}
+        <tr class="text-justify small">
+          <td>{{ cookie.pattern }}</td>
+          <td>{{ cookie.description }}</td>
+          <td>{{ cookie.content }}</td>
+          <td>{{ cookie.max_age }}</td>
+          {% endfor %}
+        </tr>
+      </tbody>
+    </table>
+    {% endfor %}
+  </div>
+  {% endblock %}
+ 

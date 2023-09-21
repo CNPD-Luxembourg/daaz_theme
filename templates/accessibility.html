@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load i18n %}
+{% block bootstrap5_title %}{% endblock %}
+{% block content %}
+<div class="container-xl py-5">
+  <h1 class="text-primary">{{ _('Accessibility') }}</h1>
+  <p class="text-justify">
+    {% blocktranslate trimmed %}
+    {% endblocktranslate %}
+  </p>
+</div>
+{% endblock %}

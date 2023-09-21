@@ -8,8 +8,6 @@
 
 {% endblock %}
 
-{% bootstrap_javascript %}
-
 <footer>
   <div class="container container-xxl py-5">
     <div class="row py-4">
@@ -37,25 +35,25 @@
 
     	<div class="col-md-3 offset-md-1 py-2">
     		<p>
-          <a class="text-decoration-none" href="">{% translate "Mentions légales" %}</a>
+          <a class="text-decoration-none" href="{% url 'legal' %}">{% translate "Mentions légales" %}</a>
         </p>
         <p>
-          <a class="text-decoration-none" href="">{% translate "Conditions générales d'utilisations" %}</a>
+          <a class="text-decoration-none" href="{% url 'tos' %}">{% translate "Conditions générales d'utilisations" %}</a>
         </p>
         <p>
           <a class="text-decoration-none" href="{% url 'privacy' %}">{% translate "Politiques de confidentialité" %}</a>
         </p>
         <p>
-          <a class="text-decoration-none" href="{% url 'privacy' %}">{% translate "Cookies" %}</a>
+          <a class="text-decoration-none" href="{% url 'cookies' %}">{% translate "Cookies" %}</a>
         </p>
     	</div>
 
     	<div class="col-md-3 py-2">
     		<p>
-          <a class="text-decoration-none" href="">Déclarations d'accessibilité</a>
+          <a class="text-decoration-none" href="{% url 'accessibility' %}">{% translate "Déclarations d'accessibilité" %}</a>
         </p>
         <p>
-          <a class="text-decoration-none" href="">Github</a>
+          <a class="text-decoration-none" href="https://github.com/NC3-LU/eLearning" target="_blank" rel="noopener noreferrer">Github</a>
         </p>
     	</div>
     </div>
