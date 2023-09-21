@@ -9,32 +9,37 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body mx-3">
-        <div class="border border-primary rounded bg-light-blue text-center mx-auto">
-          <p class="d-inline">{% translate "Je commence un nouveau parcours" %}</p>
-          <button class="btn d-inline" onclick="window.location='course'">
-            <i class="bi bi-plus-circle text-primary fs-3"></i>
-          </button>
+        <div class="border border-primary rounded bg-light-blue ">
+          <div class="d-flex align-items-center py-2 px-4">
+            <span class="d-inline flex-grow-1">{% translate "Je commence un nouveau parcours" %}</span>
+            <a class="btn d-inline p-0" href="{% url 'course' %}" role="button">
+              <i class="bi bi-plus-circle text-primary fs-3"></i>
+            </a>
+          </div>
         </div>
-        <div class="p-2">
+        <div class="py-2 ps-3">
           <span> {% translate "ou:" %}</span>
         </div>
-        <div class="container border border-primary rounded bg-light-blue text-center mx-auto ">
-          <div class="col p-3">
-            <div class="row">
-              <span class="col d-inline">
+        <div class="border border-primary rounded bg-light-blue">
+          <div class="py-2 px-4">
+            <div class="d-flex align-items-center">
+              <span class="d-inline flex-grow-1">
                 {% translate "Je continue un parcours précédent grâce à mon identifiant unique :" %}
               </span>
-              <div class="d-inline col-2">
+              <div class="d-inline">
                 <i class="bi bi-arrow-repeat text-primary fs-3"></i>
               </div>
             </div>
-            <div class="row form-group py-3 ">
+            <div class="form-group py-3 ">
               <input type="uuid" id="uuid-input" name="uuid_user" class="form-control border border-primary"
                 placeholder="ex: ce053a70-5baf-419d-8976-757c59746081." required>
             </div>
-            <button class="row btn btn-primary text-white">
-              {% translate "J’accède à mon espace" %}
-            </button>
+            <div class="text-center">
+              <button class="btn btn-primary text-white">
+                {% translate "J’accède à mon espace" %}
+              </button>
+            </div>
+
           </div>
         </div>
         {% include "modals/confidentiality_alert.html" %}
