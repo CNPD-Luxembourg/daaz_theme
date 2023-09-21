@@ -17,20 +17,20 @@
         </div>
         <hr>
         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start">
-            <li class="w-100">
+            <li class="w-100 px-0 px-sm-2">
                 <a href="{% url 'course' %}"
                     class="nav-link px-0 align-middle {% if request.path == '/course' %}text-primary fw-bold{% endif %}">
                     <i class="fs-4 bi-mortarboard"></i>
                     <span class="ms-1 d-none d-sm-inline">{% translate "Formation" %}</span>
                 </a>
             </li>
-            <li class="w-100">
+            <li class="w-100 px-0 px-sm-2">
                 <a href="#" class="nav-link px-0 align-middle">
                     <i class="fs-4 bi-columns-gap"></i>
                     <span class="ms-1 d-none d-sm-inline">{% translate "Résultats" %}</span>
                 </a>
             </li>
-            <li class="w-100">
+            <li class="w-100 px-0 px-sm-2">
                 <a href="{% url 'resources' %}"
                     class="nav-link px-0 align-middle {% if request.path == '/resources' %}text-primary fw-bold{% endif %}">
                     <i class="fs-4 bi-folder"></i>
@@ -38,20 +38,20 @@
                 </a>
             </li>
             <hr>
-            <li class="w-100">
+            <li class="w-100 px-0 px-sm-2">
                 <a href="#" class="nav-link px-0 align-middle">
                     <i class="fs-4 bi-gear"></i>
                     <span class="ms-1 d-none d-sm-inline">{% translate "Paramètres" %}</span>
                 </a>
             </li>
-            <li class="w-100">
+            <li class="w-100 px-0 px-sm-2">
                 <a href="#" class="nav-link px-0 align-middle">
                     <i class="fs-4 bi-question-circle"></i>
                     <span class="ms-1 d-none d-sm-inline">{% translate "Aide" %}</span>
                 </a>
             </li>
             <hr>
-            <li class="w-100">
+            <li class="w-100 px-0 px-sm-2">
                 <a href="{% url 'index' %}" class="nav-link px-0 align-middle danger-link">
                     <i class="fs-4 bi-box-arrow-right"></i>
                     <span class="ms-1 d-none d-sm-inline">{% translate "Log out" %}</span>
@@ -59,7 +59,7 @@
             </li>
         </ul>
         <hr>
-        <div class="mb-3 align-items-center align-items-sm-start">
+        <div class="mb-5 align-items-center align-items-sm-start">
             {% include "home/language_selector.html" %}
         </div>
     </div>
