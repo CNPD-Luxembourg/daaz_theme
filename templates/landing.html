@@ -18,8 +18,7 @@
                         </h5>
                     </div>
                     <div class="col-md-5 mb-3">
-                        <button class="btn btn-primary text-white fw-bold w-100 py-2"
-                            onclick="window.location='course';">
+                        <button type="button" class="btn btn-primary text-white fw-bold w-100 py-2" data-bs-toggle="modal" data-bs-target="#start">
                             {% translate "Lancer le parcours" %}
                         </button>
                     </div>
@@ -210,8 +209,7 @@
                             </div>
 
                             <div class="col-md-12 py-2">
-                                <button class="btn btn-primary p-2 text-white fw-semibold fs-4"
-                                    onclick="window.location='course';">
+                                <button class="btn btn-primary p-2 text-white fw-semibold fs-4" data-bs-toggle="modal" data-bs-target="#start">
                                     {% translate "Lancer le parcours" %}
                                 </button>
                             </div>
@@ -263,8 +261,7 @@
                     {% endfor %}
 
                     <div class="col-md-12 py-5 text-center">
-                        <button class="btn btn-primary p-2 text-white fw-semibold fs-4"
-                            onclick="window.location='course';">
+                        <button class="btn btn-primary p-2 text-white fw-semibold fs-4" data-bs-toggle="modal" data-bs-target="#start">
                             {% translate "Lancer le parcours" %}
                         </button>
                     </div>
@@ -400,5 +397,7 @@
         </div>
     </div>
 </div>
+
+{% include 'modals/start.html' %}
 
 {% endblock %}

@@ -1,0 +1,43 @@
+{% load i18n %}
+{% load static %}
+<div class="modal fade" id="start" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="startLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h4 class="modal-title text-primary w-100 text-center fw-bold" id="startLabel">{% translate "C’est parti !" %}</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="border border-primary rounded bg-light-blue text-center mx-auto">
+          <p class="d-inline">{% translate "Je commence un nouveau parcours" %}</p>
+          <button class="btn d-inline" onclick="window.location='course'">
+            <i class="bi bi-plus-circle text-primary fs-3"></i>
+          </button>
+        </div>
+        <div class="p-2">
+          <span> {% translate "ou:" %}</span>
+        </div>
+        <div class="container border border-primary rounded bg-light-blue text-center mx-auto ">
+          <div class="col p-3">
+            <div class="row">
+              <span class="col d-inline">
+                {% translate "Je continue un parcours précédent grâce à mon identifiant unique :" %}
+              </span>
+              <div class="d-inline col-2">
+                <i class="bi bi-arrow-repeat text-primary fs-3"></i>
+              </div>
+            </div>
+            <div class="row form-group py-3 ">
+              <input type="uuid" id="uuid-input" name="uuid_user" class="form-control border border-primary"
+                placeholder="ex: ce053a70-5baf-419d-8976-757c59746081." required>
+            </div>
+            <button class="row btn btn-primary text-white">
+              {% translate "J’accède à mon espace" %}
+            </button>
+          </div>
+        </div>
+        {% include "modals/confidentiality_alert.html" %}
+      </div>
+    </div>
+  </div>

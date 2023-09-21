@@ -1,0 +1,47 @@
+{% load i18n %}
+{% load static %}
+<div class="container d-flex py-3">
+  <div class="col">
+    <div class="row text-center py-2">
+      <h6>
+        {% translate "La confidentialité est votre alliée" %}
+      </h6>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col-4 ps-0">
+        <img src="{% static 'media/images/confidentiality.svg' %}" alt="Compliance officer on phone"
+          class="d-inline-block align-text-top w-100" />
+      </div>
+      <div class="col flex-grow-1 lh-sm">
+        <small>
+          <p>
+            {% blocktranslate trimmed %}
+            Votre anonymat est préservé pendant votre formation grâce à un identifiant unique généré
+            automatiquement lors de votre première connexion.
+            {% endblocktranslate %}
+
+          </p>
+          <p>                    
+            {% blocktranslate trimmed %}
+            Cet ID unique vous sera communiqué lorsque vous quitterez votre espace dédié.
+            {% endblocktranslate %}
+          </p>
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="border border-4 border-danger rounded mx-auto bg-light-red">
+  <div class="p-3 d-flex align-items-center">
+    <div class="d-inline align-top px-3">
+      <i class="bi bi-exclamation-circle text-danger fs-1"></i>
+    </div>
+    <div class="text-danger d-inline lh-sm">
+      <small>
+        <p>{% translate "Votre identifiant est unique et ne pourra pas être récupéré." %}</p>
+        <p>{% translate "Assurez-vous d’en garder une copie sur votre disque personnel." %}</p>
+      </small>
+    </div>
+  </div>
+</div>

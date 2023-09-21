@@ -10737,6 +10737,11 @@ h1, .h1 {
   background-color: rgba(var(--bs-light-blue), var(--bs-bg-opacity)) !important;
 }
 
+.bg-light-red {
+  --bs-bg-opacity: 0.2;
+  background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
+}
+
 .light-blue {
   color: rgb(var(--bs-light-blue));
 }
