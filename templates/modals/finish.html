@@ -1,0 +1,39 @@
+{% load i18n %}
+{% load static %}
+<div class="modal fade" id="finish" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="finishLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h4 class="modal-title text-primary w-100 text-center fw-bold" id="finishLabel">{% translate "A bientot !" %}</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="">
+          <p class="">{% translate "To access your secured training space again, you may either:" %}</p>
+        </div>
+          <div class="border border-primary rounded bg-light-blue d-flex align-items-center">
+            <span class="d-inline flex-grow-1 px-3">{% translate "Save now the following ID and enter it next time" %}</span>
+            <a class="btn d-inline" href="{% url 'index' %}" role="button">
+              <img src="{% static 'media/images/paste.svg' %}" alt="Paste">
+            </a>
+          </div>
+          <div class="py-3">
+            <div class="border border-primary rounded bg-light-blue d-flex align-items-center">
+              <span class="d-inline flex-grow-1 px-3">{% translate "Save the following link in your favorites for a direct access" %}</span>
+              <a class="btn d-inline" href="{% url 'index' %}" role="button">
+                <img src="{% static 'media/images/star.svg' %}" alt="Star">
+              </a>
+            </div>
+          </div>
+
+          <div class="border border-primary rounded bg-light-blue d-flex align-items-center">
+            <span class="d-inline flex-grow-1 px-3">{% translate "Download the link in your files for share" %}</span>
+            <a class="btn d-inline" href="{% url 'index' %}" role="button">
+              <img src="{% static 'media/images/cloud.svg' %}" alt="Cloud">
+            </a>
+          </div>
+        {% include "modals/confidentiality_alert.html" %}
+      </div>
+    </div>
+  </div>
