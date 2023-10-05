@@ -2,12 +2,10 @@
     color: grey;
 }
 
+
 .sticky-sidebar {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
-    height: 100vh;
-    overflow-y: auto;
 }
 
 #sidebar {
@@ -42,4 +40,24 @@
     #sidebar:not(.minimized) li:has(a.danger-link):focus {
         border-color: var(--bs-danger);
     }
+}
+
+@media (max-width: 576px) {
+    .sticky-sidebar {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        top:auto;
+        z-index: 1030;
+    }
+
+    #sidebar > div {
+        min-height: 0vh !important;
+    }
+
+    .nav-pills>li {
+        width: auto !important;
+    }
+
 }
