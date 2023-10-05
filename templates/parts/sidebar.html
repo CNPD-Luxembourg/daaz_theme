@@ -4,54 +4,50 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/sidebar.css' %}">
 <script src='{% static "js/sidebar.js" %}'></script>
 {% endblock %}
-<nav id="sidebar" class="col-auto col-md-2 col-lg-2 px-2 bg-white sticky-sidebar">
-    <div class="d-flex flex-column align-items-center px-sm-2 pt-2 min-vh-100">
-        <button id="sidebarToggle" class="btn btn-link align-self-end">
+<nav id="sidebar" class="col-auto col-auto col-md-2 col-lg-2 px-2 bg-white sticky-sidebar">
+    <div class="d-flex flex-sm-column flex-row align-items-center px-sm-2 pt-2 min-vh-100 justify-content-evenly">
+        <button id="sidebarToggle" class="btn btn-link align-self-end d-none d-sm-block">
             <i class="bi bi-arrow-left text-primary d-none d-sm-inline"></i>
             <i id="open_sidebar" class="bi bi-arrow-right text-primary d-none d-sm-none"></i>
         </button>
-        <div class="d-flex flex-row">
+        <div class="d-flex flex-row d-none d-sm-block">
             <img id="logo_small" src="{% static 'media/images/logo_minimized.png' %}" alt="Logo Small" width="30px"
                 class="d-sm-none">
             <img src="{% static 'media/images/logo.png' %}" alt="Logo Large" width="100px" class="d-none d-sm-inline">
         </div>
         <hr>
-        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start">
-            <li class="w-100 px-0 px-sm-2">
+        <button type="button" class="btn btn btn-primary align-self-center text-white d-none d-sm-inline">
+            {% translate "Commencer" %}
+        </button>
+        <hr>
+        <ul class="nav nav-pills flex-sm-column flex-row mb-sm-auto mb-0 align-items-center align-items-sm-start flex-grow-1 flex-sm-grow-0 text-sm-start text-center">
+            <li class="w-100 px-2 px-sm-2 d-inline d-sm-none flex-grow-1 order-sm-0 order-2">
                 <a href="{% url 'course' %}"
                     class="nav-link px-0 align-middle {% if request.path == '/course' %}text-primary fw-bold{% endif %}">
-                    <i class="fs-4 bi-mortarboard"></i>
-                    <span class="ms-1 d-none d-sm-inline">{% translate "Formation" %}</span>
+                    <i class="fs-4 bi-book"></i>
                 </a>
             </li>
-            <li class="w-100 px-0 px-sm-2">
-                <a href="#" class="nav-link px-0 align-middle">
-                    <i class="fs-4 bi-columns-gap"></i>
-                    <span class="ms-1 d-none d-sm-inline">{% translate "Résultats" %}</span>
+            <li class="w-100 px-2 px-sm-2 flex-grow-1 flex-sm-grow-0 order-sm-1 order-0">
+                <a href="{% url 'course' %}"
+                    class="nav-link px-0 align-middle {% if request.path == '/course' %}text-primary fw-bold{% endif %}">
+                    <i class="fs-4 bi-house"></i>
+                    <span class="ms-1 d-none d-sm-inline">{% translate "Accueil" %}</span>
                 </a>
             </li>
-            <li class="w-100 px-0 px-sm-2">
+            <li class="w-100 px-2 px-sm-2 flex-grow-1 flex-sm-grow-0 order-sm-2 order-1">
                 <a href="{% url 'resources' %}"
                     class="nav-link px-0 align-middle {% if request.path == '/resources' %}text-primary fw-bold{% endif %}">
                     <i class="fs-4 bi-folder"></i>
                     <span class="ms-1 d-none d-sm-inline">{% translate "Ressources" %}</span>
                 </a>
             </li>
-            <hr>
-            <li class="w-100 px-0 px-sm-2">
+            <li class="w-100 px-2 px-sm-2 flex-grow-1 flex-sm-grow-0 order-3">
                 <a href="#" class="nav-link px-0 align-middle">
                     <i class="fs-4 bi-gear"></i>
-                    <span class="ms-1 d-none d-sm-inline">{% translate "Paramètres" %}</span>
+                    <span class="ms-1 d-none d-sm-inline">{% translate "Centre d'aide" %}</span>
                 </a>
             </li>
-            <li class="w-100 px-0 px-sm-2">
-                <a href="#" class="nav-link px-0 align-middle">
-                    <i class="fs-4 bi-question-circle"></i>
-                    <span class="ms-1 d-none d-sm-inline">{% translate "Aide" %}</span>
-                </a>
-            </li>
-            <hr>
-            <li class="w-100 px-0 px-sm-2">
+            <li class="w-100 px-2 px-sm-2 flex-grow-1 flex-sm-grow-0 order-4">
                 <a class="nav-link px-0 align-middle danger-link" data-bs-toggle="modal" data-bs-target="#finish">
                     <i class="fs-4 bi-box-arrow-right"></i>
                     <span class="ms-1 d-none d-sm-inline">{% translate "Log out" %}</span>
@@ -59,7 +55,7 @@
             </li>
         </ul>
         <hr>
-        <div class="mb-5 align-items-center align-items-sm-start">
+        <div class="mb-5 align-items-center align-items-sm-start d-none d-sm-block">
             {% include "home/language_selector.html" %}
         </div>
     </div>
