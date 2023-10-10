@@ -22,11 +22,11 @@
       {% for level in levels %}
       <div class="col py-1">
         <div
-          class="card bg-primary shadow rounded-4 border-0 mb-3 {% if level.completion == 100 %} completed-level-card{% endif %}">
+          class="bg-primary shadow rounded-4 border-0 mb-3">
           <div class="row row-cols-2 p-3">
-            <div class="col">
-              <h5 class="card-title text-white fw-semibold m-0">{% translate "Niveau" %} {{ level.index }}</h5>
-              <p class="card-title text-white mb-1 fw-lighter">{{ level.name }}</p>
+            <div class="col pe-0">
+              <h5 class="text-white fw-semibold m-0">{% translate "Niveau" %} {{ level.index }}</h5>
+              <p class="text-white mb-1 fw-lighter">{{ level.name }}</p>
               <div class="w-50 position-relative">
                 <div class="ratio ratio-1x1 ">
                   <canvas class="my-auto" id="progress{{level.index}}"></canvas>
