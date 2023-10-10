@@ -1,48 +1,40 @@
 {% load i18n %}
-{% load static %}
 <div class="modal fade" id="start" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
   aria-labelledby="startLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-content text-center">
       <div class="modal-header border-0">
-        <h4 class="modal-title text-primary w-100 text-center fw-bold" id="startLabel">{% translate "C’est parti !" %}</h4>
+        <h4 class="modal-title text-primary w-100 fw-bold" id="startLabel">
+          {% translate "C’est parti !" %}
+        </h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body mx-3">
-        <div class="border border-primary rounded bg-light-blue ">
-          <div class="d-flex align-items-center py-2 px-4">
-            <span class="d-inline flex-grow-1">{% translate "Je commence un nouveau parcours" %}</span>
-            <a class="btn d-inline p-0" href="{% url 'dashboard' %}" role="button">
-              <i class="bi bi-plus-circle text-primary fs-3"></i>
-            </a>
-          </div>
+      <div class="modal-body m-3 border-3">
+        <div class="border border-primary rounded-3 py-3 px-2">
+          <p>
+            {% translate "Je commence un nouveau parcours" %}
+          </p>
+          <a class="btn btn-primary text-white" data-bs-dismiss="modal" data-bs-toggle="modal"
+            data-bs-target="#new_user">
+            {% translate "Commencer" %}
+          </a>
         </div>
         <div class="py-2 ps-3">
-          <span> {% translate "ou:" %}</span>
+          <span> {% translate "ou" %}</span>
         </div>
-        <div class="border border-primary rounded bg-light-blue">
-          <div class="py-2 px-4">
-            <div class="d-flex align-items-center">
-              <span class="d-inline flex-grow-1">
-                {% translate "Je continue un parcours précédent grâce à mon identifiant unique :" %}
-              </span>
-              <div class="d-inline">
-                <i class="bi bi-arrow-repeat text-primary fs-3"></i>
-              </div>
-            </div>
-            <div class="form-group py-3 ">
-              <input type="uuid" id="uuid-input" name="uuid_user" class="form-control border border-primary"
-                placeholder="ex: ce053a70-5baf-419d-8976-757c59746081." required>
-            </div>
-            <div class="text-center">
-              <button class="btn btn-primary text-white">
-                {% translate "J’accède à mon espace" %}
-              </button>
-            </div>
-
+        <div class="border border-primary rounded-3 py-3 px-3">
+          <p>
+            {% translate "Je continue un parcours précédent grâce à mon identifiant unique :" %}
+          </p>
+          <div class="form-group pb-3">
+            <input type="uuid" id="uuid-input" name="uuid_user" class="form-control border border-1 border-info"
+              placeholder="ex: ce053a70-5baf-419d-8976-757c59746081" required>
           </div>
+          <a class="btn btn-primary text-white" href="{% url 'dashboard' %}" role="button">
+            {% translate "J’accède à mon espace" %}
+          </a>
         </div>
-        {% include "modals/confidentiality_alert.html" %}
       </div>
     </div>
   </div>
+</div>
