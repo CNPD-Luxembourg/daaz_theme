@@ -2,13 +2,13 @@
 
 $blue: #0099FF;
 $gray-600: #D9D9D9;
-// Importing bootstrap 
+// Importing bootstrap
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
 
 // Then add additional custom code here
 
-// To compile scss file, run this command at root project ** npm run compile-scss ** 
+// To compile scss file, run this command at root project ** npm run compile-scss **
 
 :root {
   --bs-light-blue: 224, 243, 255;
@@ -92,8 +92,8 @@ ul li {
 // Icons
 
 .large-icon {
-  font-size: 80px; 
+  font-size: 80px;
 }
 .medium-icon {
-  font-size: 60px; 
+  font-size: 60px;
 }
