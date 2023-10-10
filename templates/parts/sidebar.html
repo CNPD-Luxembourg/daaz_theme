@@ -16,9 +16,9 @@
             <img src="{% static 'media/images/logo.png' %}" alt="Logo Large" width="100px" class="d-none d-sm-inline">
         </div>
         <hr>
-        <button type="button" class="btn btn btn-primary align-self-center text-white d-none d-sm-inline">
+        <a class="btn btn-primary align-self-center text-white d-none d-sm-inline" href="{% url 'course' %}" role="button">
             {% translate "Commencer" %}
-        </button>
+        </a>
         <hr>
         <ul class="nav nav-pills flex-sm-column flex-row mb-sm-auto mb-0 align-items-center align-items-sm-start flex-grow-1 flex-sm-grow-0 text-sm-start text-center">
             <li class="w-100 px-2 px-sm-2 d-inline d-sm-none flex-grow-1 order-sm-0 order-2">
