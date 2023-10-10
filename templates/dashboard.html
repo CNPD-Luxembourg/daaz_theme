@@ -4,66 +4,63 @@
 
 {% block bootstrap5_extra_head %}
 {{ block.super}}
+<script src='{% static "npm_components/chart.js/dist/chart.umd.js" %}'></script>
 <script src='{% static "js/dashboard.js" %}'></script>
 {% endblock %}
 
 {% block content_area %}
-<div class="container py-sm-4 py-5 mb-5">
-  <h5 class="text-primary pb-2"> {% translate "Hello, welcome back!" %}</h5>
-  <div class="d-flex d-sm-none">
-    <button type="button" class="btn btn-lg btn-primary text-white w-100">
-      {% translate "Commencer l’histoire" %}
-    </button>
-  </div>
-  <div class="row row-cols-auto row-cols-sm-2">
-    <div class="col">
-      <h4>{% translate "Mes cours" %}</h4>
-      <div class="row row-cols-1 row-cols-sm-2 py-2">
-        {% for level in levels %}
-        <div class="col">
-          <div
-            class="card bg-primary shadow rounded-4 border-0 mb-3 {% if level.completion == 100 %} completed-level-card{% endif %}">
-            <div class="row row-cols-2 p-3">
-              <div class="col pb-3">
-                <div class="d-flex flex-column" onclick="toggleInfo(this)">
-                  <h5 class="card-title text-white fw-semibold m-0">{% translate "Niveau" %} {{ level.index }}</h5>
-                  <p class="card-title text-white mb-3 fw-lighter">{{ level.name }}</p>
+<h5 class="text-primary pb-2"> {% translate "Hello, welcome back!" %}</h5>
+<div class="d-flex d-sm-none">
+  <a class="btn btn-lg btn-primary text-white w-100" href="{% url 'course' %}" role="button">
+    {% translate "Commencer l’histoire" %}
+  </a>
+</div>
+<div class="row row-cols-auto row-cols-sm-2 g-5">
+  <div class="col">
+    <h4>{% translate "Mes cours" %}</h4>
+    <div class="row row-cols-1 row-cols-sm-2">
+      {% for level in levels %}
+      <div class="col py-1">
+        <div
+          class="card bg-primary shadow rounded-4 border-0 mb-3 {% if level.completion == 100 %} completed-level-card{% endif %}">
+          <div class="row row-cols-2 p-3">
+            <div class="col">
+              <h5 class="card-title text-white fw-semibold m-0">{% translate "Niveau" %} {{ level.index }}</h5>
+              <p class="card-title text-white mb-1 fw-lighter">{{ level.name }}</p>
+              <div class="w-50 position-relative">
+                <div class="ratio ratio-1x1 ">
+                  <canvas class="my-auto" id="progress{{level.index}}"></canvas>
                 </div>
-                <div class="progress {% if level.completion == 100 %} progress-completed{% endif %}">
-                  <div class="progress-bar" role="progressbar" style="width: {{ level.completion }}%;"
-                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="{{ level.completion }}">
-                  </div>
-                  <span>{{ level.completion }}%</span>
-                </div>
+                <span class="text-white position-absolute top-50 start-50 translate-middle mt-1">{{ level.progress }}</span>
               </div>
-              <div class="col">
-                <img
-                  src="{% static 'media/images/img-level-'%}{{level.index}}{% if level.completion == 100 %}-completed{% endif %}.svg"
-                  alt="Compliance officer on phone" class="w-100" />
-              </div>
+            </div>
+            <div class="col m-auto">
+              <img src="{% static 'media/images/img-level-'%}{{level.index}}.svg" alt="Compliance officer on phone"
+                class="w-100" />
             </div>
           </div>
         </div>
-        {% endfor %}
-      </div>
-      <div class="row">
-        <h4> {% translate "Connaissances" %}</h4>
-      </div>
-    </div>
-    <div class="col">
-      <h4>{% translate "Stickers" %}</h4>
-      {% for level in levels %}
-      <div class="row row-cols-2 row-cols-sm-4">
-        {% for sticker in '0123'|make_list %}
-        <div class="col p-2">
-          <div class=" shadow rounded-4">
-            <img src="{% static 'media/images/sticker-'%}{{level.index}}-{{sticker}}.svg" alt="Sticker" class="w-100" />
-          </div>
-        </div>
-
-        {% endfor %}
       </div>
       {% endfor %}
     </div>
+    <div class="row">
+      <h4> {% translate "Connaissances" %}</h4>
+      <canvas id="dashboard" height="270"></canvas>
+    </div>
+  </div>
+  <div class="col">
+    <h4>{% translate "Stickers" %}</h4>
+    {% for level in levels %}
+    <div class="row row-cols-2 row-cols-sm-4">
+      {% for sticker in '0123'|make_list %}
+      <div class="col p-2">
+        <div class=" shadow rounded-4">
+          <img src="{% static 'media/images/sticker-'%}{{level.index}}-{{sticker}}.svg" alt="Sticker" class="w-100" />
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+    {% endfor %}
   </div>
   {% endblock %}
