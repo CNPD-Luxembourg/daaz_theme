@@ -3,32 +3,11 @@
 {% load static %}
 
 {% block content_area %}
-<h2 class="text-primary"> {% translate "Mes ressources" %}</h2>
-<div class="my-4">
-    <h5>{% translate "Félicitations ! " %}</h5>
-    <p>{% translate "Vous avez accès à de nouvelles ressources :" %}</p>
-</div>
+<img
+  class="bg-image position-absolute bottom-0 min-vh-100 d-sm-block d-none"
+  src="{% static 'media/images/backgroundRessources.svg'%}"
+/>
 
-
-{% for resource in resources %}
-<div class="card mb-3 w-75">
-    <div class="card-body d-flex flex-column">
-        <div class="row g-0">
-            <div class="col-md-1 align-self-center">
-                <i class="fs-4 bi-file-earmark-text-fill"></i>
-            </div>
-            <div class="col-md-5 align-self-center">
-                <p class="card-text "">{{ resource.name }}</p>
-            </div>
-            <div class="col-md-5 align-self-center">
-                <p class="card-text">{{ resource.description }}</p>
-            </div>
-            <div class="col-md-1 align-self-center">
-                <i class="fs-4 bi-patch-check-fill text-warning"></i>
-            </div>
-        </div>
-    </div>
-</div>
-{% endfor %}
-
+<h5 class="text-primary"> {% translate "Hello," %}</h5>
+<h4> {% translate "Mes  ressources" %}</h4>
 {% endblock %}
