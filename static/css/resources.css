@@ -1,0 +1,13 @@
+#resources .btn:hover {
+  box-shadow: 0 0.5rem 1rem var(--bs-primary) !important;
+  background-color: transparent;
+}
+
+@media (min-width: 576px) {
+  .bg-image {
+    background-image: url('../media/images/backgroundResources.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

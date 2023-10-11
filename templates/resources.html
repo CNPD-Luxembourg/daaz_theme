@@ -2,12 +2,50 @@
 {% load i18n %}
 {% load static %}
 
-{% block content_area %}
-<img
-  class="bg-image position-absolute bottom-0 min-vh-100 d-sm-block d-none"
-  src="{% static 'media/images/backgroundRessources.svg'%}"
-/>
+{% block bootstrap5_extra_head %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'css/resources.css' %}" />
+{% endblock %}
 
+{% block content_area %}
+{% with img_classes="row mx-auto my-2" button_classes="row btn btn-outline-primary text-primary fw-bold shadow" icon_classes="bi bi-arrow-up-right-circle-fill text-primary ps-0" %}
 <h5 class="text-primary"> {% translate "Hello," %}</h5>
-<h4> {% translate "Mes  ressources" %}</h4>
+<h4> {% translate "Mes ressources" %}</h4>
+
+<div id="resources" class="row row-cols-auto row-cols-sm-3 text-center">
+    {% for level in levels %}
+    <div class="col p-2 mx-auto">
+        <img src="{% static 'media/images/resources_level'%}{{level.index}}.svg" alt="Resources Image"
+            class="{{ img_classes }}" />
+        <button type="button" class="{{ button_classes }}">
+            <i class="{{ icon_classes }}"></i>
+            {% translate "Niveau" %} {{ level.index }} : {{ level.name }}
+        </button>
+    </div>
+    {% endfor %}
+    {% for rt in resourcesType %}
+    <div class="col p-2 mx-auto m-sm-0">
+        <img src="{% static 'media/images/resources_type'%}{{rt.index}}.svg" alt="Resources Image"
+            class="{{ img_classes }}" />
+        <button type="button" class="{{ button_classes }}">
+            <i class="{{ icon_classes }}"></i>
+            {% if rt.index == 1 %}
+            {% translate "Les fiches récapitulatives" %}
+            {% elif rt.index == 2 %}
+            {% translate "Les fiches pratiques" %}
+            {% elif rt.index == 3 %}
+            {% translate "Les templates" %}
+            {% endif %}
+        </button>
+    </div>
+    {% endfor %}
+    <div class="col p-2 mx-auto m-sm-0">
+        <img src="{% static 'media/images/resources_all.svg'%}" alt="Resources Image" class="{{ img_classes }}" />
+        <button type="button" class="{{ button_classes }}">
+            <i class="{{ icon_classes }}"></i>
+            {% translate "Tous les fichiers" %}
+        </button>
+    </div>
+</div>
+{% endwith %}
 {% endblock %}

@@ -3,14 +3,14 @@
 {% load static %}
 
 {% block bootstrap5_title %}{% endblock %}
-{% block bootstrap5_content %}
+{% block content %}
 <div class="container-fluid">
     <div class="row flex-nowrap">
         <div class="d-flex fixed-top w-100 shadow-sm bg-white py-1 d-sm-none">
             <img src="{% static 'media/images/logo.png' %}" alt="Logo Large" width="100px" class="mx-auto">
         </div>
         {% include "parts/sidebar.html" %}
-        <div class="col py-4 py-sm-0 bg-light">
+        <div class="col py-4 py-sm-0 bg-light bg-image">
             <div class="py-5 py-sm-4 mx-1 mx-sm-5">
                 {% block content_area %}
                 {% endblock %}
