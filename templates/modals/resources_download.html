@@ -1,0 +1,55 @@
+{% load i18n %}
+<div class="modal fade" id="resources_download" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="resources_downloadLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header border-0 m-5 mb-0 p-0">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="CheckAll">
+                    <label class="form-check-label ms-2" for="CheckAll">
+                        {% translate "Tout sélectionner" %}
+                    </label>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body m-3 mt-0">
+                <ul class="list-group">
+                    {% for resource in resources %}
+                    <li class="list-group-item shadow rounded my-2">
+                        <div class="d-flex align-items-center">
+                            <div class="me-2 option">
+                                <input class="form-check-input" type="checkbox" id="r_{{ resource.id }}">
+                            </div>
+                            <label class="d-flex flex-grow-1 form-check-label stretched-link align-items-center" for="r_{{ resource.id }}">
+                                {% if resource.resourceType.index == 1 %}
+                                    <i class="bi bi-file-text-fill text-warning fs-3"></i>
+                                {% elif resource.resourceType.index == 2 %}
+                                    <i class="bi bi-file-text-fill text-primary fs-3"></i>
+                                {% elif resource.resourceType.index == 3 %}
+                                    <i class="bi bi-file-text-fill text-blue-dark fs-3"></i>
+                                {% endif %}
+                                <div class="container small">
+                                    <div class="row">
+                                        <div class="col-4 fw-light my-auto">
+                                            {{ resource.resourceType }}
+                                        </div>
+                                        <div class="col-7 p-0 my-auto">
+                                            {{ resource.name }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <div class="text-center mt-3">
+                    <a type="button" class="btn btn-primary text-white">
+                        {% translate "Télécharger" %}
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -3,6 +3,17 @@
   background-color: transparent;
 }
 
+#resources_download input {
+  width: 1.5em;
+  height: 1.5em;
+  border-color: var(--bs-primary);
+  border-width: 2px;
+}
+
+.text-blue-dark {
+  color: #004D80;
+}
+
 @media (min-width: 576px) {
   .bg-image {
     background-image: url('../media/images/backgroundResources.svg');

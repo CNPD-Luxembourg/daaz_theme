@@ -5,6 +5,7 @@
 {% block bootstrap5_extra_head %}
 {{ block.super }}
 <link rel="stylesheet" type="text/css" href="{% static 'css/resources.css' %}" />
+<script src='{% static "js/resources.js" %}'></script>
 {% endblock %}
 
 {% block content_area %}
@@ -17,17 +18,17 @@
     <div class="col p-2 mx-auto">
         <img src="{% static 'media/images/resources_level'%}{{level.index}}.svg" alt="Resources Image"
             class="{{ img_classes }}" />
-        <button type="button" class="{{ button_classes }}">
+        <a type="button" class="{{ button_classes }}" data-bs-toggle="modal" data-bs-target="#resources_download">
             <i class="{{ icon_classes }}"></i>
             {% translate "Niveau" %} {{ level.index }} : {{ level.name }}
-        </button>
+        </a>
     </div>
     {% endfor %}
     {% for rt in resourcesType %}
     <div class="col p-2 mx-auto m-sm-0">
         <img src="{% static 'media/images/resources_type'%}{{rt.index}}.svg" alt="Resources Image"
             class="{{ img_classes }}" />
-        <button type="button" class="{{ button_classes }}">
+        <a id="{{ rt.index }}" type="button" class="{{ button_classes }}" data-bs-toggle="modal" data-bs-target="#resources_download">
             <i class="{{ icon_classes }}"></i>
             {% if rt.index == 1 %}
             {% translate "Les fiches récapitulatives" %}
@@ -36,16 +37,17 @@
             {% elif rt.index == 3 %}
             {% translate "Les templates" %}
             {% endif %}
-        </button>
+        </a>
     </div>
     {% endfor %}
     <div class="col p-2 mx-auto m-sm-0">
         <img src="{% static 'media/images/resources_all.svg'%}" alt="Resources Image" class="{{ img_classes }}" />
-        <button type="button" class="{{ button_classes }}">
+        <a type="button" class="{{ button_classes }}" data-bs-toggle="modal" data-bs-target="#resources_download">
             <i class="{{ icon_classes }}"></i>
             {% translate "Tous les fichiers" %}
-        </button>
+        </a>
     </div>
 </div>
 {% endwith %}
+{% include 'modals/resources_download.html' %}
 {% endblock %}
