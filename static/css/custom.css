@@ -10724,10 +10724,6 @@ textarea.form-control-lg {
   --bs-progress-height: 30px;
 }
 
-#hero {
-  margin-top: 62px;
-}
-
 h1, .h1 {
   font-weight: 700;
 }
@@ -10796,12 +10792,18 @@ ul li {
   background-color: var(--Orange-Gold, #FFA600) !important;
 }
 
+/* Icons */
 .large-icon {
   font-size: 80px;
 }
 
 .medium-icon {
   font-size: 60px;
+}
+
+/* Font */
+.font-grey {
+  color: var(--bs-grey-600, #5B5B5B) !important;
 }
 
 /*# sourceMappingURL=custom.css.map */

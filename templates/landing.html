@@ -4,32 +4,38 @@
 {% load cookiebanner %}
 {% block content %}
 {% cookiebanner_modal 'bootstrap5' %}
-<div id="hero" class="bg-white">
-    <div class="container-xl py-5">
+<div id="hero" class="bg-white py-4 pt-sm-5 mt-sm-5">
+    <div class="container-xl py-sm-5">
         <div class="row align-items-center">
-            <div class="col-md-6 col-sm-12 order-2 order-md-1 h-100">
+            <div class="col-md-6 col-sm-12 h-100">
                 <div class="row align-items-center">
                     <div class="col-md-12">
                         <h1 class="text-primary py-2">
-                            {% translate "Le chemin intuitif vers la protection des données" %}
+                            {% translate "Le chemin intuitif vers" %}
+                            <br class="d-none d-md-block"/>
+                            {% translate "la protection des données" %}
                         </h1>
                         <h5 class="py-4">
-                            {% translate "Une formation sur mesure pour les PME basée sur des exemples réels" %}
+                            {% translate "Une formation sur mesure pour les PME" %}
+                            <br/>
+                            {% translate "basée sur des exemples réels" %}
                         </h5>
                     </div>
-                    <div class="col-md-5 mb-3">
-                        <button type="button" class="btn btn-primary text-white fw-bold w-100 py-2" data-bs-toggle="modal" data-bs-target="#start">
+                    <div class="col-8 offset-2 col-md-5 offset-md-0 mb-2 mb-sm-3 text-center">
+                        <button type="button" class="btn btn-primary text-white fw-bold w-100 py-1 py-sm-2" data-bs-toggle="modal" data-bs-target="#start">
                             {% translate "Lancer le parcours" %}
                         </button>
                     </div>
                     <div class="col-md-7 mb-3">
-                        <span class="py-2">
-                            {% translate "Conçu par la Commission Nationale pour la Protection des Données" %}
+                        <span class="py-2 font-grey">
+                            {% translate "Conçu par la Commission Nationale" %}
+                            <br class="d-none d-md-block"/>
+                            {% translate "pour la Protection des Données" %}
                         </span>
                     </div>
                 </div>
             </div>
-            <div class="col-md-5 col-sm-12 order-1 order-md-2 offset-md-1 mb-4">
+            <div class="col-md-5 col-sm-12 offset-md-1 mb-4">
                 <img class="w-100" src="{% static 'media/images/img-eu-flag-waving.svg' %}" alt="Waving EU privacy flag"
                     class="d-inline-block align-text-top">
             </div>
@@ -39,9 +45,9 @@
 <div class="bg-horizontal-white-and-light-blue">
     <div class="container-xl">
         <div class="row mx-2">
-            <div class="col-md-10 offset-md-1">
+            <div class="col-xl-10 offset-xl-1">
                 <div class="row bg-primary rounded-3 border-white border border-5">
-                    <div class="col-md-4 d-flex align-items-center text-white px-5 py-2">
+                    <div class="col-md-4 d-flex align-items-center text-white px-4 ps-md-5 pe-md-3 py-3 py-sm-2">
                         <div class="flex-grow-0">
                             <i class="bi bi-magic medium-icon"></i>
                         </div>
@@ -51,12 +57,14 @@
                                 {% translate "Adapté" %}
                             </h4>
                             <span>
-                                {% translate "Le RGPD avec les mots du quotidien" %}
+                                {% translate "Le RGPD avec les" %}
+                                <br/>
+                                {% translate "mots du quotidien" %}
                             </span>
                         </div>
                     </div>
 
-                    <div class="col-md-4 d-flex align-items-center text-white px-5 py-2">
+                    <div class="col-md-4 d-flex align-items-center text-white px-4 py-3 py-sm-2">
                         <div class="flex-grow-0">
                             <i class="bi bi-clock-history medium-icon"></i>
                         </div>
@@ -66,12 +74,14 @@
                                 {% translate "Flexible" %}
                             </h4>
                             <span>
-                                {% translate "Une formation à parcourir à votre rythme" %}
+                                {% translate "Une formation à parcourir" %}
+                                <br/>
+                                {% translate "à votre rythme" %}
                             </span>
                         </div>
                     </div>
 
-                    <div class="col-md-4 d-flex align-items-center text-white px-5 py-2">
+                    <div class="col-md-4 d-flex align-items-center text-white px-4 py-3 py-sm-2">
                         <div class="flex-grow-0">
                             <i class="bi bi-shield-check medium-icon"></i>
                         </div>
@@ -81,7 +91,9 @@
                                 {% translate "Fiable" %}
                             </h4>
                             <span>
-                                {% translate "Un contenu vérifié et sécurisé" %}
+                                {% translate "Un contenu vérifié" %}
+                                <br/>
+                                {% translate "et sécurisé" %}
                             </span>
                         </div>
                     </div>
@@ -90,19 +102,19 @@
         </div>
     </div>
 </div>
-<div class="bg-light-blue py-5">
+<div class="bg-light-blue pb-3 pt-5 py-sm-5">
     <div class="container-xl">
         <div class="row">
-            <div class="col-md-8 offset-md-2">
+            <div class="col-xl-8 col-md-10 offset-xl-2 offset-md-1">
                 <div class="row">
-                    <div class="col-md-12 py-5">
+                    <div class="col-md-12 py-3 py-sm-5">
                         <h1 class="text-primary text-center">
                             {% translate "Le RGPD de A à Zen !" %}
                         </h1>
                     </div>
-                    <div class="col-md-12 py-5">
+                    <div class="col-md-12 py-3 px-4">
                         <div class="row">
-                            <div class="col-md-6 d-flex align-items-center">
+                            <div class="col-md-6 d-flex align-items-center ps-3">
                                 <div class="flex-grow-0">
                                     <i class="bi bi-book text-primary large-icon"></i>
                                 </div>
@@ -112,11 +124,13 @@
                                         {% translate "Story-Learning" %}
                                     </h4>
                                     <span>
-                                        {% translate "Une histoire captivante avec des personnages" %}
+                                        {% translate "Une histoire captivante avec" %}
+                                        <br/>
+                                        {% translate "des personnages" %}
                                     </span>
                                 </div>
                             </div>
-                            <div class="col-md-6 d-flex align-items-center">
+                            <div class="col-md-6 d-flex align-items-center ps-3">
                                 <div class="flex-grow-0">
                                     <i class="bi bi-award text-primary large-icon"></i>
                                 </div>
@@ -126,11 +140,13 @@
                                         {% translate "Accomplissement" %}
                                     </h4>
                                     <span>
-                                        {% translate "Questions et challenges pour tester votre progression" %}
+                                        {% translate "Questions et challenges" %}
+                                        <br/>
+                                        {% translate "pour tester votre progression" %}
                                     </span>
                                 </div>
                             </div>
-                            <div class="col-md-6 d-flex align-items-center">
+                            <div class="col-md-6 d-flex align-items-center ps-3">
                                 <div class="flex-grow-0">
                                     <i class="bi bi-envelope-paper text-primary large-icon"></i>
                                 </div>
@@ -140,11 +156,13 @@
                                         {% translate "Expérience" %}
                                     </h4>
                                     <span>
-                                        {% translate "Basé sur des cas concrets rencontrés par les experts" %}
+                                        {% translate "Basé sur des cas concrets" %}
+                                        <br/>
+                                        {% translate "rencontrés par les experts" %}
                                     </span>
                                 </div>
                             </div>
-                            <div class="col-md-6 d-flex align-items-center">
+                            <div class="col-md-6 d-flex align-items-center ps-3">
                                 <div class="flex-grow-0">
                                     <i class="bi bi-person-vcard text-primary large-icon"></i>
                                 </div>
@@ -154,7 +172,9 @@
                                         {% translate "Implication" %}
                                     </h4>
                                     <span>
-                                        {% translate "Des fiches pratiques utile à votre quotidien" %}
+                                        {% translate "Des fiches pratiques utile" %}
+                                        <br/>
+                                        {% translate "à votre quotidien" %}
                                     </span>
                                 </div>
                             </div>
@@ -165,13 +185,13 @@
         </div>
     </div>
 </div>
-<div id="about" class="bg-white py-5">
+<div id="about" class="bg-white py-3 py-sm-5">
     <div class="container-xl">
         <div class="row">
             <div class="col-md-10 offset-md-1">
                 <div class="row align-items-center">
                     <div class="col-md-12">
-                        <h1 class="text-primary text-center py-5">
+                        <h1 class="text-primary text-center py-3 py-sm-5">
                             {% translate "En route vers la conformité !" %}
                         </h1>
                     </div>
@@ -184,7 +204,7 @@
                                 </h3>
                             </div>
 
-                            <div class="col-md-12 py-4">
+                            <div class="col-md-12 pb-3 pt-1 py-sm-4">
                                 <p>
                                     {% blocktranslate trimmed %}
                                     Suivez l’aventure de notre héros Didier Schummer, un entrepreneur
@@ -208,7 +228,7 @@
                                 </p>
                             </div>
 
-                            <div class="col-md-12 py-2">
+                            <div class="col-md-12 py-2 text-center text-sm-start">
                                 <button class="btn btn-primary p-2 text-white fw-semibold fs-4" data-bs-toggle="modal" data-bs-target="#start">
                                     {% translate "Lancer le parcours" %}
                                 </button>
@@ -216,7 +236,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-5 offset-md-2 py-5">
+                    <div class="col-md-5 offset-md-2 py-3 pt-5 py-sm-5">
                         <img class="w-100" src="{% static 'media/images/img-compliance-phone.svg' %}"
                             alt="Compliance officer on phone" class="d-inline-block align-text-top" />
                     </div>
@@ -225,16 +245,16 @@
         </div>
     </div>
 </div>
-<div class="bg-light-blue py-5">
+<div class="bg-light-blue py-3 py-sm-5">
     <div class="container-xl">
         <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    <div class="col-md-12 py-5">
+                    <div class="col-md-12 pt-3 pb-4 py-sm-5">
                         <h1 class="text-primary text-center">{% translate "Un parcours de 4 niveaux" %}</h1>
                     </div>
                     {% for level in levels %}
-                    <div class="col-lg-3 col-md-12 gx-5 mb-3">
+                    <div class="col-lg-3 col-md-6 col-sm-12 gx-md-5 mb-3">
                         <div class="bg-white border-white rounded-3 p-4 h-100">
                             <div class="row">
                                 <div class="col-md-12">
@@ -260,7 +280,7 @@
                     </div>
                     {% endfor %}
 
-                    <div class="col-md-12 py-5 text-center">
+                    <div class="col-md-12 py-3 py-sm-5 text-center">
                         <button class="btn btn-primary p-2 text-white fw-semibold fs-4" data-bs-toggle="modal" data-bs-target="#start">
                             {% translate "Lancer le parcours" %}
                         </button>
@@ -270,13 +290,13 @@
         </div>
     </div>
 </div>
-<div class="bg-white py-5">
+<div class="bg-white py-3 py-sm-5">
     <div class="container-sm">
         <div class="row">
             <div class="col-md-10 offset-md-1">
                 <div class="row">
-                    <div className="col-md-12 py-5">
-                        <h1 class="text-primary text-center py-5">{% translate "Témoignages" %}</h1>
+                    <div className="col-md-12 py-4 py-sm-5">
+                        <h1 class="text-primary text-center py-3 py-sm-5">{% translate "Témoignages" %}</h1>
                     </div>
                     <div className="col-md-12 pb-4">
                         <h4 class="text-center fw-bold">{% translate "Ce qu’en disent les utilisateurs" %}</h4>
@@ -364,31 +384,31 @@
         </div>
     </div>
 </div>
-<div class="bg-light-blue py-5">
+<div class="bg-light-blue py-3 py-sm-5">
     <div class="container-xl">
         <div class="row">
             <div class="col-md-12">
                 <div class="row align-items-center">
-                    <div class="col-md-12 gy-5">
+                    <div class="col-md-12 py-3 py-sm-5">
                         <h1 class="text-primary text-center">{% translate "Nos partenaires" %}</h1>
                     </div>
 
-                    <div class="col-lg-3 col-md-12 gx-5 py-5">
+                    <div class="col-8 offset-2 offset-md-0 col-lg-3 col-md-12 gx-5 py-3 py-sm-5">
                         <img src="{% static 'media/images/logo-nc3.svg' %}" alt="Logo National Cybersecurity Competence Center"
                             class="d-inline-block align-text-top w-100" />
                     </div>
 
-                    <div class="col-lg-3 col-md-12 gx-5 py-5">
+                    <div class="col-8 offset-2 offset-md-0 col-lg-3 col-md-12 gx-5 py-3 py-sm-5">
                         <img src="{% static 'media/images/logo-lhc.svg' %}" alt="Logo Luxembourg House of Cybersecurity"
                             class="d-inline-block align-text-top w-100" />
                     </div>
 
-                    <div class="col-lg-3 col-md-12 gx-5 py-5">
+                    <div class="col-8 offset-2 offset-md-0 col-lg-3 col-md-12 gx-5 py-3 py-sm-5">
                         <img src="{% static 'media/images/logo-ce.svg' %}" alt="Logo Co-funded European Comision"
                             class="d-inline-block align-text-top w-100" />
                     </div>
 
-                    <div class="col-lg-3 col-md-12 gx-5 py-5">
+                    <div class="col-8 offset-2 offset-md-0 col-lg-3 col-md-12 gx-5 py-3 py-sm-5">
                         <img src="{% static 'media/images/logo-lmih.svg' %}" alt="Logo Luxembourg Let's Make It Happen"
                             class="d-inline-block align-text-top w-100" />
                     </div>
