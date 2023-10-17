@@ -15,23 +15,24 @@
     {% translate "Commencer l’histoire" %}
   </a>
 </div>
-<div class="row row-cols-auto row-cols-sm-2 g-sm-5">
+<div class="row row-cols-1 row-cols-sm-2 g-sm-5">
   <div class="col">
     <h4>{% translate "Mes cours" %}</h4>
     <div class="row row-cols-1 row-cols-sm-2">
       {% for level in levels %}
       <div class="col py-1">
-        <div
-          class="bg-primary shadow rounded-4 border-0 mb-3">
+        <div class="bg-primary shadow rounded-4 border-0 mb-3">
           <div class="row row-cols-2 p-3">
             <div class="col pe-0">
               <h5 class="text-white fw-semibold m-0">{% translate "Niveau" %} {{ level.index }}</h5>
               <p class="text-white mb-1 fw-lighter">{{ level.name }}</p>
               <div class="w-50 position-relative">
                 <div class="ratio ratio-1x1 ">
-                  <canvas class="my-auto" id="progress{{level.index}}"></canvas>
+                  <canvas class="my-auto" id="progress{{ level.index }}"></canvas>
                 </div>
-                <span class="text-white position-absolute top-50 start-50 translate-middle mt-1">{{ level.progress }}</span>
+                <span class="text-white position-absolute top-50 start-50 translate-middle mt-1">
+                  {{ level.progress }}
+                </span>
               </div>
             </div>
             <div class="col m-auto">
@@ -45,7 +46,7 @@
     </div>
     <div class="row">
       <h4> {% translate "Connaissances" %}</h4>
-      <canvas id="dashboard" height="270"></canvas>
+      <canvas id="dashboard"></canvas>
     </div>
   </div>
   <div class="col">

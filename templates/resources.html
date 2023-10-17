@@ -9,16 +9,15 @@
 {% endblock %}
 
 {% block content_area %}
-{% with img_classes="row mx-auto my-2" button_classes="row btn btn-outline-primary text-primary fw-bold shadow" icon_classes="bi bi-arrow-up-right-circle-fill text-primary ps-0" %}
-<h5 class="text-primary"> {% translate "Hello," %}</h5>
+{% with img_classes="row mx-auto" button_classes="row btn btn-outline-light text-primary fw-bold shadow w-75 rounded-pill p-2" icon_classes="bi bi-arrow-up-right-circle-fill text-primary ps-0" %}
 <h4> {% translate "Mes ressources" %}</h4>
 
-<div id="resources" class="row row-cols-auto row-cols-sm-3 text-center">
+<div id="resources" class="row row-cols-1 row-cols-sm-3 text-center">
     {% for level in levels %}
     <div class="col p-2 mx-auto">
         <img src="{% static 'media/images/resources_level'%}{{level.index}}.svg" alt="Resources Image"
             class="{{ img_classes }}" />
-        <a type="button" class="{{ button_classes }}" data-bs-toggle="modal" data-bs-target="#resources_download">
+        <a type="button" class="{{ button_classes }} go-to-download" data-level-id="{{ level.id }}">
             <i class="{{ icon_classes }}"></i>
             {% translate "Niveau" %} {{ level.index }} : {{ level.name }}
         </a>
@@ -28,7 +27,7 @@
     <div class="col p-2 mx-auto m-sm-0">
         <img src="{% static 'media/images/resources_type'%}{{rt.index}}.svg" alt="Resources Image"
             class="{{ img_classes }}" />
-        <a id="{{ rt.index }}" type="button" class="{{ button_classes }}" data-bs-toggle="modal" data-bs-target="#resources_download">
+        <a type="button" class="{{ button_classes }} go-to-download" data-rt-id="{{ rt.id }}">
             <i class="{{ icon_classes }}"></i>
             {% if rt.index == 1 %}
             {% translate "Les fiches récapitulatives" %}
@@ -42,12 +41,12 @@
     {% endfor %}
     <div class="col p-2 mx-auto m-sm-0">
         <img src="{% static 'media/images/resources_all.svg'%}" alt="Resources Image" class="{{ img_classes }}" />
-        <a type="button" class="{{ button_classes }}" data-bs-toggle="modal" data-bs-target="#resources_download">
+        <a type="button" class="{{ button_classes }} go-to-download">
             <i class="{{ icon_classes }}"></i>
             {% translate "Tous les fichiers" %}
         </a>
     </div>
 </div>
 {% endwith %}
-{% include 'modals/resources_download.html' %}
+{% include 'modals/resources_download_base.html' %}
 {% endblock %}
