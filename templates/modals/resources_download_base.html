@@ -1,0 +1,20 @@
+{% load i18n %}
+
+<div class="modal fade" id="resources_download" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="resources_downloadLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header border-0 m-5 mb-0 p-0">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="CheckAll">
+                    <label class="form-check-label ms-2" for="CheckAll">
+                        {% translate "Tout sélectionner" %}
+                    </label>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body m-3 mt-0">
+            </div>
+        </div>
+    </div>
+</div>
