@@ -6,3 +6,7 @@ footer p {
 footer a {
     color: inherit;
 }
+
+footer a:hover {
+    text-decoration: underline !important;
+}
