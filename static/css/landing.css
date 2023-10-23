@@ -1,5 +1,25 @@
 
 @media (max-width: 768px) {
+	#hero .small-headline {
+		font-size: 15px;
+		font-weight: 400;
+	}
+
+	#hero .tiny-headline {
+		text-align: center;
+		line-height: 14px !important;
+	}
+
+	#hero .tiny-headline span {
+		font-size: 12px;
+	}
+
+	#hero button {
+		width: auto !important;
+		padding-right: 18px;
+		padding-left: 18px;
+	}
+
 	.testimony-box {
 		border-radius: 0px;
 		box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
