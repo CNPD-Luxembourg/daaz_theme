@@ -2,6 +2,12 @@
 {% load i18n %}
 {% load static %}
 
+{% block bootstrap5_extra_head %}
+{{ block.super }}
+    <link rel="icon" type="image/x-icon" href="{% static 'media/images/favicon.svg' %}" />
+{% endblock %}
+
+
 {% block bootstrap5_title %}{% endblock %}
 {% block content %}
 <div class="container-fluid">
