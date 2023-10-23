@@ -1,0 +1,7 @@
+
+@media (max-width: 768px) {
+	.testimony-box {
+		border-radius: 0px;
+		box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+	}
+}
