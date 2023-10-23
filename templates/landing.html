@@ -2,6 +2,12 @@
 {% load i18n %}
 {% load static %}
 {% load cookiebanner %}
+
+{% block bootstrap5_extra_head %}
+{{ block.super}}
+<link rel="stylesheet" type="text/css" href="{% static 'css/landing.css' %}" />
+{% endblock %}
+
 {% block content %}
 {% cookiebanner_modal 'bootstrap5' %}
 <div id="hero" class="bg-white py-4 pt-sm-5 mt-sm-5">
@@ -307,8 +313,8 @@
                     </div>
                     <div class="col-md-12 py-5">
                         <div class="row">
-                            <div class="col-md-4 gx-5">
-                                <div class="row">
+                            <div class="col-md-4 gx-5 pb-4">
+                                <div class="row testimony-box p-2">
                                     <div class="col-md-12 text-end">
                                         <i class="bi bi-quote display-1 light-blue text-end"></i>
                                     </div>
@@ -332,8 +338,8 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-4 gx-5">
-                                <div class="row">
+                            <div class="col-md-4 gx-5 pb-4">
+                                <div class="row testimony-box p-2">
                                     <div class="col-md-12 text-end">
                                         <i class="bi bi-quote display-1 light-blue text-end"></i>
                                     </div>
@@ -357,8 +363,8 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-4 gx-5">
-                                <div class="row">
+                            <div class="col-md-4 gx-5 pb-4">
+                                <div class="row testimony-box p-2">
                                     <div class="col-md-12 text-end">
                                         <i class="bi bi-quote display-1 light-blue text-end"></i>
                                     </div>
