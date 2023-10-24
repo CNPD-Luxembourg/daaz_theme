@@ -9,19 +9,19 @@
 {% endblock %}
 
 {% block content_area %}
-<div class="d-flex flex-column">
+<div class="d-flex flex-column h-100">
     <div class="col-8 col-sm-4 card mx-auto rounded-3 border border-primary mb-5">
         <img class="" src="{% static 'media/images/progress_bar_example.svg' %}">
     </div>
-    <div id="carouselExampleControls" class="carousel slide" data-bs-intervale="false">
-        <div class="carousel-inner px-5" role="listbox">
-            <div class="carousel-item active">
-                <div class="col col-sm-6 card border border-primary m-auto">
+    <div id="carouselExampleControls" class="carousel slide h-100" data-bs-intervale="false">
+        <div class="carousel-inner px-5 h-100" role="listbox">
+            <div class="carousel-item active h-100">
+                <div class="col col-sm-6 card border border-primary mx-auto h-100">
                     <img src="{% static 'media/images/start_history_example.png'%}">
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="col card border border-primary p-sm-5 p-2">
+            <div class="carousel-item h-100">
+                <div class="col card border border-primary p-sm-5 p-2 mx-auto h-100">
                     <h3 class="text-primary">Question 1</h3>
                     <p>Qu’est-ce que le RGPD ?</p>
                     <div class="form-check">
@@ -47,8 +47,8 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="col card border border-primary p-sm-5 p-2">
+            <div class="carousel-item h-100">
+                <div class="col card border border-primary p-sm-5 p-2 mx-auto h-100">
                     <h3 class="text-primary">Question 2</h3>
                     <p>Quels sont les acteurs concernés par le RGPD ?</p>
                     <div class="form-check">

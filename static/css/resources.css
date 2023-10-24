@@ -26,3 +26,9 @@
     background-size: cover;
   }
 }
+
+@media (max-width: 576px) {
+  #resources {
+    height: fit-content !important;
+  }
+}

@@ -9,42 +9,43 @@
 {% endblock %}
 
 {% block content_area %}
-{% with img_classes="row mx-auto" button_classes="row btn btn-outline-light text-primary fw-bold shadow w-75 rounded-pill p-2" icon_classes="bi bi-arrow-up-right-circle-fill text-primary ps-0" %}
-<h4> {% translate "Mes ressources" %}</h4>
-
-<div id="resources" class="row row-cols-1 row-cols-sm-3 text-center">
-    {% for level in levels %}
-    <div class="col p-2 mx-auto">
-        <img src="{% static 'media/images/resources_level'%}{{level.index}}.svg" alt="Resources Image"
-            class="{{ img_classes }}" />
-        <a type="button" class="{{ button_classes }} go-to-download" data-level-id="{{ level.id }}">
-            <i class="{{ icon_classes }}"></i>
-            {% translate "Niveau" %} {{ level.index }} : {{ level.name }}
-        </a>
-    </div>
-    {% endfor %}
-    {% for rt in resourcesType %}
-    <div class="col p-2 mx-auto m-sm-0">
-        <img src="{% static 'media/images/resources_type'%}{{rt.index}}.svg" alt="Resources Image"
-            class="{{ img_classes }}" />
-        <a type="button" class="{{ button_classes }} go-to-download" data-rt-id="{{ rt.id }}">
-            <i class="{{ icon_classes }}"></i>
-            {% if rt.index == 1 %}
-            {% translate "Les fiches récapitulatives" %}
-            {% elif rt.index == 2 %}
-            {% translate "Les fiches pratiques" %}
-            {% elif rt.index == 3 %}
-            {% translate "Les templates" %}
-            {% endif %}
-        </a>
-    </div>
-    {% endfor %}
-    <div class="col p-2 mx-auto m-sm-0">
-        <img src="{% static 'media/images/resources_all.svg'%}" alt="Resources Image" class="{{ img_classes }}" />
-        <a type="button" class="{{ button_classes }} go-to-download">
-            <i class="{{ icon_classes }}"></i>
-            {% translate "Tous les fichiers" %}
-        </a>
+{% with img_classes="img-fluid" button_classes="btn btn-outline-light text-primary fw-bolder shadow w-75 rounded-pill p-2 go-to-download" icon_classes="bi bi-arrow-up-right-circle-fill text-primary ps-0" col_classes="p-2 align-self-center" %}
+<div class="flex-column d-flex h-100">
+    <h4> {% translate "Mes ressources" %}</h4>
+    <div id="resources" class="row row-cols-1 row-cols-sm-3 h-100 text-center pb-sm-0 pb-5">
+        {% for level in levels %}
+        <div class="{{ col_classes }}">
+            <img src="{% static 'media/images/resources_level'%}{{level.index}}.svg" alt="Resources Image"
+                class="{{ img_classes }}" />
+            <a type="button" class="{{ button_classes }}" data-level-id="{{ level.id }}">
+                <i class="{{ icon_classes }}"></i>
+                {% translate "Niveau" %} {{ level.index }} : {{ level.name }}
+            </a>
+        </div>
+        {% endfor %}
+        {% for rt in resourcesType %}
+        <div class="{{ col_classes }}">
+            <img src="{% static 'media/images/resources_type'%}{{rt.index}}.svg" alt="Resources Image"
+                class="{{ img_classes }}" />
+            <a type="button" class="{{ button_classes }}" data-rt-id="{{ rt.id }}">
+                <i class="{{ icon_classes }}"></i>
+                {% if rt.index == 1 %}
+                {% translate "Les fiches récapitulatives" %}
+                {% elif rt.index == 2 %}
+                {% translate "Les fiches pratiques" %}
+                {% elif rt.index == 3 %}
+                {% translate "Les templates" %}
+                {% endif %}
+            </a>
+        </div>
+        {% endfor %}
+        <div class="{{ col_classes }} m-sm-0 mb-5">
+            <img src="{% static 'media/images/resources_all.svg'%}" alt="Resources Image" class="{{ img_classes }}" />
+            <a type="button" class="{{ button_classes }}">
+                <i class="{{ icon_classes }}"></i>
+                {% translate "Tous les fichiers" %}
+            </a>
+        </div>
     </div>
 </div>
 {% endwith %}
