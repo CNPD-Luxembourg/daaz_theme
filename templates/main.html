@@ -11,13 +11,13 @@
 {% block bootstrap5_title %}{% endblock %}
 {% block content %}
 <div class="container-fluid h-100">
-    <div class="row flex-nowrap h-100">
+    <div class="row h-100">
         <div class="d-flex fixed-top w-100 shadow-sm bg-white py-1 d-sm-none">
             <img src="{% static 'media/images/logo.svg' %}" alt="Logo Large" width="100px" class="mx-auto">
         </div>
         {% include "parts/sidebar.html" %}
         <div class="col py-4 py-sm-0 bg-light bg-image">
-            <div class="py-5 py-sm-4 mx-1 mx-sm-5 h-100">
+            <div class="py-5 p-sm-0 pt-sm-4 mx-1 mx-sm-5 h-100">
                 {% block content_area %}
                 {% endblock %}
             </div>
