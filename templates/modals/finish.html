@@ -15,8 +15,8 @@
         <p class="fw-bold text-center">
           {% translate "Avez-vous votre ID pour votre prochaine visite?" %}
         </p>
-        <p class="font-monospace text-center text-nowrap">
-          ce053a70-5baf-419d-8976-757c59746081
+        <p id="user_uuid" class="font-monospace text-center text-nowrap">
+          {{ request.session.user_uuid }}
         </p>
         <a class="btn border border-primary rounded d-flex align-items-center text-start" role="button"
           onClick="copyToClipboard()">

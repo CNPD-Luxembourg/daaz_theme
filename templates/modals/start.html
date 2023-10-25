@@ -1,4 +1,10 @@
 {% load i18n %}
+{% load static %}
+
+{% block bootstrap5_extra_script %}
+<script src='{% static "js/start.js" %}'></script>
+{% endblock %}
+
 <div class="modal fade" id="start" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
   aria-labelledby="startLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -14,8 +20,7 @@
           <p>
             {% translate "Je commence un nouveau parcours" %}
           </p>
-          <a class="btn btn-primary text-white" data-bs-dismiss="modal" data-bs-toggle="modal"
-            data-bs-target="#new_user">
+          <a type="button" class="btn btn-primary text-white create_new_user" data-bs-dismiss="modal">
             {% translate "Commencer" %}
           </a>
         </div>
