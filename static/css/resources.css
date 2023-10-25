@@ -20,7 +20,7 @@
 
 @media (min-width: 576px) {
   .bg-image {
-    background-image: url('../media/images/backgroundResources.svg');
+    background-image: url('../media/images/resources/backgroundResources.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
