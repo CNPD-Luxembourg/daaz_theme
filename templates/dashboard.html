@@ -1,10 +1,16 @@
 {% extends 'main.html' %}
 {% load i18n %}
 {% load static %}
+{% load custom_filters %}
 
 {% block bootstrap5_extra_head %}
 {{ block.super}}
 <script src='{% static "npm_components/chart.js/dist/chart.umd.js" %}'></script>
+{% endblock %}
+
+{% block bootstrap5_extra_script %}
+{{ criteria|json_script:"criteria-data" }}
+{{ levels_json|json_script:"levels-data" }}
 <script src='{% static "js/dashboard.js" %}'></script>
 {% endblock %}
 
@@ -36,7 +42,7 @@
               </div>
             </div>
             <div>
-              <img src="{% static 'media/images/img-level-'%}{{level.index}}.svg" class="img-fluid w-100"  alt="Compliance officer on phone"/>
+              <img src="{% static 'media/images/landing/level-'%}{{level.index}}.svg" class="img-fluid w-100"  alt="Compliance officer on phone"/>
             </div>
           </div>
         </div>
@@ -53,9 +59,13 @@
     {% for level in levels %}
     <div class="row row-cols-2 row-cols-sm-4 py-sm-2 {% if forloop.first %}pt-sm-0{% endif %}">
       {% for sticker in '0123'|make_list %}
-      <div class="p-2 p-sm-0 px-sm-2 ">
-        <div class=" shadow rounded-4">
-          <img src="{% static 'media/images/sticker-'%}{{level.index}}-{{sticker}}.svg" alt="Sticker" class="img-fluid w-100" />
+      <div class="p-2 p-sm-0 px-sm-2">
+        <div class="shadow rounded-4">
+          {% if level|is_sticker_unlocked:sticker %}
+            <img src="{% static 'media/images/stickers/level-'%}{{ level.index }}-{{ sticker }}-unlocked.svg" alt="Sticker" class="img-fluid w-100" />
+          {% else %}
+            <img src="{% static 'media/images/stickers/level-'%}{{ level.index }}-{{ sticker }}.svg" alt="Sticker" class="img-fluid w-100" />
+        {% endif %}
         </div>
       </div>
       {% endfor %}

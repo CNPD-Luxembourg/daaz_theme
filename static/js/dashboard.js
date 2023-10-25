@@ -1,13 +1,14 @@
-$(document).ready(function () {
-    const ctx = document.getElementById('dashboard');
 
-    // TODO: Fetch values from the backend
+$(document).ready(function () {
+    let criteria = JSON.parse(document.getElementById('criteria-data').textContent);
+    let levels = JSON.parse(document.getElementById('levels-data').textContent);
+    const ctx = document.getElementById('dashboard');
     new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['Procédures', 'Formation', 'Traitement', 'Sous-traitance', 'Information', 'Risques', 'Violation de données', 'Documentation', 'Transfers'],
+            labels: criteria.labels,
             datasets: [{
-                data: [0.12, 0.19, 0.33, 0.5, 0.2, 0.3, 0.1, 0.15, 0.6],
+                data: criteria.data,
                 borderRadius: 30,
                 borderSkipped: false,
                 backgroundColor: '#AFDFFF',
@@ -56,11 +57,10 @@ $(document).ready(function () {
         }
     });
 
-    // TODO: Fetch values from the backend
-    for (const i in [1,2,3,4,5]) {
-        var progress = (5 - i) * 25;
-        let ctx1 = document.getElementById('progress' + i)
-        new Chart(ctx1, {
+    levels.forEach(level => {
+        let progress = level.progress
+        let progress_ctx = document.getElementById('progress' + level.index)
+        new Chart(progress_ctx, {
             type: 'doughnut',
             data: {
                 labels: [],
@@ -89,6 +89,6 @@ $(document).ready(function () {
                 },
             }
         });
-    }
+    });
 
 });
