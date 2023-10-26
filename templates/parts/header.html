@@ -7,6 +7,7 @@
 <script src='{% static "npm_components/@popperjs/core/dist/umd/popper.min.js" %}'></script>
 <script src='{% static "npm_components/jquery/dist/jquery.min.js" %}'></script>
 <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
+<script src='{% static "js/header.js" %}'></script>
 
 {% endblock %}
 
@@ -38,7 +39,7 @@
           <a class="nav-link text-primary fw-bold" href="{% url 'index' %}#about">{% translate "A propos" %}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-primary text-white fw-bold" data-bs-toggle="modal" data-bs-target="#start">{% translate "Commencer" %}</a>
+          <a class="nav-link btn btn-primary text-white fw-bold start">{% translate "Commencer" %}</a>
         </li>
         <li class="nav-item text-primary my-auto">
           {% include "home/language_selector.html" %}
