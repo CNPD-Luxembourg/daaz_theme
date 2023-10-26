@@ -1,8 +1,6 @@
 {% load i18n %}
 {% load static %}
 {% load django_bootstrap5 %}
-{% bootstrap_javascript %}
-{% bootstrap_messages %}
 
 {% block bootstrap5_extra_script %}
 <script src='{% static "js/start.js" %}'></script>
@@ -34,7 +32,6 @@
         </p>
         <form action="{% url 'start' %}" method="post">
           {% csrf_token %}
-          {% bootstrap_form_errors form %}
           {% bootstrap_field form.user_uuid show_label=False %}
           <button class="btn btn-primary text-white" role="submit">
             {% translate "J’accède à mon espace" %}
