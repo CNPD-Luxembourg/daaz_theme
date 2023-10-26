@@ -10,7 +10,7 @@
 
 {% block bootstrap5_extra_script %}
 {{ criteria|json_script:"criteria-data" }}
-{{ levels_json|json_script:"levels-data" }}
+{{ progress_json|json_script:"progress-data" }}
 <script src='{% static "js/dashboard.js" %}'></script>
 {% endblock %}
 
@@ -30,24 +30,24 @@
   <div>
     <h4 class="py-2 py-sm-0">{% translate "Mes cours" %}</h4>
     <div class="row row-cols-1 row-cols-sm-2">
-      {% for level in levels %}
+      {% for score in scores %}
       <div class="p-2 pt-0">
         <div class="bg-primary shadow rounded-4 border-0 mb-2">
           <div class="row row-cols-2 p-4 p-sm-2">
             <div class="pe-0">
-              <h6 class="text-white fw-semibold m-0">{% translate "Niveau" %} {{ level.index }}</h6>
-              <span class="text-white fw-lighter small">{{ level.name }}</span>
+              <h6 class="text-white fw-semibold m-0">{% translate "Niveau" %} {{ score.level.index }}</h6>
+              <span class="text-white fw-lighter small">{{ score.level.name }}</span>
               <div class="w-50 position-relative">
                 <div class="ratio ratio-1x1 ">
-                  <canvas id="progress{{ level.index }}"></canvas>
+                  <canvas id="progress{{ score.level.index }}"></canvas>
                 </div>
                 <span class="text-white position-absolute top-50 start-50 translate-middle mt-1 small">
-                  {{ level.progress }}
+                  {% widthratio score.progress 1 100 %}%
                 </span>
               </div>
             </div>
             <div>
-              <img src="{% static 'media/images/landing/level-'%}{{level.index}}.svg" class="img-fluid w-100"  alt="Compliance officer on phone"/>
+              <img src="{% static 'media/images/landing/level-'%}{{score.level.index}}.svg" class="img-fluid w-100"  alt="Compliance officer on phone"/>
             </div>
           </div>
         </div>
@@ -61,15 +61,15 @@
   </div>
   <div class="pb-2 p-sm-0">
     <h4>{% translate "Stickers" %}</h4>
-    {% for level in levels %}
+    {% for score in scores %}
     <div class="row row-cols-2 row-cols-sm-4 py-sm-2 {% if forloop.first %}pt-sm-0{% endif %}">
       {% for sticker in '0123'|make_list %}
       <div class="p-2 p-sm-0 px-sm-2">
         <div class="shadow rounded-4">
-          {% if level|is_sticker_unlocked:sticker %}
-            <img src="{% static 'media/images/stickers/level-'%}{{ level.index }}-{{ sticker }}-unlocked.svg" alt="Sticker" class="img-fluid w-100" />
+          {% if score|is_sticker_unlocked:sticker %}
+            <img src="{% static 'media/images/stickers/level-'%}{{ score.level.index }}-{{ sticker }}-unlocked.svg" alt="Sticker" class="img-fluid w-100" />
           {% else %}
-            <img src="{% static 'media/images/stickers/level-'%}{{ level.index }}-{{ sticker }}.svg" alt="Sticker" class="img-fluid w-100" />
+            <img src="{% static 'media/images/stickers/level-'%}{{ score.level.index }}-{{ sticker }}.svg" alt="Sticker" class="img-fluid w-100" />
         {% endif %}
         </div>
       </div>

@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
     let criteria = JSON.parse(document.getElementById('criteria-data').textContent);
-    let levels = JSON.parse(document.getElementById('levels-data').textContent);
+    let progress = JSON.parse(document.getElementById('progress-data').textContent);
     const ctx = document.getElementById('dashboard');
     new Chart(ctx, {
         type: 'bar',
@@ -57,9 +57,9 @@ $(document).ready(function () {
         }
     });
 
-    levels.forEach(level => {
-        let progress = level.progress
-        let progress_ctx = document.getElementById('progress' + level.index)
+    progress.forEach(el => {
+        let progress = el.progress * 100;
+        let progress_ctx = document.getElementById('progress' + el.index)
         new Chart(progress_ctx, {
             type: 'doughnut',
             data: {
