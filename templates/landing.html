@@ -2,6 +2,7 @@
 {% load i18n %}
 {% load static %}
 {% load cookiebanner %}
+{% load custom_filters %}
 
 {% block bootstrap5_extra_head %}
 {{ block.super}}
@@ -283,8 +284,8 @@
                                 </div>
                                 <div>
                                     <ul>
-                                        {% for line in level.description_lines %}
-                                        <li>{{ line }}</li>
+                                        {% for description in level.description|linebreaksbr|split:"<br>" %}
+                                        <li>{{ description }}</li>
                                         {% endfor %}
                                     </ul>
                                 </div>
