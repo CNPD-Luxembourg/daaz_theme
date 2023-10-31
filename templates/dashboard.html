@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block content_area %}
-{% if user.current_level %}
+{% if user.current_position %}
 <h5 class="text-primary pb-2"> {% translate "Hello, welcome back!" %}</h5>
 {% else %}
 <h5 class="text-primary pb-2"> {% translate "Hello" %}</h5>
