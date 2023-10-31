@@ -57,9 +57,10 @@ $(document).ready(function () {
         }
     });
 
-    progress.forEach(el => {
-        let progress = el.progress * 100;
-        let progress_ctx = document.getElementById('progress' + el.index)
+    progress.forEach((el, i) => {
+        let index = i + 1;
+        let progress = el;
+        let progress_ctx = document.getElementById('progress' + index)
         new Chart(progress_ctx, {
             type: 'doughnut',
             data: {

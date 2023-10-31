@@ -10,7 +10,7 @@
 
 {% block bootstrap5_extra_script %}
 {{ criteria|json_script:"criteria-data" }}
-{{ progress_json|json_script:"progress-data" }}
+{{ progress|json_script:"progress-data" }}
 <script src='{% static "js/dashboard.js" %}'></script>
 {% endblock %}
 
@@ -42,7 +42,7 @@
                   <canvas id="progress{{ score.level.index }}"></canvas>
                 </div>
                 <span class="text-white position-absolute top-50 start-50 translate-middle mt-1 small">
-                  {% widthratio score.progress 1 100 %}%
+                  {{ score.progress }}%
                 </span>
               </div>
             </div>
