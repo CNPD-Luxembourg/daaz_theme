@@ -1,15 +1,15 @@
 {% load static %}
 
 {% block bootstrap5_extra_head %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/components/course_progress_bar.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/course_progress_bar.css' %}">
 {% endblock %}
 
-<div class="course-progress-bar align-items-center">
+<div class="course-progress-bar align-items-center pe-3">
     <div class="progress border-primary border-1 align-items-center">
       <div
           class="progress-bar"
           role="progressbar"
-          style="width: {{ value }}%;"
+          style="width: {{ value }}%"
           aria-valuenow="{{ value }}"
           aria-valuemin="0"
           aria-valuemax="100">
@@ -18,9 +18,8 @@
 
     {% for n in '123' %}
         {% widthratio n 1 25 as threshold %}
-
         <div class="key-{{ n }} align-items-center">
-            {% if value >= threshold|add:"0" %}
+            {% if value >= threshold|add:0 %}
                 <img src="{% static 'media/images/icons/key-yellow.svg' %}"/>
             {% else %}
                 <img src="{% static 'media/images/icons/key-white.svg' %}"/>
