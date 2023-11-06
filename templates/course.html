@@ -1,6 +1,7 @@
 {% extends 'main.html' %}
 {% load i18n %}
 {% load static %}
+{% load django_bootstrap5 %}
 
 {% block bootstrap5_extra_head %}
 {{ block.super }}
@@ -20,67 +21,17 @@
                     <img src="{% static 'media/images/start_history_example.png'%}">
                 </div>
             </div>
+            {% for key, form in forms.items %}
             <div class="carousel-item h-100">
+
                 <div class="col card border border-primary p-sm-5 p-2 mx-auto h-100">
-                    <h3 class="text-primary">Question 1</h3>
-                    <p>Qu’est-ce que le RGPD ?</p>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Un règlement européen contraignant les principaux navigateurs à se mettre en conformité sur
-                            l’utilisation des cookies
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                        <label class="form-check-label" for="flexRadioDefault2">
-                            Un règlement de l’Union européenne qui pose certaines obligations en matière de protection
-                            des
-                            données à caractère personnel.
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-                        <label class="form-check-label" for="flexRadioDefault3">
-                            Un règlement européen organisant le partage des données financières au sein des entreprises
-                        </label>
-                    </div>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {% bootstrap_form form %}
+                    </form>
                 </div>
             </div>
-            <div class="carousel-item h-100">
-                <div class="col card border border-primary p-sm-5 p-2 mx-auto h-100">
-                    <h3 class="text-primary">Question 2</h3>
-                    <p>Quels sont les acteurs concernés par le RGPD ?</p>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="flexCheckboxDefault"
-                            id="flexCheckboxDefault1">
-                        <label class="form-check-label" for="flexCheckboxDefault1">
-                            Uniquement les GAFAM, et de manière générale toutes les entreprises du monde numérique
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="flexCheckboxDefault"
-                            id="flexCheckboxDefault2">
-                        <label class="form-check-label" for="flexCheckboxDefault2">
-                            Les citoyens de l’UE et tous les organismes traitant leurs données.
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="flexCheckboxDefault"
-                            id="flexCheckboxDefault3">
-                        <label class="form-check-label" for="flexCheckboxDefault3">
-                            Uniquement les entreprises de plus de 250 employés
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="flexCheckboxDefault"
-                            id="flexCheckboxDefault3">
-                        <label class="form-check-label" for="flexCheckboxDefault3">
-                            Les autorités publiques
-                        </label>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
         <button class="carousel-control-prev w-auto" type="button" data-bs-target="#carouselExampleControls"
             data-bs-slide="prev">
