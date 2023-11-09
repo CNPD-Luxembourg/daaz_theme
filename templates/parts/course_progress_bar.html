@@ -13,17 +13,17 @@
 {% widthratio n 1 25 as threshold %}
 <div class="key-{{ n }} align-items-center">
     {% if progress >= threshold|add:0 %}
-    <img src="{% static 'media/images/icons/key-yellow.svg' %}" />
+    <img class="img-fluid" src="{% static 'media/images/icons/key-yellow.svg' %}" />
     {% else %}
-    <img src="{% static 'media/images/icons/key-white.svg' %}" />
+    <img class="img-fluid" src="{% static 'media/images/icons/key-white.svg' %}" />
     {% endif %}
 </div>
 {% endfor %}
 
 <div class="trophy">
     {% if progress >= 100 %}
-    <img src="{% static '/media/images/icons/trophy-yellow.svg' %}" />
+    <img class="img-fluid" src="{% static '/media/images/icons/trophy-yellow.svg' %}" />
     {% else %}
-    <img src="{% static '/media/images/icons/trophy-white.svg' %}" />
+    <img class="img-fluid" src="{% static '/media/images/icons/trophy-white.svg' %}" />
     {% endif %}
 </div>

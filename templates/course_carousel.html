@@ -9,7 +9,7 @@
 
 <div class="carousel-inner px-5 h-100" role="listbox">
     {% for slide in slides %}
-    <div class="carousel-item h-100 pb-sm-5 {% if forloop.first %} active {% endif %}">
+    <div class="carousel-item h-100 pb-sm-5 {% if forloop.first %}active{% endif %}">
         {% if slide.question %}
         <div class="col card border border-primary p-sm-5 p-2 mx-auto h-100">
             <form method="post">
@@ -28,10 +28,11 @@
         {% elif slide.context %}
         <div class="col card border border-primary p-sm-5 p-2 mx-auto h-100">
             {% for text in slide.context.texts %}
-            <span class="inFront {{ text.css_classes|join:' ' }} {{ text.position }}">
+            <span class="inFront margin-text {{ text.css_classes|join:' ' }} {{ text.position }}">
                 {{ text.text.description|safe }}
             </span>
             {% endfor %}
+
             {% for media in slide.context.medias %}
             {% if media.media.get_m_type_display == 'Image' %}
             <img class="img-fluid {{ media.css_classes|join:' ' }} {{ media.position }}"
@@ -68,7 +69,7 @@
     {% endfor %}
 </div>
 
-<a class="carousel-control-prev w-auto previous_slide {% if progress == 0 %}control_disabled{% endif %}" type="button" data-bs-target="#carouselCourse" data-bs-slide="prev" >
+<a class="carousel-control-prev w-auto previous_slide {% if not previous_control_enable %}control_disabled{% endif %}" type="button" data-bs-target="#carouselCourse" data-bs-slide="prev" >
     <span class="carousel-control-prev-icon text-primary" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
 </a>
