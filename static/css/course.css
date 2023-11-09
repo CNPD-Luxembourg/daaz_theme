@@ -5,3 +5,139 @@
 .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%230099FF' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
+
+.control_disabled {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+}
+
+.control_disabled .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%236C757D' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.control_disabled .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%236C757D' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.form-check-input {
+    border-color: var(--bs-primary);
+    border-width: 2px;
+}
+
+.course-button {
+    background-color: transparent;
+}
+
+.course-button:hover {
+    color: var(--bs-white) !important;
+    transform: translateY(4px);
+}
+
+#summitButton.course-button {
+    box-shadow: 0 0.5rem var(--bs-primary) !important;
+}
+
+#challengeButton.course-button {
+    box-shadow: 0 0.5rem var(--bs-danger) !important;
+}
+
+#summitButton.course-button:hover {
+    box-shadow: none !important;
+    background-color: var(--bs-primary);
+}
+
+#challengeButton.course-button:hover {
+    box-shadow: none !important;
+    background-color: var(--bs-danger);
+}
+
+
+/* ABSOLUTE POSITIONS CLASSES */
+/* POSITION_CHOICES = [
+    ("TL", "Top Left"),
+    ("TC", "Top Center"),
+    ("TR", "Top Right"),
+    ("ML", "Middle Left"),
+    ("MC", "Middle Center"),
+    ("MR", "Middle Right"),
+    ("BL", "Bottom Left"),
+    ("BC", "Bottom Center"),
+    ("BR", "Bottom Right "),
+] */
+
+.TL {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.TC {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.TR {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+.ML {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.MC {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.MR {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.BL {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.BC {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.BR {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.inFront {
+    z-index: 10;
+}
+
+.overlapBR {
+    transform: translate(20%, 10%);
+}
+
+/* Responsive classes */
+
+@media (max-width: 576px) {
+    #carouselCourse img {
+        opacity: 0.3;
+    }
+}
