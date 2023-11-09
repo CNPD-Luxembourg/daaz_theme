@@ -59,6 +59,16 @@
     background-color: var(--bs-danger);
 }
 
+#challengeButton.course-button.border-warning:hover {
+    box-shadow: none !important;
+    background-color: var(--bs-warning);
+}
+
+#challengeButton.course-button.border-warning {
+    box-shadow: 0 0.5rem var(--bs-warning) !important;
+}
+
+
 /* ABSOLUTE POSITIONS CLASSES */
 /* POSITION_CHOICES = [
     ("TL", "Top Left"),
@@ -169,7 +179,11 @@
 }
 
 .overlapBR {
-    transform: translate(20%, 10%);
+    translate: 20% 10%;
+}
+
+.overlapBL {
+    translate: -20% 10%;
 }
 
 /* Responsive classes */

@@ -42,28 +42,62 @@
         </div>
 
         {% elif slide.challenge %}
-        <div class="col card border border-danger p-sm-5 p-2 mx-auto h-100">
-            <div class="text-center text-danger">
-                <h1 class="fw-bolder">
-                    {% translate "Challenge" %} !
-                </h1>
-                <h6 class="inFront">
-                    {{ slide.challenge.name }}
-                </h6>
+            {% if not forloop.last %}
+            <div class="col card border border-danger p-sm-5 p-2 mx-auto h-100">
+                <div class="text-center text-danger">
+                    <h1 class="fw-bolder">
+                        {% translate "Challenge" %} !
+                    </h1>
+                    <h6 class="inFront">
+                        {{ slide.challenge.name }}
+                    </h6>
+                </div>
+                <div class="inFront">
+                    <p>
+                        {{ slide.challenge.description|linebreaks|safe }}
+                    </p>
+                </div>
+                <div class="text-center py-sm-5 py-3 inFront">
+                    <button id="challengeButton" type="button"
+                        class="btn text-danger course-button fw-bolder border-danger border border-3 shadow rounded p-2">
+                        {% translate "Télécharger mon template" %}
+                    </button>
+                </div>
+                <img class="img-fluid BR overlapBR" src="{% static 'media/images/course/level1/challenge/cup.svg' %}" alt="Cup" />
             </div>
-            <div class="inFront">
-                <p>
-                    {{ slide.challenge.description|linebreaks|safe }}
-                </p>
-            </div>
-            <div class="text-center py-sm-5 py-3 inFront">
-                <button id="challengeButton" type="button"
-                    class="btn text-danger course-button fw-bolder border-danger border border-3 shadow rounded p-2">
-                    {% translate "Télécharger mon template" %}
+            {% else %}
+            <div class="col card border border-warning p-sm-5 p-2 mx-auto h-100">
+                <div class="text-center">
+                    <h1 class="fw-bolder text-warning">
+                        {% translate "Felicitations" %} !
+                    </h1>
+                    <h3 class="inFront text-primary">
+                        {% with index_level=level.index %}
+                        {% blocktranslate %}Vous avez terminé le niveau {{ index_level }} !{% endblocktranslate %}
+                        {% endwith %}
+                    </h3>
+                    <h6>
+                        {% translate "Votre score est de 78 sur 100 !" %}
+                    </h6>
+                    <h6>
+                        {% translate "Vous avez débloquez l’histoire numéro 2 !" %}
+                    </h6>
+                    <img class="img-fluid" src="{% static 'media/images/course/level1/challenge/final-check.svg' %}" alt="Final Check Guy" />
+                </div>
+                <div class="text-center py-sm-5 py-3 inFront">
+                    <button id="challengeButton" type="button"
+                        class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded p-2">
+                        {% translate "Télécharger la fiche récap" %}
+                    </button>
+                    <button id="challengeButton" type="button"
+                    class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded p-2">
+                    {% translate "Accéder au niveau suivant" %}
                 </button>
+                </div>
+                <img class="img-fluid TL h-100 d-none d-sm-block" src="{% static 'media/images/course/level1/challenge/palm-left.svg' %}" alt="Palm Left" />
+                <img class="img-fluid TR h-100 d-none d-sm-block" src="{% static 'media/images/course/level1/challenge/palm-right.svg' %}" alt="Palm Right" />
             </div>
-            <img class="img-fluid BR overlapBR" src="{% static 'media/images/course/challenge/cup.svg' %}" alt="Cup" />
-        </div>
+            {% endif %}
         {% endif %}
     </div>
     {% endfor %}
