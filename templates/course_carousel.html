@@ -71,10 +71,9 @@
                     <h1 class="fw-bolder text-warning">
                         {% translate "Felicitations" %} !
                     </h1>
-                    {% with index_level=level.index next_level=level.index|add:1 score=user.score|default:0 %}
+                    {% with index_level=level.index next_level=level.index|add:1 score=score|default:0 %}
                     <h3 class="inFront text-primary">
                         {% blocktranslate %}Vous avez terminé le niveau {{ index_level }} !{% endblocktranslate %}
-
                     </h3>
                     <h6>
                         {% blocktranslate %}Votre score est de {{ score }} sur 100 !"{% endblocktranslate %}
