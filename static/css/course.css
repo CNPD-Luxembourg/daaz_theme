@@ -1,7 +1,203 @@
+:root {
+    --slide-top-margin: 3.5rem;
+    --slide-left-margin: 4rem;
+    --slide-bottom-margin: -2.5rem;
+    --slide-right-margin: -4rem;
+  }
+
 .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%230099FF' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
 }
 
 .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%230099FF' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.control_disabled {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+}
+
+.control_disabled .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%236C757D' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.control_disabled .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%236C757D' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.form-check-input {
+    border-color: var(--bs-primary);
+    border-width: 2px;
+}
+
+.course-button {
+    background-color: transparent;
+}
+
+.course-button:hover {
+    color: var(--bs-white) !important;
+    transform: translateY(4px);
+}
+
+#summitButton.course-button {
+    box-shadow: 0 0.5rem var(--bs-primary) !important;
+}
+
+#challengeButton.course-button {
+    box-shadow: 0 0.5rem var(--bs-danger) !important;
+}
+
+#summitButton.course-button:hover {
+    box-shadow: none !important;
+    background-color: var(--bs-primary);
+}
+
+#challengeButton.course-button:hover {
+    box-shadow: none !important;
+    background-color: var(--bs-danger);
+}
+
+#challengeButton.course-button.border-warning:hover {
+    box-shadow: none !important;
+    background-color: var(--bs-warning);
+}
+
+#challengeButton.course-button.border-warning {
+    box-shadow: 0 0.5rem var(--bs-warning) !important;
+}
+
+
+/* ABSOLUTE POSITIONS CLASSES */
+/* POSITION_CHOICES = [
+    ("TL", "Top Left"),
+    ("TC", "Top Center"),
+    ("TR", "Top Right"),
+    ("ML", "Middle Left"),
+    ("MC", "Middle Center"),
+    ("MR", "Middle Right"),
+    ("BL", "Bottom Left"),
+    ("BC", "Bottom Center"),
+    ("BR", "Bottom Right "),
+] */
+
+.margin-text.TL {
+    translate: var(--slide-left-margin) var(--slide-top-margin);
+}
+
+.margin-text.TC {
+    translate: 0 var(--slide-left-margin);
+}
+
+.margin-text.TR {
+    translate: var(--slide-right-margin) var(--slide-top-margin);
+}
+
+.margin-text.ML {
+    translate: var(--slide-left-margin);
+}
+
+.margin-text.MR {
+    translate: var(--slide-right-margin);
+}
+
+.margin-text.BL {
+    translate: var(--slide-left-margin) var(--slide-bottom-margin);
+}
+
+.margin-text.BC {
+    translate: 0 var(--slide-bottom-margin);
+}
+
+.margin-text.BR {
+    translate: var(--slide-right-margin) var(--slide-bottom-margin);
+}
+
+.TL {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.TC {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.TR {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+.ML {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.MC {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.MR {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.BL {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.BC {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.BR {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.inFront {
+    z-index: 10;
+}
+
+.overlapBR {
+    translate: 20% 10%;
+}
+
+.overlapBL {
+    translate: -20% 10%;
+}
+
+/* Responsive classes */
+
+@media (max-width: 576px) {
+    :root {
+        --slide-top-margin: 1rem;
+        --slide-left-margin: 1rem;
+        --slide-bottom-margin: -1rem;
+        --slide-right-margin: -1rem;
+    }
+
+
+    #carouselCourse img {
+        opacity: 0.3;
+    }
 }

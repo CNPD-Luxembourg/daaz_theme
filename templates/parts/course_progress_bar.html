@@ -4,34 +4,26 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/course_progress_bar.css' %}">
 {% endblock %}
 
-<div class="course-progress-bar align-items-center pe-3">
-    <div class="progress border-primary border-1 align-items-center">
-      <div
-          class="progress-bar"
-          role="progressbar"
-          style="width: {{ value }}%"
-          aria-valuenow="{{ value }}"
-          aria-valuemin="0"
-          aria-valuemax="100">
-      </div>
+<div class="progress border-primary border-1 align-items-center">
+    <div class="progress-bar" role="progressbar" style="width: {{ progress }}%" aria-valuenow="{{ progress }}"
+        aria-valuemin="0" aria-valuemax="100">
     </div>
+</div>
+{% for n in '123' %}
+{% widthratio n 1 25 as threshold %}
+<div class="key-{{ n }} align-items-center">
+    {% if progress >= threshold|add:0 %}
+    <img class="img-fluid" src="{% static 'media/images/icons/key-yellow.svg' %}" />
+    {% else %}
+    <img class="img-fluid" src="{% static 'media/images/icons/key-white.svg' %}" />
+    {% endif %}
+</div>
+{% endfor %}
 
-    {% for n in '123' %}
-        {% widthratio n 1 25 as threshold %}
-        <div class="key-{{ n }} align-items-center">
-            {% if value >= threshold|add:0 %}
-                <img src="{% static 'media/images/icons/key-yellow.svg' %}"/>
-            {% else %}
-                <img src="{% static 'media/images/icons/key-white.svg' %}"/>
-            {% endif %}
-        </div>
-    {% endfor %}
-
-    <div class="trophy">
-        {% if value >= 100 %}
-            <img src="{% static '/media/images/icons/trophy-yellow.svg' %}"/>
-        {% else %}
-            <img src="{% static '/media/images/icons/trophy-white.svg' %}"/>
-        {% endif %}
-    </div>
+<div class="trophy">
+    {% if progress >= 100 %}
+    <img class="img-fluid" src="{% static '/media/images/icons/trophy-yellow.svg' %}" />
+    {% else %}
+    <img class="img-fluid" src="{% static '/media/images/icons/trophy-white.svg' %}" />
+    {% endif %}
 </div>
