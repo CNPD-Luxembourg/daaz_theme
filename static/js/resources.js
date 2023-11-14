@@ -1,5 +1,8 @@
 $(document).ready(function () {
     $('.go-to-download').click(function() {
+        $('#CheckAll').prop('checked', false);
+        $('#CheckAll').prop('disabled', false);
+        $('#CheckAll').parent().show();
         var $popup = $("#resources_download");
         var popup_url = 'resources_download/';
         if ($(this).data("level-id")){
@@ -14,12 +17,4 @@ $(document).ready(function () {
         });
     });
 
-
-    $('#CheckAll').change(function (e) {
-        if (e.currentTarget.checked) {
-            $('.option').find('input[type="checkbox"]').not(":disabled").prop('checked', true);
-        } else {
-            $('.option').find('input[type="checkbox"]').not(":disabled").prop('checked', false);
-        }
-    });
 });

@@ -1,39 +1,37 @@
 $(document).ready(function () {
-    var checkboxesAndRadios = $(".form-check-input");
-    var submitButton = $("#summitButton");
+    const $checkboxesAndRadios = $(".form-check-input");
+    const $submitButton = $("#summitButton");
+    const $carouselCourse = $("#carouselCourse");
+    const $progressBar = $(".course-progress-bar");
+    const $changeSlideButton = $(".change_slide");
+    const updateProgressBar_url = "update_progress_bar/";
+    const changeSlide_url = "change_slide/"+"?direction=";
+    const fadeOutDelay = 500;
+    const fadeInDelay = 0;
 
-    if (checkboxesAndRadios.length > 0) {
-        processCheckboxSelection(checkboxesAndRadios.filter(':checked').first());
+
+    function processCheckboxSelection () {
+        $submitButton.prop("disabled", !$checkboxesAndRadios.is(":checked"));
     }
 
-    checkboxesAndRadios.click(function() {
-        processCheckboxSelection($(this));
-    });
-
-
-    function processCheckboxSelection (checkbox) {
-        submitButton.attr("disabled", !checkboxesAndRadios.is(":checked"));
+    function loadSlide (button) {
+        const $button = $(button);
+        $carouselCourse.load(changeSlide_url + $button.data("bs-slide"), function () {
+            $progressBar.fadeOut(fadeOutDelay);
+            $progressBar.load(updateProgressBar_url);
+            $progressBar.fadeIn(fadeInDelay);
+        });
     }
 
-    $('.previous_slide').click(function () {
-        var $divId = $("#carouselCourse");
-        var $progress_bar_id = $(".course-progress-bar");
-        var url = 'previous_slide/';
-        $($divId).load(url, function () {
-            $($progress_bar_id).fadeOut(500)
-            $($progress_bar_id).load("update_progress_bar/")
-            $($progress_bar_id).fadeIn(100);
-        });
+    if ($checkboxesAndRadios.length > 0) {
+        processCheckboxSelection($checkboxesAndRadios.filter(':checked').first());
+    }
+
+    $checkboxesAndRadios.on("click", function () {
+        processCheckboxSelection();
     });
 
-    $('.next_slide').click(function () {
-        var $divId = $("#carouselCourse");
-        var $progress_bar_id = $(".course-progress-bar");
-        var url = 'next_slide/';
-        $($divId).load(url, function () {
-            $($progress_bar_id).fadeOut(500)
-            $($progress_bar_id).load("update_progress_bar/")
-            $($progress_bar_id).fadeIn(100);
-        });
+    $changeSlideButton.on("click", function () {
+        loadSlide($(this));
     });
 });
