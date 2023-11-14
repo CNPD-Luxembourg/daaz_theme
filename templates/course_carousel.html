@@ -17,6 +17,8 @@
                 {% csrf_token %}
                 {% bootstrap_form_errors slide.question %}
                 {% bootstrap_field slide.question.answer show_label=True label_class="pb-3" %}
+                {{ slide.question.media }}
+
                 <div class="text-center py-sm-5 py-3 inFront">
                     <button id="summitButton" type="summit"
                         class="btn text-primary course-button fw-bolder border-primary border border-3 shadow rounded p-2">
