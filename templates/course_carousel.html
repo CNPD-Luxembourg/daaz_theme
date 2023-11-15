@@ -30,21 +30,19 @@
             <div class="back col card border border-primary p-sm-5 p-2 mx-auto h-100">
                 <h3 class="text-primary">{% translate "Question"%} {{ slide.question.question_index }}</h3>
                 <div class="pb-3">{{ slide.question.answer.label_tag }}</div>
-                {% for form in slide.question %}
                 <div class="d-grid gap-2 ps-3 mb-5">
-                    {% for answer_choice in form.field.queryset %}
-                        <label class="form-check">
-                            <input class="form-check-input {% if answer_choice.is_correct %}correct_answer{% endif %}" type="{{ form.field.widget.input_type }}"
-                                value="{{ answer_choice.pk }}" {% if answer_choice.is_correct %}checked{% endif %} disabled>
-                            {% if answer_choice.is_correct %}
-                                <span>{{ answer_choice }}</span>
-                            {% else %}
-                                <span>{{ answer_choice }}</span>
-                            {% endif %}
-                        </label>
-                    {% endfor %}
-                </div>
+                {% for answer_choice in slide.question.answer.field.queryset %}
+                    <label class="form-check">
+                        <input class="form-check-input {% if answer_choice.is_correct %}correct_answer{% endif %}" type="{{ slide.question.answer.field.widget.input_type }}"
+                            value="{{ answer_choice.pk }}" {% if answer_choice.is_correct %}checked{% endif %} disabled>
+                        {% if answer_choice.is_correct %}
+                            <span>{{ answer_choice }}</span>
+                        {% else %}
+                            <span>{{ answer_choice }}</span>
+                        {% endif %}
+                    </label>
                 {% endfor %}
+                </div>
             </div>
         </div>
         {% elif slide.context %}
@@ -133,9 +131,7 @@
     <span class="carousel-control-prev-icon text-primary" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
 </a>
-<!-- <a class="carousel-control-next w-auto change_slide {% if not next_control_enable %}control_disabled{% endif %}" -->
-
-<a class="carousel-control-next w-auto change_slide"
+<a class="carousel-control-next w-auto change_slide {% if not next_control_enable %}control_disabled{% endif %}"
     type="button" data-bs-target="#carouselCourse" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>

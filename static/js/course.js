@@ -7,7 +7,10 @@ $(document).ready(function () {
     const $carouselCourse = $("#carouselCourse");
     const $progressBar = $(".course-progress-bar");
     const $questionCard = $("#question-card");
+    const $flipButton = $(".flip");
     const $changeSlideButton = $(".change_slide");
+    const $prevControlButton = $(".carousel-control-prev");
+    const $nextControlButton = $(".carousel-control-next");
     const updateProgressBar_url = "update_progress_bar/";
     const changeSlide_url = "change_slide/"+"?direction=";
     const fadeOutDelay = 500;
@@ -27,6 +30,9 @@ $(document).ready(function () {
         });
     }
 
+    $questionCard.flip({trigger: 'manual'});
+
+
     if ($checkboxesAndRadios.length > 0) {
         processCheckboxSelection($checkboxesAndRadios.filter(':checked').first());
     }
@@ -40,7 +46,7 @@ $(document).ready(function () {
         loadSlide($(this));
     });
 
-    $(".flip").on("click", function () {
+    $flipButton.on("click", function () {
         const checkedValues = $checkboxesAndRadios.filter(':checked').map(function() {
             return this.value;
         }).get();
@@ -51,6 +57,8 @@ $(document).ready(function () {
 
         $filteredAnswers.prop('checked', true);
         $filteredAnswers.addClass('wrong-answer');
+        $prevControlButton.addClass('control_disabled');
+        $nextControlButton.removeClass('control_disabled');
         $questionCard.flip('toggle');
     });
 });
