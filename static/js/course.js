@@ -1,8 +1,12 @@
 $(document).ready(function () {
-    const $checkboxesAndRadios = $(".form-check-input");
+    const $checkboxesAndRadios = $(".front .form-check-input");
+    const $answersCheckboxesAndRadios = $(".back .form-check-input");
+
+
     const $submitButton = $("#summitButton");
     const $carouselCourse = $("#carouselCourse");
     const $progressBar = $(".course-progress-bar");
+    const $questionCard = $("#question-card");
     const $changeSlideButton = $(".change_slide");
     const updateProgressBar_url = "update_progress_bar/";
     const changeSlide_url = "change_slide/"+"?direction=";
@@ -26,6 +30,7 @@ $(document).ready(function () {
     if ($checkboxesAndRadios.length > 0) {
         processCheckboxSelection($checkboxesAndRadios.filter(':checked').first());
     }
+    $questionCard.flip({trigger: 'manual'});
 
     $checkboxesAndRadios.on("click", function () {
         processCheckboxSelection();
@@ -33,5 +38,19 @@ $(document).ready(function () {
 
     $changeSlideButton.on("click", function () {
         loadSlide($(this));
+    });
+
+    $(".flip").on("click", function () {
+        const checkedValues = $checkboxesAndRadios.filter(':checked').map(function() {
+            return this.value;
+        }).get();
+
+        const $filteredAnswers = $answersCheckboxesAndRadios.filter(function() {
+            return checkedValues.includes(this.value);
+        });
+
+        $filteredAnswers.prop('checked', true);
+        $filteredAnswers.addClass('wrong-answer');
+        $questionCard.flip('toggle');
     });
 });
