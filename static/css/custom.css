@@ -11542,4 +11542,11 @@ ul li {
   transform: translateX(-50%);
 }
 
+/* Responsive classes */
+@media (max-width: 576px) {
+  :root {
+    --bs-body-font-size: 0.9rem;
+  }
+}
+
 /*# sourceMappingURL=custom.css.map */

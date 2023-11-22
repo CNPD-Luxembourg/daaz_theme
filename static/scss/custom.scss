@@ -129,3 +129,11 @@ ul li {
   left: 50%;
   transform: translateX(-50%);
 }
+
+/* Responsive classes */
+
+@media (max-width: 576px) {
+  :root {
+    --bs-body-font-size: 0.9rem;
+  }
+}
