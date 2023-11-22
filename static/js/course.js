@@ -1,7 +1,7 @@
 $(document).ready(function () {
     const $checkboxesAndRadios = $(".front .form-check-input");
     const $answersCheckboxesAndRadios = $(".back .form-check-input");
-
+    const $backSortingFields = $(".back .draggable-item");
 
     const $submitButton = $("#summitButton");
     const $carouselCourse = $("#carouselCourse");
@@ -12,16 +12,16 @@ $(document).ready(function () {
     const $prevControlButton = $(".carousel-control-prev");
     const $nextControlButton = $(".carousel-control-next");
     const updateProgressBar_url = "update_progress_bar/";
-    const changeSlide_url = "change_slide/"+"?direction=";
+    const changeSlide_url = "change_slide/" + "?direction=";
     const fadeOutDelay = 500;
     const fadeInDelay = 0;
 
 
-    function processCheckboxSelection () {
+    function processCheckboxSelection() {
         $submitButton.prop("disabled", !$checkboxesAndRadios.is(":checked"));
     }
 
-    function loadSlide (button) {
+    function loadSlide(button) {
         const $button = $(button);
         $carouselCourse.load(changeSlide_url + $button.data("bs-slide"), function () {
             $progressBar.fadeOut(fadeOutDelay);
@@ -30,13 +30,40 @@ $(document).ready(function () {
         });
     }
 
-    $questionCard.flip({trigger: 'manual'});
+    function checkSortingAnswers() {
+        const $frontSortingFields = $(".front .draggable-item");
+        $frontSortingFields.each(function (index, frontField) {
+            const frontValue = $(frontField).attr("value");
+            const backField = $backSortingFields.get(index);
+            if (frontValue !== $(backField).attr("value")) {
+                $(backField).addClass('border-danger');
+                $(backField).children().even().addClass('text-danger');
+            }
+        });
+    }
+
+    function checkSingleAndMultipleAnswers() {
+        const checkedValues = $checkboxesAndRadios.filter(':checked').map(function () {
+            return this.value;
+        }).get();
+
+        const $filteredAnswers = $answersCheckboxesAndRadios.filter(function () {
+            if (checkedValues.includes(this.value)) {
+            }
+            return checkedValues.includes(this.value);
+        });
+
+        $filteredAnswers.prop('checked', true);
+        $filteredAnswers.addClass('wrong-answer');
+    }
+
+    $questionCard.flip({ trigger: 'manual' });
 
 
     if ($checkboxesAndRadios.length > 0) {
         processCheckboxSelection($checkboxesAndRadios.filter(':checked').first());
     }
-    $questionCard.flip({trigger: 'manual'});
+    $questionCard.flip({ trigger: 'manual' });
 
     $checkboxesAndRadios.on("click", function () {
         processCheckboxSelection();
@@ -47,16 +74,13 @@ $(document).ready(function () {
     });
 
     $flipButton.on("click", function () {
-        const checkedValues = $checkboxesAndRadios.filter(':checked').map(function() {
-            return this.value;
-        }).get();
+        if ($backSortingFields.length > 0) {
+            checkSortingAnswers()
+        }
+        if ($checkboxesAndRadios.length > 0) {
+            checkSingleAndMultipleAnswers()
+        }
 
-        const $filteredAnswers = $answersCheckboxesAndRadios.filter(function() {
-            return checkedValues.includes(this.value);
-        });
-
-        $filteredAnswers.prop('checked', true);
-        $filteredAnswers.addClass('wrong-answer');
         $prevControlButton.addClass('control_disabled');
         $nextControlButton.removeClass('control_disabled');
         $questionCard.flip('toggle');
