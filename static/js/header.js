@@ -7,4 +7,25 @@ $(document).ready(function () {
             $popup.modal("show");
         });
     });
+
+
+    $('.navbar .nav-link').click(function() {
+      if ($(this).attr('href') !== undefined) {
+          divId = $(this).attr('href').split("#").pop();
+          console.log($("#" + divId))
+          $('html, body').animate({
+            scrollTop: $("#" + divId).offset().top - 110
+          }, 100);
+      }
+    });
+
+    $('.navbar .navbar-brand').click(function() {
+      if ($(this).attr('href') !== undefined) {
+          divId = $(this).attr('href').split("#").pop();
+          console.log($("#" + divId))
+          $('html, body').animate({
+            scrollTop: $("#" + divId).offset().top - 110
+          }, 100);
+      }
+    });
 });
