@@ -16,6 +16,15 @@ $gray-600: #D9D9D9;
 // Importing bootstrap
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
+@font-face {
+  font-family: Inter;
+  src: url("../fonts/Inter/Inter-VariableFont_slnt,wght.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
 
 // Then add additional custom code here
 
@@ -24,6 +33,10 @@ $gray-600: #D9D9D9;
 :root {
   --bs-light-blue: 224, 243, 255;
   --bs-progress-height: 30px;
+}
+
+html, body {
+  font-family: "Inter" !important;
 }
 
 h1 {
@@ -136,4 +149,14 @@ ul li {
   :root {
     --bs-body-font-size: 0.9rem;
   }
+}
+
+/* Fonts */
+
+.font-inter {
+    font-family: "Inter", !important;
+}
+
+.font-roboto {
+    font-family: "Roboto", !important;
 }

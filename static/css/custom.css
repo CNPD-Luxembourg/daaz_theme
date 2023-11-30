@@ -11437,9 +11437,21 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@font-face {
+  font-family: Inter;
+  src: url("../fonts/Inter/Inter-VariableFont_slnt,wght.ttf");
+}
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
 :root {
   --bs-light-blue: 224, 243, 255;
   --bs-progress-height: 30px;
+}
+
+html, body {
+  font-family: "Inter" !important;
 }
 
 h1, .h1 {
@@ -11547,6 +11559,14 @@ ul li {
   :root {
     --bs-body-font-size: 0.9rem;
   }
+}
+/* Fonts */
+.font-inter {
+  font-family: "Inter", !important;
+}
+
+.font-roboto {
+  font-family: "Roboto", !important;
 }
 
 /*# sourceMappingURL=custom.css.map */
