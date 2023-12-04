@@ -13,9 +13,9 @@
     {{ slide.question.media }}
     <div class="carousel-item h-100 pb-sm-5 mb-sm-5 {% if forloop.first %}active{% endif %}">
         {% if slide.question %}
-        <div id="question-card" class="h-100">
+        <div id="question-card" class="h-100" value="{{ slide.question.id }}">
             <div class="front col card border border-primary p-sm-5 p-2 mx-auto h-100">
-                <form method="post">
+                <form method="post" id="question-form">
                     <h3 class="text-primary">{% translate "Question"%} {{ slide.question.question_index }}</h3>
                     {% csrf_token %}
                     {% bootstrap_form_errors slide.question %}
@@ -31,7 +31,7 @@
             <div class="back col card border border-primary p-sm-5 p-2 mx-auto h-100">
                 <h3 class="text-primary">{% translate "Question"%} {{ slide.question.question_index }}</h3>
                 <div class="pb-3">{{ slide.question.answer.label_tag }}</div>
-                {% if slide.question.answer.field.q_type == "S" or slide.question.answer.field.q_type == "M" %}
+                {% if slide.question.type == "S" or slide.question.type == "M" %}
                     <div class="d-grid gap-2 ps-3 mb-5">
                         {% for answer_choice in slide.question.answer.field.queryset %}
                             <label class="form-check">
@@ -42,7 +42,7 @@
                         {% endfor %}
                     </div>
                 {% endif %}
-                {% if slide.question.answer.field.q_type == "SR" %}
+                {% if slide.question.type == "SR" %}
                     <div class="d-grid gap-2 px-3 mx-sm-2">
                         {% for answer_choice in slide.question.answer.field.queryset %}
                             <div class="row draggable-item border border-primary py-1 rounded-3" value="{{ answer_choice.pk }}">

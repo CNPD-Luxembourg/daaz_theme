@@ -17,6 +17,23 @@ $(document).ready(function () {
     const fadeInDelay = 0;
 
 
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+          const cookies = document.cookie.split(';');
+          for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+              cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+              break;
+            }
+          }
+        }
+        return cookieValue;
+      }
+
+
     function processCheckboxSelection() {
         $submitButton.prop("disabled", !$checkboxesAndRadios.is(":checked"));
     }
@@ -71,6 +88,36 @@ $(document).ready(function () {
 
     $changeSlideButton.on("click", function () {
         loadSlide($(this));
+    });
+
+    $submitButton.on("click", function (e) {
+        e.preventDefault();
+        const csrftoken = getCookie('csrftoken');
+        const $frontSortingFields = $(".active .front .draggable-item");
+        let formdata = $("#question-form").serialize();
+
+        if ($frontSortingFields.length > 0) {
+            const answers = $frontSortingFields.map(function () {
+                return $(this).attr("value");
+            }).get()
+            formdata = {answer: answers}
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "/course",
+            data: formdata,
+            headers: {
+                "X-CSRFToken": csrftoken
+            },
+            traditional: true,
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
     });
 
     $flipButton.on("click", function () {
