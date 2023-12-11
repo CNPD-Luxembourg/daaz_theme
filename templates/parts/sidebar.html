@@ -6,18 +6,18 @@
 {% endblock %}
 <nav id="sidebar" class="col-auto col-md-2 col-lg-2 px-2 bg-white shadow-sm sticky-sidebar">
     <div class="d-flex flex-sm-column flex-row align-items-center px-sm-2 pt-2 min-vh-100 justify-content-evenly">
-        <button id="sidebarToggle" class="btn btn-link align-self-end d-none d-sm-block">
+        <button id="sidebarToggle" class="btn btn-link align-self-end d-none d-sm-block my-sm-3">
             <i class="bi bi-arrow-left text-primary d-none d-sm-inline"></i>
             <i id="open_sidebar" class="bi bi-arrow-right text-primary d-none d-sm-none"></i>
         </button>
         <div class="d-flex flex-row d-none d-sm-block">
             <img id="logo_small" src="{% static 'media/images/logos/logo_minimized.svg' %}" alt="Logo Small" width="30px"
                 class="d-sm-none">
-            <img src="{% static 'media/images/logos/logo.svg' %}" alt="Logo Large" width="100px" class="d-none d-sm-inline">
+            <img src="{% static 'media/images/logos/logo.svg' %}" alt="Logo Large" class="d-none d-sm-inline w-100 px-1 my-4">
         </div>
         <hr>
         <div class="{% if request.path == '/course' %}d-none{% endif %}">
-            <a class="btn btn-primary align-self-center text-white d-none d-sm-inline" href="{% url 'course' %}" role="button">
+            <a class="start-button btn btn-primary align-self-center text-white d-none d-sm-inline-block w-100 py-3" href="{% url 'course' %}" role="button">
                 {% translate "Commencer" %}
             </a>
         </div>
@@ -51,7 +51,8 @@
                 </a>
             </li>
             <li class="w-100 px-2 px-sm-2 flex-grow-1 flex-sm-grow-0 order-4">
-                <a class="nav-link px-0 align-middle danger-link" data-bs-toggle="modal" data-bs-target="#finish">
+                <a class="nav-link px-0 align-middle danger-link" data-bs-toggle="modal" data-bs-target="#finish"
+                   role="button">
                     <i class="fs-4 bi-box-arrow-right"></i>
                     <span class="ms-1 d-none d-sm-inline">{% translate "Log out" %}</span>
                 </a>

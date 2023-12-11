@@ -12,8 +12,18 @@
     width: auto;
 }
 
+@media (min-width: 576px) {
+    #sidebar:not(.minimized) {
+        width: 200px;
+    }
+}
+
 #sidebar.minimized {
     width: fit-content;
+}
+
+#sidebar.minimized .start-button {
+    display: none !important;
 }
 
 #sidebar .nav-link:hover,
