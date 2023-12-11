@@ -8,13 +8,13 @@
 <script src='{% static "js/course.js" %}'></script>
 {% endblock %}
 
-<div class="carousel-inner px-5 h-100" role="listbox">
+<div class="carousel-inner px-0 px-md-5 pb-5 h-100" role="listbox">
     {% for slide in slides %}
     {{ slide.question.media }}
-    <div class="carousel-item h-100 pb-sm-5 mb-sm-5 {% if forloop.first %}active{% endif %}">
+    <div class="carousel-item h-100 pb-sm-4 mb-5 {% if forloop.first %}active{% endif %}">
         {% if slide.question %}
         <div id="question-card" class="h-100" value="{{ slide.question.id }}">
-            <div class="front col card border border-primary p-sm-5 p-2 mx-auto h-100">
+            <div class="front overflow-auto col card border border-3 border-primary p-sm-5 p-2 mx-auto h-100">
                 <form method="post" id="question-form">
                     <h3 class="text-primary">{% translate "Question"%} {{ slide.question.question_index }}</h3>
                     {% csrf_token %}
@@ -28,7 +28,7 @@
                     </div>
                 </form>
             </div>
-            <div class="back col card border border-primary p-sm-5 p-2 mx-auto h-100">
+            <div class="back col card border border-3 border-primary p-sm-5 p-2 mx-auto h-100">
                 <h3 class="text-primary">{% translate "Question"%} {{ slide.question.question_index }}</h3>
                 <div class="pb-3">{{ slide.question.answer.label_tag }}</div>
                 {% if slide.question.type == "S" or slide.question.type == "M" %}
@@ -60,7 +60,7 @@
             </div>
         </div>
         {% elif slide.context %}
-        <div class="col card border border-primary p-sm-5 p-2 mx-auto h-100">
+        <div class="col card border border-3 border-primary p-sm-5 p-2 mx-auto h-100">
             {% for text in slide.context.texts %}
             <span class="inFront margin-text {{ text.css_classes|join:' ' }} {{ text.position }}">
                 {{ text.text.description|safe }}
@@ -76,7 +76,7 @@
         </div>
         {% elif slide.challenge %}
             {% if slide.challenge.description == "Final" %}
-            <div class="col card border border-warning p-sm-5 p-2 mx-auto h-100">
+            <div class="col card border border-3 border-warning p-sm-5 p-2 mx-auto h-100">
                 <div class="text-center">
                     <h1 class="fw-bolder text-warning">
                         {% translate "Felicitations" %} !
@@ -111,7 +111,7 @@
                     src="{% static 'media/images/course/challenge/palm-right.svg' %}" alt="Palm Right" />
             </div>
             {% else %}
-            <div class="col card border border-danger p-sm-5 p-2 mx-auto h-100">
+            <div class="col card border border-3 border-danger p-sm-5 p-2 mx-auto h-100">
                 <div class="text-center text-danger">
                     <h1 class="fw-bolder">
                         {% translate "Challenge" %} !
@@ -139,12 +139,12 @@
     {% endfor %}
 </div>
 
-<a class="carousel-control-prev w-auto change_slide {% if not previous_control_enable %}control_disabled{% endif %}"
+<a class="carousel-control-prev bottom-0 pb-1 pb-sm-4 w-auto change_slide {% if not previous_control_enable %}control_disabled{% endif %}"
     type="button" data-bs-target="#carouselCourse" data-bs-slide="prev">
     <span class="carousel-control-prev-icon text-primary" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
 </a>
-<a class="carousel-control-next w-auto change_slide {% if not next_control_enable %}control_disabled{% endif %}"
+<a class="carousel-control-next bottom-0 pb-1 pb-sm-4 w-auto change_slide {% if not next_control_enable %}control_disabled{% endif %}"
     type="button" data-bs-target="#carouselCourse" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
