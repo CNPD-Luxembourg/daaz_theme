@@ -4,16 +4,16 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/sidebar.css' %}">
 <script src='{% static "js/sidebar.js" %}'></script>
 {% endblock %}
-<nav id="sidebar" class="col-auto col-md-2 col-lg-2 px-2 bg-white shadow-sm sticky-sidebar">
-    <div class="d-flex flex-sm-column flex-row align-items-center px-sm-2 pt-2 min-vh-100 justify-content-evenly">
-        <button id="sidebarToggle" class="btn btn-link align-self-end d-none d-sm-block my-sm-3">
+<nav id="sidebar" class="col-auto col-md-2 col-lg-2 px-0 bg-white shadow-sm sticky-sidebar">
+    <div class="d-flex flex-sm-column flex-row align-items-center pt-2 min-vh-100 justify-content-evenly">
+        <button id="sidebarToggle" class="btn btn-link align-self-end d-none d-sm-block my-sm-3 mx-2">
             <i class="bi bi-arrow-left text-primary d-none d-sm-inline"></i>
             <i id="open_sidebar" class="bi bi-arrow-right text-primary d-none d-sm-none"></i>
         </button>
         <div class="d-flex flex-row d-none d-sm-block">
             <img id="logo_small" src="{% static 'media/images/logos/logo_minimized.svg' %}" alt="Logo Small" width="30px"
                 class="d-sm-none">
-            <img src="{% static 'media/images/logos/logo.svg' %}" alt="Logo Large" class="d-none d-sm-inline w-100 px-1 my-4">
+            <img src="{% static 'media/images/logos/logo.svg' %}" alt="Logo Large" class="d-none d-sm-inline w-100 px-3 my-4">
         </div>
         <hr>
         <div class="{% if request.path == '/course' %}d-none{% endif %}">
@@ -23,43 +23,56 @@
         </div>
 
         <hr>
-        <ul class="nav nav-pills flex-sm-column flex-row mb-sm-auto mb-0 align-items-center align-items-sm-start flex-grow-1 flex-sm-grow-0 text-sm-start text-center">
-            <li class="w-100 px-2 px-sm-2 d-inline d-sm-none flex-grow-1 order-sm-0 order-2">
+        <ul class="nav nav-pills w-100 flex-sm-column flex-row mb-sm-auto mb-0 align-items-center align-items-sm-start flex-grow-1 flex-sm-grow-0 text-sm-start text-center">
+            <li class="w-100 px-2 px-sm-0 d-inline d-sm-none flex-grow-1 order-sm-0 order-2">
                 <a href="{% url 'course' %}"
                     class="nav-link px-0 align-middle {% if request.path == '/course' %}text-primary fw-bold{% endif %}">
                     <i class="fs-4 bi-book"></i>
                 </a>
             </li>
-            <li class="w-100 px-2 px-sm-2 flex-grow-1 flex-sm-grow-0 order-sm-1 order-0">
+            <li class="w-100 px-2 px-sm-0 py-sm-2 flex-grow-1 flex-sm-grow-0 order-sm-1 order-0">
                 <a href="{% url 'dashboard' %}"
                     class="nav-link px-0 align-middle {% if request.path == '/dashboard' %}text-primary fw-bold{% endif %}">
                     <i class="fs-4 bi-house"></i>
-                    <span class="ms-1 d-none d-sm-inline">{% translate "Accueil" %}</span>
+                    <span class="ms-1 d-none d-sm-inline ms-sm-1">{% translate "Accueil" %}</span>
+                    <div class="left-bar d-none bg-primary opacity-50"></div>
+                    {% if request.path == '/dashboard' %}
+                        <div class="selected-left-bar bg-primary"></div>
+                    {% endif %}
                 </a>
             </li>
-            <li class="w-100 px-2 px-sm-2 flex-grow-1 flex-sm-grow-0 order-sm-2 order-1">
+            <li class="w-100 px-2 px-sm-0 flex-grow-1 flex-sm-grow-0 order-sm-2 order-1">
                 <a href="{% url 'resources' %}"
                     class="nav-link px-0 align-middle {% if request.path == '/resources' %}text-primary fw-bold{% endif %}">
                     <i class="fs-4 bi-folder"></i>
-                    <span class="ms-1 d-none d-sm-inline">{% translate "Ressources" %}</span>
+                    <span class="ms-1 d-none d-sm-inline ms-sm-1">{% translate "Ressources" %}</span>
+                    <div class="left-bar d-none bg-primary opacity-50"></div>
+                    {% if request.path == '/resources' %}
+                        <div class="selected-left-bar bg-primary"></div>
+                    {% endif %}
                 </a>
             </li>
-            <li class="w-100 px-2 px-sm-2 flex-grow-1 flex-sm-grow-0 order-3">
+            <li class="w-100 px-2 px-sm-0 py-sm-2 flex-grow-1 flex-sm-grow-0 order-3">
                 <a href="#" class="nav-link px-0 align-middle">
                     <i class="fs-4 bi-gear"></i>
-                    <span class="ms-1 d-none d-sm-inline">{% translate "Centre d'aide" %}</span>
+                    <span class="ms-1 d-none d-sm-inline ms-sm-1">{% translate "Centre d'aide" %}</span>
+                    <div class="left-bar d-none bg-primary opacity-50"></div>
+                    {% if request.path == '/help' %}
+                        <div class="selected-left-bar bg-primary"></div>
+                    {% endif %}
                 </a>
             </li>
-            <li class="w-100 px-2 px-sm-2 flex-grow-1 flex-sm-grow-0 order-4">
+            <li class="w-100 px-2 px-sm-0 py-sm-2 flex-grow-1 flex-sm-grow-0 order-4">
                 <a class="nav-link px-0 align-middle danger-link" data-bs-toggle="modal" data-bs-target="#finish"
                    role="button">
                     <i class="fs-4 bi-box-arrow-right"></i>
-                    <span class="ms-1 d-none d-sm-inline">{% translate "Log out" %}</span>
+                    <span class="ms-1 d-none d-sm-inline ms-sm-1">{% translate "Log out" %}</span>
+                    <div class="left-bar d-none bg-danger opacity-50"></div>
                 </a>
             </li>
         </ul>
         <hr>
-        <div class="mb-5 align-items-center align-items-sm-start d-none d-sm-block">
+        <div class="mb-4 align-items-center align-items-sm-start d-none d-sm-block">
             {% include "home/language_selector.html" %}
         </div>
     </div>
