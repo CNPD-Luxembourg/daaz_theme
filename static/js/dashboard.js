@@ -13,9 +13,16 @@ $(document).ready(function () {
                 borderSkipped: false,
                 backgroundColor: '#AFDFFF',
                 barPercentage: 0.6
+            },
+            {
+                data: criteria.data.map(() => { return 100 }),
+                borderRadius: 30,
+                backgroundColor: '#ECF6FF',
+                barPercentage: 0.6
             }]
         },
         options: {
+            indexAxis: 'y',
             scales: {
                 y: {
                     ticks: {
@@ -29,8 +36,12 @@ $(document).ready(function () {
                     min: 0,
                     max: 1,
                     grid: {
+                        display: false,
                         drawTicks: false,
                         drawOnChartArea: false,
+                    },
+                    border: {
+                        display: false,
                     },
                 },
                 x: {
@@ -41,6 +52,7 @@ $(document).ready(function () {
                         display: false,
                     },
                     ticks: {
+                        display: false,
                         font: {
                             weight: 'bold',
                         },

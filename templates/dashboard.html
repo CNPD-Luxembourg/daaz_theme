@@ -18,7 +18,7 @@
 
 <div class="row row-cols-1 row-cols-sm-2 g-sm-5 h-100 d-sm-inline-flex py-2 py-sm-4">
   <div>
-    <div class="border shadow-sm rounded-4 py-3 px-4">
+    <div class="border shadow-sm rounded-4 py-3 px-4 mb-4">
       <h4 class="py-2">{% translate "Mes cours" %}</h4>
 
       <div class="row row-cols-1 row-cols-sm-2">
@@ -26,12 +26,12 @@
         <div class="col mb-3 flex-fill">
           <div class="bg-light-blue rounded-3 pt-2 pb-3 px-2 h-100">
             <div class="row row-cols-2 p-4 p-sm-2 flex-grow-1">
-              <div class="col-6 pe-0 align-items-stretch">
+              <div class="col-6 pe-0">
                 <div class="h6">{{ score.level.name }}</div>
                 <h5 class="fw-semibold m-0 pb-1">{% translate "Module" %} {{ score.level.index }}</h5>
                 <div class="small lh-1">{{ score.level.description }}</div>
               </div>
-              <div class="col-5 offset-1 h-100">
+              <div class="col-5 offset-1 h-100 align-self-center">
                 <img src="{% static 'media/images/course/levels/level-'%}{{score.level.index}}.svg" class="img-fluid"  alt="{{ score.level.description }}"/>
               </div>
             </div>
