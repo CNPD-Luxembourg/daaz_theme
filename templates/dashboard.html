@@ -15,67 +15,93 @@
 {% endblock %}
 
 {% block content_area %}
-{% if user.current_position %}
-<h5 class="text-primary pb-2"> {% translate "Hello, welcome back!" %}</h5>
-{% else %}
-<h5 class="text-primary pb-2"> {% translate "Hello" %}</h5>
-{% endif %}
 
-<div class="d-flex d-sm-none py-2">
-  <a class="btn btn-lg btn-primary text-white w-100" href="{% url 'course' %}" role="button">
-    {% translate "Commencer l’histoire" %}
-  </a>
-</div>
-<div class="row row-cols-1 row-cols-sm-2 g-sm-5 h-100 d-sm-inline-flex">
+<div class="row row-cols-1 row-cols-sm-2 g-sm-5 h-100 d-sm-inline-flex py-2 py-sm-4">
   <div>
-    <h4 class="py-2 py-sm-0">{% translate "Mes cours" %}</h4>
-    <div class="row row-cols-1 row-cols-sm-2">
-      {% for score in scores %}
-      <div class="p-2 pt-0">
-        <div class="bg-primary shadow rounded-4 border-0 mb-2">
-          <div class="row row-cols-2 p-4 p-sm-2">
-            <div class="pe-0">
-              <h6 class="text-white fw-semibold m-0">{% translate "Niveau" %} {{ score.level.index }}</h6>
-              <span class="text-white fw-lighter small">{{ score.level.name }}</span>
-              <div class="w-50 position-relative">
-                <div class="ratio ratio-1x1 ">
-                  <canvas id="progress{{ score.level.index }}"></canvas>
-                </div>
-                <span class="text-white position-absolute top-50 start-50 translate-middle mt-1 small">
-                  {{ score.progress }}%
-                </span>
+    <div class="border shadow-sm rounded-4 py-3 px-4">
+      <h4 class="py-2">{% translate "Mes cours" %}</h4>
+
+      <div class="row row-cols-1 row-cols-sm-2">
+        {% for score in scores %}
+        <div class="col mb-3 flex-fill">
+          <div class="bg-light-blue rounded-3 pt-2 pb-3 px-2 h-100">
+            <div class="row row-cols-2 p-4 p-sm-2 flex-grow-1">
+              <div class="col-6 pe-0 align-items-stretch">
+                <div class="h6">{{ score.level.name }}</div>
+                <h5 class="fw-semibold m-0 pb-1">{% translate "Module" %} {{ score.level.index }}</h5>
+                <div class="small lh-1">{{ score.level.description }}</div>
+              </div>
+              <div class="col-5 offset-1 h-100">
+                <img src="{% static 'media/images/course/levels/level-'%}{{score.level.index}}.svg" class="img-fluid"  alt="{{ score.level.description }}"/>
               </div>
             </div>
-            <div>
-              <img src="{% static 'media/images/landing/level-'%}{{score.level.index}}.svg" class="img-fluid w-100"  alt="Compliance officer on phone"/>
+
+            <div class="row row-cols-1 p-4 p-sm-2 flex-grow-0">
+              <div class="col-8">
+                <div class="small fw-bold">{% translate "Progression:" %}</div>
+              </div>
+              <div class="col-4">
+                <div class="h5 mb-0 fw-bold text-end">20%</div>
+              </div>
+
+              <div class="col">
+                <div class="progress bg-white align-items-center">
+                    <div class="progress-bar" role="progressbar" style="width: {{ progress }}%" aria-valuenow="{{ progress }}"
+                        aria-valuemin="0" aria-valuemax="100">
+                    </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="border shadow-sm rounded-4 py-3 px-4">
+      <h4>{% translate "Connaissances" %}</h4>
+
+      <canvas id="dashboard"></canvas>
+    </div>
+  </div>
+
+  <div class="border shadow-sm rounded-4 py-4 px-4">
+    <h4>{% translate "Résultats" %}</h4>
+
+    <div class="px-3">
+      {% for score in scores %}
+      <div class="row row-cols-1 row-cols-sm-2 py-sm-2 my-1">
+        <div class="col">
+          <div class="row row-cols-2 border border-primary rounded-3 py-3">
+            <div>
+              <h5 class="fw-semibold m-0">{% translate "Module" %} {{ score.level.index }}</h5>
+              <span>{{ score.level.name }}</span>
+            </div>
+
+            <div class="position-relative">
+              <div class="ratio ratio-1x1">
+                <canvas id="progress{{ score.level.index }}"></canvas>
+              </div>
+              <div class="position-absolute text-center top-50 start-50 translate-middle mt-1 small">
+                <div class="h4 mb-0 fw-bold">
+                  {{ score.score }}%
+                </div>
+                <div class="small fw-bold">
+                  De réussite
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div>
+            <img src="{% static 'media/images/stickers/level-'%}{{ score.level.index }}-1.svg" alt="Sticker" class="img-fluid w-100" />
           </div>
         </div>
       </div>
       {% endfor %}
     </div>
-    <div class="pt-4 pt-sm-0">
-      <h4> {% translate "Connaissances" %}</h4>
-      <canvas id="dashboard"></canvas>
-    </div>
-  </div>
-  <div class="pb-2 p-sm-0">
-    <h4>{% translate "Stickers" %}</h4>
-    {% for score in scores %}
-    <div class="row row-cols-2 row-cols-sm-4 py-sm-2 {% if forloop.first %}pt-sm-0{% endif %}">
-      {% for sticker in '0123'|make_list %}
-      <div class="p-2 p-sm-0 px-sm-2">
-        <div class="shadow rounded-4">
-          {% if score|is_sticker_unlocked:sticker %}
-            <img src="{% static 'media/images/stickers/level-'%}{{ score.level.index }}-{{ sticker }}-unlocked.svg" alt="Sticker" class="img-fluid w-100" />
-          {% else %}
-            <img src="{% static 'media/images/stickers/level-'%}{{ score.level.index }}-{{ sticker }}.svg" alt="Sticker" class="img-fluid w-100" />
-        {% endif %}
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-    {% endfor %}
   </div>
 </div>
 {% endblock %}

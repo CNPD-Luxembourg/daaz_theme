@@ -11502,11 +11502,11 @@ ul li {
 .progress {
   position: relative;
   background-color: var(--bs-white);
-  border: var(--bs-primary) 3px solid;
   font-size: 16px;
-  height: 32px !important;
+  height: 26px !important;
   border-radius: 16px;
   text-align: center;
+  width: 100%;
 }
 
 .progress > span {
@@ -11517,7 +11517,6 @@ ul li {
 }
 
 .progress-bar {
-  padding: 3px;
   border-top-right-radius: 13px;
   border-bottom-right-radius: 13px;
 }
