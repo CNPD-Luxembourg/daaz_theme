@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="col d-flex align-items-center h-50">
-                  <div class="progress" style="height:50% !important">
+                  <div class="progress bg-white w-100" style="height:50% !important">
                     <div class="progress-bar" role="progressbar" style="width: {{ score.progress }}%"
                       aria-valuenow="{{ score.progress }}" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
@@ -72,7 +72,7 @@
             {{ c.label }}
           </div>
           <div class="d-flex align-items-center h-50">
-            <div class="progress bg-light-blue" style="height: 50% !important;">
+            <div class="progress bg-light-blue w-100" style="height: 50% !important;">
               <div class="progress-bar" role="progressbar" style="width: {% widthratio c.value 1 100 %}%"
                 aria-valuenow="{{ c.value }}" aria-valuemin="0" aria-valuemax="1"></div>
             </div>

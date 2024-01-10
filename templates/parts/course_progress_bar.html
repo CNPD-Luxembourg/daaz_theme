@@ -4,9 +4,8 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/course_progress_bar.css' %}">
 {% endblock %}
 
-<div class="progress border-primary border-1 align-items-center">
-    <div class="progress-bar" role="progressbar" style="width: {{ progress }}%" aria-valuenow="{{ progress }}"
-        aria-valuemin="0" aria-valuemax="100">
+<div class="progress bg-white border border-primary border-2">
+    <div class="progress-bar" role="progressbar" style="width: {{ progress }}%" aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100">
     </div>
 </div>
 {% for n in '123' %}
