@@ -1,0 +1,10 @@
+@media (max-width: 1600px) {
+    .small {
+        font-size: 0.7em;
+    }
+}
+@media (min-width: 1600px) {
+    .small {
+        font-size: 1em;
+    }
+}

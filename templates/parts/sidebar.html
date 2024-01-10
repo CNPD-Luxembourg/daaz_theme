@@ -17,7 +17,7 @@
         </div>
 
         <div class="w-100 px-3 pb-4 d-none d-sm-block {% if request.path == '/course' %}d-none{% endif %}">
-            <a class="start-button btn btn-primary align-self-center text-white d-none d-sm-inline-block w-100 py-3" href="{% url 'course' %}" role="button">
+            <a class="start-button btn btn-primary align-self-center text-white fw-bold d-none d-sm-inline-block w-100 py-3" href="{% url 'course' %}" role="button">
                 <img src="{% static 'media/images/character-1.svg' %}" alt="Logo Large" class="mx-auto">
                 {% translate "Commencer l'aventure ici!" %}
             </a>

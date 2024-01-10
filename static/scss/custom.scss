@@ -13,8 +13,82 @@ $spacers: (
 
 $blue: #0099FF;
 $gray-600: #D9D9D9;
+
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/_maps";
+@import "../../../node_modules/bootstrap/scss/utilities";
+
+$utilities: map-merge($utilities,
+    ("height": map-merge(map-get($utilities, "height"),
+        (values: map-merge(map-get(map-get($utilities, "height"), "values"),
+            (
+              1: 1%,
+              2: 2%,
+              3: 3%,
+              4: 4%,
+              5: 5%,
+              10: 10%,
+              15: 15%,
+              20: 20%,
+              30: 30%,
+              35: 35%,
+              40: 40%,
+              45: 45%,
+              48: 48%,
+              49: 49%,
+              55: 55%,
+              60: 60%,
+              65: 65%,
+              70: 70%,
+              80: 80%,
+              85: 85%,
+              90: 90%,
+              95: 95%,
+            ),
+          ),
+        ),
+      ),
+    ));
+
+    $utilities: map-merge($utilities,
+    ("width": map-merge(map-get($utilities, "width"),
+        (values: map-merge(map-get(map-get($utilities, "width"), "values"),
+            (
+              1: 1%,
+              2: 2%,
+              3: 3%,
+              4: 4%,
+              5: 5%,
+              10: 10%,
+              15: 15%,
+              20: 20%,
+              30: 30%,
+              35: 35%,
+              40: 40%,
+              45: 45%,
+              48: 48%,
+              49: 49%,
+              55: 55%,
+              60: 60%,
+              65: 65%,
+              70: 70%,
+              80: 80%,
+              85: 85%,
+              90: 90%,
+              95: 95%,
+            ),
+          ),
+        ),
+      ),
+    ));
+
+
+
 // Importing bootstrap
 @import "../../../node_modules/bootstrap/scss/bootstrap";
+
+
 
 @font-face {
   font-family: Inter;
@@ -35,7 +109,10 @@ $gray-600: #D9D9D9;
   --bs-progress-height: 30px;
 }
 
-html, body {
+
+
+html,
+body {
   font-family: "Inter" !important;
 }
 
@@ -96,7 +173,7 @@ ul li {
   width: 100%;
 }
 
-.progress > span {
+.progress>span {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -121,6 +198,7 @@ ul li {
 .large-icon {
   font-size: 80px;
 }
+
 .medium-icon {
   font-size: 60px;
 }
@@ -144,8 +222,10 @@ ul li {
   display: block;
   position: absolute;
   background-color: #000;
-  width: 4px; /* Thickness of the line */
-  height: 100%; /* Height of the line */
+  width: 4px;
+  /* Thickness of the line */
+  height: 100%;
+  /* Height of the line */
   left: 50%;
   transform: translateX(-50%);
 }
@@ -161,9 +241,9 @@ ul li {
 /* Fonts */
 
 .font-inter {
-    font-family: "Inter", !important;
+  font-family: "Inter", !important;
 }
 
 .font-roboto {
-    font-family: "Roboto", !important;
+  font-family: "Roboto", !important;
 }
