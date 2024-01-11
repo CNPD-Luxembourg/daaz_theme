@@ -15,21 +15,61 @@
 {% endblock %}
 
 {% block content_area %}
-<div class="row h-100">
-  <div class="col-md-6 col-12 h-100 w-45">
-    <div class="border shadow-sm rounded-4 px-4 py-3 h-49">
+<div class="row h-sm-100">
+  <div class="col-sm-6 col-12 h-sm-100 w-sm-55 w-lg-45">
+    <div class="border shadow-sm rounded-4 px-4 py-3 h-sm-49">
       <h4>{% translate "Mes cours" %}</h4>
-      <div class="row h-45">
+      <div class="row h-sm-45">
+        <div class="d-sm-none d-inline">
+          <div id="carouselDashboard" class="carousel slide" data-bs-intervale="false">
+            <div class="carousel-inner">
+              {% for score in scores %}
+              <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <div class="bg-light-blue rounded-3 p-2 h-sm-100">
+                  <div class="row">
+                    <div class="col-6 pe-0 h-100">
+                      <p class="small d-flex align-items-center m-0 text-nowrap">
+                        {{ score.level.name }}
+                      </p>
+                      <h6 class="fw-semibold m-0 pb-1 d-flex align-items-center text-nowrap">
+                        {% translate "Module" %} {{ score.level.index }}
+                      </h6>
+                    </div>
+                    <div class="col-6 text-center" style="height: 50px;">
+                      <img src="{% static 'media/images/course/levels/level-'%}{{score.level.index}}.svg"
+                        class="img-fluid h-100" />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="p-5"></div><!-- <canvas class="m-auto" id="progress{{ score.level.index }}" width="100%" height="100%"></canvas> -->
+                      <p class="small text-nowrap text-center mt-1 fw-bold">
+                        {% translate "de progression" %}
+                      </p>
+                    </div>
+                    <div class="col-6 m-auto">
+                      <div class="p-5"></div>
+                      <p class="small text-nowrap text-center mt-1 fw-bold">
+                        {% translate "de réussite" %}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
         {% for score in scores %}
-        <div class="col-md-6 col-12 p-0 h-100">
-          <div class="p-2 h-100">
-            <div class="bg-light-blue rounded-3 pt-2 px-2 h-100">
-              <div class="row p-4 p-sm-2 h-50">
+        <div class="col-sm-6 col-12 p-0 h-sm-100 d-none d-sm-block">
+          <div class="p-2 h-sm-100">
+            <div class="bg-light-blue rounded-3 p-2 h-sm-100">
+              <div class="row p-sm-2 h-50">
                 <div class="col-6 pe-0 h-100">
-                  <p class="small d-flex align-items-center m-0 text-nowrap h-auto">
+                  <p class="small d-flex align-items-center m-0 text-nowrap">
                     {{ score.level.name }}
                   </p>
-                  <h6 class="fw-semibold m-0 pb-1 d-flex align-items-center h-auto">
+                  <h6 class="fw-semibold m-0 pb-1 d-flex align-items-center text-nowrap">
                     {% translate "Module" %} {{ score.level.index }}
                   </h6>
                 </div>
@@ -38,8 +78,7 @@
                     class="img-fluid h-100" />
                 </div>
               </div>
-
-              <div class="row p-4 p-sm-2 h-50">
+              <div class="row p-sm-2 h-50">
                 <div class="col-8 d-flex align-items-end h-50">
                   <div class="small fw-semibold">{% translate "Progression:" %}</div>
                 </div>
@@ -48,9 +87,8 @@
                     {{ score.progress }}%
                   </div>
                 </div>
-
-                <div class="col d-flex align-items-center h-50">
-                  <div class="progress bg-white w-100" style="height:50% !important">
+                <div class="col d-flex align-items-center h-sm-50">
+                  <div class="progress bg-white w-100 h-lg-50 h-sm-100">
                     <div class="progress-bar" role="progressbar" style="width: {{ score.progress }}%"
                       aria-valuenow="{{ score.progress }}" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
@@ -62,17 +100,17 @@
         {% endfor %}
       </div>
     </div>
-    <div class="h-2"></div>
-    <div class="border shadow-sm rounded-4 px-4 py-3 h-49">
+    <div class="h-sm-2 p-2 p-sm-0"></div>
+    <div class="border shadow-sm rounded-4 p-3 ps-4 px-sm-4 py-sm-3 h-sm-49">
       <h4>{% translate "Connaissances" %}</h4>
-      <div class="d-flex flex-column h-95">
+      <div class="d-flex flex-column h-sm-95">
         {% for c in criteria.data %}
         <div class="h-10">
-          <div class="small d-flex align-items-end h-50">
+          <div class="small d-flex align-items-end h-sm-50">
             {{ c.label }}
           </div>
-          <div class="d-flex align-items-center h-50">
-            <div class="progress bg-light-blue w-100" style="height: 50% !important;">
+          <div class="d-flex align-items-center h-sm-50">
+            <div class="progress bg-light-blue w-100 h-lg-50 h-sm-100">
               <div class="progress-bar" role="progressbar" style="width: {% widthratio c.value 1 100 %}%"
                 aria-valuenow="{{ c.value }}" aria-valuemin="0" aria-valuemax="1"></div>
             </div>
@@ -86,39 +124,42 @@
       </div>
     </div>
   </div>
-  <div class="col-md-6 col-12 h-100 w-55">
+  <div class="col-sm-6 col-12 h-100 w-sm-45 w-lg-55 d-none d-sm-block">
     <div class="border shadow-sm rounded-4 px-4 py-3 h-100">
       <h4 class="pt-2">{% translate "Résultats" %}</h4>
       <div class="px-3 h-100">
         {% for score in scores %}
         <div class="row h-20">
-          <div class="col-md-6 col-12 h-100">
+          <div class="col-sm-6 col-12 h-100 w-sm-40 w-lg-50">
             <div class="row border border-primary rounded-3 h-100">
-              <div class="col-md-6 col-12 p-4 pe-0 h-100">
-                <h3 class="fw-semibold m-0">{% translate "Module" %} {{ score.level.index }}</h3>
-                <h6>{{ score.level.name }}</h6>
-              </div>
-              <div class="col-md-6 col-12 position-relative d-flex align-items-center justify-content-center h-100">
-                <div class="h-85 w-85">
-                  <canvas id="progress{{ score.level.index }}"></canvas>
+              <div class="col-12 col-lg-6 p-lg-4 pe-lg-0 py-2 px-0 h-sm-30 h-lg-100">
+                <div class="d-none d-lg-none d-sm-inline text-center">
+                  <h6 class="fw-bold text-nowrap m-0">{% translate "Module" %} {{ score.level.index }}</h6>
+                  <h6 class="small">{{ score.level.name }}</h6>
                 </div>
-                <div class="position-absolute text-center top-50 start-50 translate-middle lh-1">
-                  <h4 class="mb-0 fw-bold">
-                    {{ score.score }}%
-                  </h4>
-                  <div class="small fw-semibold">
-                    {% translate "De réussite" %}
-                  </div>
+                <div class="d-none d-lg-inline">
+                  <h3 class="fw-semibold text-nowrap m-0">{% translate "Module" %} {{ score.level.index }}</h3>
+                  <h6>{{ score.level.name }}</h6>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 h-sm-70 h-lg-100 d-flex">
+                <div class="h-sm-90 w-sm-90 h-lg-80 w-lg-80 m-auto pb-4">
+                  <canvas id="progress{{ score.level.index }}"></canvas>
+                  <p class="small text-nowrap text-center mt-1">
+                    {% translate "de réussite" %}
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-12 text-end p-0 h-100">
-            <img src="{% static 'media/images/stickers/level-'%}{{ score.level.index }}-1.svg" alt="Sticker"
-              class="img-fluid h-100" />
+          <div class="col-sm-6 col-12 text-end p-0 h-100 w-sm-60 w-lg-50">
+            <img src="{% static 'media/images/stickers/16x9/level-'%}{{ score.level.index }}-1.svg" alt="Sticker"
+              class="img-fluid h-100 d-none d-lg-inline" />
+            <img src="{% static 'media/images/stickers/1x1/level-'%}{{ score.level.index }}-1.svg" alt="Sticker"
+              class="img-fluid h-100 d-none d-lg-none d-sm-inline " />
           </div>
         </div>
-        <div class="row h-3"></div>
+        <div class="row h-4"></div>
         {% endfor %}
       </div>
     </div>
