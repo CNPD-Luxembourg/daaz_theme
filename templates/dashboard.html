@@ -21,19 +21,19 @@
       <h4>{% translate "Mes cours" %}</h4>
       <div class="row h-sm-45">
         <div class="d-sm-none d-inline">
-          <div id="carouselDashboard" class="carousel slide" data-bs-ride="carousel" data-bs-intervale="false">
+          <div id="carouselDashboard" class="carousel slide" data-bs-ride="" data-bs-intervale="false">
             <div class="carousel-inner">
               {% for score in scores %}
               <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                <div class="bg-light-blue rounded-3 p-2 h-sm-100">
-                  <div class="row">
-                    <div class="col-6 pe-0 h-100">
-                      <p class="small d-flex align-items-center m-0 text-nowrap">
+                <div class="bg-light-blue rounded-3 p-4 h-sm-100">
+                  <div class="row d-flex">
+                    <div class="col-6 pe-0 my-auto h-100">
+                      <p class="d-flex align-items-center m-0 text-nowrap">
                         {{ score.level.name }}
                       </p>
-                      <h6 class="fw-semibold m-0 pb-1 d-flex align-items-center text-nowrap">
+                      <h5 class="fw-semibold m-0 pb-1 d-flex align-items-center text-nowrap">
                         {% translate "Module" %} {{ score.level.index }}
-                      </h6>
+                      </h5>
                     </div>
                     <div class="col-6 text-center" style="height: 50px;">
                       <img src="{% static 'media/images/course/levels/level-'%}{{score.level.index}}.svg"
@@ -63,15 +63,15 @@
         {% for score in scores %}
         <div class="col-sm-6 col-12 p-0 h-sm-100 d-none d-sm-block">
           <div class="p-2 h-sm-100">
-            <div class="bg-light-blue rounded-3 p-2 h-sm-100">
+            <div class="bg-light-blue rounded-3 p-2 px-lg-3 h-sm-100">
               <div class="row p-sm-2 h-50">
-                <div class="col-6 pe-0 h-100">
-                  <p class="small d-flex align-items-center m-0 text-nowrap">
+                <div class="col-6 pe-0 my-auto">
+                  <p class="small m-0 text-nowrap">
                     {{ score.level.name }}
                   </p>
-                  <h6 class="fw-semibold m-0 pb-1 d-flex align-items-center text-nowrap">
+                  <h5 class="fw-semibold m-0 pb-1 text-nowrap">
                     {% translate "Module" %} {{ score.level.index }}
-                  </h6>
+                  </h5>
                 </div>
                 <div class="col-6 text-center h-100">
                   <img src="{% static 'media/images/course/levels/level-'%}{{score.level.index}}.svg"
