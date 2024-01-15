@@ -11,6 +11,7 @@
 
 {% block bootstrap5_extra_script %}
 {{ progress|json_script:"progress-data" }}
+{{ success|json_script:"success-data" }}
 <script src='{% static "js/dashboard.js" %}'></script>
 {% endblock %}
 
@@ -40,16 +41,16 @@
                         class="img-fluid h-100" />
                     </div>
                   </div>
-                  <div class="row">
+                  <div class="row pt-3">
                     <div class="col-6">
-                      <div class="p-5"></div><!-- <canvas class="m-auto" id="progress{{ score.level.index }}" width="100%" height="100%"></canvas> -->
-                      <p class="small text-nowrap text-center mt-1 fw-bold">
+                      <canvas class="m-auto" id="progress_sm{{ score.level.index }}" width="100%" height="100%"></canvas>
+                      <p class="small text-nowrap text-center mt-1 mb-2 fw-bold">
                         {% translate "de progression" %}
                       </p>
                     </div>
                     <div class="col-6 m-auto">
-                      <div class="p-5"></div>
-                      <p class="small text-nowrap text-center mt-1 fw-bold">
+                      <canvas class="m-auto" id="success_sm{{ score.level.index }}" width="100%" height="100%"></canvas>
+                      <p class="small text-nowrap text-center mt-1 mb-2 fw-bold">
                         {% translate "de réussite" %}
                       </p>
                     </div>
@@ -144,7 +145,7 @@
               </div>
               <div class="col-12 col-lg-6 h-sm-70 h-lg-100 d-flex">
                 <div class="h-sm-90 w-sm-90 h-lg-80 w-lg-80 m-auto pb-4">
-                  <canvas id="progress{{ score.level.index }}"></canvas>
+                  <canvas id="success{{ score.level.index }}"></canvas>
                   <p class="small text-nowrap text-center mt-1">
                     {% translate "de réussite" %}
                   </p>
@@ -153,10 +154,12 @@
             </div>
           </div>
           <div class="col-sm-6 col-12 text-end p-0 h-100 w-sm-60 w-lg-50">
-            <img src="{% static 'media/images/stickers/16x9/level-'%}{{ score.level.index }}-1.svg" alt="Sticker"
+            {% with sticker_unlocked=score|is_sticker_unlocked %}
+            <img src="{% static 'media/images/stickers/16x9/level-'%}{{ score.level.index }}-{{sticker_unlocked}}.svg" alt="Sticker"
               class="img-fluid h-100 d-none d-lg-inline" />
-            <img src="{% static 'media/images/stickers/1x1/level-'%}{{ score.level.index }}-1.svg" alt="Sticker"
+            <img src="{% static 'media/images/stickers/1x1/level-'%}{{ score.level.index }}-{{sticker_unlocked}}.svg" alt="Sticker"
               class="img-fluid h-100 d-none d-lg-none d-sm-inline " />
+            {% endwith %}
           </div>
         </div>
         <div class="row h-4"></div>
