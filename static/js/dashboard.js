@@ -32,7 +32,7 @@ $(document).ready(function () {
                 labels: [],
                 datasets: [{
                     data: [progress, progress - 100],
-                    backgroundColor: ['#0099FF', '#FFFFFF'],
+                    backgroundColor: ['#0099FF', '#ECF6FF'],
                     borderWidth: 0,
                     borderRadius: 10,
                 }]
@@ -41,6 +41,7 @@ $(document).ready(function () {
                 responsive: true,
                 maintainAspectRatio: false,
                 cutout: "75%",
+                events: [],
                 plugins: {
                     tooltip: {
                         enabled: false
