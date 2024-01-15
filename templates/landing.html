@@ -9,9 +9,10 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/landing.css' %}" />
 {% endblock %}
 
+
 {% block content %}
 {% cookiebanner_modal 'bootstrap5' %}
-<div id="hero" class="bg-white py-4 pt-sm-5 mt-sm-5">
+<div id="hero" class="bg-white py-4 pt-sm-5 mt-sm-5 px-4 px-sm-0">
     <div class="container-xl py-sm-5">
         <div class="row align-items-center">
             <div class="col-md-6 col-sm-12 h-100">
@@ -53,7 +54,7 @@
         </div>
     </div>
 </div>
-<div class="bg-horizontal-white-and-light-blue">
+<div class="bg-horizontal-white-and-light-blue px-4 py-3 p-sm-0 ">
     <div class="container-xl">
         <div class="row mx-2">
             <div class="col-xl-10 offset-xl-1">
@@ -113,7 +114,7 @@
         </div>
     </div>
 </div>
-<div class="bg-light-blue pb-3 pt-5 py-sm-5">
+<div class="bg-light-blue pb-3 pt-5 py-sm-5 px-4 px-sm-0">
     <div class="container-xl">
         <div class="row">
             <div class="col-xl-8 col-md-10 offset-xl-2 offset-md-1">
@@ -196,7 +197,7 @@
         </div>
     </div>
 </div>
-<div id="about" class="bg-white py-3 py-sm-5">
+<div id="about" class="bg-white py-3 py-sm-5 px-4 px-sm-0">
     <div class="container-xl">
         <div class="row">
             <div class="col-md-10 offset-md-1">
@@ -256,7 +257,7 @@
         </div>
     </div>
 </div>
-<div class="bg-light-blue py-3 py-sm-5">
+<div class="bg-light-blue py-3 py-sm-5 px-3 px-sm-0">
     <div class="container-xl">
         <div class="row">
             <div class="col-md-12">
@@ -282,8 +283,8 @@
                                         </h4>
                                     </div>
                                 </div>
-                                <div>
-                                    <ul>
+                                <div class="px-1 px-sm-2">
+                                    <ul class="ps-3 ps-sm-4">
                                         {% for description in level.description|linebreaksbr|split:"<br>" %}
                                         <li>{{ description }}</li>
                                         {% endfor %}
@@ -304,7 +305,7 @@
         </div>
     </div>
 </div>
-<div class="bg-white py-3 py-sm-5">
+<div class="bg-white py-3 py-sm-5 px-4 px-sm-0">
     <div class="container-sm">
         <div class="row">
             <div class="col-md-10 offset-md-1">
@@ -398,7 +399,7 @@
         </div>
     </div>
 </div>
-<div class="bg-light-blue py-3 py-sm-5">
+<div class="bg-light-blue py-3 py-sm-5 px-4 px-sm-0">
     <div class="container-xl">
         <div class="row">
             <div class="col-md-12">
@@ -409,22 +410,22 @@
 
                     <div class="col-8 offset-2 offset-md-0 col-lg-3 col-md-12 gx-5 py-3 py-sm-5">
                         <img src="{% static 'media/images/logos/logo-nc3.svg' %}" alt="Logo National Cybersecurity Competence Center"
-                            class="d-inline-block align-text-top w-100" />
+                            class="img-fluid" />
                     </div>
 
                     <div class="col-8 offset-2 offset-md-0 col-lg-3 col-md-12 gx-5 py-3 py-sm-5">
                         <img src="{% static 'media/images/logos/logo-lhc.svg' %}" alt="Logo Luxembourg House of Cybersecurity"
-                            class="d-inline-block align-text-top w-100" />
+                            class="img-fluid" />
                     </div>
 
                     <div class="col-8 offset-2 offset-md-0 col-lg-3 col-md-12 gx-5 py-3 py-sm-5">
                         <img src="{% static 'media/images/logos/logo-ce.svg' %}" alt="Logo Co-funded European Comision"
-                            class="d-inline-block align-text-top w-100" />
+                            class="img-fluid" />
                     </div>
 
                     <div class="col-8 offset-2 offset-md-0 col-lg-3 col-md-12 gx-5 py-3 py-sm-5">
                         <img src="{% static 'media/images/logos/logo-lmih.svg' %}" alt="Logo Luxembourg Let's Make It Happen"
-                            class="d-inline-block align-text-top w-100" />
+                            class="img-fluid" />
                     </div>
                 </div>
             </div>
