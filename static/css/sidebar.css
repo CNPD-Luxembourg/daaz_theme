@@ -137,4 +137,7 @@
     #sidebar .left-dot {
         display: none;
     }
+    #sidebar li {
+        font-size: 24px;
+    }
 }
