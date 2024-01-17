@@ -97,14 +97,6 @@
     padding-left: 0;
   }
 
-  .modal-open {
-    overflow-y: auto;
-  }
-
-  .modal-dialog {
-    margin-top: 120px;
-  }
-
   #cookiebannerForm table {
     color: rgba(0, 0, 0, 0.7);
     font-style: italic;
