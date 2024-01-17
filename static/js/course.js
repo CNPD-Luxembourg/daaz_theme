@@ -112,10 +112,8 @@ $(document).ready(function () {
             },
             traditional: true,
             success: function (data) {
-                console.log(data);
             },
             error: function (error) {
-                console.log(error);
             }
         });
     });
@@ -128,8 +126,12 @@ $(document).ready(function () {
             checkSingleAndMultipleAnswers()
         }
 
-        $prevControlButton.addClass('control_disabled');
-        $nextControlButton.removeClass('control_disabled');
+        $nextControlButton
+            .removeClass('control_disabled')
+            .find("i")
+            .removeClass('text-secondary')
+            .addClass('text-primary');
+
         $questionCard.flip('toggle');
     });
 });
