@@ -8,10 +8,10 @@
 <script src='{% static "js/course.js" %}'></script>
 {% endblock %}
 
-<div class="carousel-inner px-0 px-md-5 pb-0 pb-sm-5 h-100" role="listbox">
+<div class="carousel-inner px-0 px-md-5 pb-0 h-100" role="listbox">
     {% for slide in slides %}
     {{ slide.question.media }}
-    <div class="carousel-item h-100 pb-sm-4 mb-5 {% if forloop.first %}active{% endif %}">
+    <div class="carousel-item pb-sm-2 h-90 {% if forloop.first %}active{% endif %}">
         {% if slide.question %}
         <div id="question-card" class="h-100" value="{{ slide.question.id }}">
             <div class="front overflow-auto col card border border-3 border-primary p-sm-5 p-2 mx-auto h-100">
@@ -28,34 +28,35 @@
                     </div>
                 </form>
             </div>
-            <div class="back col card border border-3 border-primary p-sm-5 p-2 mx-auto h-100">
+            <div class="back overflow-auto col card border border-3 border-primary p-sm-5 p-2 mx-auto h-100">
                 <h3 class="text-primary">{% translate "Question"%} {{ slide.question.question_index }}</h3>
                 <div class="pb-3">{{ slide.question.answer.label_tag }}</div>
                 {% if slide.question.type == "S" or slide.question.type == "M" %}
-                    <div class="d-grid gap-2 ps-3 mb-5">
-                        {% for answer_choice in slide.question.answer.field.queryset %}
-                            <label class="form-check">
-                                <input class="form-check-input {% if answer_choice.is_correct %}correct_answer{% endif %}"
-                                    type="{{ slide.question.answer.field.widget.input_type }}" value="{{ answer_choice.pk }}" {%if answer_choice.is_correct %}checked{% endif %} disabled>
-                                    <span>{{ answer_choice }}</span>
-                            </label>
-                        {% endfor %}
-                    </div>
+                <div class="d-grid gap-2 ps-3 mb-5">
+                    {% for answer_choice in slide.question.answer.field.queryset %}
+                    <label class="form-check">
+                        <input class="form-check-input {% if answer_choice.is_correct %}correct_answer{% endif %}"
+                            type="{{ slide.question.answer.field.widget.input_type }}" value="{{ answer_choice.pk }}"
+                            {%if answer_choice.is_correct %}checked{% endif %} disabled>
+                        <span>{{ answer_choice }}</span>
+                    </label>
+                    {% endfor %}
+                </div>
                 {% endif %}
                 {% if slide.question.type == "SR" %}
-                    <div class="d-grid gap-2 px-3 mx-sm-2">
-                        {% for answer_choice in slide.question.answer.field.queryset %}
-                            <div class="row draggable-item border border-primary py-1 rounded-3" value="{{ answer_choice.pk }}">
-                                <div class="col-1 h4 align-self-center text-primary text-nowrap text-center px-0 m-0">
-                                    {{answer_choice.index }}.
-                                </div>
-                                <div class="col-10 align-self-center px-1">{{ answer_choice }}</div>
-                                <div class="col-1 h2 align-self-center text-primary text-center px-0 m-0">
-                                    <i class="bi bi-grip-horizontal"></i>
-                                </div>
-                            </div>
-                        {% endfor %}
+                <div class="d-grid gap-2 px-3 mx-sm-2">
+                    {% for answer_choice in slide.question.answer.field.queryset %}
+                    <div class="row draggable-item border border-primary py-1 rounded-3" value="{{ answer_choice.pk }}">
+                        <div class="col-1 h4 align-self-center text-primary text-nowrap text-center px-0 m-0">
+                            {{answer_choice.index }}.
+                        </div>
+                        <div class="col-10 align-self-center px-1">{{ answer_choice }}</div>
+                        <div class="col-1 h2 align-self-center text-primary text-center px-0 m-0">
+                            <i class="bi bi-grip-horizontal"></i>
+                        </div>
                     </div>
+                    {% endfor %}
+                </div>
                 {% endif %}
             </div>
         </div>
@@ -75,77 +76,79 @@
             {% endfor %}
         </div>
         {% elif slide.challenge %}
-            {% if slide.challenge.description == "Final" %}
-            <div class="col card border border-3 border-warning p-sm-5 p-2 mx-auto h-100">
-                <div class="text-center">
-                    <h1 class="fw-bolder text-warning">
-                        {% translate "Felicitations" %} !
-                    </h1>
-                    {% with index_level=level.index next_level=level.index|add:1 score=score|default:0 %}
-                    <h3 class="inFront text-primary">
-                        {% blocktranslate %}Vous avez terminé le niveau {{ index_level }} !{% endblocktranslate %}
-                    </h3>
-                    <h6>
-                        {% blocktranslate %}Votre score est de {{ score }} sur 100 !{% endblocktranslate %}
-                    </h6>
-                    <h6>
-                        {% blocktranslate %}Vous avez débloquez l’histoire numéro {{ next_level }} !{% endblocktranslate %}
-                    </h6>
-                    {% endwith %}
-                    <img class="img-fluid" src="{% static 'media/images/course/challenge/final-check.svg' %}"
-                        alt="Final Check Guy" />
-                </div>
-                <div class="text-center inFront">
-                    <button id="challengeButton" type="button"
-                        class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded p-2">
-                        {% translate "Télécharger la fiche récap" %}
-                    </button>
-                    <a id="challengeButton" type="button" href="{% url 'course' %}"
-                        class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded p-2">
-                        {% translate "Accéder au niveau suivant" %}
-                    </a>
-                </div>
-                <img class="img-fluid TL h-100 d-none d-sm-block"
-                    src="{% static 'media/images/course/challenge/palm-left.svg' %}" alt="Palm Left" />
-                <img class="img-fluid TR h-100 d-none d-sm-block"
-                    src="{% static 'media/images/course/challenge/palm-right.svg' %}" alt="Palm Right" />
+        {% if slide.challenge.description == "Final" %}
+        <div class="col card border border-3 border-warning p-sm-5 p-2 mx-auto h-100">
+            <div class="text-center">
+                <h1 class="fw-bolder text-warning">
+                    {% translate "Felicitations" %} !
+                </h1>
+                {% with index_level=level.index next_level=level.index|add:1 score=score|default:0 %}
+                <h3 class="inFront text-primary">
+                    {% blocktranslate %}Vous avez terminé le niveau {{ index_level }} !{% endblocktranslate %}
+                </h3>
+                <h6>
+                    {% blocktranslate %}Votre score est de {{ score }} sur 100 !{% endblocktranslate %}
+                </h6>
+                <h6>
+                    {% blocktranslate %}Vous avez débloquez l’histoire numéro {{ next_level }} !{% endblocktranslate %}
+                </h6>
+                {% endwith %}
+                <img class="img-fluid" src="{% static 'media/images/course/challenge/final-check.svg' %}"
+                    alt="Final Check Guy" />
             </div>
-            {% else %}
-            <div class="col card border border-3 border-danger p-sm-5 p-2 mx-auto h-100">
-                <div class="text-center text-danger">
-                    <h1 class="fw-bolder">
-                        {% translate "Challenge" %} !
-                    </h1>
-                    <h6 class="inFront">
-                        {{ slide.challenge.name }}
-                    </h6>
-                </div>
-                <div class="inFront">
-                    <p>
-                        {{ slide.challenge.description|linebreaks|safe }}
-                    </p>
-                </div>
-                <div class="text-center inFront">
-                    <button id="challengeButton" type="button"
-                        class="btn text-danger course-button fw-bolder border-danger border border-3 shadow rounded p-2">
-                        {% translate "Télécharger mon template" %}
-                    </button>
-                </div>
-                <img class="img-fluid BR overlapBR" src="{% static 'media/images/course/challenge/cup.svg' %}" alt="Cup" />
+            <div class="text-center inFront">
+                <button id="challengeButton" type="button"
+                    class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded p-2">
+                    {% translate "Télécharger la fiche récap" %}
+                </button>
+                <a id="challengeButton" type="button" href="{% url 'course' %}"
+                    class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded p-2">
+                    {% translate "Accéder au niveau suivant" %}
+                </a>
             </div>
-            {% endif %}
+            <img class="img-fluid TL h-100 d-none d-sm-block"
+                src="{% static 'media/images/course/challenge/palm-left.svg' %}" alt="Palm Left" />
+            <img class="img-fluid TR h-100 d-none d-sm-block"
+                src="{% static 'media/images/course/challenge/palm-right.svg' %}" alt="Palm Right" />
+        </div>
+        {% else %}
+        <div class="col card border border-3 border-danger p-sm-5 p-2 mx-auto h-100">
+            <div class="text-center text-danger">
+                <h1 class="fw-bolder">
+                    {% translate "Challenge" %} !
+                </h1>
+                <h6 class="inFront">
+                    {{ slide.challenge.name }}
+                </h6>
+            </div>
+            <div class="inFront">
+                <p>
+                    {{ slide.challenge.description|linebreaks|safe }}
+                </p>
+            </div>
+            <div class="text-center inFront">
+                <button id="challengeButton" type="button"
+                    class="btn text-danger course-button fw-bolder border-danger border border-3 shadow rounded p-2">
+                    {% translate "Télécharger mon template" %}
+                </button>
+            </div>
+            <img class="img-fluid BR overlapBR" src="{% static 'media/images/course/challenge/cup.svg' %}" alt="Cup" />
+        </div>
+        {% endif %}
         {% endif %}
     </div>
     {% endfor %}
 </div>
-
-<a class="carousel-control-prev shadow rounded-4 bottom-0 py-0 py-sm-1 px-1 px-4 mb-sm-4 opacity-100 change_slide {% if not previous_control_enable %}control_disabled{% endif %}"
+<a class="carousel-control-prev shadow rounded-4 bottom-0 py-0 py-sm-1 px-1 px-4 opacity-100 change_slide {% if not previous_control_enable %}control_disabled{% endif %}"
     type="button" role="button" data-bs-target="#carouselCourse" data-bs-slide="prev">
-    <span aria-hidden="true"><i class="h1 bi bi-caret-left {% if not next_control_enable %}text-primary{% else %}text-dark{% endif %}"></i></span>
+    <span aria-hidden="true"><i
+            class="h1 bi bi-caret-left {% if not previous_control_enable %}text-secondary{% else %}text-primary{% endif %}"></i></span>
     <span class="visually-hidden">Previous</span>
 </a>
-<a class="carousel-control-next shadow rounded-4 bottom-0 py-0 py-sm-1 px-1 px-4 mb-sm-4 opacity-100 change_slide {% if not next_control_enable %}control_disabled{% endif %}"
+<a class="carousel-control-next shadow rounded-4 bottom-0 py-0 py-sm-1 px-1 px-4 opacity-100 change_slide {% if not next_control_enable %}control_disabled{% endif %}"
     type="button" data-bs-target="#carouselCourse" data-bs-slide="next">
-    <span aria-hidden="true"><i class="h1 bi bi-caret-right {% if not next_control_enable %}text-primary{% else %}text-dark{% endif %}"></i></span>
+    <span aria-hidden="true"><i
+            class="h1 bi bi-caret-right {% if not next_control_enable %}text-secondary{% else %}text-primary{% endif %}"></i></span>
     <span class="visually-hidden">Next</span>
 </a>
+
