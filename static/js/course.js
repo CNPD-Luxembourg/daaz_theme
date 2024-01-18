@@ -20,18 +20,18 @@ $(document).ready(function () {
     function getCookie(name) {
         let cookieValue = null;
         if (document.cookie && document.cookie !== '') {
-          const cookies = document.cookie.split(';');
-          for (let i = 0; i < cookies.length; i++) {
-            const cookie = cookies[i].trim();
-            // Does this cookie string begin with the name we want?
-            if (cookie.substring(0, name.length + 1) === (name + '=')) {
-              cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-              break;
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
             }
-          }
         }
         return cookieValue;
-      }
+    }
 
 
     function processCheckboxSelection() {
@@ -80,7 +80,6 @@ $(document).ready(function () {
     if ($checkboxesAndRadios.length > 0) {
         processCheckboxSelection($checkboxesAndRadios.filter(':checked').first());
     }
-    $questionCard.flip({ trigger: 'manual' });
 
     $checkboxesAndRadios.on("click", function () {
         processCheckboxSelection();
@@ -100,7 +99,7 @@ $(document).ready(function () {
             const answers = $frontSortingFields.map(function () {
                 return $(this).attr("value");
             }).get()
-            formdata = {answer: answers}
+            formdata = { answer: answers }
         }
 
         $.ajax({
@@ -134,4 +133,20 @@ $(document).ready(function () {
 
         $questionCard.flip('toggle');
     });
+
+
+    if ($(".carousel-item.active").find("#summitButton").length === 0) {
+        $questionCard.flip({ spped: 0 });
+        if ($checkboxesAndRadios.length > 0) {
+            checkSingleAndMultipleAnswers()
+        }
+        $nextControlButton
+            .removeClass('control_disabled')
+            .find("i")
+            .removeClass('text-secondary')
+            .addClass('text-primary');
+
+        $questionCard.flip(true);
+
+    }
 });

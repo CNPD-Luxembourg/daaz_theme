@@ -20,12 +20,14 @@
                     {% csrf_token %}
                     {% bootstrap_form_errors slide.question %}
                     {% bootstrap_field slide.question.answer show_label=True label_class="pb-3" %}
+                    {% if not slide.question.answer.initial %}
                     <div class="text-center inFront">
                         <button id="summitButton" type="button"
                             class="flip btn text-primary course-button fw-bolder border-primary border border-3 shadow rounded p-2">
                             {% translate "Valider" %}
                         </button>
                     </div>
+                    {% endif %}
                 </form>
             </div>
             <div class="back overflow-auto col card border border-3 border-primary p-sm-5 p-2 mx-auto h-100">
@@ -151,4 +153,3 @@
             class="h1 bi bi-caret-right {% if not next_control_enable %}text-secondary{% else %}text-primary{% endif %}"></i></span>
     <span class="visually-hidden">Next</span>
 </a>
-
