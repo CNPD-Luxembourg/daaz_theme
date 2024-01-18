@@ -112,11 +112,11 @@
           </div>
           <div class="d-flex align-items-center h-sm-50">
             <div class="progress bg-light-blue w-100 h-lg-50 h-sm-100">
-              <div class="progress-bar" role="progressbar" style="width: {% widthratio c.value 1 100 %}%"
+              <div class="progress-bar" role="progressbar" style="width: {% widthratio c.value 100 100 %}%"
                 aria-valuenow="{{ c.value }}" aria-valuemin="0" aria-valuemax="1"></div>
             </div>
             <div class="small mx-2">
-              {% widthratio c.value 1 100 %}%
+              {% widthratio c.value 100 100 %}%
             </div>
           </div>
         </div>
