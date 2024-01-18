@@ -6,38 +6,36 @@
 <script src='{% static "js/start.js" %}'></script>
 {% endblock %}
 
-<div class="modal-dialog">
-  <div class="modal-content text-center">
-    <div class="modal-header border-0">
-      <h4 class="modal-title text-primary w-100 fw-bold" id="startLabel">
-        {% translate "C’est parti !" %}
-      </h4>
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<div class="modal-content text-center">
+  <div class="modal-header border-0">
+    <h4 class="modal-title text-primary w-100 fw-bold" id="startLabel">
+      {% translate "C’est parti !" %}
+    </h4>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body m-3 border-3">
+    <div class="border border-primary rounded-3 py-3 px-2">
+      <p>
+        {% translate "Je commence un nouveau parcours" %}
+      </p>
+      <a type="button" class="btn btn-primary text-white create_new_user" data-bs-dismiss="modal">
+        {% translate "Commencer" %}
+      </a>
     </div>
-    <div class="modal-body m-3 border-3">
-      <div class="border border-primary rounded-3 py-3 px-2">
-        <p>
-          {% translate "Je commence un nouveau parcours" %}
-        </p>
-        <a type="button" class="btn btn-primary text-white create_new_user" data-bs-dismiss="modal">
-          {% translate "Commencer" %}
-        </a>
-      </div>
-      <div class="py-2 ps-3">
-        <span> {% translate "ou" %}</span>
-      </div>
-      <div class="border border-primary rounded-3 py-3 px-3">
-        <p>
-          {% translate "Je continue un parcours précédent grâce à mon identifiant unique :" %}
-        </p>
-        <form action="{% url 'start' %}" method="post">
-          {% csrf_token %}
-          {% bootstrap_field form.user_uuid show_label=False %}
-          <button class="btn btn-primary text-white" role="submit">
-            {% translate "J’accède à mon espace" %}
-          </button>
-        </form>
-      </div>
+    <div class="py-2 ps-3">
+      <span> {% translate "ou" %}</span>
+    </div>
+    <div class="border border-primary rounded-3 py-3 px-3">
+      <p>
+        {% translate "Je continue un parcours précédent grâce à mon identifiant unique :" %}
+      </p>
+      <form action="{% url 'start' %}" method="post">
+        {% csrf_token %}
+        {% bootstrap_field form.user_uuid show_label=False %}
+        <button class="btn btn-primary text-white" role="submit">
+          {% translate "J’accède à mon espace" %}
+        </button>
+      </form>
     </div>
   </div>
 </div>

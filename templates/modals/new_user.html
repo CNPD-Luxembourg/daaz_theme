@@ -2,12 +2,12 @@
 {% load static %}
 
 <div class="modal-content">
-  <div class="modal-header border-0">
+  <div class="modal-header border-0 p-3 pb-2 ">
     <h4 class="modal-title text-primary w-100 fw-bold text-center" id="new_userLabel">
       {% translate "Nouveau Parcours" %}
     </h4>
   </div>
-  <div class="modal-body m-3 border-3">
+  <div class="modal-body m-3 border-3 mt-0">
     {% include "modals/confidentiality_alert.html" %}
     <p>
       {% translate "Voici votre ID:" %}
@@ -21,7 +21,7 @@
       <i class="bi bi-clipboard-plus text-primary fs-3"></i>
       <span class="d-inline flex-grow-1 px-3">{% translate "Copier l’ID dans le presse-papier" %}</span>
     </a>
-    <div class="py-3">
+    <div class="py-2">
       <a class="btn border border-primary rounded d-flex align-items-center text-start" role="button"
         onClick="downloadTextFile()">
         <i class="bi bi-download text-primary fs-3"></i>
