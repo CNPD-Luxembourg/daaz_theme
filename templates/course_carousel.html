@@ -10,6 +10,9 @@
 
 <div class="carousel-inner px-0 px-md-5 pb-0 h-100" role="listbox">
     {% for slide in slides %}
+    {% if not slide.question.answer.initial and forloop.first %}
+    {{ "false"|json_script:"is_question_answered" }}
+    {% endif %}
     {{ slide.question.media }}
     <div class="carousel-item pb-sm-2 h-90 {% if forloop.first %}active{% endif %}">
         {% if slide.question %}
@@ -20,14 +23,12 @@
                     {% csrf_token %}
                     {% bootstrap_form_errors slide.question %}
                     {% bootstrap_field slide.question.answer show_label=True label_class="pb-3" %}
-                    {% if not slide.question.answer.initial %}
                     <div class="text-center inFront">
                         <button id="summitButton" type="button"
                             class="flip btn text-primary course-button fw-bolder border-primary border border-3 shadow rounded p-2">
                             {% translate "Valider" %}
                         </button>
                     </div>
-                    {% endif %}
                 </form>
             </div>
             <div class="back overflow-auto col card border border-3 border-primary p-sm-5 p-2 mx-auto h-100">

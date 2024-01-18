@@ -16,6 +16,9 @@ $(document).ready(function () {
     const fadeOutDelay = 500;
     const fadeInDelay = 0;
 
+    if (document.getElementById('is_question_answered')){
+        var is_question_answered = JSON.parse(document.getElementById('is_question_answered').textContent);
+    }
 
     function getCookie(name) {
         let cookieValue = null;
@@ -76,10 +79,24 @@ $(document).ready(function () {
 
     $questionCard.flip({ trigger: 'manual' });
 
+    if (!is_question_answered) {
+        if ($checkboxesAndRadios.length > 0) {
+            checkSingleAndMultipleAnswers()
+        }
+        $nextControlButton
+            .removeClass('control_disabled')
+            .find("i")
+            .removeClass('text-secondary')
+            .addClass('text-primary');
+
+        $questionCard.flip(true);
+    }
+
 
     if ($checkboxesAndRadios.length > 0) {
         processCheckboxSelection($checkboxesAndRadios.filter(':checked').first());
     }
+
 
     $checkboxesAndRadios.on("click", function () {
         processCheckboxSelection();
@@ -133,20 +150,4 @@ $(document).ready(function () {
 
         $questionCard.flip('toggle');
     });
-
-
-    if ($(".carousel-item.active").find("#summitButton").length === 0) {
-        $questionCard.flip({ spped: 0 });
-        if ($checkboxesAndRadios.length > 0) {
-            checkSingleAndMultipleAnswers()
-        }
-        $nextControlButton
-            .removeClass('control_disabled')
-            .find("i")
-            .removeClass('text-secondary')
-            .addClass('text-primary');
-
-        $questionCard.flip(true);
-
-    }
 });
