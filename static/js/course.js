@@ -1,8 +1,8 @@
 $(document).ready(function () {
     const $checkboxesAndRadios = $(".front .form-check-input");
+    const $backSlide = $(".back");
     const $answersCheckboxesAndRadios = $(".back .form-check-input");
     const $backSortingFields = $(".back .draggable-item");
-
     const $submitButton = $("#summitButton");
     const $carouselCourse = $("#carouselCourse");
     const $progressBar = $(".course-progress-bar");
@@ -43,10 +43,12 @@ $(document).ready(function () {
 
     function loadSlide(button) {
         const $button = $(button);
+        $backSlide.addClass('d-none');
         $carouselCourse.load(changeSlide_url + $button.data("bs-slide"), function () {
             $progressBar.fadeOut(fadeOutDelay);
             $progressBar.load(updateProgressBar_url);
             $progressBar.fadeIn(fadeInDelay);
+            $backSlide.removeClass('d-none');
         });
     }
 
