@@ -75,6 +75,21 @@
                 </div>
             </div>
         </div>
+        {% elif slide.explanation %}
+        <div class="row overflow-auto card border border-light shadow-sm m-0 h-100">
+            <div class="d-flex flex-column col-12 col-md-6 p-sm-5 p-2 h-100">
+                <div class="my-auto">
+                    <h3 class="text-primary">{% translate "Question"%} {{ slide.explanation.question_index }}</h3>
+                    <h6 class="fw-bold">{% translate "Explication"%}:</h6>
+                    <div class="pb-3">{{ slide.explanation.question.name }}</div>
+                    {{ slide.explanation.label |safe|linebreaksbr }}
+                </div>
+            </div>
+            <div class="col-6 p-0 text-end d-none d-md-inline h-100">
+                <img class="img-fluid h-100" src="{% static 'media/images/course/explanation_image.svg' %}" alt="Final image" />
+            </div>
+        </div>
+
         {% elif slide.context %}
         <div class="col card border border-light shadow-sm p-sm-5 p-2 mx-auto h-100">
             {% for text in slide.context.texts %}
