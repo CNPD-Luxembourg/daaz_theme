@@ -33,7 +33,8 @@
                     </div>
                 </form>
                 <div class="col-6 p-0 text-end d-none d-md-inline h-100">
-                    <img class="img-fluid h-100" src="{% static 'media/images/course/question_image.svg' %}" alt="Question image" />
+                    <img class="img-fluid h-100" src="{% static 'media/images/course/question_image.svg' %}"
+                        alt="Question image" />
                 </div>
             </div>
             <div class="back overflow-auto row card border border-light shadow-sm m-0 h-100">
@@ -45,9 +46,11 @@
                         <div class="d-grid gap-2 ps-3 mb-5">
                             {% for answer_choice in slide.question.answer.field.queryset %}
                             <label class="form-check">
-                                <input class="form-check-input {% if answer_choice.is_correct %}correct_answer{% endif %}"
-                                    type="{{ slide.question.answer.field.widget.input_type }}" value="{{ answer_choice.pk }}"
-                                    {%if answer_choice.is_correct %}checked{% endif %} disabled>
+                                <input
+                                    class="form-check-input {% if answer_choice.is_correct %}correct_answer{% endif %}"
+                                    type="{{ slide.question.answer.field.widget.input_type }}"
+                                    value="{{ answer_choice.pk }}" {%if answer_choice.is_correct %}checked{% endif %}
+                                    disabled>
                                 <span>{{ answer_choice }}</span>
                             </label>
                             {% endfor %}
@@ -56,7 +59,8 @@
                         {% if slide.question.type == "SR" %}
                         <div class="d-grid gap-2 px-3 mx-sm-2">
                             {% for answer_choice in slide.question.answer.field.queryset %}
-                            <div class="row draggable-item border border-primary py-1 rounded-3" value="{{ answer_choice.pk }}">
+                            <div class="row draggable-item border border-primary py-1 rounded-3"
+                                value="{{ answer_choice.pk }}">
                                 <div class="col-1 h4 align-self-center text-primary text-nowrap text-center px-0 m-0">
                                     {{answer_choice.index }}.
                                 </div>
@@ -71,7 +75,8 @@
                     </div>
                 </div>
                 <div class="col-6 p-0 text-end d-none d-md-inline h-100">
-                    <img class="img-fluid h-100" src="{% static 'media/images/course/question_image.svg' %}" alt="Question image" />
+                    <img class="img-fluid h-100" src="{% static 'media/images/course/question_image.svg' %}"
+                        alt="Question image" />
                 </div>
             </div>
         </div>
@@ -86,24 +91,29 @@
                 </div>
             </div>
             <div class="col-6 p-0 text-end d-none d-md-inline h-100">
-                <img class="img-fluid h-100" src="{% static 'media/images/course/explanation_image.svg' %}" alt="Final image" />
+                <img class="img-fluid h-100" src="{% static 'media/images/course/explanation_image.svg' %}"
+                    alt="Final image" />
             </div>
         </div>
-
         {% elif slide.context %}
-        <div class="col card border border-light shadow-sm p-sm-5 p-2 mx-auto h-100">
-            {% for text in slide.context.texts %}
-            <span class="inFront margin-text {{ text.css_classes|join:' ' }} {{ text.position }}">
-                {{ text.text.description|safe }}
-            </span>
-            {% endfor %}
-
-            {% for media in slide.context.medias %}
-            {% if media.media.get_m_type_display == 'Image' %}
-            <img class="img-fluid {{ media.css_classes|join:' ' }} {{ media.position }}"
-                src="{% static media.media.path|extract_static %}" alt="{{ media.media.name }}" />
-            {% endif %}
-            {% endfor %}
+        <div class="row overflow-auto border rounded border-light shadow-sm h-100">
+            <div class="d-flex col-12 col-sm-12 col-md-6 h-md-100">
+                <div class="my-auto ps-2 ps-md-5">
+                    {% for text in slide.context.texts %}
+                    <span class="inFront {{ text.css_classes|join:' ' }} {{ text.position }} {% if text.text.get_t_type_display == 'Title'%}text-primary{%endif%}">
+                        {{ text.text.description|linebreaks|safe }}
+                    </span>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 h-md-100 text-center">
+                {% for media in slide.context.medias %}
+                {% if media.media.get_m_type_display == 'Image' %}
+                <img class="img-fluid h-100 w-50 w-sm-100 {{ media.css_classes|join:' ' }} {{ text.position }}"
+                    src="{% static media.media.path|extract_static %}" alt="{{ media.media.name }}" />
+                {% endif %}
+                {% endfor %}
+            </div>
         </div>
         {% elif slide.challenge %}
         {% if slide.challenge.description == "Final" %}
@@ -140,7 +150,8 @@
                 </div>
             </div>
             <div class="col-6 p-0 text-end d-none d-md-inline h-100">
-                <img class="img-fluid h-100" src="{% static 'media/images/course/final_image.svg' %}" alt="Final image" />
+                <img class="img-fluid h-100" src="{% static 'media/images/course/final_image.svg' %}"
+                    alt="Final image" />
             </div>
         </div>
         {% else %}
@@ -169,7 +180,8 @@
                 </div>
             </div>
             <div class="col-6 p-0 text-end d-none d-md-inline h-100">
-                <img class="img-fluid h-100" src="{% static 'media/images/course/challenge_image.svg' %}" alt="Challenge image" />
+                <img class="img-fluid h-100" src="{% static 'media/images/course/challenge_image.svg' %}"
+                    alt="Challenge image" />
             </div>
         </div>
         {% endif %}

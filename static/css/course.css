@@ -223,9 +223,4 @@
         --slide-bottom-margin: -1rem;
         --slide-right-margin: -1rem;
     }
-
-
-    #carouselCourse img {
-        opacity: 0.3;
-    }
 }
