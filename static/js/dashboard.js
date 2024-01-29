@@ -29,7 +29,7 @@ $(document).ready(function () {
                 ctx.font = `bold ${fontSize}em Inter`;
                 ctx.textBaseline = "middle";
 
-                let text = `${data.datasets[0].data[0]}%`,
+                let text = `${Math.round(data.datasets[0].data[0])}%`,
                     textX = Math.round((width - ctx.measureText(text).width) / 2),
                     textY = height / 2;
 
