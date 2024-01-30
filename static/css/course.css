@@ -70,8 +70,8 @@
 }
 
 .correct_answer:checked {
-    background-color: #60E232;
-    border-color: #60E232;
+    background-color: var(--bs-success);
+    border-color:var(--bs-success);
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e") !important;
 }
 .correct_answer:disabled {
@@ -79,18 +79,17 @@
 }
 
 .correct_answer + span {
-    color: #60E232;
+    color: var(--bs-success);
 }
 
 .wrong-answer:not(.correct_answer):checked {
-    background-color: #E2323D;
-    border-color: #E2323D;
+    background-color: var(--bs-danger);
+    border-color: var(--bs-danger);
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 6 14 14M14 6 6 14'/%3e%3c/svg%3e");
 }
 
 .wrong-answer:not(.correct_answer) + span {
-    color: #E2323D;
-}
+    color: var(--bs-danger);
 
 .wrong-answer:disabled {
     opacity: 1;

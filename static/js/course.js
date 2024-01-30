@@ -16,7 +16,7 @@ $(document).ready(function () {
     const fadeOutDelay = 500;
     const fadeInDelay = 0;
 
-    if (document.getElementById('is_question_answered')){
+    if (document.getElementById('is_question_answered')) {
         var is_question_answered = JSON.parse(document.getElementById('is_question_answered').textContent);
     }
 
@@ -58,8 +58,11 @@ $(document).ready(function () {
             const frontValue = $(frontField).attr("value");
             const backField = $backSortingFields.get(index);
             if (frontValue !== $(backField).attr("value")) {
-                $(backField).addClass('border-danger');
-                $(backField).children().even().addClass('text-danger');
+                $(backField).addClass('border-danger bg-light-red');
+                $(backField).children().last().addClass('text-danger');
+            } else {
+                $(backField).addClass('border-success bg-light-green');
+                $(backField).children().last().addClass('text-success');
             }
         });
     }
@@ -84,6 +87,10 @@ $(document).ready(function () {
     if (!is_question_answered) {
         if ($checkboxesAndRadios.length > 0) {
             checkSingleAndMultipleAnswers()
+        }
+
+        if ($backSortingFields.length > 0) {
+            checkSortingAnswers()
         }
         $nextControlButton
             .removeClass('control_disabled')
@@ -113,13 +120,6 @@ $(document).ready(function () {
         const csrftoken = getCookie('csrftoken');
         const $frontSortingFields = $(".active .front .draggable-item");
         let formdata = $("#question-form").serialize();
-
-        if ($frontSortingFields.length > 0) {
-            const answers = $frontSortingFields.map(function () {
-                return $(this).attr("value");
-            }).get()
-            formdata = { answer: answers }
-        }
 
         $.ajax({
             type: "POST",
