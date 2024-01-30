@@ -126,12 +126,12 @@
     </div>
   </div>
   <div class="col-sm-6 col-12 h-100 w-sm-45 w-lg-55 d-none d-sm-block">
-    <div class="border shadow-sm rounded-4 px-4 py-3 h-100">
+    <div class="row d-flex border shadow-sm rounded-4 px-4 py-3 h-100">
       <h4 class="pt-2">{% translate "Résultats" %}</h4>
-      <div class="px-3 h-100">
+      <div class="mx-auto row d-flex px-3 h-95">
         {% for score in scores %}
-        <div class="row h-20">
-          <div class="col-sm-6 col-12 h-100 w-sm-40 w-lg-50">
+        <div class="mx-auto row h-20">
+          <div class="col-sm-6 col-12 h-100">
             <div class="row border border-primary rounded-3 h-100">
               <div class="col-12 col-lg-6 p-lg-4 pe-lg-0 py-2 px-0 h-sm-30 h-lg-100 d-flex">
                 <div class="d-none d-lg-none d-sm-inline text-center">
@@ -153,7 +153,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-12 text-end p-0 h-100 w-sm-60 w-lg-50">
+          <div class="col-sm-6 col-12 text-end p-0 h-100">
             {% with sticker_unlocked=score|is_sticker_unlocked %}
             <img src="{% static 'media/images/stickers/16x9/level-'%}{{ score.level.index }}-{{sticker_unlocked}}.svg" alt="Sticker"
               class="img-fluid h-100 d-none d-lg-inline" />
@@ -162,7 +162,7 @@
             {% endwith %}
           </div>
         </div>
-        <div class="row h-4"></div>
+        <div class="mx-auto row h-5"></div>
         {% endfor %}
       </div>
     </div>
