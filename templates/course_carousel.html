@@ -22,12 +22,8 @@
                     <div class="my-auto">
                         <h3 class="text-primary">{% translate "Question"%} {{ slide.question.question_index }}</h3>
                         {% csrf_token %}
-                        {% if slide.question.type == "LI" %}
-                            {{ slide.question.as_p }}
-                        {% else %}
-                            {% bootstrap_form_errors slide.question %}
-                            {% bootstrap_field slide.question.answer show_label=True label_class="pb-3" %}
-                        {% endif %}
+                        {% bootstrap_form_errors slide.question %}
+                        {% bootstrap_field slide.question.answer show_label=True label_class="pb-3" %}
                         <div class="text-center pb-2 inFront">
                             <button id="summitButton" type="button"
                                 class="flip btn text-primary course-button fw-bolder border-primary border border-3 shadow rounded p-2">
