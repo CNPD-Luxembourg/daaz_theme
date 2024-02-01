@@ -15,6 +15,7 @@ $(document).ready(function () {
     const changeSlide_url = "change_slide/" + "?direction=";
     const fadeOutDelay = 500;
     const fadeInDelay = 0;
+    const $buttonsRadioOptions = $(".option-button-radio")
 
     if (document.getElementById('is_question_answered')) {
         var is_question_answered = JSON.parse(document.getElementById('is_question_answered').textContent);
@@ -80,6 +81,9 @@ $(document).ready(function () {
 
         $filteredAnswers.prop('checked', true);
         $filteredAnswers.addClass('wrong-answer');
+        if ($filteredAnswers.hasClass('option-button-radio') && !$filteredAnswers.hasClass('correct-answer')) {
+            $filteredAnswers.siblings().addClass('border-danger bg-light-red');
+        }
     }
 
     $questionCard.flip({ trigger: 'manual' });
@@ -104,6 +108,17 @@ $(document).ready(function () {
 
     if ($checkboxesAndRadios.length > 0) {
         processCheckboxSelection($checkboxesAndRadios.filter(':checked').first());
+    }
+
+    if ($buttonsRadioOptions.length > 0) {
+        $buttonsRadioOptions.each(function () {
+            $(this).on('change', function () {
+                $('#id_' + $(this).attr('name') + ' .btn').removeClass('active');
+                if (this.checked) {
+                    $(this).siblings().addClass('active text-light');
+                }
+            });
+        })
     }
 
 

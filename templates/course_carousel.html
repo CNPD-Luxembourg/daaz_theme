@@ -22,8 +22,12 @@
                     <div class="my-auto">
                         <h3 class="text-primary">{% translate "Question"%} {{ slide.question.question_index }}</h3>
                         {% csrf_token %}
-                        {% bootstrap_form_errors slide.question %}
-                        {% bootstrap_field slide.question.answer show_label=True label_class="pb-3" %}
+                        {% if slide.question.type == "LI" %}
+                            {{ slide.question.as_p }}
+                        {% else %}
+                            {% bootstrap_form_errors slide.question %}
+                            {% bootstrap_field slide.question.answer show_label=True label_class="pb-3" %}
+                        {% endif %}
                         <div class="text-center pb-2 inFront">
                             <button id="summitButton" type="button"
                                 class="flip btn text-primary course-button fw-bolder border-primary border border-3 shadow rounded p-2">
@@ -53,6 +57,24 @@
                                     disabled>
                                 <span>{{ answer_choice }}</span>
                             </label>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                        {% if slide.question.type == "LI" %}
+                        <div class="d-grid gap-2 ps-3 mb-5">
+                            {% for answer_choice in slide.question.answer.field.queryset %}
+                            <div>
+                                <input
+                                class="form-check-input option-button-radio{% if answer_choice.is_correct %} correct_answer{% endif %}"
+                                type="{{ slide.question.answer.field.widget.input_type }}"
+                                value="{{ answer_choice.pk }}" {%if answer_choice.is_correct %}checked{% endif %}
+                                disabled>
+                                <div
+                                    class="btn btn-sm border border-primary {% if answer_choice.is_correct %} border-success bg-light-green{% endif %}" >
+                                    {{ answer_choice }}
+                                </div>
+                            </div>
+
                             {% endfor %}
                         </div>
                         {% endif %}

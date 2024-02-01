@@ -42,6 +42,14 @@
     transform: translateY(4px);
 }
 
+.option-button-radio + label:hover {
+    color: var(--bs-white) !important;
+}
+
+.option-button-radio + label.active {
+    color: var(--bs-white) !important;
+}
+
 #summitButton.course-button {
     box-shadow: 0 0.5rem var(--bs-primary) !important;
 }
