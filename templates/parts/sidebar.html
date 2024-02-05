@@ -79,8 +79,11 @@
             </li>
         </ul>
         <hr>
-        <div class="mb-4 align-items-center align-items-sm-start d-none d-sm-flex">
+        <div id="language_selector_expanded" class="mb-4 align-items-center align-items-sm-start d-none d-sm-inline">
             {% include "home/language_selector_sidebar.html" %}
+        </div>
+      <div id="language_selector_minimized" class="mb-4 align-items-center align-items-sm-start d-sm-none">
+            {% include "home/language_selector_landing.html" %}
         </div>
     </div>
 </nav>
