@@ -3,19 +3,12 @@
 {% load django_bootstrap5 %}
 {% load custom_filters %}
 
-{% block bootstrap5_extra_script %}
-<script src='{% static "npm_components/flip/dist/jquery.flip.js" %}'></script>
-<script src='{% static "js/course.js" %}'></script>
-{% endblock %}
-
-<div class="carousel-inner px-0 px-md-5 pb-0 h-100" role="listbox">
-    {% for slide in slides %}
+{% for slide in slides %}
     {% if not slide.question.answer.initial and forloop.first %}
     {{ "false"|json_script:"is_question_answered" }}
     {% endif %}
     {{ slide.question.media }}
-    <div class="carousel-item pb-sm-2 h-90 {% if forloop.first and slides|length == 2 or forloop.counter == 2 and slides|length == 3 %}active{% endif %}">
-        {% if slide.question %}
+    {% if slide.question %}
         <div id="question-card" class="h-100" value="{{ slide.question.id }}">
             <div class="front overflow-auto row card border border-light shadow-sm m-0 h-100">
                 <form class="d-flex flex-column col-12 col-md-6 p-sm-5 p-2 h-100" method="post" id="question-form">
@@ -46,11 +39,9 @@
                         <div class="d-grid gap-2 ps-3 mb-5">
                             {% for answer_choice in slide.question.answer.field.queryset %}
                             <label class="form-check">
-                                <input
-                                    class="form-check-input {% if answer_choice.is_correct %}correct_answer{% endif %}"
+                                <input class="form-check-input {% if answer_choice.is_correct %}correct_answer{% endif %}"
                                     type="{{ slide.question.answer.field.widget.input_type }}"
-                                    value="{{ answer_choice.pk }}" {%if answer_choice.is_correct %}checked{% endif %}
-                                    disabled>
+                                    value="{{ answer_choice.pk }}" {%if answer_choice.is_correct %}checked{% endif %} disabled>
                                 <span>{{ answer_choice }}</span>
                             </label>
                             {% endfor %}
@@ -61,12 +52,12 @@
                             {% for answer_choice in slide.question.answer.field.queryset %}
                             <div>
                                 <input
-                                class="form-check-input option-button-radio{% if answer_choice.is_correct %} correct_answer{% endif %}"
-                                type="{{ slide.question.answer.field.widget.input_type }}"
-                                value="{{ answer_choice.pk }}" {%if answer_choice.is_correct %}checked{% endif %}
-                                disabled>
+                                    class="form-check-input option-button-radio{% if answer_choice.is_correct %} correct_answer{% endif %}"
+                                    type="{{ slide.question.answer.field.widget.input_type }}"
+                                    value="{{ answer_choice.pk }}" {%if answer_choice.is_correct %}checked{% endif %}
+                                    disabled>
                                 <div
-                                    class="btn btn-sm border border-primary {% if answer_choice.is_correct %} border-success bg-light-green{% endif %}" >
+                                    class="btn btn-sm border border-primary {% if answer_choice.is_correct %} border-success bg-light-green{% endif %}">
                                     {{ answer_choice }}
                                 </div>
                             </div>
@@ -98,7 +89,7 @@
                 </div>
             </div>
         </div>
-        {% elif slide.explanation %}
+    {% elif slide.explanation %}
         <div class="row overflow-auto card border border-light shadow-sm m-0 h-100">
             <div class="d-flex flex-column col-12 col-md-6 p-sm-5 p-2 h-100">
                 <div class="my-auto">
@@ -113,12 +104,13 @@
                     alt="Final image" />
             </div>
         </div>
-        {% elif slide.context %}
+    {% elif slide.context %}
         <div class="row overflow-auto border rounded border-light shadow-sm h-100">
             <div class="d-flex col-12 col-sm-12 col-md-6 h-md-100">
                 <div class="my-auto ps-2 ps-md-5">
                     {% for text in slide.context.texts %}
-                    <span class="inFront {{ text.css_classes|join:' ' }} {{ text.position }} {% if text.text.get_t_type_display == 'Title'%}text-primary{%endif%}">
+                    <span
+                        class="inFront {{ text.css_classes|join:' ' }} {{ text.position }} {% if text.text.get_t_type_display == 'Title'%}text-primary{%endif%}">
                         {{ text.text.description|linebreaks|safe }}
                     </span>
                     {% endfor %}
@@ -133,89 +125,74 @@
                 {% endfor %}
             </div>
         </div>
-        {% elif slide.challenge %}
+    {% elif slide.challenge %}
         {% if slide.challenge.description == "Final" %}
-        <div class="row card border border-light shadow-sm m-0 h-100">
-            <div class="d-flex flex-column col-12 col-md-6 p-sm-5 p-2 h-100">
-                <div class="my-auto">
-                    <div class="text-center">
-                        <h1 class="fw-bolder text-warning">
-                            {% translate "Felicitations" %} !
-                        </h1>
-                        {% with index_level=level.index next_level=level.index|add:1 score=score|default:0 %}
-                        <h3 class="inFront text-primary">
-                            {% blocktranslate %}Vous avez terminé le niveau {{ index_level }} !{% endblocktranslate %}
-                        </h3>
-                        <h6>
-                            {% blocktranslate %}Votre score est de {% endblocktranslate %}
-                            <span class="text-primary">{{ score }}%</span>
-                        </h6>
-                        <h6>
-                            {% blocktranslate %}Vous avez débloquez l’histoire numéro {{ next_level }} !{% endblocktranslate %}
-                        </h6>
-                        {% endwith %}
-                    </div>
-                    <div class="text-center pb-2 inFront">
-                        <button id="challengeButton" type="button"
-                            class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded p-2">
-                            {% translate "Télécharger la fiche récap" %}
-                        </button>
-                        <a id="challengeButton" type="button" href="{% url 'course' %}"
-                            class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded p-2">
-                            {% translate "Accéder au niveau suivant" %}
-                        </a>
+            <div class="row card border border-light shadow-sm m-0 h-100">
+                <div class="d-flex flex-column col-12 col-md-6 p-sm-5 p-2 h-100">
+                    <div class="my-auto">
+                        <div class="text-center">
+                            <h1 class="fw-bolder text-warning">
+                                {% translate "Felicitations" %} !
+                            </h1>
+                            {% with index_level=level.index next_level=level.index|add:1 score=score|default:0 %}
+                            <h3 class="inFront text-primary">
+                                {% blocktranslate %}Vous avez terminé le niveau {{ index_level }} !{% endblocktranslate %}
+                            </h3>
+                            <h6>
+                                {% blocktranslate %}Votre score est de {% endblocktranslate %}
+                                <span class="text-primary">{{ score }}%</span>
+                            </h6>
+                            <h6>
+                                {% blocktranslate %}Vous avez débloquez l’histoire numéro {{ next_level }} !{% endblocktranslate %}
+                            </h6>
+                            {% endwith %}
+                        </div>
+                        <div class="text-center pb-2 inFront">
+                            <button id="challengeButton" type="button"
+                                class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded p-2">
+                                {% translate "Télécharger la fiche récap" %}
+                            </button>
+                            <a id="challengeButton" type="button" href="{% url 'course' %}"
+                                class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded p-2">
+                                {% translate "Accéder au niveau suivant" %}
+                            </a>
+                        </div>
                     </div>
                 </div>
+                <div class="col-6 p-0 text-end d-none d-md-inline h-100">
+                    <img class="img-fluid h-100" src="{% static 'media/images/course/final_image.svg' %}" alt="Final image" />
+                </div>
             </div>
-            <div class="col-6 p-0 text-end d-none d-md-inline h-100">
-                <img class="img-fluid h-100" src="{% static 'media/images/course/final_image.svg' %}"
-                    alt="Final image" />
-            </div>
-        </div>
         {% else %}
-        <div class="row card border border-light shadow-sm m-0 h-100">
-            <div class="d-flex flex-column col-12 col-md-6 p-sm-5 p-2 h-100">
-                <div class="my-auto">
-                    <div class="text-center text-danger">
-                        <h1 class="fw-bolder">
-                            {% translate "Challenge" %} !
-                        </h1>
-                        <h6 class="inFront">
-                            {{ slide.challenge.name }}
-                        </h6>
-                    </div>
-                    <div class="inFront">
-                        <p>
-                            {{ slide.challenge.description|linebreaks|safe }}
-                        </p>
-                    </div>
-                    <div class="text-center pb-2 inFront">
-                        <button id="challengeButton" type="button"
-                            class="btn text-danger course-button fw-bolder border-danger border border-3 shadow rounded p-2">
-                            {% translate "Télécharger mon template" %}
-                        </button>
+            <div class="row card border border-light shadow-sm m-0 h-100">
+                <div class="d-flex flex-column col-12 col-md-6 p-sm-5 p-2 h-100">
+                    <div class="my-auto">
+                        <div class="text-center text-danger">
+                            <h1 class="fw-bolder">
+                                {% translate "Challenge" %} !
+                            </h1>
+                            <h6 class="inFront">
+                                {{ slide.challenge.name }}
+                            </h6>
+                        </div>
+                        <div class="inFront">
+                            <p>
+                                {{ slide.challenge.description|linebreaks|safe }}
+                            </p>
+                        </div>
+                        <div class="text-center pb-2 inFront">
+                            <button id="challengeButton" type="button"
+                                class="btn text-danger course-button fw-bolder border-danger border border-3 shadow rounded p-2">
+                                {% translate "Télécharger mon template" %}
+                            </button>
+                        </div>
                     </div>
                 </div>
+                <div class="col-6 p-0 text-end d-none d-md-inline h-100">
+                    <img class="img-fluid h-100" src="{% static 'media/images/course/challenge_image.svg' %}"
+                        alt="Challenge image" />
+                </div>
             </div>
-            <div class="col-6 p-0 text-end d-none d-md-inline h-100">
-                <img class="img-fluid h-100" src="{% static 'media/images/course/challenge_image.svg' %}"
-                    alt="Challenge image" />
-            </div>
-        </div>
         {% endif %}
-        {% endif %}
-    </div>
-    {% endfor %}
-</div>
-<a class="carousel-control-prev shadow rounded-4 bottom-0 py-0 py-sm-1 px-1 px-4 opacity-100 change_slide {% if not previous_control_enable %}control_disabled{% endif %}"
-    type="button" role="button" data-bs-target="#carouselCourse" data-bs-slide="prev">
-    <span aria-hidden="true"><i
-            class="h1 bi bi-caret-left {% if not previous_control_enable %}text-secondary{% else %}text-primary{% endif %}"></i></span>
-    <span class="visually-hidden">Previous</span>
-</a>
-<a class="carousel-control-next shadow rounded-4 bottom-0 py-0 py-sm-1 px-1 px-4 opacity-100 change_slide {% if not next_control_enable %}control_disabled{% endif %}"
-    type="button" data-bs-target="#carouselCourse" data-bs-slide="next">
-    <span aria-hidden="true"><i
-            class="h1 bi bi-caret-right {% if not next_control_enable %}text-secondary{% else %}text-primary{% endif %}"></i></span>
-    <span class="visually-hidden">Next</span>
-</a>
+    {% endif %}
+{% endfor %}
