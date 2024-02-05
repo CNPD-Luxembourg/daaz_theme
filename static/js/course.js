@@ -45,10 +45,12 @@ $(document).ready(function () {
     function loadSlide(button) {
         const $button = $(button);
         $backSlide.addClass('d-none');
-        $carouselCourse.load(changeSlide_url + $button.data("bs-slide"), function () {
+        const $newSlide = $('<div class="carousel-item pb-sm-2 h-90"></div>');
+        $newSlide.load(changeSlide_url + $button.data("bs-slide"), function () {
             $progressBar.fadeOut(fadeOutDelay);
             $progressBar.load(updateProgressBar_url);
             $progressBar.fadeIn(fadeInDelay);
+            $carouselCourse.find(".carousel-inner").append($newSlide);
             $backSlide.removeClass('d-none');
         });
     }
