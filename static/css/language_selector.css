@@ -21,7 +21,9 @@
 #sidebar #language_selector {
     background-image: unset;
     padding-right: 10px;
+    appearance: none;
 }
+
 
 @media (max-width: 576px) {
     .language-selector .d-sm-none {
