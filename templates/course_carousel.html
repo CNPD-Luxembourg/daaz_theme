@@ -14,7 +14,7 @@
     {{ "false"|json_script:"is_question_answered" }}
     {% endif %}
     {{ slide.question.media }}
-    <div class="carousel-item pb-sm-2 h-90 {% if forloop.first %}active{% endif %}">
+    <div class="carousel-item pb-sm-2 h-90 {% if forloop.first and slides|length == 2 or forloop.counter == 2 and slides|length == 3 %}active{% endif %}">
         {% if slide.question %}
         <div id="question-card" class="h-100" value="{{ slide.question.id }}">
             <div class="front overflow-auto row card border border-light shadow-sm m-0 h-100">
