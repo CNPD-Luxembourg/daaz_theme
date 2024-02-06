@@ -4,6 +4,8 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/sidebar.css' %}">
 <script src='{% static "js/sidebar.js" %}'></script>
 {% endblock %}
+{% with sidebarstate=request.session.sidebar_state %}
+{{ sidebarstate|json_script:"sidebarState" }}
 <nav id="sidebar" class="col-auto col-md-2 col-lg-2 px-0 bg-white shadow-sm sticky-sidebar">
     <div class="d-flex flex-sm-column flex-row align-items-center pt-2 min-vh-100 justify-content-evenly">
         <button id="sidebarToggle" class="btn btn-link align-self-end d-none d-sm-block my-sm-3 mx-2">
@@ -87,3 +89,4 @@
         </div>
     </div>
 </nav>
+{% endwith %}
