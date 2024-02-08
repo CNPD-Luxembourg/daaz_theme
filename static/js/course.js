@@ -41,7 +41,7 @@ $(document).ready(function () {
     }
 
     function initializeFlipForCard() {
-        $questionCard.flip({ trigger: 'manual'});
+        $questionCard.flip({ trigger: 'manual' });
     }
 
     function checkAndFlipQuestionCards() {
@@ -104,17 +104,13 @@ $(document).ready(function () {
     function update_progress_bar(event, direction) {
         let carouselLength = $carouselCourse.find(".carousel-item").length
         $progressBar.fadeOut(fadeOutDelay);
-        $progressBar.load(updateProgressBar_url + direction, function() {
+        $progressBar.load(updateProgressBar_url + direction, function () {
             $progressBar.fadeIn(fadeInDelay);
-            if (direction == "prev" && event.from < event.to) {
-                console.log('start carousel');
-            }else if (direction == "next" && event.to ==  carouselLength - 1) {
-                loadSlide(direction)
-            }else if(direction == "prev" && event.to == 0) {
+            if (direction === "next" && event.to === carouselLength - 1
+                || direction === "prev" && event.to === 0) {
                 loadSlide(direction)
             }
         });
-
     }
 
     function loadSlide(direction) {
@@ -125,9 +121,9 @@ $(document).ready(function () {
             if (isEmptySlide) {
                 if (direction === "prev") $prevControlButton.addClass('control_disabled')
                 if (direction === "next") $nextControlButton.addClass('control_disabled')
-            } else{
+            } else {
                 if (direction === "next") $carouselContainer.append($newSlide);
-                if (direction ==="prev") $carouselContainer.prepend($newSlide);
+                if (direction === "prev") $carouselContainer.prepend($newSlide);
             }
             $carouselControls.removeClass('control_blocked')
         });
@@ -157,8 +153,8 @@ $(document).ready(function () {
         $answersCheckboxesAndRadios.each(function () {
             if (checkedValues.includes(this.value)) {
                 $(this)
-                .addClass('wrong-answer')
-                .prop('checked', true);
+                    .addClass('wrong-answer')
+                    .prop('checked', true);
                 return checkedValues.includes(this.value);
             } else if (this.checked && this.type === 'checkbox') {
                 $(this).addClass('not-checked')
@@ -171,7 +167,8 @@ $(document).ready(function () {
     delegateInputClick()
     checkAndFlipQuestionCards()
 
-    if ($questionCard.length > 0 && !$questionCard.data("flip-model").isFlipped) {
+    if ($carouselContainer.find(".active #question-card").length > 0
+        && !$carouselContainer.find(".active #question-card").data("flip-model").isFlipped) {
         $nextControlButton.addClass('control_disabled')
     }
 
@@ -183,8 +180,8 @@ $(document).ready(function () {
 
         if ($activeSlide.find("#question-card").length > 0) {
             $questionCard = $activeSlide.find("#question-card")
+            $nextControlButton.addClass('control_disabled')
             if (!$questionCard.data("flip-model")) {
-                $nextControlButton.addClass('control_disabled')
                 initializeFlipForCard()
                 delegateSummitButtonClick()
                 delegateInputClick()
