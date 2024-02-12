@@ -181,12 +181,15 @@ $(document).ready(function () {
         if ($activeSlide.find("#question-card").length > 0) {
             $questionCard = $activeSlide.find("#question-card")
             $nextControlButton.addClass('control_disabled')
-            if (!$questionCard.data("flip-model")) {
+            dataFlip = $questionCard.data("flip-model")
+            if (!dataFlip) {
                 initializeFlipForCard()
                 delegateSummitButtonClick()
                 delegateInputClick()
             }
-            checkAndFlipQuestionCards()
+            if (dataFlip.isFlipped) {
+                checkAndFlipQuestionCards()
+            }
         }
         update_progress_bar(event, direction)
     })
