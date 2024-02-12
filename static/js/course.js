@@ -41,7 +41,7 @@ $(document).ready(function () {
     }
 
     function initializeFlipForCard() {
-        $questionCard.flip({ trigger: 'manual' });
+        $questionCard.flip({ trigger: 'manual', autoSize: false });
     }
 
     function checkAndFlipQuestionCards() {
@@ -187,7 +187,7 @@ $(document).ready(function () {
                 delegateSummitButtonClick()
                 delegateInputClick()
             }
-            if (dataFlip.isFlipped) {
+            if (dataFlip && dataFlip.isFlipped) {
                 checkAndFlipQuestionCards()
             }
         }
