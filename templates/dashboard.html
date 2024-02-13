@@ -155,8 +155,14 @@
           </div>
           <div class="col-sm-6 col-lg-6 col-12 text-end p-0 h-100">
             {% with sticker_unlocked=score|is_sticker_unlocked %}
-            <div style="background-image: url({% static 'media/images/stickers/16x9/level-' %}{{ score.level.index }}-{{sticker_unlocked}}.svg); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100%; display: none;" class="d-lg-block ms-2 border border-dark border-2 rounded"></div>
-            <div style="background-image: url({% static 'media/images/stickers/1x1/level-' %}{{ score.level.index }}-{{sticker_unlocked}}.svg); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100%; display: none;" class="d-lg-none d-sm-block border border-dark border-2 rounded ms-3"></div>
+            <div
+              style="background-image: url({% static 'media/images/stickers/16x9/level-' %}{{ score.level.index }}-{{sticker_unlocked}}.svg); background-size: cover; background-position: center; background-repeat: no-repeat; display: none;"
+              class="d-lg-block ms-2 border {% if sticker_unlocked == '1' %}border-dark{% elif sticker_unlocked == '2' or sticker_unlocked == '3' %}border-primary {% elif sticker_unlocked == '4' %}border-warning{% endif %} border-2 rounded h-100">
+            </div>
+            <div
+              style="background-image: url({% static 'media/images/stickers/1x1/level-' %}{{ score.level.index }}-{{sticker_unlocked}}.svg); background-size: cover; background-position: center; background-repeat: no-repeat; display: none;"
+              class="d-lg-none d-sm-block border {% if sticker_unlocked == '1' %}border-dark{% elif sticker_unlocked == '2' or sticker_unlocked == '3' %}border-primary {% elif sticker_unlocked == '4' %}border-warning{% endif %} border-2 rounded ms-3 h-100">
+            </div>
             {% endwith %}
           </div>
         </div>
