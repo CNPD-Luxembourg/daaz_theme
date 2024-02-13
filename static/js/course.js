@@ -1,25 +1,19 @@
 $(document).ready(function () {
-    const $checkboxesAndRadios = $(".front .form-check-input");
-    const $backSlide = $(".back");
-    const $answersCheckboxesAndRadios = $(".back .form-check-input");
-    const $backSortingFields = $(".back .draggable-item");
-    const $submitButton = $("#summitButton");
+    var $questionCard = $("#question-card");
+    var $checkboxesAndRadios = $(".front .form-check-input");
+    var $answersCheckboxesAndRadios = $(".back .form-check-input");
+    var $backSortingFields = $(".back .draggable-item");
+    var $submitButton = $("#summitButton");
     const $carouselCourse = $("#carouselCourse");
+    const $carouselContainer = $(".carousel-inner");
     const $progressBar = $(".course-progress-bar");
-    const $questionCard = $("#question-card");
-    const $flipButton = $(".flip");
-    const $changeSlideButton = $(".change_slide");
+    const $carouselControls = $(".carousel-control");
     const $prevControlButton = $(".carousel-control-prev");
     const $nextControlButton = $(".carousel-control-next");
-    const updateProgressBar_url = "update_progress_bar/";
-    const changeSlide_url = "change_slide/" + "?direction=";
+    const updateProgressBar_url = "update_progress_bar/?direction=";
+    const changeSlide_url = "change_slide/?direction=";
     const fadeOutDelay = 500;
     const fadeInDelay = 0;
-    const $buttonsRadioOptions = $(".option-button-radio")
-
-    if (document.getElementById('is_question_answered')) {
-        var is_question_answered = JSON.parse(document.getElementById('is_question_answered').textContent);
-    }
 
     function getCookie(name) {
         let cookieValue = null;
@@ -27,7 +21,6 @@ $(document).ready(function () {
             const cookies = document.cookie.split(';');
             for (let i = 0; i < cookies.length; i++) {
                 const cookie = cookies[i].trim();
-                // Does this cookie string begin with the name we want?
                 if (cookie.substring(0, name.length + 1) === (name + '=')) {
                     cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
                     break;
@@ -37,19 +30,102 @@ $(document).ready(function () {
         return cookieValue;
     }
 
-
     function processCheckboxSelection() {
+        const nbCorrectQuestions = $questionCard.find(".back .form-check-input").filter(':checked').length;
+        const $checkedCheckboxes = $checkboxesAndRadios.filter(':checkbox:checked');
+        const $uncheckedCheckboxes = $checkboxesAndRadios.not(':checkbox:checked');
+
         $submitButton.prop("disabled", !$checkboxesAndRadios.is(":checked"));
+        $uncheckedCheckboxes.prop('disabled', $checkedCheckboxes.length === nbCorrectQuestions);
+
     }
 
-    function loadSlide(button) {
-        const $button = $(button);
-        $backSlide.addClass('d-none');
-        $carouselCourse.load(changeSlide_url + $button.data("bs-slide"), function () {
-            $progressBar.fadeOut(fadeOutDelay);
-            $progressBar.load(updateProgressBar_url);
+    function initializeFlipForCard() {
+        $questionCard.flip({ trigger: 'manual', autoSize: false });
+    }
+
+    function checkAndFlipQuestionCards() {
+        $checkboxesAndRadios = $questionCard.find(".front .form-check-input");
+        if ($checkboxesAndRadios.is(":checked")) {
+            if ($checkboxesAndRadios.length > 0) {
+                checkSingleAndMultipleAnswers();
+            }
+
+            if ($backSortingFields.length > 0) {
+                checkSortingAnswers();
+            }
+
+            $nextControlButton.removeClass('control_disabled')
+            $questionCard.flip(true);
+        }
+    }
+
+    function delegateSummitButtonClick() {
+        $submitButton = $questionCard.find("#summitButton");
+        $submitButton.on("click", function (e) {
+            e.preventDefault();
+            const csrftoken = getCookie('csrftoken');
+            const $frontSortingFields = $(".active .front .draggable-item");
+            let formdata = $questionCard.find("#question-form").serialize();
+
+            $.ajax({
+                type: "POST",
+                url: "/course",
+                data: formdata,
+                headers: {
+                    "X-CSRFToken": csrftoken
+                },
+                traditional: true,
+                success: function (data) {
+                },
+                error: function (error) {
+                }
+            });
+
+            if ($backSortingFields.length > 0) checkSortingAnswers()
+            if ($checkboxesAndRadios.length > 0) checkSingleAndMultipleAnswers()
+
+            $questionCard.flip('true');
+            $nextControlButton.removeClass('control_disabled')
+
+        });
+    }
+
+    function delegateInputClick() {
+        $checkboxesAndRadios = $questionCard.find(".front .form-check-input");
+
+        $checkboxesAndRadios.on("click", function () {
+            processCheckboxSelection();
+        });
+
+        if ($checkboxesAndRadios.length > 0) processCheckboxSelection();
+    }
+
+    function update_progress_bar(event, direction) {
+        let carouselLength = $carouselCourse.find(".carousel-item").length
+        $progressBar.fadeOut(fadeOutDelay);
+        $progressBar.load(updateProgressBar_url + direction, function () {
             $progressBar.fadeIn(fadeInDelay);
-            $backSlide.removeClass('d-none');
+            if (direction === "next" && event.to === carouselLength - 1
+                || direction === "prev" && event.to === 0) {
+                loadSlide(direction)
+            }
+        });
+    }
+
+    function loadSlide(direction) {
+        $carouselControls.addClass('control_blocked')
+        const $newSlide = $('<div class="carousel-item pb-sm-2 h-90"></div>');
+        $newSlide.load(changeSlide_url + direction, function () {
+            const isEmptySlide = $newSlide.find('.empty-slide').length > 0;
+            if (isEmptySlide) {
+                if (direction === "prev") $prevControlButton.addClass('control_disabled')
+                if (direction === "next") $nextControlButton.addClass('control_disabled')
+            } else {
+                if (direction === "next") $carouselContainer.append($newSlide);
+                if (direction === "prev") $carouselContainer.prepend($newSlide);
+            }
+            $carouselControls.removeClass('control_blocked')
         });
     }
 
@@ -69,102 +145,52 @@ $(document).ready(function () {
     }
 
     function checkSingleAndMultipleAnswers() {
+        $answersCheckboxesAndRadios = $questionCard.find(".back .form-check-input")
         const checkedValues = $checkboxesAndRadios.filter(':checked').map(function () {
             return this.value;
         }).get();
 
-        const $filteredAnswers = $answersCheckboxesAndRadios.filter(function () {
+        $answersCheckboxesAndRadios.each(function () {
             if (checkedValues.includes(this.value)) {
-            }
-            return checkedValues.includes(this.value);
-        });
-
-        $filteredAnswers.prop('checked', true);
-        $filteredAnswers.addClass('wrong-answer');
-        if ($filteredAnswers.hasClass('option-button-radio') && !$filteredAnswers.hasClass('correct-answer')) {
-            $filteredAnswers.siblings().addClass('border-danger bg-light-red');
-        }
-    }
-
-    $questionCard.flip({ trigger: 'manual' });
-
-    if (!is_question_answered) {
-        if ($checkboxesAndRadios.length > 0) {
-            checkSingleAndMultipleAnswers()
-        }
-
-        if ($backSortingFields.length > 0) {
-            checkSortingAnswers()
-        }
-        $nextControlButton
-            .removeClass('control_disabled')
-            .find("i")
-            .removeClass('text-secondary')
-            .addClass('text-primary');
-
-        $questionCard.flip(true);
-    }
-
-
-    if ($checkboxesAndRadios.length > 0) {
-        processCheckboxSelection($checkboxesAndRadios.filter(':checked').first());
-    }
-
-    if ($buttonsRadioOptions.length > 0) {
-        $buttonsRadioOptions.each(function () {
-            $(this).on('change', function () {
-                $('#id_' + $(this).attr('name') + ' .btn').removeClass('active');
-                if (this.checked) {
-                    $(this).siblings().addClass('active text-light');
-                }
-            });
-        })
-    }
-
-
-    $checkboxesAndRadios.on("click", function () {
-        processCheckboxSelection();
-    });
-
-    $changeSlideButton.on("click", function () {
-        loadSlide($(this));
-    });
-
-    $submitButton.on("click", function (e) {
-        e.preventDefault();
-        const csrftoken = getCookie('csrftoken');
-        const $frontSortingFields = $(".active .front .draggable-item");
-        let formdata = $("#question-form").serialize();
-
-        $.ajax({
-            type: "POST",
-            url: "/course",
-            data: formdata,
-            headers: {
-                "X-CSRFToken": csrftoken
-            },
-            traditional: true,
-            success: function (data) {
-            },
-            error: function (error) {
+                $(this)
+                    .addClass('wrong-answer')
+                    .prop('checked', true);
+                return checkedValues.includes(this.value);
+            } else if (this.checked && this.type === 'checkbox') {
+                $(this).addClass('not-checked')
             }
         });
-    });
+    }
 
-    $flipButton.on("click", function () {
-        if ($backSortingFields.length > 0) {
-            checkSortingAnswers()
+    initializeFlipForCard();
+    delegateSummitButtonClick()
+    delegateInputClick()
+    checkAndFlipQuestionCards()
+
+    if ($carouselContainer.find(".active #question-card").length > 0
+        && !$carouselContainer.find(".active #question-card").data("flip-model").isFlipped) {
+        $nextControlButton.addClass('control_disabled')
+    }
+
+    $carouselCourse.on('slide.bs.carousel', function (event) {
+        let $activeSlide = $(event.relatedTarget)
+        let direction = event.direction === "left" ? "next" : "prev"
+
+        $carouselControls.removeClass('control_disabled')
+
+        if ($activeSlide.find("#question-card").length > 0) {
+            $questionCard = $activeSlide.find("#question-card")
+            $nextControlButton.addClass('control_disabled')
+            dataFlip = $questionCard.data("flip-model")
+            if (!dataFlip) {
+                initializeFlipForCard()
+                delegateSummitButtonClick()
+                delegateInputClick()
+            }
+            if (dataFlip && dataFlip.isFlipped) {
+                checkAndFlipQuestionCards()
+            }
         }
-        if ($checkboxesAndRadios.length > 0) {
-            checkSingleAndMultipleAnswers()
-        }
-
-        $nextControlButton
-            .removeClass('control_disabled')
-            .find("i")
-            .removeClass('text-secondary')
-            .addClass('text-primary');
-
-        $questionCard.flip('toggle');
-    });
+        update_progress_bar(event, direction)
+    })
 });

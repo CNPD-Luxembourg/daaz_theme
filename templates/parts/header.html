@@ -17,7 +17,8 @@
   <div class="container-xxl">
     <!-- Logo -->
     <a class="navbar-brand" href="{% url 'index' %}#hero">
-      <img src="{% static 'media/images/logos/logo.svg' %}" alt="Logo" width="100px" class="d-inline-block align-text-top">
+      <img src="{% static 'media/images/logos/logo.svg' %}" alt="Logo" width="100px"
+        class="d-inline-block align-text-top">
       {{ site_name }}
     </a>
 
@@ -40,7 +41,7 @@
           <a class="nav-link btn btn-primary text-white fw-bold start">{% translate "Commencer" %}</a>
         </li>
         <li class="nav-item text-primary my-auto">
-          {% include "home/language_selector.html" %}
+          {% include "home/language_selector_landing.html" %}
         </li>
       </ul>
     </div>

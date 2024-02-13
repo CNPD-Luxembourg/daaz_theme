@@ -12,183 +12,103 @@
 
 {% block content %}
 {% cookiebanner_modal 'bootstrap5' %}
-<div id="hero" class="bg-white py-4 pt-sm-5 mt-sm-5 px-4 px-sm-0">
-    <div class="container-xl py-sm-5">
-        <div class="row align-items-center">
-            <div class="col-md-6 col-sm-12 h-100">
-                <div class="row align-items-center">
-                    <div class="col-md-12">
-                        <h1 class="text-primary py-2">
-                            {% translate "Le chemin intuitif vers" %}
-                            <br class="d-none d-md-block"/>
-                            {% translate "la protection des données" %}
-                        </h1>
-                        <h5 class="small-headline py-4">
-                            {% translate "Une formation sur mesure pour les PME" %}
-                            <br/>
-                            {% translate "basée sur des exemples réels" %}
-                        </h5>
-                    </div>
-                    <div class="col-md-12 d-md-none pb-5">
-                        <img class="w-100" src="{% static 'media/images/landing/eu-flag-waving.svg' %}" alt="Waving EU privacy flag"
-                            class="d-inline-block align-text-top">
-                    </div>
-                    <div class="col-8 offset-2 col-md-5 offset-md-0 mb-2 mb-sm-3 text-center">
-                        <a type="button" class="btn btn-primary text-white fw-bold w-100 py-2 py-sm-2 start">
-                            {% translate "Lancer le parcours" %}
-                        </a>
-                    </div>
-                    <div class="tiny-headline col-md-7 mb-3">
-                        <span class="py-2 font-grey">
-                            {% translate "Conçu par la Commission Nationale" %}
-                            <br class="d-none d-md-block"/>
-                            {% translate "pour la Protection des Données" %}
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-5 col-sm-12 offset-md-1 mb-4 d-none d-md-block">
-                <img class="w-100" src="{% static 'media/images/landing/eu-flag-waving.svg' %}" alt="Waving EU privacy flag"
-                    class="d-inline-block align-text-top">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="bg-horizontal-white-and-light-blue px-4 py-3 p-sm-0 ">
-    <div class="container-xl">
-        <div class="row mx-2">
-            <div class="col-xl-10 offset-xl-1">
-                <div class="row bg-primary rounded-3 border-white border border-5">
-                    <div class="col-md-4 d-flex align-items-center text-white px-4 ps-md-5 pe-md-3 py-3 py-sm-2 pe-1">
-                        <div class="flex-grow-0">
-                            <i class="bi bi-magic medium-icon"></i>
-                        </div>
 
-                        <div class="flex-grow-1 p-3 lh-sm">
-                            <h4 class="mb-1">
-                                {% translate "Adapté" %}
-                            </h4>
-                            <span>
-                                {% translate "Le RGPD avec les" %}
+<div class="h-auto">
+    <div id="hero" class="bg-white py-4 px-4 px-sm-0">
+        <div class="container-xl py-sm-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 col-sm-12 h-100">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <h1 class="text-primary py-2">
+                                {% translate "Le chemin intuitif vers" %}
+                                <br class="d-none d-md-block"/>
+                                {% translate "la protection des données" %}
+                            </h1>
+                            <h5 class="small-headline py-4">
+                                {% translate "Une formation sur mesure pour les PME" %}
                                 <br/>
-                                {% translate "mots du quotidien" %}
-                            </span>
+                                {% translate "basée sur des exemples réels" %}
+                            </h5>
                         </div>
-                    </div>
-
-                    <div class="col-md-4 d-flex align-items-center text-white px-4 py-3 py-sm-2 pe-1">
-                        <div class="flex-grow-0">
-                            <i class="bi bi-clock-history medium-icon"></i>
+                        <div class="col-md-12 d-md-none pb-5">
+                            <img class="w-100" src="{% static 'media/images/landing/eu-flag-waving.svg' %}" alt="Waving EU privacy flag"
+                                class="d-inline-block align-text-top">
                         </div>
-
-                        <div class="flex-grow-1 p-3 pe-0 lh-sm">
-                            <h4 class="mb-1">
-                                {% translate "Flexible" %}
-                            </h4>
-                            <span>
-                                {% translate "Une formation à parcourir" %}
-                                <br/>
-                                {% translate "à votre rythme" %}
-                            </span>
+                        <div class="col-8 offset-2 col-md-5 offset-md-0 mb-2 mb-sm-3 text-center">
+                            <a type="button" class="btn btn-primary text-white fw-bold w-100 py-2 py-sm-2 start">
+                                {% translate "Lancer le parcours" %}
+                            </a>
                         </div>
-                    </div>
-
-                    <div class="col-md-4 d-flex align-items-center text-white px-4 py-3 py-sm-2 pe-1">
-                        <div class="flex-grow-0">
-                            <i class="bi bi-shield-check medium-icon"></i>
-                        </div>
-
-                        <div class="flex-grow-1 p-3 lh-sm">
-                            <h4 class="mb-1">
-                                {% translate "Fiable" %}
-                            </h4>
-                            <span>
-                                {% translate "Un contenu vérifié" %}
-                                <br/>
-                                {% translate "et sécurisé" %}
+                        <div class="tiny-headline col-md-7 mb-3">
+                            <span class="py-2 font-grey">
+                                {% translate "Conçu par la Commission Nationale" %}
+                                <br class="d-none d-md-block"/>
+                                {% translate "pour la Protection des Données" %}
                             </span>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-5 col-sm-12 offset-md-1 mb-4 d-none d-md-block">
+                    <img class="w-100" src="{% static 'media/images/landing/eu-flag-waving.svg' %}" alt="Waving EU privacy flag"
+                        class="d-inline-block align-text-top">
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="bg-light-blue pb-3 pt-5 py-sm-5 px-4 px-sm-0">
-    <div class="container-xl">
-        <div class="row">
-            <div class="col-xl-8 col-md-10 offset-xl-2 offset-md-1">
-                <div class="row">
-                    <div class="col-md-12 py-3 py-sm-5">
-                        <h1 class="text-primary text-center">
-                            {% translate "Le RGPD de A à Zen !" %}
-                        </h1>
-                    </div>
-                    <div class="col-md-12 py-3 px-4">
-                        <div class="row">
-                            <div class="col-md-6 d-flex align-items-center ps-3">
-                                <div class="flex-grow-0">
-                                    <i class="bi bi-book text-primary large-icon"></i>
-                                </div>
-
-                                <div class="flex-grow-1 p-3 lh-sm">
-                                    <h4 class="mb-1">
-                                        {% translate "Story-Learning" %}
-                                    </h4>
-                                    <span>
-                                        {% translate "Une histoire captivante avec" %}
-                                        <br/>
-                                        {% translate "des personnages" %}
-                                    </span>
-                                </div>
+    <div class="bg-horizontal-white-and-light-blue px-4 py-3 p-sm-0 ">
+        <div class="container-xl">
+            <div class="row mx-2">
+                <div class="col-xl-10 offset-xl-1">
+                    <div class="row bg-primary rounded-3 border-white border border-5">
+                        <div class="col-md-4 d-flex align-items-center text-white px-4 ps-md-5 pe-md-3 py-3 py-sm-2 pe-1">
+                            <div class="flex-grow-0">
+                                <i class="bi bi-magic medium-icon"></i>
                             </div>
-                            <div class="col-md-6 d-flex align-items-center ps-3">
-                                <div class="flex-grow-0">
-                                    <i class="bi bi-award text-primary large-icon"></i>
-                                </div>
 
-                                <div class="flex-grow-1 p-3 lh-sm">
-                                    <h4 class="mb-1">
-                                        {% translate "Accomplissement" %}
-                                    </h4>
-                                    <span>
-                                        {% translate "Questions et challenges" %}
-                                        <br/>
-                                        {% translate "pour tester votre progression" %}
-                                    </span>
-                                </div>
+                            <div class="flex-grow-1 p-3 lh-sm">
+                                <h4 class="mb-1">
+                                    {% translate "Adapté" %}
+                                </h4>
+                                <span>
+                                    {% translate "Le RGPD avec les" %}
+                                    <br/>
+                                    {% translate "mots du quotidien" %}
+                                </span>
                             </div>
-                            <div class="col-md-6 d-flex align-items-center ps-3">
-                                <div class="flex-grow-0">
-                                    <i class="bi bi-envelope-paper text-primary large-icon"></i>
-                                </div>
+                        </div>
 
-                                <div class="flex-grow-1 p-3 lh-sm">
-                                    <h4 class="mb-1">
-                                        {% translate "Expérience" %}
-                                    </h4>
-                                    <span>
-                                        {% translate "Basé sur des cas concrets" %}
-                                        <br/>
-                                        {% translate "rencontrés par les experts" %}
-                                    </span>
-                                </div>
+                        <div class="col-md-4 d-flex align-items-center text-white px-4 py-3 py-sm-2 pe-1">
+                            <div class="flex-grow-0">
+                                <i class="bi bi-clock-history medium-icon"></i>
                             </div>
-                            <div class="col-md-6 d-flex align-items-center ps-3">
-                                <div class="flex-grow-0">
-                                    <i class="bi bi-person-vcard text-primary large-icon"></i>
-                                </div>
 
-                                <div class="flex-grow-1 p-3 lh-sm">
-                                    <h4 class="mb-1">
-                                        {% translate "Implication" %}
-                                    </h4>
-                                    <span>
-                                        {% translate "Des fiches pratiques utile" %}
-                                        <br/>
-                                        {% translate "à votre quotidien" %}
-                                    </span>
-                                </div>
+                            <div class="flex-grow-1 p-3 pe-0 lh-sm">
+                                <h4 class="mb-1">
+                                    {% translate "Flexible" %}
+                                </h4>
+                                <span>
+                                    {% translate "Une formation à parcourir" %}
+                                    <br/>
+                                    {% translate "à votre rythme" %}
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 d-flex align-items-center text-white px-4 py-3 py-sm-2 pe-1">
+                            <div class="flex-grow-0">
+                                <i class="bi bi-shield-check medium-icon"></i>
+                            </div>
+
+                            <div class="flex-grow-1 p-3 lh-sm">
+                                <h4 class="mb-1">
+                                    {% translate "Fiable" %}
+                                </h4>
+                                <span>
+                                    {% translate "Un contenu vérifié" %}
+                                    <br/>
+                                    {% translate "et sécurisé" %}
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -196,199 +116,80 @@
             </div>
         </div>
     </div>
-</div>
-<div id="about" class="bg-white py-3 py-sm-5 px-4 px-sm-0">
-    <div class="container-xl">
-        <div class="row">
-            <div class="col-md-10 offset-md-1">
-                <div class="row align-items-center">
-                    <div class="col-md-12">
-                        <h1 class="text-primary text-center py-3 py-sm-5">
-                            {% translate "En route vers la conformité !" %}
-                        </h1>
-                    </div>
-
-                    <div class="col-md-5">
-                        <div class="row">
-                            <div class="col-md-12 py-2">
-                                <h3>
-                                    {% translate "Une histoire de PME" %}
-                                </h3>
-                            </div>
-
-                            <div class="col-md-12 pb-3 pt-1 py-sm-4">
-                                <p>
-                                    {% blocktranslate trimmed %}
-                                    Suivez l’aventure de notre héros Dominique Schummer, un entrepreneur
-                                    dynamique confronté au Règlement Général sur la Protection des Données, dit aussi
-                                    <b>“RGPD”</b>.
-                                    {% endblocktranslate %}
-                                </p>
-
-                                <p>
-                                    {% blocktranslate trimmed %}
-                                    Soutenu par son équipe, Dominique découvrira et mettra en pratique le
-                                    RGPD pour garantir un traitement de données respectueux des personnes concernées.
-                                    {% endblocktranslate %}
-                                </p>
-
-                                <p>
-                                    {% blocktranslate trimmed %}
-                                    Explorez la protection des données personnelles aux côtés de Dominique et
-                                    montez en compétences !
-                                    {% endblocktranslate %}
-                                </p>
-                            </div>
-
-                            <div class="col-md-12 py-2 text-center text-sm-start">
-                                <a class="btn btn-primary p-2 text-white fw-semibold fs-4 start">
-                                    {% translate "Lancer le parcours" %}
-                                </a>
-                            </div>
+    <div class="bg-light-blue pb-3 pt-5 py-sm-5 px-4 px-sm-0">
+        <div class="container-xl">
+            <div class="row">
+                <div class="col-xl-8 col-md-10 offset-xl-2 offset-md-1">
+                    <div class="row">
+                        <div class="col-md-12 py-3 py-sm-5">
+                            <h1 class="text-primary text-center">
+                                {% translate "Le RGPD de A à Zen !" %}
+                            </h1>
                         </div>
-                    </div>
-
-                    <div class="col-md-5 offset-md-2 py-3 pt-5 py-sm-5">
-                        <img class="w-100" src="{% static 'media/images/landing/compliance-phone.svg' %}"
-                            alt="Compliance officer on phone" class="d-inline-block align-text-top" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="bg-light-blue py-3 py-sm-5 px-3 px-sm-0">
-    <div class="container-xl">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-12 pt-3 pb-4 py-sm-5">
-                        <h1 class="text-primary text-center">{% translate "Un parcours de 4 niveaux" %}</h1>
-                    </div>
-                    {% for level in levels %}
-                    <div class="col-lg-3 col-md-6 col-sm-12 gx-md-5 mb-3">
-                        <div class="bg-white border-white rounded-3 p-4 h-100">
-                            <div class="row row-cols-2 row-cols-sm-1">
-                                <div>
-                                    <img class="w-100" src="{% static 'media/images/landing/level-'%}{{level.index}}.svg"
-                                        alt="Compliance officer on phone" class="d-inline-block align-text-top" />
-                                    <div class="pt-2">
-                                        <h1 class="text-primary text-center">
-                                            {% translate "Niveau" %} {{ level.index }}
-                                        </h1>
+                        <div class="col-md-12 py-3 px-4">
+                            <div class="row">
+                                <div class="col-md-6 d-flex align-items-center ps-3">
+                                    <div class="flex-grow-0">
+                                        <i class="bi bi-book text-primary large-icon"></i>
                                     </div>
-                                    <div class="pb-4">
-                                        <h4 class="text-center fw-bold">
-                                            {{ level.name }}
+
+                                    <div class="flex-grow-1 p-3 lh-sm">
+                                        <h4 class="mb-1">
+                                            {% translate "Story-Learning" %}
                                         </h4>
+                                        <span>
+                                            {% translate "Une histoire captivante avec" %}
+                                            <br/>
+                                            {% translate "des personnages" %}
+                                        </span>
                                     </div>
                                 </div>
-                                <div class="px-1 px-sm-2">
-                                    <ul class="ps-3 ps-sm-4">
-                                        {% for description in level.description|linebreaksbr|split:"<br>" %}
-                                        <li>{{ description }}</li>
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-
-                    <div class="col-md-12 py-3 py-sm-5 text-center">
-                        <button class="btn btn-primary p-2 text-white fw-semibold fs-4 start">
-                            {% translate "Lancer le parcours" %}
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="bg-white py-3 py-sm-5 px-4 px-sm-0">
-    <div class="container-sm">
-        <div class="row">
-            <div class="col-md-10 offset-md-1">
-                <div class="row">
-                    <div className="col-md-12 py-4 py-sm-5">
-                        <h1 class="text-primary text-center py-3 py-sm-5">{% translate "Témoignages" %}</h1>
-                    </div>
-                    <div className="col-md-12 pb-4">
-                        <h4 class="text-center fw-bold">{% translate "Ce qu’en disent les utilisateurs" %}</h4>
-                    </div>
-                    <div class="col-md-12 py-5">
-                        <div class="row">
-                            <div class="col-md-4 gx-5 pb-4">
-                                <div class="row testimony-box p-2">
-                                    <div class="col-md-12 text-end">
-                                        <i class="bi bi-quote display-1 light-blue text-end"></i>
+                                <div class="col-md-6 d-flex align-items-center ps-3">
+                                    <div class="flex-grow-0">
+                                        <i class="bi bi-award text-primary large-icon"></i>
                                     </div>
 
-                                    <div class="col-md-12">
-                                        <p class="fst-italic">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        </p>
-                                    </div>
-
-                                    <div class="col-md-12 d-flex align-items-center">
-                                        <img class="flex-grow-0 rounded-circle align-items-center" width="50px"
-                                            height="50px" src="{% static 'media/images/landing/level-3.svg' %}"
-                                            alt="Compliance officer on phone" class="d-inline-block align-text-top" />
-
-                                        <div class="flex-grow-1 p-3 align-items-center">
-                                            <div class="text-primary fw-bold">Superjhemp</div>
-                                            <div>Super héros</div>
-                                        </div>
+                                    <div class="flex-grow-1 p-3 lh-sm">
+                                        <h4 class="mb-1">
+                                            {% translate "Accomplissement" %}
+                                        </h4>
+                                        <span>
+                                            {% translate "Questions et challenges" %}
+                                            <br/>
+                                            {% translate "pour tester votre progression" %}
+                                        </span>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="col-md-4 gx-5 pb-4">
-                                <div class="row testimony-box p-2">
-                                    <div class="col-md-12 text-end">
-                                        <i class="bi bi-quote display-1 light-blue text-end"></i>
+                                <div class="col-md-6 d-flex align-items-center ps-3">
+                                    <div class="flex-grow-0">
+                                        <i class="bi bi-envelope-paper text-primary large-icon"></i>
                                     </div>
 
-                                    <div class="col-md-12">
-                                        <p class="fst-italic">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        </p>
-                                    </div>
-
-                                    <div class="col-md-12 d-flex align-items-center">
-                                        <img class="flex-grow-0 rounded-circle align-items-center" width="50px"
-                                            height="50px" src="{% static 'media/images/landing/level-3.svg' %}"
-                                            alt="Compliance officer on phone" class="d-inline-block align-text-top" />
-
-                                        <div class="flex-grow-1 p-3 align-items-center">
-                                            <div class="text-primary fw-bold">Superjhemp</div>
-                                            <div>Super héros</div>
-                                        </div>
+                                    <div class="flex-grow-1 p-3 lh-sm">
+                                        <h4 class="mb-1">
+                                            {% translate "Expérience" %}
+                                        </h4>
+                                        <span>
+                                            {% translate "Basé sur des cas concrets" %}
+                                            <br/>
+                                            {% translate "rencontrés par les experts" %}
+                                        </span>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="col-md-4 gx-5 pb-4">
-                                <div class="row testimony-box p-2">
-                                    <div class="col-md-12 text-end">
-                                        <i class="bi bi-quote display-1 light-blue text-end"></i>
+                                <div class="col-md-6 d-flex align-items-center ps-3">
+                                    <div class="flex-grow-0">
+                                        <i class="bi bi-person-vcard text-primary large-icon"></i>
                                     </div>
 
-                                    <div class="col-md-12">
-                                        <p class="fst-italic">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        </p>
-                                    </div>
-
-                                    <div class="col-md-12 d-flex align-items-center">
-                                        <img class="flex-grow-0 rounded-circle align-items-center" width="50px"
-                                            height="50px" src="{% static 'media/images/landing/level-3.svg' %}"
-                                            alt="Compliance officer on phone" class="d-inline-block align-text-top" />
-
-                                        <div class="flex-grow-1 p-3 align-items-center">
-                                            <div class="text-primary fw-bold">Superjhemp</div>
-                                            <div>Super héros</div>
-                                        </div>
+                                    <div class="flex-grow-1 p-3 lh-sm">
+                                        <h4 class="mb-1">
+                                            {% translate "Implication" %}
+                                        </h4>
+                                        <span>
+                                            {% translate "Des fiches pratiques utile" %}
+                                            <br/>
+                                            {% translate "à votre quotidien" %}
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -398,38 +199,240 @@
             </div>
         </div>
     </div>
-</div>
-<div class="bg-light-blue py-3 py-sm-5 px-4 px-sm-0">
-    <div class="container-xl">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row align-items-center">
-                    <div class="col-md-12 py-3 py-sm-5">
-                        <h1 class="text-primary text-center">{% translate "Nos partenaires" %}</h1>
-                    </div>
+    <div id="about" class="bg-white py-3 py-sm-5 px-4 px-sm-0">
+        <div class="container-xl">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <h1 class="text-primary text-center py-3 py-sm-5">
+                                {% translate "En route vers la conformité !" %}
+                            </h1>
+                        </div>
 
-                    <div class="col-8 offset-2 offset-md-0 col-lg-3 col-md-12 gx-5 py-3 py-sm-5">
-                        <img src="{% static 'media/images/logos/logo-nc3.svg' %}" alt="Logo National Cybersecurity Competence Center"
-                            class="img-fluid" />
-                    </div>
+                        <div class="col-md-5">
+                            <div class="row">
+                                <div class="col-md-12 py-2">
+                                    <h3>
+                                        {% translate "Une histoire de PME" %}
+                                    </h3>
+                                </div>
 
-                    <div class="col-8 offset-2 offset-md-0 col-lg-3 col-md-12 gx-5 py-3 py-sm-5">
-                        <img src="{% static 'media/images/logos/logo-lhc.svg' %}" alt="Logo Luxembourg House of Cybersecurity"
-                            class="img-fluid" />
-                    </div>
+                                <div class="col-md-12 pb-3 pt-1 py-sm-4">
+                                    <p>
+                                        {% blocktranslate trimmed %}
+                                        Suivez l’aventure de notre héros Dominique Schummer, un entrepreneur
+                                        dynamique confronté au Règlement Général sur la Protection des Données, dit aussi
+                                        <b>“RGPD”</b>.
+                                        {% endblocktranslate %}
+                                    </p>
 
-                    <div class="col-8 offset-2 offset-md-0 col-lg-3 col-md-12 gx-5 py-3 py-sm-5">
-                        <img src="{% static 'media/images/logos/logo-ce.svg' %}" alt="Logo Co-funded European Comision"
-                            class="img-fluid" />
-                    </div>
+                                    <p>
+                                        {% blocktranslate trimmed %}
+                                        Soutenu par son équipe, Dominique découvrira et mettra en pratique le
+                                        RGPD pour garantir un traitement de données respectueux des personnes concernées.
+                                        {% endblocktranslate %}
+                                    </p>
 
-                    <div class="col-8 offset-2 offset-md-0 col-lg-3 col-md-12 gx-5 py-3 py-sm-5">
-                        <img src="{% static 'media/images/logos/logo-lmih.svg' %}" alt="Logo Luxembourg Let's Make It Happen"
-                            class="img-fluid" />
+                                    <p>
+                                        {% blocktranslate trimmed %}
+                                        Explorez la protection des données personnelles aux côtés de Dominique et
+                                        montez en compétences !
+                                        {% endblocktranslate %}
+                                    </p>
+                                </div>
+
+                                <div class="col-md-12 py-2 text-center text-sm-start">
+                                    <a class="btn btn-primary p-2 text-white fw-semibold fs-4 start">
+                                        {% translate "Lancer le parcours" %}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 offset-md-2 py-3 pt-5 py-sm-5">
+                            <img class="w-100" src="{% static 'media/images/landing/compliance-phone.svg' %}"
+                                alt="Compliance officer on phone" class="d-inline-block align-text-top" />
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="bg-light-blue py-3 py-sm-5 px-3 px-sm-0">
+        <div class="container-xl">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-12 pt-3 pb-4 py-sm-5">
+                            <h1 class="text-primary text-center">{% translate "Un parcours de 4 niveaux" %}</h1>
+                        </div>
+                        {% for level in levels %}
+                        <div class="col-lg-3 col-md-6 col-sm-12 gx-md-5 mb-3">
+                            <div class="bg-white border-white rounded-3 p-4 h-100">
+                                <div class="row row-cols-2 row-cols-sm-1">
+                                    <div>
+                                        <img class="w-100" src="{% static 'media/images/landing/level-'%}{{level.index}}.svg"
+                                            alt="Compliance officer on phone" class="d-inline-block align-text-top" />
+                                        <div class="pt-2">
+                                            <h1 class="text-primary text-center">
+                                                {% translate "Niveau" %} {{ level.index }}
+                                            </h1>
+                                        </div>
+                                        <div class="pb-4">
+                                            <h4 class="text-center fw-bold">
+                                                {{ level.name }}
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class="px-1 px-sm-2">
+                                        <ul class="ps-3 ps-sm-4">
+                                            {% for description in level.description|linebreaksbr|split:"<br>" %}
+                                            <li>{{ description }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                        <div class="col-md-12 py-3 py-sm-5 text-center">
+                            <button class="btn btn-primary p-2 text-white fw-semibold fs-4 start">
+                                {% translate "Lancer le parcours" %}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-white py-3 py-sm-5 px-4 px-sm-0">
+        <div class="container-sm">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="row">
+                        <div className="col-md-12 py-4 py-sm-5">
+                            <h1 class="text-primary text-center py-3 py-sm-5">{% translate "Témoignages" %}</h1>
+                        </div>
+                        <div className="col-md-12 pb-4">
+                            <h4 class="text-center fw-bold">{% translate "Ce qu’en disent les utilisateurs" %}</h4>
+                        </div>
+                        <div class="col-md-12 py-5">
+                            <div class="row">
+                                <div class="col-md-4 gx-5 pb-4">
+                                    <div class="row testimony-box p-2">
+                                        <div class="col-md-12 text-end">
+                                            <i class="bi bi-quote display-1 light-blue text-end"></i>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <p class="fst-italic">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            </p>
+                                        </div>
+
+                                        <div class="col-md-12 d-flex align-items-center">
+                                            <img class="flex-grow-0 rounded-circle align-items-center" width="50px"
+                                                height="50px" src="{% static 'media/images/landing/level-3.svg' %}"
+                                                alt="Compliance officer on phone" class="d-inline-block align-text-top" />
+
+                                            <div class="flex-grow-1 p-3 align-items-center">
+                                                <div class="text-primary fw-bold">Superjhemp</div>
+                                                <div>Super héros</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 gx-5 pb-4">
+                                    <div class="row testimony-box p-2">
+                                        <div class="col-md-12 text-end">
+                                            <i class="bi bi-quote display-1 light-blue text-end"></i>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <p class="fst-italic">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            </p>
+                                        </div>
+
+                                        <div class="col-md-12 d-flex align-items-center">
+                                            <img class="flex-grow-0 rounded-circle align-items-center" width="50px"
+                                                height="50px" src="{% static 'media/images/landing/level-3.svg' %}"
+                                                alt="Compliance officer on phone" class="d-inline-block align-text-top" />
+
+                                            <div class="flex-grow-1 p-3 align-items-center">
+                                                <div class="text-primary fw-bold">Superjhemp</div>
+                                                <div>Super héros</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 gx-5 pb-4">
+                                    <div class="row testimony-box p-2">
+                                        <div class="col-md-12 text-end">
+                                            <i class="bi bi-quote display-1 light-blue text-end"></i>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <p class="fst-italic">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            </p>
+                                        </div>
+
+                                        <div class="col-md-12 d-flex align-items-center">
+                                            <img class="flex-grow-0 rounded-circle align-items-center" width="50px"
+                                                height="50px" src="{% static 'media/images/landing/level-3.svg' %}"
+                                                alt="Compliance officer on phone" class="d-inline-block align-text-top" />
+
+                                            <div class="flex-grow-1 p-3 align-items-center">
+                                                <div class="text-primary fw-bold">Superjhemp</div>
+                                                <div>Super héros</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-light-blue py-3 py-sm-5 px-4 px-sm-0">
+        <div class="container-xl">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row align-items-center">
+                        <div class="col-md-12 py-3 py-sm-5">
+                            <h1 class="text-primary text-center">{% translate "Nos partenaires" %}</h1>
+                        </div>
+
+                        <div class="col-8 offset-2 offset-md-0 col-lg-3 col-md-12 gx-5 py-3 py-sm-5">
+                            <img src="{% static 'media/images/logos/logo-nc3.svg' %}" alt="Logo National Cybersecurity Competence Center"
+                                class="img-fluid" />
+                        </div>
+
+                        <div class="col-8 offset-2 offset-md-0 col-lg-3 col-md-12 gx-5 py-3 py-sm-5">
+                            <img src="{% static 'media/images/logos/logo-lhc.svg' %}" alt="Logo Luxembourg House of Cybersecurity"
+                                class="img-fluid" />
+                        </div>
+
+                        <div class="col-8 offset-2 offset-md-0 col-lg-3 col-md-12 gx-5 py-3 py-sm-5">
+                            <img src="{% static 'media/images/logos/logo-ce.svg' %}" alt="Logo Co-funded European Comision"
+                                class="img-fluid" />
+                        </div>
+
+                        <div class="col-8 offset-2 offset-md-0 col-lg-3 col-md-12 gx-5 py-3 py-sm-5">
+                            <img src="{% static 'media/images/logos/logo-lmih.svg' %}" alt="Logo Luxembourg Let's Make It Happen"
+                                class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
 </div>
-{% endblock %}

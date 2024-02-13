@@ -22,10 +22,18 @@
     left: calc(50% + 20px);
 }
 
-.control_disabled {
+.control_disabled, .control_blocked {
     pointer-events: none;
     cursor: default;
     text-decoration: none;
+}
+.control_disabled i {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
+}
+
+.perspective-flip {
+    perspective: 2400px !important;
 }
 
 .form-check-input {
@@ -87,8 +95,18 @@
     opacity: 1;
 }
 
-.correct_answer+span {
+.correct_answer + span {
     color: var(--bs-success);
+}
+
+.correct_answer.not-checked {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    color: var(--bs-primary) !important;
+}
+
+.correct_answer.not-checked + span {
+    color: var(--bs-primary) !important;
 }
 
 .wrong-answer:not(.correct_answer):checked {

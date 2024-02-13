@@ -8,18 +8,41 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/course.css' %}" />
 {% endblock %}
 
+{% block bootstrap5_extra_script %}
+<script src='{% static "npm_components/flip/dist/jquery.flip.js" %}'></script>
+<script src='{% static "js/course.js" %}'></script>
+{% endblock %}
+
 {% block content_area %}
 <div class="d-flex flex-column h-100 mb-6 mb-sm-0">
-    <div class="col-12 col-sm-8 col-md-4 card mx-auto rounded-3 border border-primary mb-3 py-sm-2 py-2 px-3">
-        <h4 class="text-primary text-center fw-bold">
+    <div class="col-12 col-sm-8 col-md-4 card mx-auto rounded-3 border border-primary mb-3 py-sm-2 py-2 px-3 h-15">
+        <h4 class="text-primary text-center fw-bold h-30">
             {% translate "Niveau" %} {{ level.index }} : {{ level.name }}
         </h4>
-        <div class="course-progress-bar align-items-center pe-3">
+        <div class="course-progress-bar align-items-center pe-3 h-70">
             {% include "parts/course_progress_bar.html" %}
         </div>
     </div>
     <div id="carouselCourse" class="carousel slide h-85" data-bs-touch="false" data-bs-intervale="false">
-        {% include "course_carousel.html" %}
+        <div class="carousel-inner px-0 px-md-5 pb-0 h-100" role="listbox">
+            {% for slide in slides %}
+            <div class="carousel-item pb-sm-2 h-90 {% if forloop.first and slides|length == 2 or forloop.counter == 2 and slides|length == 3 %}active{% endif %}">
+                {% include "course_new_slide.html" %}
+            </div>
+            {% endfor %}
+        </div>
+        <a class="carousel-control carousel-control-prev shadow rounded-4 bottom-0 py-0 py-sm-1 px-1 px-4 opacity-100 {% if not previous_control_enable %}control_disabled{% endif %}"
+            type="button" data-bs-target="#carouselCourse" data-bs-slide="prev">
+            <span aria-hidden="true"><i
+                    class="h1 bi bi-caret-left text-primary"></i></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class=" carousel-control carousel-control-next shadow rounded-4 bottom-0 py-0 py-sm-1 px-1 px-4 opacity-100 {% if not next_control_enable %}control_disabled{% endif %}"
+            type="button" data-bs-target="#carouselCourse" data-bs-slide="next">
+            <span aria-hidden="true"><i
+                    class="h1 bi bi-caret-right text-primary"></i></span>
+            <span class="visually-hidden">Next</span>
+        </a>
     </div>
 </div>
 {% endblock %}
