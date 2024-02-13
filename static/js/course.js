@@ -168,6 +168,7 @@ $(document).ready(function () {
     checkAndFlipQuestionCards()
 
     if ($carouselContainer.find(".active #question-card").length > 0
+        && $carouselContainer.find(".active #question-card").data("flip-model")
         && !$carouselContainer.find(".active #question-card").data("flip-model").isFlipped) {
         $nextControlButton.addClass('control_disabled')
     }
@@ -186,7 +187,9 @@ $(document).ready(function () {
                 initializeFlipForCard()
                 delegateSummitButtonClick()
                 delegateInputClick()
+                checkAndFlipQuestionCards()
             }
+
             if (dataFlip && dataFlip.isFlipped) {
                 checkAndFlipQuestionCards()
             }
