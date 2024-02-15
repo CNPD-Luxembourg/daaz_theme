@@ -16,7 +16,7 @@
                 <form class="d-flex flex-column col-12 col-md-6 p-sm-5 p-2 h-100" method="post" id="question-form">
                     <div class="m-auto">
                         {% if form.quiz %}
-                            <h3 class="text-primary">{% translate "Quiz"%} {{ form.quiz.id }}.{{ form.question_quiz_index }}</h3>
+                            <h3 class="text-primary">{% translate "Quiz"%} {{ form.quiz_index}}.{{ form.question_quiz_index }}</h3>
                             {% if form.display_quiz_label %}
                                 <p><strong><em>{% translate "Scénario"%}:</em></strong></span> {{ form.quiz.name }}</p>
                             {% endif %}
@@ -36,11 +36,9 @@
                 </form>
                 <div class="col-6 p-0 text-end d-none d-md-inline h-100">
                     {% if form.quiz %}
-                        <img class="img-fluid h-100" src="{% static 'media/images/course/quiz_image.svg' %}"
-                            alt="Question image" />
+                        <img class="img-fluid h-100" src="{% static 'media/images/course/quiz_image.svg' %}"alt="Question image"/>
                     {% else %}
-                        <img class="img-fluid h-100" src="{% static 'media/images/course/question_image.svg' %}"
-                        alt="Quiz image" />
+                        <img class="img-fluid h-100" src="{% static 'media/images/course/question_image.svg' %}" alt="Quiz image"/>
                     {% endif %}
                 </div>
             </div>
@@ -48,7 +46,7 @@
                 <div class="d-flex flex-column col-12 col-md-6 p-sm-5 p-2 h-100">
                     <div class="m-auto">
                         {% if form.quiz %}
-                        <h3 class="text-primary">{% translate "Quiz"%} {{ form.quiz.id }}.{{ form.question_quiz_index }}</h3>
+                        <h3 class="text-primary">{% translate "Quiz"%} {{ form.quiz_index }}.{{ form.question_quiz_index }}</h3>
                             {% if form.display_quiz_label %}
                                 <p><strong><em>{% translate "Scénario"%}:</em></strong></span> {{ form.quiz.name }}</p>
                             {% endif %}
@@ -105,8 +103,11 @@
                     </div>
                 </div>
                 <div class="col-6 p-0 text-end d-none d-md-inline h-100">
-                    <img class="img-fluid h-100" src="{% static 'media/images/course/question_image.svg' %}"
-                        alt="Question image" />
+                    {% if form.quiz %}
+                        <img class="img-fluid h-100" src="{% static 'media/images/course/quiz_image.svg' %}" alt="Question image"/>
+                    {% else %}
+                        <img class="img-fluid h-100" src="{% static 'media/images/course/question_image.svg' %}" alt="Quiz image"/>
+                    {% endif %}
                 </div>
             </div>
         </div>

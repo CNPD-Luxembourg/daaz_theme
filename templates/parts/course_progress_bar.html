@@ -8,15 +8,16 @@
     <div class="progress-bar" role="progressbar" style="width: {{ progress }}%" aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100">
     </div>
 </div>
-{% for n in '123' %}
-{% widthratio n 1 25 as threshold %}
-<div class="key-{{ n }} align-items-center">
-    {% if progress >= threshold|add:0 %}
-    <img class="img-fluid" src="{% static 'media/images/icons/key-yellow.svg' %}" />
-    {% else %}
-    <img class="img-fluid" src="{% static 'media/images/icons/key-white.svg' %}" />
+{% for quiz_id, quiz in quizzes.items %}
+    {% if not forloop.last %}
+    <div class="key align-items-center" style="left:calc({{quiz.percentage}}% - 15px)">
+        {% if progress >= quiz.percentage|add:0 %}
+        <img class="img-fluid" src="{% static 'media/images/icons/key-yellow.svg' %}" />
+        {% else %}
+        <img class="img-fluid" src="{% static 'media/images/icons/key-white.svg' %}" />
+        {% endif %}
+    </div>
     {% endif %}
-</div>
 {% endfor %}
 
 <div class="trophy">
