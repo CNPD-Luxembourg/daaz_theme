@@ -90,7 +90,7 @@
                             <div class="row draggable-item border border-primary py-1 rounded-3 small"
                                 value="{{ answer_choice.pk }}">
                                 <p class="col-1 align-self-center text-nowrap text-center px-0 m-0">
-                                    {{answer_choice.index }}.
+                                    {{ forloop.counter }}.
                                 </p>
                                 <div class="col-10 align-self-center px-1">{{ answer_choice }}</div>
                                 <div class="col-1 h2 align-self-center text-center px-0 m-0">

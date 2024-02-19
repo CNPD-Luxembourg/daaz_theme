@@ -1,15 +1,16 @@
 $(document).ready(function () {
-    var $questionCard = $("#question-card");
-    var $checkboxesAndRadios = $(".front .form-check-input");
-    var $answersCheckboxesAndRadios = $(".back .form-check-input");
-    var $backSortingFields = $(".back .draggable-item");
-    var $submitButton = $("#summitButton");
+
     const $carouselCourse = $("#carouselCourse");
     const $carouselContainer = $(".carousel-inner");
     const $progressBar = $(".course-progress-bar");
     const $carouselControls = $(".carousel-control");
     const $prevControlButton = $(".carousel-control-prev");
     const $nextControlButton = $(".carousel-control-next");
+    var $questionCard = $carouselContainer.find(".active #question-card");
+    var $checkboxesAndRadios = $questionCard.find(".front .form-check-input");
+    var $answersCheckboxesAndRadios = $questionCard.find(".back .form-check-input");
+    var $backSortingFields = $questionCard.find(".back .draggable-item");
+    var $submitButton = $questionCard.find("#summitButton");
     const updateProgressBar_url = "update_progress_bar/?direction=";
     const changeSlide_url = "change_slide/?direction=";
     const fadeOutDelay = 500;
@@ -46,15 +47,19 @@ $(document).ready(function () {
 
     function checkAndFlipQuestionCards() {
         $checkboxesAndRadios = $questionCard.find(".front .form-check-input");
+        $backSortingFields = $questionCard.find(".back .draggable-item");
+        dataFlip = $questionCard.data("flip-model")
         if ($checkboxesAndRadios.is(":checked")) {
             if ($checkboxesAndRadios.length > 0) {
                 checkSingleAndMultipleAnswers();
             }
 
-            if ($backSortingFields.length > 0) {
-                checkSortingAnswers();
-            }
+            $nextControlButton.removeClass('control_disabled')
+            $questionCard.flip(true);
+        }
 
+        if ($backSortingFields.length > 0 && dataFlip.isFlipped) {
+            checkSortingAnswers();
             $nextControlButton.removeClass('control_disabled')
             $questionCard.flip(true);
         }
@@ -130,7 +135,7 @@ $(document).ready(function () {
     }
 
     function checkSortingAnswers() {
-        const $frontSortingFields = $(".front .draggable-item");
+        const $frontSortingFields = $questionCard.find(".front .draggable-item");
         $frontSortingFields.each(function (index, frontField) {
             const frontValue = $(frontField).attr("value");
             const backField = $backSortingFields.get(index);
