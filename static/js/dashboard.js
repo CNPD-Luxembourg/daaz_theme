@@ -18,14 +18,14 @@ $(document).ready(function () {
         doughnutChart(success_sm_ctx, value, false)
     });
 
-    function doughnutChart(ctx, value, responsive=true) {
+    function doughnutChart(ctx, value, responsive = true) {
         const doughnutLabel = {
             id: 'doughnutLabel',
-            beforeDraw(chart){
+            beforeDraw(chart) {
                 let width = chart.width;
                 let height = chart.height + 10;
-                let {ctx, data} = chart;
-                let fontSize = (height/100).toFixed(2);
+                let { ctx, data } = chart;
+                let fontSize = (height / 100).toFixed(2);
                 ctx.font = `bold ${fontSize}em Inter`;
                 ctx.textBaseline = "middle";
 
@@ -46,7 +46,7 @@ $(document).ready(function () {
                     data: [value, value - 100],
                     backgroundColor: ['#0099FF', '#ECF6FF'],
                     borderWidth: 0,
-                    borderRadius: 10,
+                    borderRadius: [10, 0],
                 }]
             },
             options: {
@@ -60,7 +60,7 @@ $(document).ready(function () {
                     }
                 },
             },
-            plugins:[doughnutLabel]
+            plugins: [doughnutLabel]
         });
 
     }
