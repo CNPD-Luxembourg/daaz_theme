@@ -10,7 +10,7 @@
 </div>
 {% for quiz_id, quiz in quizzes.items %}
     {% if not forloop.last %}
-    <div class="key align-items-center" style="left:calc({{quiz.percentage}}% - 22px)">
+    <div class="key align-items-center" style="left:calc({{quiz.percentage}}% - 22px) !important">
         {% if progress > quiz.percentage|add:0 %}
         <img class="img-fluid" src="{% static 'media/images/icons/key-yellow.svg' %}" />
         {% else %}
