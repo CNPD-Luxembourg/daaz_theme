@@ -1,4 +1,5 @@
 {% load static %}
+{% load l10n %}
 
 {% block bootstrap5_extra_head %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/course_progress_bar.css' %}">
@@ -9,15 +10,17 @@
     </div>
 </div>
 {% for quiz_id, quiz in quizzes.items %}
-    {% if not forloop.last %}
-    <div class="key align-items-center" style="left:calc({{quiz.percentage}}% - 22px) !important">
-        {% if progress > quiz.percentage|add:0 %}
-        <img class="img-fluid" src="{% static 'media/images/icons/key-yellow.svg' %}" />
-        {% else %}
-        <img class="img-fluid" src="{% static 'media/images/icons/key-white.svg' %}" />
+    {% localize off %}
+        {% if not forloop.last %}
+        <div class="key align-items-center" style="left:calc({{quiz.percentage}}% - 22px)">
+            {% if progress > quiz.percentage|add:0 %}
+            <img class="img-fluid" src="{% static 'media/images/icons/key-yellow.svg' %}" />
+            {% else %}
+            <img class="img-fluid" src="{% static 'media/images/icons/key-white.svg' %}" />
+            {% endif %}
+        </div>
         {% endif %}
-    </div>
-    {% endif %}
+    {% endlocalize %}
 {% endfor %}
 
 <div class="trophy">
