@@ -48,19 +48,17 @@ $(document).ready(function () {
         $backSortingFields = $questionCard.find(".back .draggable-item");
         $sortingQuestionAnswered = $questionCard.find(".front .question_answered");
         if ($checkboxesAndRadios.is(":checked")) {
-            if ($checkboxesAndRadios.length > 0) {
-                checkSingleAndMultipleAnswers();
-            }
-
+            if ($checkboxesAndRadios.length > 0) checkSingleAndMultipleAnswers();
             $nextControlButton.removeClass('control_disabled')
             $questionCard.flip(true);
         }
 
-        if ($backSortingFields.length > 0 && $sortingQuestionAnswered.length >0) {
-            checkSortingAnswers();
+        if ($sortingQuestionAnswered.length > 0) {
+            if ($backSortingFields.length > 0 ) checkSortingAnswers();
             $nextControlButton.removeClass('control_disabled')
             $questionCard.flip(true);
         }
+
     }
 
     function delegateSummitButtonClick() {
