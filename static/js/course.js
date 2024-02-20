@@ -46,7 +46,7 @@ $(document).ready(function () {
     function checkAndFlipQuestionCards() {
         $checkboxesAndRadios = $questionCard.find(".front .form-check-input");
         $backSortingFields = $questionCard.find(".back .draggable-item");
-        dataFlip = $questionCard.data("flip-model")
+        $sortingQuestionAnswered = $questionCard.find(".front .question_answered");
         if ($checkboxesAndRadios.is(":checked")) {
             if ($checkboxesAndRadios.length > 0) {
                 checkSingleAndMultipleAnswers();
@@ -56,7 +56,7 @@ $(document).ready(function () {
             $questionCard.flip(true);
         }
 
-        if ($backSortingFields.length > 0 && dataFlip.isFlipped) {
+        if ($backSortingFields.length > 0 && $sortingQuestionAnswered.length >0) {
             checkSortingAnswers();
             $nextControlButton.removeClass('control_disabled')
             $questionCard.flip(true);
