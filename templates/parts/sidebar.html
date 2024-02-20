@@ -24,7 +24,7 @@
         </div>
 
         <ul class="nav nav-pills w-100 flex-sm-column flex-row mb-sm-auto mb-0 align-items-center align-items-sm-start flex-grow-1 flex-sm-grow-0 text-sm-start text-center">
-            <li class="w-100 px-2 px-sm-0 d-inline d-sm-none flex-grow-1 order-sm-0 order-2">
+            <li class="w-100 px-2 px-sm-0 d-none flex-grow-1 order-sm-0 order-2">
                 <a href="{% url 'course' %}"
                     class="nav-link p-0 align-middle {% if request.path == '/course' %}text-primary fw-bold{% endif %}">
                     <i class="bi-book"></i>
@@ -82,7 +82,7 @@
         <div id="language_selector_expanded" class="mb-4 align-items-center align-items-sm-start d-none d-sm-inline">
             {% include "home/language_selector_sidebar.html" %}
         </div>
-      <div id="language_selector_minimized" class="mb-4 align-items-center align-items-sm-start d-sm-none">
+      <div id="language_selector_minimized" class="mb-4 align-items-center align-items-sm-start d-none">
             {% include "home/language_selector_landing.html" %}
         </div>
     </div>
