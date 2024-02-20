@@ -9,6 +9,7 @@ $(document).ready(function () {
     var $questionCard = $carouselContainer.find(".active #question-card");
     var $checkboxesAndRadios = $questionCard.find(".front .form-check-input");
     var $answersCheckboxesAndRadios = $questionCard.find(".back .form-check-input");
+    var $checkboxesAndRadiosLabels = $questionCard.find(".front .form-check-label")
     var $backSortingFields = $questionCard.find(".back .draggable-item");
     var $submitButton = $questionCard.find("#summitButton");
     const updateProgressBar_url = "update_progress_bar/?direction=";
@@ -54,7 +55,7 @@ $(document).ready(function () {
         }
 
         if ($sortingQuestionAnswered.length > 0) {
-            if ($backSortingFields.length > 0 ) checkSortingAnswers();
+            if ($backSortingFields.length > 0) checkSortingAnswers();
             $nextControlButton.removeClass('control_disabled')
             $questionCard.flip(true);
         }
@@ -90,6 +91,17 @@ $(document).ready(function () {
             $nextControlButton.removeClass('control_disabled')
 
         });
+    }
+
+    function delegateLabelClick () {
+        $checkboxesAndRadiosLabels = $questionCard.find(".front .form-check-label");
+        $checkboxesAndRadiosLabels.on("click", function () {
+            let $input = $(this).prev('.form-check-input')
+            if ($input.is(':checkbox')) {
+                if (!$input.is(':checked')) $input.checked;
+            }
+            if ($input.is(':radio')) $input.prop('checked', !$input.prop('checked'));
+        })
     }
 
     function delegateInputClick() {
@@ -167,6 +179,7 @@ $(document).ready(function () {
     initializeFlipForCard();
     delegateSummitButtonClick()
     delegateInputClick()
+    delegateLabelClick()
     checkAndFlipQuestionCards()
 
     if ($carouselContainer.find(".active #question-card").length > 0
@@ -190,6 +203,7 @@ $(document).ready(function () {
                 delegateSummitButtonClick()
                 delegateInputClick()
                 checkAndFlipQuestionCards()
+                delegateLabelClick()
             }
 
             if (dataFlip && dataFlip.isFlipped) {
