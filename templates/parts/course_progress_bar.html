@@ -13,7 +13,7 @@
     {% localize off %}
         {% if not forloop.last %}
         <div class="key align-items-center" style="left:calc({{quiz.percentage}}% - 22px)">
-            {% if progress > quiz.percentage|add:0 %}
+            {% if progress > quiz.percentage %}
             <img class="img-fluid" src="{% static 'media/images/icons/key-yellow.svg' %}" />
             {% else %}
             <img class="img-fluid" src="{% static 'media/images/icons/key-white.svg' %}" />
