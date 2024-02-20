@@ -3,15 +3,11 @@
 {% load i18n %}
 
 {% block bootstrap5_extra_head %}
-<!-- <link rel="stylesheet" href="{% static 'css/header.css' %}"> -->
 <script src='{% static "npm_components/@popperjs/core/dist/umd/popper.min.js" %}'></script>
 <script src='{% static "npm_components/jquery/dist/jquery.min.js" %}'></script>
 <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
 <script src='{% static "js/header.js" %}'></script>
-
 {% endblock %}
-
-{% bootstrap_javascript %}
 
 <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top px-3 px-sm-0">
   <div class="container-xxl">
