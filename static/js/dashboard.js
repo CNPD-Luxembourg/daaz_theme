@@ -46,7 +46,7 @@ $(document).ready(function () {
                     data: [value, value - 100],
                     backgroundColor: ['#0099FF', '#ECF6FF'],
                     borderWidth: 0,
-                    borderRadius: [10, 0],
+                    borderRadius: [(value < 100) ? 10 : 0, 0],
                 }]
             },
             options: {
