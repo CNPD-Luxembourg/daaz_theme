@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     const $carouselCourse = $("#carouselCourse");
     const $carouselContainer = $(".carousel-inner");
-    const $progressBar = $(".course-progress-bar");
+    const $progressBarContainer = $("#progress_bar_container");
     const $carouselControls = $(".carousel-control");
     const $prevControlButton = $(".carousel-control-prev");
     const $nextControlButton = $(".carousel-control-next");
@@ -13,8 +13,6 @@ $(document).ready(function () {
     var $submitButton = $questionCard.find("#summitButton");
     const updateProgressBar_url = "update_progress_bar/?direction=";
     const changeSlide_url = "change_slide/?direction=";
-    const fadeOutDelay = 500;
-    const fadeInDelay = 0;
 
     function getCookie(name) {
         let cookieValue = null;
@@ -108,9 +106,10 @@ $(document).ready(function () {
 
     function update_progress_bar(event, direction) {
         let carouselLength = $carouselCourse.find(".carousel-item").length
-        $progressBar.fadeOut(fadeOutDelay);
-        $progressBar.load(updateProgressBar_url + direction, function () {
-            $progressBar.fadeIn(fadeInDelay);
+        const $updateProgressBar = $('<div class="course-progress-bar align-items-center pe-3"></div>');
+        $updateProgressBar.load(updateProgressBar_url + direction, function () {
+            $progressBarContainer.find('.course-progress-bar').remove()
+            $progressBarContainer.append($updateProgressBar)
             if (direction === "next" && event.to === carouselLength - 1
                 || direction === "prev" && event.to === 0) {
                 loadSlide(direction)
