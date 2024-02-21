@@ -58,17 +58,17 @@
     color: var(--bs-white) !important;
 }
 
-#summitButton.course-button {
+#summitButton.course-button, #downloadButton.course-button {
     box-shadow: 0 0.5rem var(--bs-primary) !important;
+}
+
+#summitButton.course-button:hover, #downloadButton.course-button:hover{
+    box-shadow: none !important;
+    background-color: var(--bs-primary);
 }
 
 #challengeButton.course-button {
     box-shadow: 0 0.5rem var(--bs-danger) !important;
-}
-
-#summitButton.course-button:hover {
-    box-shadow: none !important;
-    background-color: var(--bs-primary);
 }
 
 #challengeButton.course-button:hover {

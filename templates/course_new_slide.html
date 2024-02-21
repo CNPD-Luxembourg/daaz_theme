@@ -132,10 +132,18 @@
         <div class="d-flex col-12 col-sm-12 col-md-6 h-md-100">
             <div class="m-auto ps-2 ps-md-5">
                 {% for text in slide.context.texts %}
-                <span
-                    class="inFront {{ text.css_classes|join:' ' }} {{ text.position }} {% if text.text.get_t_type_display == 'Title'%}text-primary{%endif%}">
+                {% if text.text.get_t_type_display == 'Hyperlink' %}
+                <div class="d-flex">
+                    <a id="downloadButton" class="btn text-primary course-button fw-bolder border-primary border border-3 shadow rounded mx-auto {{ text.css_classes|join:' ' }}" href="{% static text.text.hyperlink %}" download>
+                        {{ text.text.description }}
+                    </a>
+                </div>
+                {% else %}
+                <div
+                    class="{{ text.css_classes|join:' ' }} {{ text.position }} {% if text.text.get_t_type_display == 'Title'%}text-primary{%endif%}">
                     {{ text.text.description|linebreaks|safe }}
-                </span>
+                </div>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>
