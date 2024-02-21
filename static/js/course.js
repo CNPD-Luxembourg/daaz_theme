@@ -104,6 +104,7 @@ $(document).ready(function () {
     }
 
     function update_progress_bar(event, direction) {
+        $carouselControls.addClass('control_blocked')
         let carouselLength = $carouselCourse.find(".carousel-item").length
         const $updateProgressBar = $('<div class="course-progress-bar align-items-center pe-3"></div>');
         $updateProgressBar.load(updateProgressBar_url + direction, function () {
@@ -112,12 +113,13 @@ $(document).ready(function () {
             if (direction === "next" && event.to === carouselLength - 1
                 || direction === "prev" && event.to === 0) {
                 loadSlide(direction)
+            } else {
+                $carouselControls.removeClass('control_blocked')
             }
         });
     }
 
     function loadSlide(direction) {
-        $carouselControls.addClass('control_blocked')
         const $newSlide = $('<div class="carousel-item pb-sm-2 h-90"></div>');
         $newSlide.load(changeSlide_url + direction, function () {
             const isEmptySlide = $newSlide.find('.empty-slide').length > 0;
