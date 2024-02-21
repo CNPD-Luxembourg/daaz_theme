@@ -93,17 +93,6 @@ $(document).ready(function () {
         });
     }
 
-    function delegateLabelClick () {
-        $checkboxesAndRadiosLabels = $questionCard.find(".front .form-check-label");
-        $checkboxesAndRadiosLabels.on("click", function () {
-            let $input = $(this).prev('.form-check-input')
-            if ($input.is(':checkbox')) {
-                if (!$input.is(':checked')) $input.checked;
-            }
-            if ($input.is(':radio')) $input.prop('checked', !$input.prop('checked'));
-        })
-    }
-
     function delegateInputClick() {
         $checkboxesAndRadios = $questionCard.find(".front .form-check-input");
 
@@ -179,7 +168,6 @@ $(document).ready(function () {
     initializeFlipForCard();
     delegateSummitButtonClick()
     delegateInputClick()
-    delegateLabelClick()
     checkAndFlipQuestionCards()
 
     if ($carouselContainer.find(".active #question-card").length > 0
@@ -203,7 +191,6 @@ $(document).ready(function () {
                 delegateSummitButtonClick()
                 delegateInputClick()
                 checkAndFlipQuestionCards()
-                delegateLabelClick()
             }
 
             if (dataFlip && dataFlip.isFlipped) {
