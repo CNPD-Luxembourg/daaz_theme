@@ -58,30 +58,30 @@
     color: var(--bs-white) !important;
 }
 
-#summitButton.course-button, #downloadButton.course-button {
+#summitButton.course-button, #downloadButton.course-button.practical-sheet-button {
     box-shadow: 0 0.5rem var(--bs-primary) !important;
 }
 
-#summitButton.course-button:hover, #downloadButton.course-button:hover{
+#summitButton.course-button:hover, #downloadButton.course-button.practical-sheet-button:hover{
     box-shadow: none !important;
     background-color: var(--bs-primary);
 }
 
-#challengeButton.course-button {
+#downloadButton.course-button.challenge-button {
     box-shadow: 0 0.5rem var(--bs-danger) !important;
 }
 
-#challengeButton.course-button:hover {
+#downloadButton.course-button.challenge-button:hover {
     box-shadow: none !important;
     background-color: var(--bs-danger);
 }
 
-#challengeButton.course-button.border-warning:hover {
+.course-button.final-button:hover {
     box-shadow: none !important;
     background-color: var(--bs-warning);
 }
 
-#challengeButton.course-button.border-warning {
+.course-button.final-button {
     box-shadow: 0 0.5rem var(--bs-warning) !important;
 }
 
