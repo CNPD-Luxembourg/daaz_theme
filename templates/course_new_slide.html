@@ -177,8 +177,12 @@
         <div class="m-auto">
             {% for text in slide.context.texts %}
             <div
-                class="{{ text.css_classes|join:' ' }} {{ text.position }} {% if text.text.get_t_type_display == 'Title'%}text-primary{%endif%}">
+                class="{{ text.css_classes|join:' ' }} {{ text.position }} {% if text.text.get_t_type_display == 'Title'%}text-primary{%endif%} d-none d-md-flex">
                 {{ text.text.description|wordwrap:60|linebreaks|safe }}
+            </div>
+            <div
+                class="{{ text.css_classes|join:' ' }} {{ text.position }} {% if text.text.get_t_type_display == 'Title'%}text-primary{%endif%}  d-md-none d-flex">
+                {{ text.text.description|linebreaks|safe }}
             </div>
             {% endfor %}
             {% for resource in slide.context.resources %}
