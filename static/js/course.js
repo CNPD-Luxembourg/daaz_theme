@@ -197,6 +197,7 @@ $(document).ready(function () {
 
             if (dataFlip && dataFlip.isFlipped) {
                 checkAndFlipQuestionCards()
+                $nextControlButton.removeClass('control_disabled')
             }
         }
         update_progress_bar(event, direction)
