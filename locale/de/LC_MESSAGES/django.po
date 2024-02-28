@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-12 14:20+0000\n"
+"POT-Creation-Date: 2024-02-28 08:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,62 +68,65 @@ msgstr ""
 msgid "Niveau"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:17
-#: theme/templates/course_new_slide.html:37
-#: theme/templates/course_new_slide.html:97
-msgid "Question"
-msgstr ""
-
-#: theme/templates/course_new_slide.html:24
-#: theme/templates/course_new_slide.html:123
-msgid "Valider"
-msgstr ""
-
-#: theme/templates/course_new_slide.html:98
-msgid "Explication"
-msgstr ""
-
-#: theme/templates/course_new_slide.html:113
-#: theme/templates/course_new_slide.html:136
+#: theme/templates/course_new_slide.html:19
+#: theme/templates/course_new_slide.html:49
 msgid "Quiz"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:115
-#: theme/templates/course_new_slide.html:138
+#: theme/templates/course_new_slide.html:21
+#: theme/templates/course_new_slide.html:51
 msgid "Scénario"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:224
+#: theme/templates/course_new_slide.html:24
+#: theme/templates/course_new_slide.html:54
+#: theme/templates/course_new_slide.html:118
+msgid "Question"
+msgstr ""
+
+#: theme/templates/course_new_slide.html:32
+msgid "Valider"
+msgstr ""
+
+#: theme/templates/course_new_slide.html:119
+msgid "Explication"
+msgstr ""
+
+#: theme/templates/course_new_slide.html:136
 msgid "Felicitations"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:228
+#: theme/templates/course_new_slide.html:140
 #, python-format
 msgid "Vous avez terminé le niveau %(index_level)s !"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:231
+#: theme/templates/course_new_slide.html:143
 msgid "Votre score est de "
 msgstr ""
 
-#: theme/templates/course_new_slide.html:235
+#: theme/templates/course_new_slide.html:147
 #, python-format
 msgid "Vous avez débloquez l’histoire numéro %(next_level)s !"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:242
+#: theme/templates/course_new_slide.html:157
 msgid "Télécharger la fiche récap"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:246
+#: theme/templates/course_new_slide.html:164
+msgid "Télécharger le rapport du niveau"
+msgstr ""
+
+#: theme/templates/course_new_slide.html:170
 msgid "Accéder au niveau suivant"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:261
-msgid "Challenge"
+#: theme/templates/course_new_slide.html:192
+msgid "Télécharger la fiche pratique"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:275
+#: theme/templates/course_new_slide.html:195
 msgid "Télécharger mon template"
 msgstr ""
 
@@ -131,28 +134,32 @@ msgstr ""
 msgid "Mes cours"
 msgstr ""
 
-#: theme/templates/dashboard.html:36 theme/templates/dashboard.html:74
-#: theme/templates/dashboard.html:138 theme/templates/dashboard.html:142
+#: theme/templates/dashboard.html:27
+msgid "Reprendre"
+msgstr ""
+
+#: theme/templates/dashboard.html:41 theme/templates/dashboard.html:79
+#: theme/templates/dashboard.html:143 theme/templates/dashboard.html:147
 msgid "Module"
 msgstr ""
 
-#: theme/templates/dashboard.html:48
+#: theme/templates/dashboard.html:53
 msgid "de progression"
 msgstr ""
 
-#: theme/templates/dashboard.html:54 theme/templates/dashboard.html:150
+#: theme/templates/dashboard.html:59 theme/templates/dashboard.html:155
 msgid "de réussite"
 msgstr ""
 
-#: theme/templates/dashboard.html:84
+#: theme/templates/dashboard.html:89
 msgid "Progression:"
 msgstr ""
 
-#: theme/templates/dashboard.html:106
+#: theme/templates/dashboard.html:111
 msgid "Connaissances"
 msgstr ""
 
-#: theme/templates/dashboard.html:130
+#: theme/templates/dashboard.html:135
 msgid "Résultats"
 msgstr ""
 
@@ -397,7 +404,7 @@ msgstr ""
 msgid "Je commence un nouveau parcours"
 msgstr ""
 
-#: theme/templates/modals/start.html:22 theme/templates/parts/header.html:41
+#: theme/templates/modals/start.html:22 theme/templates/parts/header.html:37
 msgid "Commencer"
 msgstr ""
 
@@ -433,11 +440,11 @@ msgstr ""
 msgid "Déclarations d'accessibilité"
 msgstr ""
 
-#: theme/templates/parts/header.html:35 theme/templates/parts/sidebar.html:42
+#: theme/templates/parts/header.html:31 theme/templates/parts/sidebar.html:42
 msgid "Accueil"
 msgstr ""
 
-#: theme/templates/parts/header.html:38
+#: theme/templates/parts/header.html:34
 msgid "A propos"
 msgstr ""
 
@@ -476,6 +483,61 @@ msgid ""
 "operation. <br><br> For any questions regarding the processing of personal "
 "data by the CNPD, you can contact the CNPD's Data Protection Officer (DPO): "
 "<a href=\"mailto:dpo@cnpd.lu\">dpo@cnpd.lu</a>"
+msgstr ""
+
+#: theme/templates/report/cover.html:12
+msgid "Date"
+msgstr ""
+
+#: theme/templates/report/cover.html:18
+msgid "Self-assessment id"
+msgstr ""
+
+#: theme/templates/report/cover.html:25
+msgid "Score"
+msgstr ""
+
+#: theme/templates/report/intro.html:4
+msgid "Introduction and Warning"
+msgstr ""
+
+#: theme/templates/report/intro.html:7
+#, python-format
+msgid ""
+"The objective of the self-assessment tool, %(tool_name)s is to assess the "
+"maturity of an organization in terms of applicable good practices in the "
+"field of information security.<br /><br /> This document, based on the "
+"%(tool_name)s, is for the exclusive use of the customer. It is in this "
+"respect confidential.<br /><br /> In view of the methodology used and the "
+"fact that it is a self-assessment, it is understood that the overall results "
+"can not in any way be exhaustive. As such, the actual risk assessment or the "
+"list of identified risks and vulnerabilities are based on the information "
+"provided by the client. The analysis resulting from this assessment can "
+"engage only the customer for any omission or error that would be due to "
+"third parties or not.<br /><br /> The tool, %(tool_name)s can possibly "
+"provide recommendations. It is understood by the client that the "
+"recommendations are neither exclusive nor exhaustive.<br /><br /> It should "
+"also be noted that the information you have provided to us will be recorded "
+"for statistical reasons. Due to the nature of the data, we can not identify "
+"you. Unless you later contact us to do a Diagnostic NC3."
+msgstr ""
+
+#: theme/templates/report/questions.html:1
+msgid "Questions"
+msgstr ""
+
+#: theme/templates/report/template.html:10
+#: theme/templates/report/template.html:15
+msgid "Final report"
+msgstr ""
+
+#: theme/templates/report/template.html:14
+#, python-format
+msgid "Generated with %(tool_name)s"
+msgstr ""
+
+#: theme/templates/report/toc.html:1
+msgid "Table of contents"
 msgstr ""
 
 #: theme/templates/resources.html:14
