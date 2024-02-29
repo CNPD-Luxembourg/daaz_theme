@@ -1,0 +1,16 @@
+{% load i18n %}
+
+<h2>{% translate "Table des matières" %}</h2>
+<ul class="toc list-unstyled pt-3">
+    <li class="border-bottom border-secondary">
+        <a class="text-decoration-none text-reset" href="#questions"></a>
+    </li>
+    <ul class="list-unstyled ps-4 small">
+        {% for question in questions_and_quizzes %}
+            <li class="border-bottom border-secondary pt-1">
+                <a class="text-decoration-none text-reset" href="#{{ forloop.counter }}"></a>
+            </li>
+        {% endfor %}
+    </ul>
+</ul>
+<p class="page-break" ></p>

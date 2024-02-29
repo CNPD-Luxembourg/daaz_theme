@@ -1,0 +1,101 @@
+@page {
+    size: A4; /* Change from the default size of A4 */
+    margin: 2.5cm 2cm 2cm 2.5cm; /* Set margin on each page */
+    padding: 15px 0 15px 0;
+
+    @top-left {
+        background-image: var(--tool_logo_url);
+        background-repeat: no-repeat;
+        content: '';
+        background-size: 100%;
+        background-position: center bottom;
+        margin-bottom: 5px;
+        height: 2.5cm;
+        width: 25%;
+    }
+    @top-center {
+        background: #404040;
+        content: '';
+        display: block;
+        height: 0.2px;
+        opacity: 0.5;
+        width: 100%;
+    }
+    @bottom-left {
+        background-image: var(--left_logo_url);
+        background-repeat: no-repeat;
+        content: '';
+        background-size: 50%;
+        background-position: left center;
+        margin-bottom: 5px;
+        height: 2cm;
+        width: 25%;
+    }
+    @bottom-center {
+        background: #404040;
+        content: '';
+        display: block;
+        height: 0.2px;
+        opacity: 0.5;
+        width: 100%;
+    }
+    @bottom-right {
+        content: counter(page);
+        height: 2cm;
+        width: 1cm;
+        text-align: center;
+        font-size: 14px;
+    }
+}
+@page:first {
+    @top-left { content: none;}
+    @top-center { content: none;}
+    @bottom-left { content: none;}
+    @bottom-center { content: none;}
+    @bottom-right { content: none;}
+}
+
+
+.toc li a::before {
+    content: target-text(attr(href));
+}
+
+.toc li a::after {
+    content: target-counter(attr(href), page);
+    float: right;
+}
+
+
+.page-break {
+    page-break-before: always
+}
+
+.correct_answer.checked {
+    background-color: var(--bs-success);
+    border-color: var(--bs-success);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e") !important;
+}
+
+.correct_answer + span {
+    color: var(--bs-success);
+}
+
+.correct_answer.not-checked {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    color: var(--bs-primary) !important;
+}
+
+.correct_answer.not-checked + span {
+    color: var(--bs-primary) !important;
+}
+
+.wrong-answer:not(.correct_answer.checked) {
+    background-color: var(--bs-danger);
+    border-color: var(--bs-danger);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 6 14 14M14 6 6 14'/%3e%3c/svg%3e");
+}
+
+.wrong-answer:not(.correct_answer)+span {
+    color: var(--bs-danger);
+}

@@ -1,0 +1,23 @@
+{% load i18n %}
+
+<div class="my-6">
+    <img src="file:{{ static_theme_dir }}/media/images/logos/logo.svg" alt="Logo">
+    <h1 class="mt-5 mb-2 text-center">{{ name_level }}</h1>
+    <h2 class="mb-5 text-center">{% translate "Rapport de niveau" %} {{ index_level }}</h2>
+    <hr />
+    <div class="mt-5">
+        <p>
+            <span class="fw-bold">{% translate "Identifiant unique" %}:</span>
+            {{ user_id }}
+        </p>
+        <p>
+            <span class="fw-bold">{% translate "Date de fin du niveau" %}:</span>
+            {{ end_level_date }}
+        </p>
+        <p>
+            <span class="fw-bold">{% translate "Réussite" %}:</span>
+            {{ score_level }}%
+        </p>
+    </div>
+</div>
+<p class="page-break"></p>
