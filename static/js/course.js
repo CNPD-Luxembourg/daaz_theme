@@ -36,8 +36,9 @@ $(document).ready(function () {
         const $uncheckedCheckboxes = $checkboxesAndRadios.not(':checkbox:checked');
 
         $submitButton.prop("disabled", !$checkboxesAndRadios.is(":checked"));
-        $uncheckedCheckboxes.prop('disabled', $checkedCheckboxes.length === nbCorrectQuestions);
-
+        if (nbCorrectQuestions > 0) {
+            $uncheckedCheckboxes.prop('disabled', $checkedCheckboxes.length === nbCorrectQuestions);
+        }
     }
 
     function initializeFlipForCard() {
@@ -150,6 +151,7 @@ $(document).ready(function () {
     }
 
     function checkSingleAndMultipleAnswers() {
+        const nbCorrectQuestions = $questionCard.find(".back .form-check-input").not(".neutral-answer").filter(':checked').length;
         $answersCheckboxesAndRadios = $questionCard.find(".back .form-check-input")
         const checkedValues = $checkboxesAndRadios.filter(':checked').map(function () {
             return this.value;
@@ -157,10 +159,13 @@ $(document).ready(function () {
 
         $answersCheckboxesAndRadios.each(function () {
             if (checkedValues.includes(this.value)) {
-                $(this)
-                    .addClass('wrong-answer')
-                    .prop('checked', true);
-                return checkedValues.includes(this.value);
+                if (nbCorrectQuestions > 0) {
+                    $(this).addClass('wrong-answer')
+                } else {
+                    $(this).addClass('neutral-answer')
+                }
+                    $(this).prop('checked', true);
+
             } else if (this.checked && this.type === 'checkbox') {
                 $(this).addClass('not-checked')
             }
