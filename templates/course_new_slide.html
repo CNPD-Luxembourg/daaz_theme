@@ -175,11 +175,11 @@
             {% else %}
                 {% for text in slide.context.texts %}
                     <div
-                        class="{{ text.css_classes|join:' ' }} {{ text.position }} {% if text.text.get_t_type_display == 'Title'%}text-primary{%endif%} d-none d-md-flex">
+                        class="{{ text.css_classes|join:' ' }} {{ text.position }} {% if text.text.get_t_type_display == 'Title'%}text-primary{%endif%} d-none d-md-inline">
                         {{ text.text.description|wordwrap:60|linebreaks|safe }}
                     </div>
                     <div
-                        class="{{ text.css_classes|join:' ' }} {{ text.position }} {% if text.text.get_t_type_display == 'Title'%}text-primary{%endif%}  d-md-none d-flex">
+                        class="{{ text.css_classes|join:' ' }} {{ text.position }} {% if text.text.get_t_type_display == 'Title'%}text-primary{%endif%}  d-md-none d-inline">
                         {{ text.text.description|linebreaks|safe }}
                     </div>
                 {% endfor %}
