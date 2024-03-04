@@ -16,7 +16,7 @@
         </p>
         <p>
             <span class="fw-bold">{% translate "Réussite" %}:</span>
-            {{ score_level }}%
+            {{ score_level|floatformat:'0' }}%
         </p>
     </div>
 </div>

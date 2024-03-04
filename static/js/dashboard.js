@@ -19,6 +19,7 @@ $(document).ready(function () {
     });
 
     function doughnutChart(ctx, value, responsive = true) {
+        const value_rounded = Math.round(value);
         const doughnutLabel = {
             id: 'doughnutLabel',
             beforeDraw(chart) {
@@ -43,10 +44,10 @@ $(document).ready(function () {
             data: {
                 labels: [],
                 datasets: [{
-                    data: [value, value - 100],
+                    data: [value_rounded, value_rounded - 100],
                     backgroundColor: ['#0099FF', '#ECF6FF'],
                     borderWidth: 0,
-                    borderRadius: [(value < 100) ? 10 : 0, 0],
+                    borderRadius: [(value_rounded < 100) ? 10 : 0, 0],
                 }]
             },
             options: {

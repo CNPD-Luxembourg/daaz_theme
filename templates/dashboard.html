@@ -90,13 +90,13 @@
                 </div>
                 <div class="col-4 d-flex align-items-end justify-content-end h-50">
                   <div class="mb-0 fw-bold">
-                    {{ score.progress }}%
+                    {{ score.progress|floatformat:'0' }}%
                   </div>
                 </div>
                 <div class="col d-flex align-items-center h-sm-50">
                   <div class="progress bg-white w-100 h-lg-50 h-sm-100">
-                    <div class="progress-bar" role="progressbar" style="width: {{ score.progress }}%"
-                      aria-valuenow="{{ score.progress }}" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar" role="progressbar" style="width: {{ score.progress|floatformat:'0' }}%"
+                      aria-valuenow="{{ score.progress|floatformat:'0' }}" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
               </div>
