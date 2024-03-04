@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-28 08:17+0000\n"
+"POT-Creation-Date: 2024-03-04 15:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,29 +63,32 @@ msgstr ""
 msgid "Maximum term"
 msgstr ""
 
-#: theme/templates/course.html:20 theme/templates/landing.html:279
+#: theme/templates/course.html:20 theme/templates/landing.html:278
 #: theme/templates/resources.html:22
-msgid "Niveau"
+msgid "Level"
 msgstr ""
 
 #: theme/templates/course_new_slide.html:19
 #: theme/templates/course_new_slide.html:49
+#: theme/templates/report/questions.html:7
 msgid "Quiz"
 msgstr ""
 
 #: theme/templates/course_new_slide.html:21
 #: theme/templates/course_new_slide.html:51
-msgid "Scénario"
+#: theme/templates/report/questions.html:9
+msgid "Script"
 msgstr ""
 
 #: theme/templates/course_new_slide.html:24
 #: theme/templates/course_new_slide.html:54
 #: theme/templates/course_new_slide.html:118
+#: theme/templates/report/questions.html:12
 msgid "Question"
 msgstr ""
 
 #: theme/templates/course_new_slide.html:32
-msgid "Valider"
+msgid "Confirm"
 msgstr ""
 
 #: theme/templates/course_new_slide.html:119
@@ -93,49 +96,49 @@ msgid "Explication"
 msgstr ""
 
 #: theme/templates/course_new_slide.html:136
-msgid "Felicitations"
+msgid "Congratulations"
 msgstr ""
 
 #: theme/templates/course_new_slide.html:140
 #, python-format
-msgid "Vous avez terminé le niveau %(index_level)s !"
+msgid "You have finished level %(index_level)s !"
 msgstr ""
 
 #: theme/templates/course_new_slide.html:143
-msgid "Votre score est de "
+msgid "Your score is "
 msgstr ""
 
 #: theme/templates/course_new_slide.html:147
 #, python-format
-msgid "Vous avez débloquez l’histoire numéro %(next_level)s !"
+msgid "You have unlocked story number %(next_level)s !"
 msgstr ""
 
 #: theme/templates/course_new_slide.html:157
-msgid "Télécharger la fiche récap"
+msgid "Download the summary sheet"
 msgstr ""
 
 #: theme/templates/course_new_slide.html:164
-msgid "Télécharger le rapport du niveau"
+msgid "Download the level report"
 msgstr ""
 
 #: theme/templates/course_new_slide.html:170
-msgid "Accéder au niveau suivant"
+msgid "Access the next level"
 msgstr ""
 
 #: theme/templates/course_new_slide.html:192
-msgid "Télécharger la fiche pratique"
+msgid "Download the fact sheet"
 msgstr ""
 
 #: theme/templates/course_new_slide.html:195
-msgid "Télécharger mon template"
+msgid "Download my template"
 msgstr ""
 
 #: theme/templates/dashboard.html:22
-msgid "Mes cours"
+msgid "My lessons"
 msgstr ""
 
 #: theme/templates/dashboard.html:27
-msgid "Reprendre"
+msgid "Resume"
 msgstr ""
 
 #: theme/templates/dashboard.html:41 theme/templates/dashboard.html:79
@@ -144,64 +147,68 @@ msgid "Module"
 msgstr ""
 
 #: theme/templates/dashboard.html:53
-msgid "de progression"
+msgid "of progression"
 msgstr ""
 
 #: theme/templates/dashboard.html:59 theme/templates/dashboard.html:155
-msgid "de réussite"
+msgid "successful"
 msgstr ""
 
 #: theme/templates/dashboard.html:89
-msgid "Progression:"
+msgid "Progression"
 msgstr ""
 
 #: theme/templates/dashboard.html:111
-msgid "Connaissances"
+msgid "Knowledge"
 msgstr ""
 
 #: theme/templates/dashboard.html:135
-msgid "Résultats"
+msgid "Results"
+msgstr ""
+
+#: theme/templates/helping_center.html:7 theme/templates/parts/sidebar.html:67
+msgid "Help Center"
 msgstr ""
 
 #: theme/templates/landing.html:24
-msgid "Le chemin intuitif vers"
+msgid "The intuitive path to"
 msgstr ""
 
 #: theme/templates/landing.html:26
-msgid "la protection des données"
+msgid "data protection"
 msgstr ""
 
 #: theme/templates/landing.html:29
-msgid "Une formation sur mesure pour les PME"
+msgid "Costumized training for SME's"
 msgstr ""
 
 #: theme/templates/landing.html:31
-msgid "basée sur des exemples réels"
+msgid "based on real examples"
 msgstr ""
 
-#: theme/templates/landing.html:40 theme/templates/landing.html:247
-#: theme/templates/landing.html:302
-msgid "Lancer le parcours"
+#: theme/templates/landing.html:40 theme/templates/landing.html:246
+#: theme/templates/landing.html:301
+msgid "Start the journey"
 msgstr ""
 
 #: theme/templates/landing.html:45
-msgid "Conçu par la Commission Nationale"
+msgid "Developed by the National Commission"
 msgstr ""
 
 #: theme/templates/landing.html:47
-msgid "pour la Protection des Données"
+msgid "for Data Protection"
 msgstr ""
 
 #: theme/templates/landing.html:71
-msgid "Adapté"
+msgid "Suitable"
 msgstr ""
 
 #: theme/templates/landing.html:74
-msgid "Le RGPD avec les"
+msgid "The GDPR with the"
 msgstr ""
 
 #: theme/templates/landing.html:76
-msgid "mots du quotidien"
+msgid "words of everyday life"
 msgstr ""
 
 #: theme/templates/landing.html:88
@@ -209,23 +216,23 @@ msgid "Flexible"
 msgstr ""
 
 #: theme/templates/landing.html:91
-msgid "Une formation à parcourir"
+msgid "A training to follow"
 msgstr ""
 
 #: theme/templates/landing.html:93
-msgid "à votre rythme"
+msgid "at your own pace"
 msgstr ""
 
 #: theme/templates/landing.html:105
-msgid "Fiable"
+msgid "Reliable"
 msgstr ""
 
 #: theme/templates/landing.html:108
-msgid "Un contenu vérifié"
+msgid "Verified content"
 msgstr ""
 
 #: theme/templates/landing.html:110
-msgid "et sécurisé"
+msgid "and secure"
 msgstr ""
 
 #: theme/templates/landing.html:126
@@ -237,35 +244,35 @@ msgid "Story-Learning"
 msgstr ""
 
 #: theme/templates/landing.html:141
-msgid "Une histoire captivante avec"
+msgid "A captivating story with"
 msgstr ""
 
 #: theme/templates/landing.html:143
-msgid "des personnages"
+msgid "characters"
 msgstr ""
 
 #: theme/templates/landing.html:154
-msgid "Accomplissement"
+msgid "Achievement"
 msgstr ""
 
 #: theme/templates/landing.html:157
-msgid "Questions et challenges"
+msgid "Questions and challenges"
 msgstr ""
 
 #: theme/templates/landing.html:159
-msgid "pour tester votre progression"
+msgid "to test your progression"
 msgstr ""
 
 #: theme/templates/landing.html:170
-msgid "Expérience"
+msgid "Experience"
 msgstr ""
 
 #: theme/templates/landing.html:173
-msgid "Basé sur des cas concrets"
+msgid "Based on concrete cases"
 msgstr ""
 
 #: theme/templates/landing.html:175
-msgid "rencontrés par les experts"
+msgid "met by experts"
 msgstr ""
 
 #: theme/templates/landing.html:186
@@ -273,54 +280,52 @@ msgid "Implication"
 msgstr ""
 
 #: theme/templates/landing.html:189
-msgid "Des fiches pratiques utile"
+msgid "Useful fact sheets"
 msgstr ""
 
 #: theme/templates/landing.html:191
-msgid "à votre quotidien"
+msgid "in your everyday life"
 msgstr ""
 
 #: theme/templates/landing.html:209
-msgid "En route vers la conformité !"
+msgid "On the way to compliance !"
 msgstr ""
 
 #: theme/templates/landing.html:217
-msgid "Une histoire de PME"
+msgid "A story of an SME"
 msgstr ""
 
 #: theme/templates/landing.html:223
 msgid ""
-"Suivez l’aventure de notre héros Dominique Schummer, un entrepreneur "
-"dynamique confronté au Règlement Général sur la Protection des Données, dit "
-"aussi <b>“RGPD”</b>."
+"Follow the adventure of our hero Dominique Schummer, a dynamic businessmann "
+"faced with the General Data Protection Regulation, also called <b>“GDPR”</b>."
 msgstr ""
 
 #: theme/templates/landing.html:231
 msgid ""
-"Soutenu par son équipe, Dominique découvrira et mettra en pratique le RGPD "
-"pour garantir un traitement de données respectueux des personnes concernées."
+"Aided by his team, Dominique will discover and implement the GDPR to ensure "
+"a respectful handling of the data subject's data."
 msgstr ""
 
 #: theme/templates/landing.html:238
 msgid ""
-"Explorez la protection des données personnelles aux côtés de Dominique et "
-"montez en compétences !"
+"Explore the world of data protection alongside Dominique and gain new skills!"
 msgstr ""
 
-#: theme/templates/landing.html:268
-msgid "Un parcours de 4 niveaux"
+#: theme/templates/landing.html:267
+msgid "A 4 -level journey"
 msgstr ""
 
-#: theme/templates/landing.html:316
-msgid "Témoignages"
+#: theme/templates/landing.html:315
+msgid "Testimonies"
 msgstr ""
 
-#: theme/templates/landing.html:319
-msgid "Ce qu’en disent les utilisateurs"
+#: theme/templates/landing.html:318
+msgid "What other users said about it"
 msgstr ""
 
-#: theme/templates/landing.html:410
-msgid "Nos partenaires"
+#: theme/templates/landing.html:409
+msgid "Our partners"
 msgstr ""
 
 #: theme/templates/legal.html:7
@@ -328,108 +333,108 @@ msgid "Legal"
 msgstr ""
 
 #: theme/templates/modals/confidentiality_alert.html:6
-msgid "La confidentialité est votre alliée"
+msgid "Privacy is your ally"
 msgstr ""
 
 #: theme/templates/modals/confidentiality_alert.html:10
 msgid ""
-"Votre anonymat est préservé pendant votre formation grâce à un identifiant "
-"unique généré automatiquement lors de votre première connexion."
+"Your anonimity is garantied during the training by means of a unique "
+"identifier generated automatically upon your first connection."
 msgstr ""
 
 #: theme/templates/modals/finish.html:10
-msgid "A bientôt !"
+msgid "See you soon!"
 msgstr ""
 
 #: theme/templates/modals/finish.html:16
-msgid "Avez-vous votre ID pour votre prochaine visite?"
+msgid "Do you have your ID for your next visit?"
 msgstr ""
 
 #: theme/templates/modals/finish.html:24
 #: theme/templates/modals/new_user.html:22
-msgid "Copier l’ID dans le presse-papier"
+msgid "Copy your ID into the clipboard"
 msgstr ""
 
 #: theme/templates/modals/finish.html:30
 #: theme/templates/modals/new_user.html:28
-msgid "Télécharger un fichier TXT avec votre ID"
+msgid "Download a TXT file with your ID"
 msgstr ""
 
 #: theme/templates/modals/finish.html:36
 #: theme/templates/modals/new_user.html:34
-msgid "Télécharger le QR code"
+msgid "Download a QR code"
 msgstr ""
 
 #: theme/templates/modals/finish.html:42
-msgid "J’ai mon ID et je reviendrai"
+msgid "I have my ID and I will be back"
 msgstr ""
 
 #: theme/templates/modals/new_user.html:7
-msgid "Nouveau Parcours"
+msgid "New journey"
 msgstr ""
 
 #: theme/templates/modals/new_user.html:13
-msgid "Voici votre ID:"
+msgid "Your ID:"
 msgstr ""
 
 #: theme/templates/modals/new_user.html:40
-msgid "J’ai mon ID et je commence"
+msgid "I have my ID and I want to start"
 msgstr ""
 
 #: theme/templates/modals/resources_download.html:34
-msgid "Sorry, no resources available"
+msgid "Sorry, no ressources available"
 msgstr ""
 
 #: theme/templates/modals/resources_download.html:39
-msgid "Télécharger"
+msgid "Download"
 msgstr ""
 
 #: theme/templates/modals/resources_download_base.html:12
-msgid "Tout sélectionner"
+msgid "Select all"
 msgstr ""
 
 #: theme/templates/modals/save_uuid_alert.html:8
-msgid "Votre identifiant est unique et ne pourra pas être récupéré."
+msgid "Your identifier is unique and can't be recovered."
 msgstr ""
 
 #: theme/templates/modals/save_uuid_alert.html:9
-msgid "Assurez-vous d’en garder une copie sur votre disque personnel."
+msgid "Please ensure to save a copy on your personnel hard drive."
 msgstr ""
 
 #: theme/templates/modals/start.html:12
-msgid "C’est parti !"
+msgid "Let's go !"
 msgstr ""
 
 #: theme/templates/modals/start.html:19
-msgid "Je commence un nouveau parcours"
+msgid "I will start a new journey"
 msgstr ""
 
 #: theme/templates/modals/start.html:22 theme/templates/parts/header.html:37
-msgid "Commencer"
+msgid "Start"
 msgstr ""
 
 #: theme/templates/modals/start.html:26
-msgid "ou"
+msgid "or"
 msgstr ""
 
 #: theme/templates/modals/start.html:30
-msgid "Je continue un parcours précédent grâce à mon identifiant unique :"
+msgid "I will continue a previous journey using my unique identifier:"
 msgstr ""
 
 #: theme/templates/modals/start.html:36
-msgid "J’accède à mon espace"
+msgid "Access my space"
 msgstr ""
 
 #: theme/templates/parts/footer.html:40
-msgid "Mentions légales"
+msgid "Legal notice"
 msgstr ""
 
 #: theme/templates/parts/footer.html:43
-msgid "Conditions générales d'utilisations"
+msgid "General terms of use"
 msgstr ""
 
 #: theme/templates/parts/footer.html:46
-msgid "Politiques de confidentialité"
+msgid "Privacy notice"
 msgstr ""
 
 #: theme/templates/parts/footer.html:49
@@ -437,27 +442,23 @@ msgid "Cookies"
 msgstr ""
 
 #: theme/templates/parts/footer.html:55
-msgid "Déclarations d'accessibilité"
+msgid "Accessibility statement"
 msgstr ""
 
 #: theme/templates/parts/header.html:31 theme/templates/parts/sidebar.html:42
-msgid "Accueil"
+msgid "Home"
 msgstr ""
 
 #: theme/templates/parts/header.html:34
-msgid "A propos"
+msgid "About"
 msgstr ""
 
 #: theme/templates/parts/sidebar.html:22
-msgid "Commencer l'aventure ici!"
+msgid "Start your journey here!"
 msgstr ""
 
 #: theme/templates/parts/sidebar.html:55
 msgid "Ressources"
-msgstr ""
-
-#: theme/templates/parts/sidebar.html:67
-msgid "Centre d'aide"
 msgstr ""
 
 #: theme/templates/parts/sidebar.html:77
@@ -485,79 +486,48 @@ msgid ""
 "<a href=\"mailto:dpo@cnpd.lu\">dpo@cnpd.lu</a>"
 msgstr ""
 
-#: theme/templates/report/cover.html:12
-msgid "Date"
+#: theme/templates/report/cover.html:6 theme/templates/report/template.html:9
+msgid "Level report"
+msgstr ""
+
+#: theme/templates/report/cover.html:10
+msgid "Unique identifier"
+msgstr ""
+
+#: theme/templates/report/cover.html:14
+msgid "End date of level"
 msgstr ""
 
 #: theme/templates/report/cover.html:18
-msgid "Self-assessment id"
+msgid "Success"
 msgstr ""
 
-#: theme/templates/report/cover.html:25
-msgid "Score"
+#: theme/templates/report/questions.html:4
+msgid "Answers"
 msgstr ""
 
-#: theme/templates/report/intro.html:4
-msgid "Introduction and Warning"
-msgstr ""
-
-#: theme/templates/report/intro.html:7
-#, python-format
-msgid ""
-"The objective of the self-assessment tool, %(tool_name)s is to assess the "
-"maturity of an organization in terms of applicable good practices in the "
-"field of information security.<br /><br /> This document, based on the "
-"%(tool_name)s, is for the exclusive use of the customer. It is in this "
-"respect confidential.<br /><br /> In view of the methodology used and the "
-"fact that it is a self-assessment, it is understood that the overall results "
-"can not in any way be exhaustive. As such, the actual risk assessment or the "
-"list of identified risks and vulnerabilities are based on the information "
-"provided by the client. The analysis resulting from this assessment can "
-"engage only the customer for any omission or error that would be due to "
-"third parties or not.<br /><br /> The tool, %(tool_name)s can possibly "
-"provide recommendations. It is understood by the client that the "
-"recommendations are neither exclusive nor exhaustive.<br /><br /> It should "
-"also be noted that the information you have provided to us will be recorded "
-"for statistical reasons. Due to the nature of the data, we can not identify "
-"you. Unless you later contact us to do a Diagnostic NC3."
-msgstr ""
-
-#: theme/templates/report/questions.html:1
-msgid "Questions"
-msgstr ""
-
-#: theme/templates/report/template.html:10
-#: theme/templates/report/template.html:15
-msgid "Final report"
-msgstr ""
-
-#: theme/templates/report/template.html:14
-#, python-format
-msgid "Generated with %(tool_name)s"
-msgstr ""
-
-#: theme/templates/report/toc.html:1
+#: theme/templates/report/toc.html:3
 msgid "Table of contents"
 msgstr ""
 
 #: theme/templates/resources.html:14
-msgid "Mes ressources"
+msgid "My ressources"
 msgstr ""
 
 #: theme/templates/resources.html:33
-msgid "Les fiches récapitulatives"
+msgid "Summary sheets"
 msgstr ""
 
 #: theme/templates/resources.html:35
-msgid "Les fiches pratiques"
+msgid "Fact sheets"
 msgstr ""
 
 #: theme/templates/resources.html:37
-msgid "Les templates"
+msgid "Templates"
 msgstr ""
 
 #: theme/templates/resources.html:46
-msgid "Tous les fichiers"
+msgid "All files"
 msgstr ""
 
 #: theme/templates/tos.html:7
