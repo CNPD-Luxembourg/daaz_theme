@@ -19,7 +19,7 @@
       <div class="modal-body">
         <form id="cookiebannerForm">
           {% for cookiegroup in cb_settings.groups %}
-          <p class="text-justify">{{ cookiegroup.description }} <a href="{% url 'cookies' %}" role="button">{% trans 'Details' %}</a></p>
+          <p class="text-justify">{{ cookiegroup.description }} <a href="{% url 'cookies' %}" role="button">{% translate 'Details' %}</a></p>
           {% endfor %}
         </form>
       </div>

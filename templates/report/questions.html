@@ -1,12 +1,12 @@
 {% load i18n %}
 {% load custom_filters %}
 
-<h2 id="questions">{{ _('Réponses') }}</h2>
+<h2 id="questions">{% translate "Answers" %}</h2>
 {% for question in questions_and_quizzes %}
     {% if question.quiz %}
-    <h3 id="{{ forloop.counter }}" class="text-primary">{% translate "Quiz"%} {{ question.quiz_index}}.{{ question.question_quiz_index }}</h3>
+    <h3 id="{{ forloop.counter }}" class="text-primary">{% translate "Quiz" %} {{ question.quiz_index}}.{{ question.question_quiz_index }}</h3>
     {% if question.display_quiz_label %}
-    <p class="small"><strong><em>{% translate "Scénario"%}:</em></strong></span> {{ question.quiz.name }}</p>
+    <p class="small"><strong><em>{% translate "Script"%}:</em></strong></span> {{ question.quiz.name }}</p>
     {% endif %}
     {% else %}
     <h3 id="{{ forloop.counter }}" class="text-primary">{% translate "Question"%} {{ question.question_index }}</h3>

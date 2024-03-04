@@ -31,11 +31,11 @@
             </div>
         </li>
         {% empty %}
-            <h4 class="mx-auto">{% translate "Sorry, no resources available" %}</h4>
+            <h4 class="mx-auto">{% translate "Sorry, no ressources available" %}</h4>
         {% endfor %}
     </ul>
 
     <div class="text-center mt-3">
-        <button id="downloadButton" type="summit" class="btn btn-primary text-white {% if formset|length == 0 %}d-none{% endif %}" data-bs-dismiss="modal">{% translate "Télécharger" %}</button>
+        <button id="downloadButton" type="summit" class="btn btn-primary text-white {% if formset|length == 0 %}d-none{% endif %}" data-bs-dismiss="modal">{% translate "Download" %}</button>
     </div>
 </form>

@@ -18,7 +18,7 @@
                 {% if form.quiz %}
                 <h3 class="text-primary">{% translate "Quiz"%} {{ form.quiz_index}}.{{ form.question_quiz_index }}</h3>
                 {% if form.display_quiz_label %}
-                <p><strong><em>{% translate "Scénario"%}:</em></strong></span> {{ form.quiz.name }}</p>
+                <p><strong><em>{% translate "Script"%}:</em></strong></span> {{ form.quiz.name }}</p>
                 {% endif %}
                 {% else %}
                 <h3 class="text-primary">{% translate "Question"%} {{ form.question_index }}</h3>
@@ -29,7 +29,7 @@
                 <div class="text-center pb-2">
                     <button id="summitButton" type="button"
                         class="flip btn text-primary course-button fw-bolder border-primary border border-3 shadow rounded p-2">
-                        {% translate "Valider" %}
+                        {% translate "Confirm" %}
                     </button>
                 </div>
             </div>
@@ -48,7 +48,7 @@
                 {% if form.quiz %}
                 <h3 class="text-primary">{% translate "Quiz"%} {{ form.quiz_index }}.{{ form.question_quiz_index }}</h3>
                 {% if form.display_quiz_label %}
-                <p><strong><em>{% translate "Scénario"%}:</em></strong></span> {{ form.quiz.name }}</p>
+                <p><strong><em>{% translate "Script"%}:</em></strong></span> {{ form.quiz.name }}</p>
                 {% endif %}
                 {% else %}
                 <h3 class="text-primary">{% translate "Question"%} {{ form.question_index }}</h3>
@@ -133,18 +133,18 @@
             {% if slide.context.label|contains:"final" %}
                 <div class="text-center">
                     <h2 class="fw-bolder text-warning">
-                        {% translate "Felicitations" %} !
+                        {% translate "Congratulations" %} !
                     </h2>
                     {% with index_level=level.index next_level=level.index|add:1 score=score|default:0 %}
                     <p class="fw-bolder text-primary">
-                        {% blocktranslate %}Vous avez terminé le niveau {{ index_level }} !{% endblocktranslate %}
+                        {% blocktranslate %}You have finished level {{ index_level }} !{% endblocktranslate %}
                     </p>
                     <p>
-                        {% blocktranslate %}Votre score est de {% endblocktranslate %}
+                        {% blocktranslate %}Your score is {% endblocktranslate %}
                         <span class="text-primary">{{ score }}%</span>
                     </p>
                     <p>
-                        {% blocktranslate %}Vous avez débloquez l’histoire numéro {{ next_level }} !{% endblocktranslate %}
+                        {% blocktranslate %}You have unlocked story number {{ next_level }} !{% endblocktranslate %}
                     </p>
                     {% endwith %}
                 </div>
@@ -154,20 +154,20 @@
                         <div class="col">
                             <a class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button {{ resource.css_classes|join:' ' }}"
                                 href="{% static resource.resource.path|extract_static %}" download>
-                                {% translate "Télécharger la fiche récap" %}
+                                {% translate "Download the summary sheet" %}
                             </a>
                         </div>
                         {% endfor %}
                         <div class="col">
                             <a class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button"
                             href="{% url 'report' %}">
-                                {% translate "Télécharger le rapport du niveau" %}
+                                {% translate "Download the level report" %}
                             </a>
                         </div>
                         <div class="col mx-auto">
                             <a type="button" href="{% url 'course' %}"
                                 class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button">
-                                {% translate "Accéder au niveau suivant" %}
+                                {% translate "Access the next level" %}
                             </a>
                         </div>
                     </div>
@@ -189,10 +189,10 @@
                             class="btn text-primary course-button fw-bolder border-primary border border-3 shadow rounded mx-auto {{ resource.css_classes|join:' ' }}"
                             href="{% static resource.resource.path|extract_static %}" download>
                             {% if slide.context.label|contains:"fiche pratique" %}
-                            {% translate "Télécharger la fiche pratique"%}
+                            {% translate "Download the fact sheet"%}
                             {% endif %}
                             {% if slide.context.label|contains:"challenge" %}
-                            {% translate "Télécharger mon template"%}
+                            {% translate "Download my template"%}
                             {% endif %}
                         </a>
                     </div>

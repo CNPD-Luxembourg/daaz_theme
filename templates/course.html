@@ -17,7 +17,7 @@
 <div class="d-flex flex-column h-100 mb-6 mb-sm-0">
     <div id="progress_bar_container" class="col-12 col-sm-8 col-md-4 card mx-auto rounded-3 border border-primary mb-3 py-sm-2 py-2 px-3">
         <h4 class="text-primary text-center fw-bold">
-            {% translate "Niveau" %} {{ level.index }} : {{ level.name }}
+            {% translate "Level" %} {{ level.index }} : {{ level.name }}
         </h4>
         <div class="course-progress-bar align-items-center pe-3">
             {% include "parts/course_progress_bar.html" %}
@@ -35,13 +35,11 @@
             type="button" data-bs-target="#carouselCourse" data-bs-slide="prev">
             <span aria-hidden="true"><i
                     class="h1 bi bi-caret-left text-primary"></i></span>
-            <span class="visually-hidden">Previous</span>
         </a>
         <a class=" carousel-control carousel-control-next shadow rounded-4 bottom-0 py-0 py-sm-1 px-1 px-4 opacity-100 {% if not next_control_enable %}control_disabled{% endif %}"
             type="button" data-bs-target="#carouselCourse" data-bs-slide="next">
             <span aria-hidden="true"><i
                     class="h1 bi bi-caret-right text-primary"></i></span>
-            <span class="visually-hidden">Next</span>
         </a>
     </div>
 </div>

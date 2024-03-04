@@ -9,31 +9,31 @@
 <div class="modal-content text-center">
   <div class="modal-header border-0">
     <h4 class="modal-title text-primary w-100 fw-bold" id="startLabel">
-      {% translate "C’est parti !" %}
+      {% translate "Let's go !" %}
     </h4>
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
   </div>
   <div class="modal-body m-3 border-3">
     <div class="border border-primary rounded-3 py-3 px-2">
       <p>
-        {% translate "Je commence un nouveau parcours" %}
+        {% translate "I will start a new journey" %}
       </p>
       <a type="button" class="btn btn-primary text-white create_new_user" data-bs-dismiss="modal">
-        {% translate "Commencer" %}
+        {% translate "Start" %}
       </a>
     </div>
     <div class="py-2 ps-3">
-      <span> {% translate "ou" %}</span>
+      <span> {% translate "or" %}</span>
     </div>
     <div class="border border-primary rounded-3 py-3 px-3">
       <p>
-        {% translate "Je continue un parcours précédent grâce à mon identifiant unique :" %}
+        {% translate "I will continue a previous journey using my unique identifier:" %}
       </p>
       <form action="{% url 'start' %}" method="post">
         {% csrf_token %}
         {% bootstrap_field form.user_uuid show_label=False %}
         <button class="btn btn-primary text-white" role="submit">
-          {% translate "J’accède à mon espace" %}
+          {% translate "Access my space" %}
         </button>
       </form>
     </div>
