@@ -13,7 +13,7 @@
 {% with form=slide.question %}
 <div id="question-card" class="h-100 perspective-flip" value="{{ form.id }}">
     <div class="front row overflow-auto border rounded border-light shadow-sm m-0 h-100">
-        <form class="d-flex flex-column col-12 col-md-6 p-sm-5 p-2 h-100" method="post" id="question-form">
+        <form class="d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-100" method="post" id="question-form">
             <div class="m-auto">
                 {% if form.quiz %}
                 <h3 class="text-primary">{% translate "Quiz"%} {{ form.quiz_index}}.{{ form.question_quiz_index }}</h3>
@@ -43,7 +43,7 @@
         </div>
     </div>
     <div class="back row overflow-auto border rounded border-light shadow-sm m-0 h-100">
-        <div class="d-flex flex-column col-12 col-md-6 p-sm-5 p-2 h-100">
+        <div class="d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-100">
             <div class="m-auto">
                 {% if form.quiz %}
                 <h3 class="text-primary">{% translate "Quiz"%} {{ form.quiz_index }}.{{ form.question_quiz_index }}</h3>
@@ -127,7 +127,7 @@
 </div>
 {% elif slide.context %}
 <div class="row overflow-auto border rounded border-light shadow-sm m-0 h-100">
-    <div class="d-flex col-12 col-md-6 h-md-100">
+    <div class="d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-md-100">
         <div class="m-auto">
             {% if slide.context.label|contains:"final" %}
                 <div class="text-center">
