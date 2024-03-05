@@ -250,4 +250,8 @@
         --slide-bottom-margin: -1rem;
         --slide-right-margin: -1rem;
     }
+    .border-sm-secondary {
+        --bs-border-opacity: 1;
+        border-color: rgba(var(--bs-secondary-rgb), var(--bs-border-opacity)) !important;
+    }
 }
