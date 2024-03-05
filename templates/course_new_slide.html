@@ -12,7 +12,7 @@
 {{ slide.question.media }}
 {% with form=slide.question %}
 <div id="question-card" class="h-100 perspective-flip" value="{{ form.id }}">
-    <div class="front overflow-auto row card border border-light shadow-sm m-0 h-100 w-100">
+    <div class="front row overflow-auto border rounded border-light shadow-sm m-0 h-100">
         <form class="d-flex flex-column col-12 col-md-6 p-sm-5 p-2 h-100" method="post" id="question-form">
             <div class="m-auto">
                 {% if form.quiz %}
@@ -42,7 +42,7 @@
             {% endif %}
         </div>
     </div>
-    <div class="back overflow-auto row card border border-light shadow-sm m-0 h-100 w-100">
+    <div class="back row overflow-auto border rounded border-light shadow-sm m-0 h-100">
         <div class="d-flex flex-column col-12 col-md-6 p-sm-5 p-2 h-100">
             <div class="m-auto">
                 {% if form.quiz %}
@@ -112,8 +112,8 @@
 </div>
 {% endwith %}
 {% elif slide.explanation %}
-<div class="row overflow-auto card border border-light shadow-sm m-0 h-100">
-    <div class="d-flex flex-column col-12 col-md-6 p-sm-5 p-2 h-100">
+<div class="row overflow-auto border rounded border-light shadow-sm m-0 h-100">
+    <div class="d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-100">
         <div class="m-auto">
             <h3 class="text-primary">{% translate "Question"%} {{ slide.explanation.question_index }}</h3>
             <h6 class="fw-bold">{% translate "Explication"%}:</h6>
@@ -126,16 +126,15 @@
     </div>
 </div>
 {% elif slide.context %}
-
-<div class="row overflow-auto border rounded border-light shadow-sm h-100">
-    <div class="d-flex col-12 col-sm-12 col-md-6 h-md-100">
+<div class="row overflow-auto border rounded border-light shadow-sm m-0 h-100">
+    <div class="d-flex col-12 col-md-6 h-md-100">
         <div class="m-auto">
             {% if slide.context.label|contains:"final" %}
                 <div class="text-center">
                     <h2 class="fw-bolder text-warning">
                         {% translate "Congratulations" %} !
                     </h2>
-                    {% with index_level=level.index next_level=level.index|add:1 score=score|default:0 %}
+                    {% with index_level=level.index next_level=level.index|add:1 score=score|floatformat:'0'|default:0 %}
                     <p class="fw-bolder text-primary">
                         {% blocktranslate %}You have finished level {{ index_level }} !{% endblocktranslate %}
                     </p>
@@ -200,7 +199,7 @@
             {% endif %}
         </div>
     </div>
-    <div class="col-12 col-sm-12 col-md-6 h-md-100 text-center">
+    <div class="col-12 col-md-6 h-md-100 text-center">
         {% for media in slide.context.medias %}
         <img class="img-fluid h-100 w-50 w-sm-100 {{ media.css_classes|join:' ' }} {{ text.position }}"
             src="{% static media.media.path|extract_static %}" alt="{{ media.media.name }}" />
