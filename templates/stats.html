@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load i18n %}
+{% block bootstrap5_extra_head %}
+{{ block.super}}
+<script src='{% static "npm_components/chart.js/dist/chart.umd.js" %}'></script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/stats.css' %}">
+{% endblock %}
+
+{% block bootstrap5_extra_script %}
+{{ users|json_script:"users-data" }}
+<script src='{% static "js/stats.js" %}'></script>
+{% endblock %}
+
+{% block content %}
+<div class="col-4">
+    <canvas id="users_stats"></canvas>
+</div>
+<canvas id="users_stats"></canvas>
+{% endblock %}
