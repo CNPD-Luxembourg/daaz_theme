@@ -17,7 +17,7 @@
 
 {% block content_area %}
 <div class="row h-sm-100">
-  <div class="col-sm-6 col-12 h-sm-100 w-sm-55 w-lg-45">
+  <div class="col-sm-6 col-12 h-sm-100 w-sm-55 w-xl-45">
     <div class="border shadow-sm rounded-4 px-4 py-3 h-sm-49">
       <h4>{% translate "My lessons" %}</h4>
       <div class="row h-sm-45">
@@ -69,32 +69,36 @@
         {% for score in scores %}
         <div class="col-sm-6 col-12 p-0 h-sm-100 d-none d-sm-block">
           <div class="p-2 h-sm-100">
-            <div class="bg-light-blue rounded-3 p-2 px-lg-3 h-sm-100">
-              <div class="row p-sm-2 h-50">
-                <div class="col-6 pe-0 my-auto">
-                  <p class="small m-0 text-nowrap">
-                    {{ score.level.name }}
-                  </p>
-                  <h5 class="fw-semibold m-0 pb-1 text-nowrap">
-                    {% translate "Module" %} {{ score.level.index }}
-                  </h5>
+            <div class="bg-light-blue rounded-3 p-1 p-lg-2 p-xl-3 h-sm-100">
+              <div class="row px-sm-2 h-65">
+                <div class="d-flex col-12 col-lg-6 ps-lg-2">
+                  <div class="d-none d-lg-none d-sm-inline m-auto text-center">
+                    <p class="small m-0 text-nowrap">{{ score.level.name }}</p>
+                    <h5 class="fw-semibold m-0 pb-1">{% translate "Module" %} {{ score.level.index }}</h5>
+                  </div>
+                  <div class="d-none d-lg-inline my-auto">
+                    <p class="small m-0 text-nowrap">{{ score.level.name }}</p>
+                    <h5 class="fw-semibold m-0 pb-1">{% translate "Module" %} {{ score.level.index }}</h5>
+                  </div>
                 </div>
-                <div class="col-6 text-center h-100">
+                <div class="col-12 col-lg-6 text-center h-40 h-lg-100">
                   <img src="{% static 'media/images/course/levels/level-'%}{{score.level.index}}.svg"
                     class="img-fluid h-100" />
                 </div>
               </div>
-              <div class="row p-sm-2 h-50">
-                <div class="col-8 d-flex align-items-end h-50">
-                  <div class="small fw-semibold">{% translate "Progression" %}:</div>
-                </div>
-                <div class="col-4 d-flex align-items-end justify-content-end h-50">
-                  <div class="mb-0 fw-bold">
-                    {{ score.progress|floatformat:'0' }}%
+              <div class="col px-sm-2 h-35">
+                <div class="row h-50 h-lg-70">
+                  <div class="col-9 d-flex align-items-end">
+                    <div class="small fw-semibold">{% translate "Progression" %}:</div>
+                  </div>
+                  <div class="col-3 d-flex align-items-end justify-content-end">
+                    <div class="small fw-semibold">
+                      {{ score.progress|floatformat:'0' }}%
+                    </div>
                   </div>
                 </div>
-                <div class="col d-flex align-items-center h-sm-50">
-                  <div class="progress bg-white w-100 h-lg-50 h-sm-100">
+                <div class="col h-30">
+                  <div class="progress bg-white h-100">
                     <div class="progress-bar" role="progressbar" style="width: {{ score.progress|floatformat:'0' }}%"
                       aria-valuenow="{{ score.progress|floatformat:'0' }}" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
@@ -130,26 +134,26 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-6 col-12 h-100 w-sm-45 w-lg-55 d-none d-sm-block">
-    <div class="row d-flex border shadow-sm rounded-4 px-sm-2 px-lg-3 px-xl-4 py-3 h-100">
+  <div class="col-sm-6 col-12 h-100 w-sm-45 w-xl-55 d-none d-sm-block">
+    <div class="row d-flex border shadow-sm rounded-4 px-sm-2 px-xl-3 px-xl-4 py-3 h-100">
       <h4 class="pt-2">{% translate "Results" %}</h4>
-      <div class="mx-auto px-sm-1 px-lg-3 row d-flex h-95">
+      <div class="row d-flex mx-auto px-sm-1 px-xl-3 h-95">
         {% for score in scores %}
-        <div class="mx-auto px-sm-1  row h-20">
-          <div class="col-sm-4 col-lg-6 col-12 h-100">
-            <div class="row border border-primary rounded-3 h-100 me-lg-4">
-              <div class="col-12 col-lg-6 p-lg-4 pe-lg-0 py-2 px-0 h-sm-30 h-lg-100 d-flex">
-                <div class="d-none d-lg-none d-sm-inline mx-auto text-center">
-                  <h6 class="fw-bold text-nowrap m-0">{% translate "Module" %} {{ score.level.index }}</h6>
+        <div class="row mx-auto px-sm-1 h-20">
+          <div class="col-sm-4 col-xl-6 col-12 h-100">
+            <div class="row border border-primary rounded-3 h-100 me-xl-4">
+              <div class="d-flex col-12 col-xl-6 p-0 h-sm-30 h-xl-100 ">
+                <div class="d-none d-xl-none d-sm-inline m-auto text-center">
+                  <h6 class="fw-bolder m-0">{% translate "Module" %} {{ score.level.index }}</h6>
                   <h6 class="small">{{ score.level.name }}</h6>
                 </div>
-                <div class="d-none d-lg-inline my-auto">
-                  <h4 class="fw-semibold text-nowrap m-0">{% translate "Module" %} {{ score.level.index }}</h4>
+                <div class="d-none d-xl-inline m-auto p-3">
+                  <h4 class="fw-semibold m-0">{% translate "Module" %} {{ score.level.index }}</h4>
                   <h6>{{ score.level.name }}</h6>
                 </div>
               </div>
-              <div class="col-12 col-lg-6 h-sm-70 h-lg-100 d-flex">
-                <div class="h-sm-90 w-sm-90 h-lg-80 w-lg-80 m-auto pb-4">
+              <div class="col-12 col-xl-6 h-sm-70 h-xl-100 d-flex p-0">
+                <div class="h-sm-90 w-sm-90 h-xl-80 w-xl-80 m-auto pb-4">
                   <canvas id="success{{ score.level.index }}"></canvas>
                   <p class="small text-nowrap text-center mt-1">
                     {% translate "successful" %}
@@ -158,25 +162,41 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-6 col-12 text-end p-0 h-100">
+          <div class="col-sm-8 col-xl-6 col-12 text-end p-0 h-100">
             {% with sticker_unlocked=score|is_sticker_unlocked %}
             <div
               style="background-image: url({% static 'media/images/stickers/16x9/level-' %}{{ score.level.index }}-{{sticker_unlocked}}.svg);"
-              class="sticker_results d-lg-block ms-2 border border-2 rounded h-100
+              class="sticker_results d-xl-block ms-2 border border-2 rounded h-100
                 {% if sticker_unlocked == '1' %}border-dark
                 {% elif sticker_unlocked == '2' or sticker_unlocked == '3' %}border-primary
-                {% elif sticker_unlocked == '4' %}border-warning{% endif %}">
-                <img src="{% static 'media/images/stickers/medal_blue.svg' %}" class="p-2 img-fluid h-70 {% if sticker_unlocked == '3' %}d-inline{% else %}d-none{% endif %}" />
-                <img src="{% static 'media/images/stickers/medal_gold.svg' %}" class="p-2 img-fluid h-70 {% if sticker_unlocked == '4' %}d-inline{% else %}d-none{% endif %}" />
+                {% elif sticker_unlocked == '4' %}border-warning
+                {% endif %}">
+                <img src="{% static 'media/images/stickers/medal_blue.svg' %}" class="p-2 img-fluid h-70
+                  {% if sticker_unlocked == '3' %}d-inline
+                  {% else %}d-none
+                  {% endif %}" />
+                <img src="{% static 'media/images/stickers/medal_gold.svg' %}" class="p-2 img-fluid h-70
+                  {% if sticker_unlocked == '4' %}d-inline
+                  {% else %}d-none
+                  {% endif %}" />
             </div>
             <div
               style="background-image: url({% static 'media/images/stickers/1x1/level-' %}{{ score.level.index }}-{{sticker_unlocked}}.svg);"
-              class="sticker_results d-lg-none d-sm-block border border-2 rounded ms-3 h-100
+              class="sticker_results d-xl-none d-sm-block border border-2 rounded ms-3 h-100
                 {% if sticker_unlocked == '1' %}border-dark
                 {% elif sticker_unlocked == '2' or sticker_unlocked == '3' %}border-primary
-                {% elif sticker_unlocked == '4' %}border-warning{% endif %}">
-                <img src="{% static 'media/images/stickers/medal_blue.svg' %}" class="p-2 img-fluid h-50 {% if sticker_unlocked == '3' %}d-inline{% else %}d-none{% endif %}" />
-                <img src="{% static 'media/images/stickers/medal_gold.svg' %}" class="p-2 img-fluid h-50 {% if sticker_unlocked == '4' %}d-inline{% else %}d-none{% endif %}" />
+                {% elif sticker_unlocked == '4' %}border-warning
+                {% endif %}">
+                <img src="{% static 'media/images/stickers/medal_blue.svg' %}"
+                class="p-2 img-fluid h-50
+                  {% if sticker_unlocked == '3' %}d-inline
+                  {% else %}d-none
+                  {% endif %}" />
+                <img src="{% static 'media/images/stickers/medal_gold.svg' %}"
+                class="p-2 img-fluid h-50
+                  {% if sticker_unlocked == '4' %}d-inline
+                  {% else %}d-none
+                  {% endif %}" />
             </div>
             {% endwith %}
           </div>
