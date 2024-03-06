@@ -1,0 +1,50 @@
+{% load i18n %}
+{% load custom_filters %}
+
+<h2 id="questions">{% translate "Answers" %}</h2>
+{% for question in questions_and_quizzes %}
+    {% if question.quiz %}
+    <h3 id="{{ forloop.counter }}" class="text-primary">{% translate "Quiz" %} {{ question.quiz_index}}.{{ question.question_quiz_index }}</h3>
+    {% if question.display_quiz_label %}
+    <p class="small"><strong><em>{% translate "Script"%}:</em></strong></span> {{ question.quiz.name }}</p>
+    {% endif %}
+    {% else %}
+    <h3 id="{{ forloop.counter }}" class="text-primary">{% translate "Question"%} {{ question.question_index }}</h3>
+    {% endif %}
+    <div class="pb-1 fw-bolder small">{{ question.answer.label_tag }}</div>
+    <div class="d-grid gap-2 ps-3 mb-4 small">
+    {% if question.type != "SR" %}
+        {% filter_by_value question.answer.field.queryset "is_correct" True as has_correct_answer %}
+        {% for answer_choice in question.answer.field.queryset %}
+            <label class="form-check">
+                <input class="form-check-input checked
+                    {% if answer_choice.is_correct %}correct_answer{% endif %}
+                    {% if question.type == 'M' %}
+                        {% if answer_choice in question.answer.field.initial and not answer_choice.is_correct %}wrong-answer
+                        {% elif answer_choice not in question.answer.field.initial and answer_choice.is_correct %}not-checked
+                        {% endif %}
+                    {% endif %}
+                    {% if question.type == 'S' and has_correct_answer|length > 0 and answer_choice == question.answer.field.initial and not answer_choice.is_correct %}wrong-answer{% endif %}"
+                    type="{{ question.answer.field.widget.input_type }}"
+                    {% if has_correct_answer|length_is:'0' and answer_choice == question.answer.field.initial %}checked{%endif%}>
+                    <span>{{ answer_choice }}</span>
+            </label>
+        {% endfor %}
+    {% elif question.answer.field.initial %}
+        {% for answer_choice in question.answer.field.queryset %}
+            <div class="py-1 me-4">
+                {% with user_answer=question.answer.field.initial|slice:forloop.counter|last %}
+                <div class="row border rounded-3 {% if answer_choice == user_answer %}border-success bg-light-green{% else %}border-danger bg-light-red{% endif %}">
+                    <p class="col-1 align-self-center text-center">
+                        {{ forloop.counter }}.
+                    </p>
+                    <div class="col-10 pt-2 align-self-center">{{ answer_choice }}</div>
+                    <div class="col-1">
+                    </div>
+                </div>
+                {% endwith %}
+            </div>
+        {% endfor %}
+    {% endif %}
+    </div>
+{% endfor %}

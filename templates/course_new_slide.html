@@ -3,196 +3,207 @@
 {% load django_bootstrap5 %}
 {% load custom_filters %}
 
-{% for slide in slides %}
-    {% if not slide.question.answer.initial and forloop.first %}
-    {{ "false"|json_script:"is_question_answered" }}
-    {% endif %}
-    {{ slide.question.media }}
-    {% if slide.question %}
-        <div id="question-card" class="h-100" value="{{ slide.question.id }}">
-            <div class="front overflow-auto row card border border-light shadow-sm m-0 h-100">
-                <form class="d-flex flex-column col-12 col-md-6 p-sm-5 p-2 h-100" method="post" id="question-form">
-                    <div class="my-auto">
-                        <h3 class="text-primary">{% translate "Question"%} {{ slide.question.question_index }}</h3>
-                        {% csrf_token %}
-                        {% bootstrap_form_errors slide.question %}
-                        {% bootstrap_field slide.question.answer show_label=True label_class="pb-3" %}
-                        <div class="text-center pb-2 inFront">
-                            <button id="summitButton" type="button"
-                                class="flip btn text-primary course-button fw-bolder border-primary border border-3 shadow rounded p-2">
-                                {% translate "Valider" %}
-                            </button>
-                        </div>
-                    </div>
-                </form>
-                <div class="col-6 p-0 text-end d-none d-md-inline h-100">
-                    <img class="img-fluid h-100" src="{% static 'media/images/course/question_image.svg' %}"
-                        alt="Question image" />
-                </div>
-            </div>
-            <div class="back overflow-auto row card border border-light shadow-sm m-0 h-100">
-                <div class="d-flex flex-column col-12 col-md-6 p-sm-5 p-2 h-100">
-                    <div class="my-auto">
-                        <h3 class="text-primary">{% translate "Question"%} {{ slide.question.question_index }}</h3>
-                        <div class="pb-3">{{ slide.question.answer.label_tag }}</div>
-                        {% if slide.question.type == "S" or slide.question.type == "M" %}
-                        <div class="d-grid gap-2 ps-3 mb-5">
-                            {% for answer_choice in slide.question.answer.field.queryset %}
-                            <label class="form-check">
-                                <input class="form-check-input {% if answer_choice.is_correct %}correct_answer{% endif %}"
-                                    type="{{ slide.question.answer.field.widget.input_type }}"
-                                    value="{{ answer_choice.pk }}" {%if answer_choice.is_correct %}checked{% endif %} disabled>
-                                <span>{{ answer_choice }}</span>
-                            </label>
-                            {% endfor %}
-                        </div>
-                        {% endif %}
-                        {% if slide.question.type == "LI" %}
-                        <div class="d-grid gap-2 ps-3 mb-5">
-                            {% for answer_choice in slide.question.answer.field.queryset %}
-                            <div>
-                                <input
-                                    class="form-check-input option-button-radio{% if answer_choice.is_correct %} correct_answer{% endif %}"
-                                    type="{{ slide.question.answer.field.widget.input_type }}"
-                                    value="{{ answer_choice.pk }}" {%if answer_choice.is_correct %}checked{% endif %}
-                                    disabled>
-                                <div
-                                    class="btn btn-sm border border-primary {% if answer_choice.is_correct %} border-success bg-light-green{% endif %}">
-                                    {{ answer_choice }}
-                                </div>
-                            </div>
 
-                            {% endfor %}
-                        </div>
-                        {% endif %}
-                        {% if slide.question.type == "SR" %}
-                        <div class="d-grid gap-2 p-3 pt-0 mx-sm-2">
-                            {% for answer_choice in slide.question.answer.field.queryset %}
-                            <div class="row draggable-item border border-primary py-1 rounded-3 small"
-                                value="{{ answer_choice.pk }}">
-                                <p class="col-1 align-self-center text-nowrap text-center px-0 m-0">
-                                    {{answer_choice.index }}.
-                                </p>
-                                <div class="col-10 align-self-center px-1">{{ answer_choice }}</div>
-                                <div class="col-1 h2 align-self-center text-center px-0 m-0">
-                                    <i class="bi bi-grip-horizontal"></i>
-                                </div>
-                            </div>
-                            {% endfor %}
-                        </div>
-                        {% endif %}
-                    </div>
-                </div>
-                <div class="col-6 p-0 text-end d-none d-md-inline h-100">
-                    <img class="img-fluid h-100" src="{% static 'media/images/course/question_image.svg' %}"
-                        alt="Question image" />
+{% if slide is None %}
+<div class="empty-slide"></div>
+{% endif %}
+
+{% if slide.question %}
+{{ slide.question.media }}
+{% with form=slide.question %}
+<div id="question-card" class="h-100 perspective-flip" value="{{ form.id }}">
+    <div class="front row overflow-auto border rounded border-light border-sm-secondary shadow-sm m-0 h-100">
+        <form class="d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-100" method="post" id="question-form">
+            <div class="m-auto">
+                {% if form.quiz %}
+                <h3 class="text-primary">{% translate "Quiz"%} {{ form.quiz_index}}.{{ form.question_quiz_index }}</h3>
+                {% if form.display_quiz_label %}
+                <p><strong><em>{% translate "Script"%}:</em></strong></span> {{ form.quiz.name }}</p>
+                {% endif %}
+                {% else %}
+                <h3 class="text-primary">{% translate "Question"%} {{ form.question_index }}</h3>
+                {% endif %}
+                {% csrf_token %}
+                {% bootstrap_form_errors form %}
+                {% bootstrap_field form.answer show_label=True label_class="pb-3" %}
+                <div class="text-center pb-2">
+                    <button id="summitButton" type="button"
+                        class="flip btn text-primary course-button fw-bolder border-primary border border-3 shadow rounded p-2">
+                        {% translate "Confirm" %}
+                    </button>
                 </div>
             </div>
+        </form>
+        <div class="col-6 p-0 text-end d-none d-md-inline h-100">
+            {% if form.quiz %}
+            <img class="img-fluid h-100" src="{% static 'media/images/course/quiz_image.svg' %}" alt="Question image" />
+            {% else %}
+            <img class="img-fluid h-100" src="{% static 'media/images/course/question_image.svg' %}" alt="Quiz image" />
+            {% endif %}
         </div>
-    {% elif slide.explanation %}
-        <div class="row overflow-auto card border border-light shadow-sm m-0 h-100">
-            <div class="d-flex flex-column col-12 col-md-6 p-sm-5 p-2 h-100">
-                <div class="my-auto">
-                    <h3 class="text-primary">{% translate "Question"%} {{ slide.explanation.question_index }}</h3>
-                    <h6 class="fw-bold">{% translate "Explication"%}:</h6>
-                    <div class="pb-3">{{ slide.explanation.question.name }}</div>
-                    {{ slide.explanation.label |safe|linebreaksbr }}
-                </div>
-            </div>
-            <div class="col-6 p-0 text-end d-none d-md-inline h-100">
-                <img class="img-fluid h-100" src="{% static 'media/images/course/explanation_image.svg' %}"
-                    alt="Final image" />
-            </div>
-        </div>
-    {% elif slide.context %}
-        <div class="row overflow-auto border rounded border-light shadow-sm h-100">
-            <div class="d-flex col-12 col-sm-12 col-md-6 h-md-100">
-                <div class="my-auto ps-2 ps-md-5">
-                    {% for text in slide.context.texts %}
-                    <span
-                        class="inFront {{ text.css_classes|join:' ' }} {{ text.position }} {% if text.text.get_t_type_display == 'Title'%}text-primary{%endif%}">
-                        {{ text.text.description|linebreaks|safe }}
-                    </span>
+    </div>
+    <div class="back row overflow-auto border rounded border-light border-sm-secondary shadow-sm m-0 h-100">
+        <div class="d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-100">
+            <div class="m-auto">
+                {% if form.quiz %}
+                <h3 class="text-primary">{% translate "Quiz"%} {{ form.quiz_index }}.{{ form.question_quiz_index }}</h3>
+                {% if form.display_quiz_label %}
+                <p><strong><em>{% translate "Script"%}:</em></strong></span> {{ form.quiz.name }}</p>
+                {% endif %}
+                {% else %}
+                <h3 class="text-primary">{% translate "Question"%} {{ form.question_index }}</h3>
+                {% endif %}
+                <div class="pb-3">{{ form.answer.label_tag }}</div>
+                {% if form.type == "S" or form.type == "M" %}
+                <div class="d-grid gap-2 ps-3 mb-5">
+                    {% for answer_choice in form.answer.field.queryset %}
+                    <label class="form-check">
+                        <input class="form-check-input {% if answer_choice.is_correct %}correct_answer{% endif %}"
+                            type="{{ form.answer.field.widget.input_type }}" value="{{ answer_choice.pk }}"
+                            {%if answer_choice.is_correct %}checked{% endif %} disabled>
+                        <span>{{ answer_choice }}</span>
+                    </label>
                     {% endfor %}
                 </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 h-md-100 text-center">
-                {% for media in slide.context.medias %}
-                {% if media.media.get_m_type_display == 'Image' %}
-                <img class="img-fluid h-100 w-50 w-sm-100 {{ media.css_classes|join:' ' }} {{ text.position }}"
-                    src="{% static media.media.path|extract_static %}" alt="{{ media.media.name }}" />
                 {% endif %}
-                {% endfor %}
+                {% if form.type == "LI" %}
+                <div class="d-grid gap-2 ps-3 mb-5">
+                    {% for answer_choice in form.answer.field.queryset %}
+                    <div>
+                        <input
+                            class="form-check-input option-button-radio{% if answer_choice.is_correct %} correct_answer{% endif %}"
+                            type="{{ form.answer.field.widget.input_type }}" value="{{ answer_choice.pk }}"
+                            {%if answer_choice.is_correct %}checked{% endif %} disabled>
+                        <div
+                            class="btn btn-sm border border-primary {% if answer_choice.is_correct %} border-success bg-light-green{% endif %}">
+                            {{ answer_choice }}
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {% if form.type == "SR" %}
+                <div class="d-grid gap-2 p-3 pt-0 mx-sm-2">
+                    {% for answer_choice in form.answer.field.queryset %}
+                    <div class="row draggable-item border border-primary py-1 rounded-3 small"
+                        value="{{ answer_choice.pk }}">
+                        <p class="col-1 align-self-center text-nowrap text-center px-0 m-0">
+                            {{ forloop.counter }}.
+                        </p>
+                        <div class="col-10 align-self-center px-1">{{ answer_choice }}</div>
+                        <div class="col-1 h2 align-self-center text-center px-0 m-0">
+                            <i class="bi bi-grip-horizontal"></i>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
             </div>
         </div>
-    {% elif slide.challenge %}
-        {% if slide.challenge.description == "Final" %}
-            <div class="row card border border-light shadow-sm m-0 h-100">
-                <div class="d-flex flex-column col-12 col-md-6 p-sm-5 p-2 h-100">
-                    <div class="my-auto">
-                        <div class="text-center">
-                            <h1 class="fw-bolder text-warning">
-                                {% translate "Felicitations" %} !
-                            </h1>
-                            {% with index_level=level.index next_level=level.index|add:1 score=score|default:0 %}
-                            <h3 class="inFront text-primary">
-                                {% blocktranslate %}Vous avez terminé le niveau {{ index_level }} !{% endblocktranslate %}
-                            </h3>
-                            <h6>
-                                {% blocktranslate %}Votre score est de {% endblocktranslate %}
-                                <span class="text-primary">{{ score }}%</span>
-                            </h6>
-                            <h6>
-                                {% blocktranslate %}Vous avez débloquez l’histoire numéro {{ next_level }} !{% endblocktranslate %}
-                            </h6>
-                            {% endwith %}
+        <div class="col-6 p-0 text-end d-none d-md-inline h-100">
+            {% if form.quiz %}
+            <img class="img-fluid h-100" src="{% static 'media/images/course/quiz_image.svg' %}" alt="Question image" />
+            {% else %}
+            <img class="img-fluid h-100" src="{% static 'media/images/course/question_image.svg' %}" alt="Quiz image" />
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endwith %}
+{% elif slide.explanation %}
+<div class="row overflow-auto border rounded border-light border-sm-secondary shadow-sm m-0 h-100">
+    <div class="d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-100">
+        <div class="m-auto">
+            <h3 class="text-primary">{% translate "Question"%} {{ slide.explanation.question_index }}</h3>
+            <h6 class="fw-bold">{% translate "Explication"%}:</h6>
+            <div class="pb-3">{{ slide.explanation.question.name }}</div>
+            {{ slide.explanation.label |safe|linebreaksbr }}
+        </div>
+    </div>
+    <div class="col-6 p-0 text-end d-none d-md-inline h-100">
+        <img class="img-fluid h-100" src="{% static 'media/images/course/explanation_image.svg' %}" alt="Final image" />
+    </div>
+</div>
+{% elif slide.context %}
+<div class="row overflow-auto border rounded border-light border-sm-secondary shadow-sm m-0 h-100">
+    <div class="d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-md-100">
+        <div class="m-auto">
+            {% if slide.context.label|contains:"final" %}
+                <div class="text-center">
+                    <h2 class="fw-bolder text-warning">
+                        {% translate "Congratulations" %} !
+                    </h2>
+                    {% with index_level=level.index next_level=level.index|add:1 score=score|floatformat:'0'|default:0 %}
+                    <p class="fw-bolder text-primary">
+                        {% blocktranslate %}You have finished level {{ index_level }} !{% endblocktranslate %}
+                    </p>
+                    <p>
+                        {% blocktranslate %}Your score is {% endblocktranslate %}
+                        <span class="text-primary">{{ score }}%</span>
+                    </p>
+                    <p>
+                        {% blocktranslate %}You have unlocked story number {{ next_level }} !{% endblocktranslate %}
+                    </p>
+                    {% endwith %}
+                </div>
+                <div class="container py-2">
+                    <div class="row row-cols-1 row-cols-md-2 text-center g-4">
+                        {% for resource in slide.context.resources %}
+                        <div class="col">
+                            <a class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button {{ resource.css_classes|join:' ' }}"
+                                href="{% static resource.resource.path|extract_static %}" download>
+                                {% translate "Download the summary sheet" %}
+                            </a>
                         </div>
-                        <div class="text-center pb-2 inFront">
-                            <button id="challengeButton" type="button"
-                                class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded p-2">
-                                {% translate "Télécharger la fiche récap" %}
-                            </button>
-                            <a id="challengeButton" type="button" href="{% url 'course' %}"
-                                class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded p-2">
-                                {% translate "Accéder au niveau suivant" %}
+                        {% endfor %}
+                        <div class="col">
+                            <a class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button"
+                            href="{% url 'report' %}">
+                                {% translate "Download the level report" %}
+                            </a>
+                        </div>
+                        <div class="col mx-auto">
+                            <a type="button" href="{% url 'course' %}"
+                                class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button">
+                                {% translate "Access the next level" %}
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 p-0 text-end d-none d-md-inline h-100">
-                    <img class="img-fluid h-100" src="{% static 'media/images/course/final_image.svg' %}" alt="Final image" />
-                </div>
-            </div>
-        {% else %}
-            <div class="row card border border-light shadow-sm m-0 h-100">
-                <div class="d-flex flex-column col-12 col-md-6 p-sm-5 p-2 h-100">
-                    <div class="my-auto">
-                        <div class="text-center text-danger">
-                            <h1 class="fw-bolder">
-                                {% translate "Challenge" %} !
-                            </h1>
-                            <h6 class="inFront">
-                                {{ slide.challenge.name }}
-                            </h6>
-                        </div>
-                        <div class="inFront">
-                            <p>
-                                {{ slide.challenge.description|linebreaks|safe }}
-                            </p>
-                        </div>
-                        <div class="text-center pb-2 inFront">
-                            <button id="challengeButton" type="button"
-                                class="btn text-danger course-button fw-bolder border-danger border border-3 shadow rounded p-2">
-                                {% translate "Télécharger mon template" %}
-                            </button>
-                        </div>
+            {% else %}
+                {% for text in slide.context.texts %}
+                    <div
+                        class="{{ text.css_classes|join:' ' }} {{ text.position }} {% if text.text.get_t_type_display == 'Title'%}text-primary{%endif%} d-none d-md-inline">
+                        {{ text.text.description|wordwrap:60|linebreaks|safe }}
                     </div>
-                </div>
-                <div class="col-6 p-0 text-end d-none d-md-inline h-100">
-                    <img class="img-fluid h-100" src="{% static 'media/images/course/challenge_image.svg' %}"
-                        alt="Challenge image" />
-                </div>
-            </div>
-        {% endif %}
-    {% endif %}
-{% endfor %}
+                    <div
+                        class="{{ text.css_classes|join:' ' }} {{ text.position }} {% if text.text.get_t_type_display == 'Title'%}text-primary{%endif%}  d-md-none d-inline">
+                        {{ text.text.description|linebreaks|safe }}
+                    </div>
+                {% endfor %}
+                {% for resource in slide.context.resources %}
+                    <div class="d-flex">
+                        <a id="downloadButton"
+                            class="btn text-primary course-button fw-bolder border-primary border border-3 shadow rounded mx-auto {{ resource.css_classes|join:' ' }}"
+                            href="{% static resource.resource.path|extract_static %}" download>
+                            {% if slide.context.label|contains:"fiche pratique" %}
+                            {% translate "Download the fact sheet"%}
+                            {% endif %}
+                            {% if slide.context.label|contains:"challenge" %}
+                            {% translate "Download my template"%}
+                            {% endif %}
+                        </a>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+    <div class="col-12 col-md-6 h-md-100 text-center">
+        {% for media in slide.context.medias %}
+        <img class="img-fluid h-100 w-50 w-sm-100 {{ media.css_classes|join:' ' }} {{ text.position }}"
+            src="{% static media.media.path|extract_static %}" alt="{{ media.media.name }}" />
+        {% endfor %}
+    </div>
+</div>
+{% endif %}

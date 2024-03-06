@@ -3,15 +3,11 @@
 {% load i18n %}
 
 {% block bootstrap5_extra_head %}
-<!-- <link rel="stylesheet" href="{% static 'css/header.css' %}"> -->
 <script src='{% static "npm_components/@popperjs/core/dist/umd/popper.min.js" %}'></script>
 <script src='{% static "npm_components/jquery/dist/jquery.min.js" %}'></script>
 <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
 <script src='{% static "js/header.js" %}'></script>
-
 {% endblock %}
-
-{% bootstrap_javascript %}
 
 <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top px-3 px-sm-0">
   <div class="container-xxl">
@@ -32,13 +28,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link text-primary fw-bold" href="{% url 'index' %}#hero">{% translate "Accueil" %}</a>
+          <a class="nav-link text-primary fw-bold" href="{% url 'index' %}#hero">{% translate "Home" %}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-primary fw-bold" href="{% url 'index' %}#about">{% translate "A propos" %}</a>
+          <a class="nav-link text-primary fw-bold" href="{% url 'index' %}#about">{% translate "About" %}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-primary text-white fw-bold start">{% translate "Commencer" %}</a>
+          <a class="nav-link btn btn-primary text-white fw-bold start">{% translate "Start" %}</a>
         </li>
         <li class="nav-item text-primary my-auto">
           {% include "home/language_selector_landing.html" %}

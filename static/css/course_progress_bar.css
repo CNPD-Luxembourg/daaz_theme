@@ -11,23 +11,9 @@
   height: 10px !important;
 }
 
-.course-progress-bar .key-1,
-.course-progress-bar .key-2,
-.course-progress-bar .key-3 {
+.course-progress-bar .key {
 	position: absolute;
 	height: 38px;
-}
-
-.course-progress-bar .key-1 {
-	left: calc(25% - 15px);
-}
-
-.course-progress-bar .key-2 {
-	left: calc(50% - 15px);
-}
-
-.course-progress-bar .key-3 {
-	left: calc(75% - 15px);
 }
 
 .course-progress-bar .trophy {

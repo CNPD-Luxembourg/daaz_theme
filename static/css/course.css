@@ -22,10 +22,18 @@
     left: calc(50% + 20px);
 }
 
-.control_disabled {
+.control_disabled, .control_blocked {
     pointer-events: none;
     cursor: default;
     text-decoration: none;
+}
+.control_disabled i {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
+}
+
+.perspective-flip {
+    perspective: 2400px !important;
 }
 
 .form-check-input {
@@ -50,30 +58,30 @@
     color: var(--bs-white) !important;
 }
 
-#summitButton.course-button {
+#summitButton.course-button, #downloadButton.course-button.practical-sheet-button {
     box-shadow: 0 0.5rem var(--bs-primary) !important;
 }
 
-#challengeButton.course-button {
-    box-shadow: 0 0.5rem var(--bs-danger) !important;
-}
-
-#summitButton.course-button:hover {
+#summitButton.course-button:hover, #downloadButton.course-button.practical-sheet-button:hover{
     box-shadow: none !important;
     background-color: var(--bs-primary);
 }
 
-#challengeButton.course-button:hover {
+#downloadButton.course-button.challenge-button {
+    box-shadow: 0 0.5rem var(--bs-danger) !important;
+}
+
+#downloadButton.course-button.challenge-button:hover {
     box-shadow: none !important;
     background-color: var(--bs-danger);
 }
 
-#challengeButton.course-button.border-warning:hover {
+.course-button.final-button:hover {
     box-shadow: none !important;
     background-color: var(--bs-warning);
 }
 
-#challengeButton.course-button.border-warning {
+.course-button.final-button {
     box-shadow: 0 0.5rem var(--bs-warning) !important;
 }
 
@@ -87,8 +95,18 @@
     opacity: 1;
 }
 
-.correct_answer+span {
+.correct_answer + span {
     color: var(--bs-success);
+}
+
+.correct_answer.not-checked {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    color: var(--bs-primary) !important;
+}
+
+.correct_answer.not-checked + span {
+    color: var(--bs-primary) !important;
 }
 
 .wrong-answer:not(.correct_answer):checked {
@@ -231,5 +249,9 @@
         --slide-left-margin: 1rem;
         --slide-bottom-margin: -1rem;
         --slide-right-margin: -1rem;
+    }
+    .border-sm-secondary {
+        --bs-border-opacity: 1;
+        border-color: rgba(var(--bs-secondary-rgb), var(--bs-border-opacity)) !important;
     }
 }

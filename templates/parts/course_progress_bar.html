@@ -1,4 +1,5 @@
 {% load static %}
+{% load l10n %}
 
 {% block bootstrap5_extra_head %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/course_progress_bar.css' %}">
@@ -8,15 +9,18 @@
     <div class="progress-bar" role="progressbar" style="width: {{ progress }}%" aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100">
     </div>
 </div>
-{% for n in '123' %}
-{% widthratio n 1 25 as threshold %}
-<div class="key-{{ n }} align-items-center">
-    {% if progress >= threshold|add:0 %}
-    <img class="img-fluid" src="{% static 'media/images/icons/key-yellow.svg' %}" />
-    {% else %}
-    <img class="img-fluid" src="{% static 'media/images/icons/key-white.svg' %}" />
-    {% endif %}
-</div>
+{% for quiz_id, quiz in quizzes.items %}
+    {% localize off %}
+        {% if not forloop.last %}
+        <div class="key align-items-center" style="left:calc({{quiz.percentage}}% - 22px)">
+            {% if progress > quiz.percentage %}
+            <img class="img-fluid" src="{% static 'media/images/icons/key-yellow.svg' %}" />
+            {% else %}
+            <img class="img-fluid" src="{% static 'media/images/icons/key-white.svg' %}" />
+            {% endif %}
+        </div>
+        {% endif %}
+    {% endlocalize %}
 {% endfor %}
 
 <div class="trophy">
