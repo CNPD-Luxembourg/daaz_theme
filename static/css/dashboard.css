@@ -1,7 +1,7 @@
 .sticker_results {
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: none;
 }
 
@@ -13,5 +13,20 @@
 @media (min-width: 1600px) {
     .small {
         font-size: 1em;
+    }
+    .module-title {
+        font-size: 1.5rem ;
+    }
+}
+
+@media (max-height: 700px) and (min-width: 576px) and (max-width: 1400px) {
+    .small {
+        font-size: 0.55em !important;
+    }
+    .small.fs-6 {
+        font-size: 0.7em !important;
+    }
+    .module-title {
+        font-size: 1rem !important;
     }
 }
