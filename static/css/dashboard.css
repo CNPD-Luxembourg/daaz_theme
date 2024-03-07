@@ -5,6 +5,12 @@
     display: none;
 }
 
+@media (max-width: 576px) {
+    .progress {
+        height: 10px;
+    }
+}
+
 @media (max-width: 1600px) {
     .small {
         font-size: 0.7em;

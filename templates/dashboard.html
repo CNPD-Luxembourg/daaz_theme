@@ -16,7 +16,7 @@
 {% endblock %}
 
 {% block content_area %}
-<div class="row h-sm-100">
+<div class="row h-sm-100 pb-6 pb-sm-0">
   <div class="col-sm-6 col-12 h-sm-100 w-sm-55 w-xl-45">
     <div class="border shadow-sm rounded-4 px-4 py-3 h-sm-49">
       <h4>{% translate "My lessons" %}</h4>
@@ -115,12 +115,12 @@
       <h4>{% translate "Knowledge" %}</h4>
       <div class="d-flex flex-column h-sm-95">
         {% for c in criteria.data %}
-        <div class="h-10">
+        <div class="h-sm-10">
           <div class="small d-flex align-items-end h-sm-50">
             {{ c.label }}
           </div>
           <div class="d-flex align-items-center h-sm-50">
-            <div class="progress bg-light-blue w-100 h-lg-50 h-sm-100">
+            <div class="progress bg-light-blue w-100 h-sm-50">
               <div class="progress-bar" role="progressbar" style="width: {% widthratio c.value 100 100 %}%"
                 aria-valuenow="{{ c.value }}" aria-valuemin="0" aria-valuemax="1"></div>
             </div>
