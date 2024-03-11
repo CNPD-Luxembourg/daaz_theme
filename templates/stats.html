@@ -11,6 +11,7 @@
 {% block bootstrap5_extra_script %}
 {{ users_by_date|json_script:"users_by_date" }}
 {{ users_by_level|json_script:"users_by_level" }}
+{{ avg_score_by_level|json_script:"avg_score_by_level" }}
 <script src='{% static "js/stats.js" %}'></script>
 {% endblock %}
 
@@ -20,11 +21,11 @@
         <div class="col-12 col-md-3">
             <h4>{% translate "Key figures" %}</h4>
             <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
+                <li class="list-group-item d-flex justify-content-between align-items-center mb-0">
                     {% translate "Total users" %}
                     <span class="badge bg-primary rounded-pill">{{ global_total_users }}</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
+                <li class="list-group-item d-flex justify-content-between align-items-center mb-0">
                     {% translate "Global Average score" %}
                     <span class="badge bg-primary rounded-pill">{{ global_avg_score|floatformat:'0' }}%</span>
                 </li>
@@ -51,5 +52,16 @@
             <canvas id="users_by_level_line"></canvas>
         </div>
     </div>
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <h4 class="text-primary text-center">{% translate "Users and Score by level [Bar/Line Chart]" %}</h4>
+            <canvas id="users_and_score_by_level_bar"></canvas>
+        </div>
+        <div class="col-12 col-md-6">
+            <h4 class="text-primary text-center">{% translate "Users and Score by level [Line/Line Chart]" %}</h4>
+            <canvas id="users_and_score_by_level_line"></canvas>
+        </div>
+    </div>
+    
 </div>
 {% endblock %}

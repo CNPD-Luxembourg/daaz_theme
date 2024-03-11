@@ -2,25 +2,64 @@
 $(document).ready(function () {
     let usersBydate = JSON.parse(document.getElementById('users_by_date').textContent);
     let usersByLevel = JSON.parse(document.getElementById('users_by_level').textContent);
+    let scoreBylevel = JSON.parse(document.getElementById('avg_score_by_level').textContent);
+
     let user_dates = usersBydate.map(user => new Date(user.created_at))
-    let user_dates_values = usersBydate.map(user => user.total_users)
     let user_levels = usersByLevel.map(user => user.current_level__index)
+    let user_dates_values = usersBydate.map(user => user.total_users)
     let user_levels_values = usersByLevel.map(user => user.total_users)
+    let score_levels_values = scoreBylevel.map(user => user.avg_score/100)
 
-    let users_by_date_bar_ctx = document.getElementById('users_by_date_bar');
-    let users_by_date_line_ctx = document.getElementById('users_by_date_line');
-    let users_by_level_bar_ctx = document.getElementById('users_by_level_bar');
-    let users_by_level_line_ctx = document.getElementById('users_by_level_line');
-
-    barChart(users_by_date_bar_ctx,user_dates,user_dates_values,'time')
-    lineChart(users_by_date_line_ctx,user_dates,user_dates_values, 'time')
-    barChart(users_by_level_bar_ctx,user_levels,user_levels_values)
-    lineChart(users_by_level_line_ctx,user_levels,user_levels_values)
+    const users_by_date_bar_ctx = document.getElementById('users_by_date_bar');
+    const users_by_date_line_ctx = document.getElementById('users_by_date_line');
+    const users_by_level_bar_ctx = document.getElementById('users_by_level_bar');
+    const users_by_level_line_ctx = document.getElementById('users_by_level_line');
+    const users_and_score_by_level_bar_ctx = document.getElementById('users_and_score_by_level_bar');
+    const users_and_score_by_level_line_ctx = document.getElementById('users_and_score_by_level_line');
 
 
-    function barChart(ctx,labels,values,typeXaxis='category') {
+    drawSingleAxisChart(
+        'bar',
+        users_by_date_bar_ctx,
+        user_dates, 
+        user_dates_values, 
+        'time'
+    )
+    drawSingleAxisChart(
+        'line', 
+        users_by_date_line_ctx,
+        user_dates, 
+        user_dates_values, 
+        'time'
+    )
+    drawSingleAxisChart(
+        'bar',
+        users_by_level_bar_ctx, 
+        user_levels,
+        user_levels_values
+    )
+    drawSingleAxisChart(
+        'line',
+        users_by_level_line_ctx, 
+        user_levels,
+        user_levels_values
+    )
+    drawMultipleAxisChart(
+        'bar',
+        users_and_score_by_level_bar_ctx,
+        user_levels,user_levels_values,
+        score_levels_values
+    )
+    drawMultipleAxisChart(
+        'line',
+        users_and_score_by_level_line_ctx,
+        user_levels,user_levels_values,
+        score_levels_values
+    )
+
+    function drawSingleAxisChart(chartType,ctx,labels, values, typeXaxis = 'category') {
         new Chart(ctx, {
-            type: 'bar',
+            type: chartType,
             data: {
                 labels: labels,
                 datasets: [{
@@ -29,7 +68,7 @@ $(document).ready(function () {
             },
             options: {
                 plugins: {
-                    legend : {
+                    legend: {
                         display: false
                     }
                 },
@@ -49,18 +88,28 @@ $(document).ready(function () {
         });
     }
 
-    function lineChart(ctx,labels,values,typeXaxis='category') {
+    function drawMultipleAxisChart(chartType, ctx, labels, valuesYaxis, valuesY2axis, typeXaxis = 'category') {
         new Chart(ctx, {
-            type: 'line',
+            type: chartType,
             data: {
                 labels: labels,
-                datasets: [{
-                    data: values,
-                }]
+                datasets: [
+                    {
+                        data: valuesYaxis,
+                        yAxisID: 'y',
+                        order: 1
+                    },
+                    {
+                        data: valuesY2axis,
+                        yAxisID: 'y2',
+                        type: 'line',
+                        order: 0
+                    },
+                ]
             },
             options: {
                 plugins: {
-                    legend : {
+                    legend: {
                         display: false
                     }
                 },
@@ -70,9 +119,26 @@ $(document).ready(function () {
                         type: typeXaxis,
                     },
                     y: {
+                        type: 'linear',
                         beginAtZero: true,
                         ticks: {
                             precision: 0,
+                        }
+                    },
+                    y2: {
+                        type: 'linear',
+                        position: 'right',
+                        suggestedMax: 1,
+                        suggestedMin: 0,
+                        beginAtZero: true,
+                        ticks: {
+                            format: {
+                                style: 'percent'
+                            },
+                            precision: 0,
+                        },
+                        grid: {
+                            drawOnChartArea: false
                         }
                     }
                 },
