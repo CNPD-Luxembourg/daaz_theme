@@ -4,17 +4,25 @@
 {% block bootstrap5_extra_head %}
 {{ block.super}}
 <script src='{% static "npm_components/chart.js/dist/chart.umd.js" %}'></script>
+<script src='{% static "npm_components/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js" %}'></script>
 <link rel="stylesheet" type="text/css" href="{% static 'css/stats.css' %}">
 {% endblock %}
 
 {% block bootstrap5_extra_script %}
-{{ users|json_script:"users-data" }}
+{{ user_by_date|json_script:"users-data" }}
 <script src='{% static "js/stats.js" %}'></script>
 {% endblock %}
 
 {% block content %}
-<div class="col-4">
-    <canvas id="users_stats"></canvas>
+<div class="row">
+    <div class="col-4">
+        <h4 class="text-primary text-center">{% translate "Users by date [BarChart]" %}</h4>
+        <canvas id="users_stats_bar"></canvas>
+    </div>
+    <div class="col-4">
+        <h4 class="text-primary text-center">{% translate "Users by date [LineChart]" %}</h4>
+        <canvas id="users_stats_line"></canvas>
+    </div>
 </div>
-<canvas id="users_stats"></canvas>
+
 {% endblock %}
