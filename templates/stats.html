@@ -12,6 +12,7 @@
 {{ users_by_date|json_script:"users_by_date" }}
 {{ users_by_level|json_script:"users_by_level" }}
 {{ avg_score_by_level|json_script:"avg_score_by_level" }}
+{{ avg_progress_by_level|json_script:"avg_progress_by_level"}}
 <script src='{% static "js/stats.js" %}'></script>
 {% endblock %}
 
@@ -62,6 +63,15 @@
             <canvas id="users_and_score_by_level_line"></canvas>
         </div>
     </div>
-    
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <h4 class="text-primary text-center">{% translate "Users and Progress by level [Bar/Line Chart]" %}</h4>
+            <canvas id="users_and_progress_by_level_bar"></canvas>
+        </div>
+        <div class="col-12 col-md-6">
+            <h4 class="text-primary text-center">{% translate "Users and Progress by level [Line/Line Chart]" %}</h4>
+            <canvas id="users_and_progress_by_level_line"></canvas>
+        </div>
+    </div>
 </div>
 {% endblock %}

@@ -3,12 +3,14 @@ $(document).ready(function () {
     let usersBydate = JSON.parse(document.getElementById('users_by_date').textContent);
     let usersByLevel = JSON.parse(document.getElementById('users_by_level').textContent);
     let scoreBylevel = JSON.parse(document.getElementById('avg_score_by_level').textContent);
+    let progressBylevel = JSON.parse(document.getElementById('avg_progress_by_level').textContent);
 
     let user_dates = usersBydate.map(user => new Date(user.created_at))
     let user_levels = usersByLevel.map(user => user.current_level__index)
     let user_dates_values = usersBydate.map(user => user.total_users)
     let user_levels_values = usersByLevel.map(user => user.total_users)
     let score_levels_values = scoreBylevel.map(user => user.avg_score/100)
+    let progress_levels_values = progressBylevel.map(user => user.avg_progress/100)
 
     const users_by_date_bar_ctx = document.getElementById('users_by_date_bar');
     const users_by_date_line_ctx = document.getElementById('users_by_date_line');
@@ -16,6 +18,8 @@ $(document).ready(function () {
     const users_by_level_line_ctx = document.getElementById('users_by_level_line');
     const users_and_score_by_level_bar_ctx = document.getElementById('users_and_score_by_level_bar');
     const users_and_score_by_level_line_ctx = document.getElementById('users_and_score_by_level_line');
+    const users_and_progress_by_level_bar_ctx = document.getElementById('users_and_progress_by_level_bar');
+    const users_and_progress_by_level_line_ctx = document.getElementById('users_and_progress_by_level_line');
 
 
     drawSingleAxisChart(
@@ -47,14 +51,38 @@ $(document).ready(function () {
     drawMultipleAxisChart(
         'bar',
         users_and_score_by_level_bar_ctx,
-        user_levels,user_levels_values,
+        user_levels,
+        'Users',
+        user_levels_values,
+        'Average score',
         score_levels_values
     )
     drawMultipleAxisChart(
         'line',
         users_and_score_by_level_line_ctx,
-        user_levels,user_levels_values,
+        user_levels,
+        'Users',
+        user_levels_values,
+        'Average score',
         score_levels_values
+    )
+    drawMultipleAxisChart(
+        'bar',
+        users_and_progress_by_level_bar_ctx,
+        user_levels,
+        'Users',
+        user_levels_values,
+        'Average progress',
+        progress_levels_values
+    )
+    drawMultipleAxisChart(
+        'line',
+        users_and_progress_by_level_line_ctx,
+        user_levels,
+        'Users',
+        user_levels_values,
+        'Average progress',
+        progress_levels_values
     )
 
     function drawSingleAxisChart(chartType,ctx,labels, values, typeXaxis = 'category') {
@@ -88,18 +116,20 @@ $(document).ready(function () {
         });
     }
 
-    function drawMultipleAxisChart(chartType, ctx, labels, valuesYaxis, valuesY2axis, typeXaxis = 'category') {
+    function drawMultipleAxisChart(chartType, ctx, labels,  legendYaxis, valuesYaxis, legendY2axis, valuesY2axis, typeXaxis = 'category') {
         new Chart(ctx, {
             type: chartType,
             data: {
                 labels: labels,
                 datasets: [
                     {
+                        label: legendYaxis,
                         data: valuesYaxis,
                         yAxisID: 'y',
                         order: 1
                     },
-                    {
+                    {   
+                        label: legendY2axis,
                         data: valuesY2axis,
                         yAxisID: 'y2',
                         type: 'line',
@@ -109,9 +139,6 @@ $(document).ready(function () {
             },
             options: {
                 plugins: {
-                    legend: {
-                        display: false
-                    }
                 },
                 responsive: true,
                 scales: {
