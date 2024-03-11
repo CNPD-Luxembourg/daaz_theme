@@ -6,7 +6,6 @@ $(document).ready(function () {
     let user_dates_values = usersBydate.map(user => user.total_users)
     let user_levels = usersByLevel.map(user => user.current_level__index)
     let user_levels_values = usersByLevel.map(user => user.total_users)
-    console.log(usersByLevel);
 
     let users_by_date_bar_ctx = document.getElementById('users_by_date_bar');
     let users_by_date_line_ctx = document.getElementById('users_by_date_line');
