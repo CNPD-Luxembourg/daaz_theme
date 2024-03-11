@@ -160,9 +160,9 @@ $(document).ready(function () {
                         beginAtZero: true,
                         ticks: {
                             format: {
-                                style: 'percent'
+                                style: 'percent',
+                                minimumFractionDigits:0
                             },
-                            precision: 0,
                         },
                         grid: {
                             drawOnChartArea: false
