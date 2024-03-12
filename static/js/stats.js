@@ -51,7 +51,7 @@ $(document).ready(function () {
             click: function(date, count) {
                 let clickDate = new Date(date);
                 let pastYear = clickDate.setFullYear(clickDate.getFullYear() - 1 );
-                drawMatrixActivity(usersBydate, pastYear);
+                drawMatrixActivityChart(usersBydate, pastYear);
             }
         });
     }
