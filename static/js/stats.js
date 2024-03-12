@@ -4,24 +4,36 @@ $(document).ready(function () {
     let scoreBylevel = JSON.parse(document.getElementById('avg_score_by_level').textContent);
     let progressBylevel = JSON.parse(document.getElementById('avg_progress_by_level').textContent);
 
+    let aggregatedUsersBydate = aggregateByYear(usersBydate);
+    let user_dates_values = Object.values(aggregatedUsersBydate);
+    let user_dates= Object.keys(aggregatedUsersBydate);
     let user_levels = usersByLevel.map(user => `Level ${user.level_index}: ${user.level_name}`)
     let user_levels_values = usersByLevel.map(user => user.count)
     let score_levels_values = scoreBylevel.map(user => user.avg_score/100)
     let progress_levels_values = progressBylevel.map(user => user.avg_progress/100)
 
+    const users_by_year_ctx = document.getElementById('users_by_year_chart');
     const users_by_level_ctx = document.getElementById('users_by_level_chart');
     const users_and_score_by_level_ctx = document.getElementById('users_and_score_by_level_chart');
     const users_and_progress_by_level_ctx = document.getElementById('users_and_progress_by_level_chart');
 
 
-    drawMatrixActivityChart(usersBydate)
+    drawMatrixActivityChart(usersBydate);
+
+    drawSingleAxisChart(
+        'bar',
+        users_by_year_ctx,
+        user_dates,
+        user_dates_values,
+        'time'
+    );
 
     drawSingleAxisChart(
         'bar',
         users_by_level_ctx,
         user_levels,
         user_levels_values
-    )
+    );
 
     drawMultipleAxisChart(
         'bar',
@@ -31,7 +43,7 @@ $(document).ready(function () {
         user_levels_values,
         'Average score',
         score_levels_values
-    )
+    );
 
     drawMultipleAxisChart(
         'bar',
@@ -41,7 +53,7 @@ $(document).ready(function () {
         user_levels_values,
         'Average progress',
         progress_levels_values
-    )
+    );
 
     function drawMatrixActivityChart(data, start_date) {
         $('#surveys-activity').github_graph({
@@ -75,6 +87,16 @@ $(document).ready(function () {
                 scales: {
                     x: {
                         type: typeXaxis,
+                        time: {
+                            unit: 'year',
+                            displayFormats: {
+                              year: 'yyyy'
+                            },
+                            tooltipFormat: 'yyyy'
+                          },
+                          ticks: {
+                            source: 'labels'
+                          }
                     },
                     y: {
                         beginAtZero: true,
@@ -142,5 +164,17 @@ $(document).ready(function () {
                 },
             },
         });
+    }
+
+    function aggregateByYear(data){
+        return data.reduce((acc, entry) => {
+            const year = new Date(entry.timestamp);
+            const yearKey = year.getFullYear();
+            if (!acc[yearKey]) {
+              acc[yearKey] = 0;
+            }
+            acc[yearKey] += entry.count;
+            return acc;
+          }, {});
     }
 });
