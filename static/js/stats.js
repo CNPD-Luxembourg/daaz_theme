@@ -1,11 +1,10 @@
-
 $(document).ready(function () {
     let usersBydate = JSON.parse(document.getElementById('users_by_date').textContent);
     let usersByLevel = JSON.parse(document.getElementById('users_by_level').textContent);
     let scoreBylevel = JSON.parse(document.getElementById('avg_score_by_level').textContent);
     let progressBylevel = JSON.parse(document.getElementById('avg_progress_by_level').textContent);
 
-    let user_levels = usersByLevel.map(user => user.current_level__index)
+    let user_levels = usersByLevel.map(user => `Level ${user.level_index}: ${user.level_name}`)
     let user_levels_values = usersByLevel.map(user => user.count)
     let score_levels_values = scoreBylevel.map(user => user.avg_score/100)
     let progress_levels_values = progressBylevel.map(user => user.avg_progress/100)
@@ -15,11 +14,7 @@ $(document).ready(function () {
     const users_and_progress_by_level_ctx = document.getElementById('users_and_progress_by_level_chart');
 
 
-    $('#surveys-activity').github_graph({
-        data: usersBydate ,
-        texts: ['user','users'],
-      });
-
+    drawMatrixActivityChart(usersBydate)
 
     drawSingleAxisChart(
         'bar',
@@ -37,6 +32,7 @@ $(document).ready(function () {
         'Average score',
         score_levels_values
     )
+
     drawMultipleAxisChart(
         'bar',
         users_and_progress_by_level_ctx,
@@ -46,6 +42,19 @@ $(document).ready(function () {
         'Average progress',
         progress_levels_values
     )
+
+    function drawMatrixActivityChart(data, start_date) {
+        $('#surveys-activity').github_graph({
+            start_date: start_date ? start_date : null,
+            data: usersBydate ,
+            texts: ['user','users'],
+            click: function(date, count) {
+                let clickDate = new Date(date);
+                let pastYear = clickDate.setFullYear(clickDate.getFullYear() - 1 );
+                drawMatrixActivity(usersBydate, pastYear);
+            }
+        });
+    }
 
     function drawSingleAxisChart(chartType,ctx,labels, values, typeXaxis = 'category') {
         new Chart(ctx, {
