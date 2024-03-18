@@ -9,20 +9,23 @@ $(document).ready(function () {
 
     let aggregatedUsersBydate = aggregateByYear(usersBydate);
     let successRateByQuestion = aggregateByLevel(questionsSuccessRate);
+    let successRateByCategory = aggregateByCategory(questionsSuccessRate);
     let questionLabels = getQuestionLabels(successRateByQuestion, nbQuestions);
-    let user_dates_values = Object.values(aggregatedUsersBydate);
+    let categoryLabels = Object.keys(successRateByCategory);
+    let categories_values = Object.values(successRateByCategory);
+    let user_dates_values = Object.keys(aggregatedUsersBydate);
     let user_dates = Object.keys(aggregatedUsersBydate);
-    let user_levels = usersByLevel.map(user => `Level ${user.level_index}: ${user.level_name}`)
-    let user_levels_values = usersByLevel.map(user => user.count)
-    let score_levels_values = scoreBylevel.map(user => user.avg_score / 100)
-    let progress_levels_values = progressBylevel.map(user => user.avg_progress / 100)
+    let user_levels = usersByLevel.map(user => `Level ${user.level_index}: ${user.level_name}`);
+    let user_levels_values = usersByLevel.map(user => user.count);
+    let score_levels_values = scoreBylevel.map(user => user.avg_score / 100);
+    let progress_levels_values = progressBylevel.map(user => user.avg_progress / 100);
 
     const users_by_year_ctx = document.getElementById('users_by_year_chart');
     const users_by_level_ctx = document.getElementById('users_by_level_chart');
     const users_and_score_by_level_ctx = document.getElementById('users_and_score_by_level_chart');
     const users_and_progress_by_level_ctx = document.getElementById('users_and_progress_by_level_chart');
     const success_rate_by_question_ctx = document.getElementById('success_rate_by_question_chart');
-
+    const success_rate_by_knowledge_ctx = document.getElementById('success_rate_by_knowledge_chart');
 
     drawMatrixActivityChart(usersBydate);
 
@@ -62,6 +65,12 @@ $(document).ready(function () {
     );
 
     drawRadarChart(success_rate_by_question_ctx, questionLabels, successRateByQuestion, nbQuestions);
+
+    drawLinePercentChart(
+        success_rate_by_knowledge_ctx,
+        categoryLabels,
+        categories_values
+    );
 
     function drawMatrixActivityChart(data, start_date) {
         $('#surveys-activity').github_graph({
@@ -217,6 +226,40 @@ $(document).ready(function () {
         radarChart.update();
     }
 
+
+    function drawLinePercentChart(ctx, labels, values) {
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    data: values,
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                responsive: true,
+                scales: {
+                    y: {
+                        suggestedMax: 1,
+                        suggestedMin: 0,
+                        beginAtZero: true,
+                        ticks: {
+                            format: {
+                                style: 'percent',
+                                minimumFractionDigits: 0
+                            },
+                        },
+                    }
+                },
+            },
+        });
+    }
+
     function aggregateByYear(data) {
         return data.reduce((acc, entry) => {
             const year = new Date(entry.timestamp);
@@ -241,6 +284,23 @@ $(document).ready(function () {
             return acc;
         }, {});
     }
+
+    function aggregateByCategory(data) {
+        return data.reduce((acc, obj) => {
+            const key = obj.categories;
+            if (key) {
+                let success_rate = obj.success_rate/100
+                if (!acc[key]) {
+                    acc[key] = success_rate;
+                }else{
+                    acc[key]=(acc[key] + success_rate)/2;
+                }
+            }
+            return acc;
+        }, {});
+    }
+
+
 
     function getQuestionLabels(data, nbElements) {
         if (Object.keys(data).length === 0) return [];
