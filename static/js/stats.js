@@ -3,8 +3,11 @@ $(document).ready(function () {
     let usersByLevel = JSON.parse(document.getElementById('users_by_level').textContent);
     let scoreBylevel = JSON.parse(document.getElementById('avg_score_by_level').textContent);
     let progressBylevel = JSON.parse(document.getElementById('avg_progress_by_level').textContent);
+    let questionsSuccessRate = JSON.parse(document.getElementById('questions_success_rate').textContent);
 
     let aggregatedUsersBydate = aggregateByYear(usersBydate);
+    let successRateByQuestion = aggregateByLevel(questionsSuccessRate);
+    let questionLabels = getQuestionLabels(successRateByQuestion);
     let user_dates_values = Object.values(aggregatedUsersBydate);
     let user_dates= Object.keys(aggregatedUsersBydate);
     let user_levels = usersByLevel.map(user => `Level ${user.level_index}: ${user.level_name}`)
@@ -16,6 +19,7 @@ $(document).ready(function () {
     const users_by_level_ctx = document.getElementById('users_by_level_chart');
     const users_and_score_by_level_ctx = document.getElementById('users_and_score_by_level_chart');
     const users_and_progress_by_level_ctx = document.getElementById('users_and_progress_by_level_chart');
+    const success_rate_by_question_ctx = document.getElementById('success_rate_by_question_chart');
 
 
     drawMatrixActivityChart(usersBydate);
@@ -54,6 +58,8 @@ $(document).ready(function () {
         'Average progress',
         progress_levels_values
     );
+
+    drawRadarChart(success_rate_by_question_ctx, questionLabels, successRateByQuestion);
 
     function drawMatrixActivityChart(data, start_date) {
         $('#surveys-activity').github_graph({
@@ -109,7 +115,7 @@ $(document).ready(function () {
         });
     }
 
-    function drawMultipleAxisChart(chartType, ctx, labels,  legendYaxis, valuesYaxis, legendY2axis, valuesY2axis, typeXaxis = 'category') {
+    function drawMultipleAxisChart(chartType, ctx, labels, legendYaxis, valuesYaxis, legendY2axis, valuesY2axis, typeXaxis = 'category') {
         new Chart(ctx, {
             type: chartType,
             data: {
@@ -166,6 +172,28 @@ $(document).ready(function () {
         });
     }
 
+    function drawRadarChart(ctx, labels, values) {
+        let radarChart = new Chart(ctx, {
+            type: "radar",
+            data: {
+                labels: labels,
+                datasets: []
+            },
+            options: {
+                responsive: true,
+            },
+        });
+        for (let key in values) {
+            radarChart.data.datasets.push(
+                {
+                    label: key,
+                    data: values[key].map(value => value.success_rate)
+                }
+            )
+        }
+        radarChart.update();
+    }
+
     function aggregateByYear(data){
         return data.reduce((acc, entry) => {
             const year = new Date(entry.timestamp);
@@ -176,5 +204,29 @@ $(document).ready(function () {
             acc[yearKey] += entry.count;
             return acc;
           }, {});
+    }
+
+    function aggregateByLevel(data){
+        return data.reduce((acc, obj) => {
+            obj.success_rate = obj.success_rate === null ? 0.0 : obj.success_rate * 100;
+            const key = obj.level__translations__name;
+            if (!acc[key]) {
+                acc[key] = [];
+            }
+            acc[key].push(obj);
+            return acc;
+        }, {});
+    }
+
+    function getQuestionLabels(data){
+        if (Object.keys(data).length === 0) return [];
+        let labels = [];
+        data[Object.keys(data)[0]].forEach((value,index) => {
+            console.log(index);
+            if (index <= 21) {
+                labels.push(`Q${index + 1}`);
+            }
+        })
+        return labels
     }
 });

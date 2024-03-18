@@ -12,7 +12,8 @@
 {{ users_by_date|json_script:"users_by_date" }}
 {{ users_by_level|json_script:"users_by_level" }}
 {{ avg_score_by_level|json_script:"avg_score_by_level" }}
-{{ avg_progress_by_level|json_script:"avg_progress_by_level"}}
+{{ avg_progress_by_level|json_script:"avg_progress_by_level" }}
+{{ questions_success_rate|json_script:"questions_success_rate" }}
 <script src='{% static "js/github_contribution.js" %}'></script>
 <link href="{% static 'css/github_contribution_graph.css' %}" media="all" rel="stylesheet">
 <script src='{% static "js/stats.js" %}'></script>
@@ -72,6 +73,16 @@
         <div class="col-12 col-md-6 my-2">
             <h4 class="text-primary text-center">{% translate "Users and Progress by level" %}</h4>
             <canvas id="users_and_progress_by_level_chart"></canvas>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6 my-2">
+            <h4 class="text-primary text-center">{% translate "Success rate by question" %}</h4>
+            <canvas id="success_rate_by_question_chart"></canvas>
+        </div>
+        <div class="col-12 col-md-6 my-2">
+            <h4 class="text-primary text-center">{% translate "Success rate by knowledge" %}</h4>
+            <canvas id="success_rate_by_knowledge_chart"></canvas>
         </div>
     </div>
 </div>
