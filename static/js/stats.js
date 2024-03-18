@@ -139,8 +139,6 @@ $(document).ready(function () {
                 ]
             },
             options: {
-                plugins: {
-                },
                 responsive: true,
                 scales: {
                     x: {
@@ -182,6 +180,15 @@ $(document).ready(function () {
                 datasets: []
             },
             options: {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `${context.raw.toFixed()}%`;
+                            }
+                        }
+                    }
+                },
                 responsive: true,
                 scales: {
                     r: {
@@ -189,7 +196,7 @@ $(document).ready(function () {
                         max: 100,
                         beginAtZero: true,
                         ticks: {
-                            callback: function(value, index, ticks) {
+                            callback: function(value) {
                                 return `${value}%`;
                             }
                         }
