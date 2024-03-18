@@ -223,7 +223,6 @@ $(document).ready(function () {
         if (Object.keys(data).length === 0) return [];
         let labels = [];
         data[Object.keys(data)[0]].forEach((value,index) => {
-            console.log(index);
             if (index < 20) {
                 labels.push(`Q${index + 1}`);
             }
