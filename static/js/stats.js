@@ -183,6 +183,18 @@ $(document).ready(function () {
             },
             options: {
                 responsive: true,
+                scales: {
+                    r: {
+                        min: 0,
+                        max: 100,
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value, index, ticks) {
+                                return `${value}%`;
+                            }
+                        }
+                    },
+                },
             },
         });
         for (let key in values) {
