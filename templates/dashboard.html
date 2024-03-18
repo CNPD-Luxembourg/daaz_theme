@@ -20,13 +20,18 @@
   <div class="col-sm-6 col-12 h-sm-100 w-sm-55 w-xl-45">
     <div class="border shadow-sm rounded-4 px-4 py-3 h-sm-49">
       <h4>{% translate "My lessons" %}</h4>
-      <div class="row h-sm-45">
+      <div class="pb-2 pb-sm-1 text-center">
+        <a class="start-button btn btn-primary btn-sm text-white fw-bold text-decoration-none w-100" href="{% url 'course' %}">
+            {% if progress.0 > 0 %}
+            {% translate "Continue your journey here!" %}
+            {% else %}
+            {% translate "Start your journey here!" %}
+            {% endif %}
+
+        </a>
+      </div>
+      <div class="row h-sm-40">
         <div class="d-sm-none d-inline">
-          <div class="pt-1 pb-3 text-center">
-            <a class="btn btn-primary btn-sm text-white w-100 text-decoration-none" href="{% url 'course' %}">
-                {% translate "Resume" %}
-            </a>
-          </div>
           <div id="carouselDashboard" class="carousel slide" data-bs-ride="carousel" data-bs-intervale="false">
             <div class="carousel-inner">
               {% for score in scores %}

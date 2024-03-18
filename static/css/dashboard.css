@@ -5,6 +5,12 @@
     display: none;
 }
 
+.start-button:hover {
+    border-color: var(--bs-primary);
+    background-color: var(--bs-white);
+    color: var(--bs-primary) !important;
+}
+
 @media (max-width: 576px) {
     .progress {
         height: 10px;
