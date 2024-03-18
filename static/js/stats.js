@@ -213,6 +213,7 @@ $(document).ready(function () {
             if (!acc[key]) {
                 acc[key] = [];
             }
+
             acc[key].push(obj);
             return acc;
         }, {});
@@ -223,7 +224,7 @@ $(document).ready(function () {
         let labels = [];
         data[Object.keys(data)[0]].forEach((value,index) => {
             console.log(index);
-            if (index <= 21) {
+            if (index < 20) {
                 labels.push(`Q${index + 1}`);
             }
         })
