@@ -189,7 +189,9 @@ $(document).ready(function () {
             radarChart.data.datasets.push(
                 {
                     label: key,
-                    data: values[key].map((value, index) => { if (index < nbElements) return value.success_rate })
+                    data: values[key]
+                        .map(value => value.success_rate)
+                        .slice(0, nbElements)
                 }
             )
         }
@@ -224,11 +226,9 @@ $(document).ready(function () {
     function getQuestionLabels(data, nbElements) {
         if (Object.keys(data).length === 0) return [];
         let labels = [];
-        data[Object.keys(data)[0]].forEach((value, index) => {
-            if (index < nbElements) {
-                labels.push(`Q${index + 1}`);
-            }
+        data[Object.keys(data)[0]].map((value, index) => {
+            labels.push(`Q${index + 1}`);
         })
-        return labels
+        return labels.slice(0, nbElements)
     }
 });
