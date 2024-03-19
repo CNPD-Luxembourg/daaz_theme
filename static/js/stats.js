@@ -6,6 +6,7 @@ $(document).ready(function () {
     let scoreBylevel = JSON.parse(document.getElementById('avg_score_by_level').textContent);
     let progressBylevel = JSON.parse(document.getElementById('avg_progress_by_level').textContent);
     let questionsSuccessRate = JSON.parse(document.getElementById('questions_success_rate').textContent);
+    let users_current_position = JSON.parse(document.getElementById('users_current_position').textContent);
 
     let aggregatedUsersBydate = aggregateByYear(usersBydate);
     let successRateByQuestion = aggregateByLevel(questionsSuccessRate);
@@ -19,6 +20,8 @@ $(document).ready(function () {
     let user_levels_values = usersByLevel.map(user => user.count);
     let score_levels_values = scoreBylevel.map(user => user.avg_score / 100);
     let progress_levels_values = progressBylevel.map(user => user.avg_progress / 100);
+    let user_current_position = users_current_position.map(position => `Level ${position.current_level__index} Slide ${position.current_position}`);
+    let user_current_position_values = users_current_position.map(position => position.total_users);
 
     const users_by_year_ctx = document.getElementById('users_by_year_chart');
     const users_by_level_ctx = document.getElementById('users_by_level_chart');
@@ -26,6 +29,8 @@ $(document).ready(function () {
     const users_and_progress_by_level_ctx = document.getElementById('users_and_progress_by_level_chart');
     const success_rate_by_question_ctx = document.getElementById('success_rate_by_question_chart');
     const success_rate_by_knowledge_ctx = document.getElementById('success_rate_by_knowledge_chart');
+    const users_current_position_ctx = document.getElementById('users_current_position_chart');
+
 
     drawMatrixActivityChart(usersBydate);
 
@@ -71,6 +76,8 @@ $(document).ready(function () {
         categoryLabels,
         categories_values
     );
+
+    drawLinePieChart(users_current_position_ctx,user_current_position, user_current_position_values);
 
     function drawMatrixActivityChart(data, start_date) {
         $('#surveys-activity').github_graph({
@@ -260,6 +267,26 @@ $(document).ready(function () {
         });
     }
 
+    function drawLinePieChart(ctx, labels, values) {
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: labels,
+                datasets: [{
+                    data: values,
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                },
+                responsive: true,
+            },
+        });
+    }
+
     function aggregateByYear(data) {
         return data.reduce((acc, entry) => {
             const year = new Date(entry.timestamp);
@@ -299,8 +326,6 @@ $(document).ready(function () {
             return acc;
         }, {});
     }
-
-
 
     function getQuestionLabels(data, nbElements) {
         if (Object.keys(data).length === 0) return [];
