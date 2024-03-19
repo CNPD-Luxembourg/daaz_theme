@@ -25,7 +25,7 @@
                             class="selected-left-dot d-inline-block bg-primary ps-sm-2 opacity-0 {% if request.path == '/dashboard' %}opacity-100{% endif %}">
                         </div>
                     </span>
-                    <i class="bi-house"></i>
+                    <i class="bi-house" data-toggle="tooltip" data-placement="right" title='{% translate "Home" %}'></i>
                     <span class="ms-1 d-none d-sm-inline ms-sm-1">{% translate "Home" %}</span>
                     <div class="left-bar d-none bg-primary opacity-50"></div>
                 </a>
@@ -38,7 +38,7 @@
                             class="selected-left-dot d-inline-block bg-primary ps-sm-2 opacity-0 {% if request.path == '/resources' %}opacity-100{% endif %}">
                         </div>
                     </span>
-                    <i class="bi-folder"></i>
+                    <i class="bi-folder" data-toggle="tooltip" data-placement="right" title='{% translate "Ressources" %}'></i>
                     <span class="ms-1 d-none d-sm-inline ms-sm-1">{% translate "Ressources" %}</span>
                 </a>
             </li>
@@ -50,7 +50,7 @@
                             class="selected-left-dot d-inline-block bg-primary opacity-0 {% if request.path == '/helping_center' %}opacity-50{% endif %}">
                         </div>
                     </span>
-                    <i class="bi-gear"></i>
+                    <i class="bi-gear" data-toggle="tooltip" data-placement="right" title="{% translate 'Help Center'%} "></i>
                     <span class="ms-1 d-none d-sm-inline ms-sm-1">{% translate "Help Center" %}</span>
                 </a>
             </li>
@@ -60,7 +60,7 @@
                     <span class="left-dot">
                         <div class="selected-left-dot d-inline-block opacity-0"></div>
                     </span>
-                    <i class="bi-box-arrow-right"></i>
+                    <i class="bi-box-arrow-right" data-toggle="tooltip" data-placement="right" title='{% translate "Log out" %}'></i>
                     <span class="ms-1 d-none d-sm-inline ms-sm-1">{% translate "Log out" %}</span>
                 </a>
             </li>
