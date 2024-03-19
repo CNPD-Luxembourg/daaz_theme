@@ -9,13 +9,15 @@ $(document).ready(function () {
     let questionsSuccessRate = JSON.parse(document.getElementById('questions_success_rate').textContent);
     let users_current_position = JSON.parse(document.getElementById('users_current_position').textContent);
 
+
+
     let aggregatedUsersBydate = aggregateByYear(usersBydate);
     let successRateByQuestion = aggregateByLevel(questionsSuccessRate);
     let successRateByCategory = aggregateByCategory(questionsSuccessRate);
     let questionLabels = getQuestionLabels(successRateByQuestion, nbQuestions);
     let categoryLabels = Object.keys(successRateByCategory);
     let categories_values = Object.values(successRateByCategory);
-    let user_dates_values = Object.keys(aggregatedUsersBydate);
+    let user_dates_values = Object.values(aggregatedUsersBydate);
     let user_dates = Object.keys(aggregatedUsersBydate);
     let user_levels = usersByLevel.map(user => `Level ${user.level_index}: ${user.level_name}`);
     let user_levels_values = usersByLevel.map(user => user.count);
@@ -31,7 +33,6 @@ $(document).ready(function () {
     const success_rate_by_question_ctx = document.getElementById('success_rate_by_question_chart');
     const success_rate_by_knowledge_ctx = document.getElementById('success_rate_by_knowledge_chart');
     const users_current_position_ctx = document.getElementById('users_current_position_chart');
-
 
     drawMatrixActivityChart(usersBydate);
 
