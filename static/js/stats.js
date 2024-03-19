@@ -1,5 +1,6 @@
 $(document).ready(function () {
     const nbQuestions = 20;
+    const topOfCurrentPosition = 10;
 
     let usersBydate = JSON.parse(document.getElementById('users_by_date').textContent);
     let usersByLevel = JSON.parse(document.getElementById('users_by_level').textContent);
@@ -20,8 +21,8 @@ $(document).ready(function () {
     let user_levels_values = usersByLevel.map(user => user.count);
     let score_levels_values = scoreBylevel.map(user => user.avg_score / 100);
     let progress_levels_values = progressBylevel.map(user => user.avg_progress / 100);
-    let user_current_position = users_current_position.map(position => `Level ${position.current_level__index} Slide ${position.current_position}`);
-    let user_current_position_values = users_current_position.map(position => position.total_users);
+    let user_current_position = users_current_position.map(position => `Level ${position.current_level__index} Slide ${position.current_position}`).slice(0,topOfCurrentPosition);
+    let user_current_position_values = users_current_position.map(position => position.total_users).slice(0,topOfCurrentPosition);
 
     const users_by_year_ctx = document.getElementById('users_by_year_chart');
     const users_by_level_ctx = document.getElementById('users_by_level_chart');
