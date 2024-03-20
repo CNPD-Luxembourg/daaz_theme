@@ -9,12 +9,12 @@ $(document).ready(function () {
     let questionsSuccessRate = JSON.parse(document.getElementById('questions_success_rate').textContent);
     let users_current_position = JSON.parse(document.getElementById('users_current_position').textContent);
 
-
-
     let aggregatedUsersBydate = aggregateByYear(usersBydate);
-    let successRateByQuestion = aggregateByLevel(questionsSuccessRate);
-    let successRateByCategory = aggregateByCategory(questionsSuccessRate);
+    let successRateByQuestion = aggregateQuestionsByLevel(questionsSuccessRate);
     let questionLabels = getQuestionLabels(successRateByQuestion, nbQuestions);
+    let successRateByQuiz = aggregateQuizByLevel(questionsSuccessRate);
+    let quizLabels = getQuestionLabels(successRateByQuiz)
+    let successRateByCategory = aggregateByCategory(questionsSuccessRate);
     let categoryLabels = Object.keys(successRateByCategory);
     let categories_values = Object.values(successRateByCategory);
     let user_dates_values = Object.values(aggregatedUsersBydate);
@@ -23,16 +23,18 @@ $(document).ready(function () {
     let user_levels_values = usersByLevel.map(user => user.count);
     let score_levels_values = scoreBylevel.map(user => user.avg_score / 100);
     let progress_levels_values = progressBylevel.map(user => user.avg_progress / 100);
-    let user_current_position = users_current_position.map(position => `Level ${position.current_level__index} Slide ${position.current_position}`).slice(0,topOfCurrentPosition);
-    let user_current_position_values = users_current_position.map(position => position.total_users).slice(0,topOfCurrentPosition);
+    let user_current_position = users_current_position.map(position => `Level ${position.current_level__index} Slide ${position.current_position}`).slice(0, topOfCurrentPosition);
+    let user_current_position_values = users_current_position.map(position => position.total_users).slice(0, topOfCurrentPosition);
 
     const users_by_year_ctx = document.getElementById('users_by_year_chart');
     const users_by_level_ctx = document.getElementById('users_by_level_chart');
     const users_and_score_by_level_ctx = document.getElementById('users_and_score_by_level_chart');
     const users_and_progress_by_level_ctx = document.getElementById('users_and_progress_by_level_chart');
     const success_rate_by_question_ctx = document.getElementById('success_rate_by_question_chart');
+    const success_rate_by_quiz_ctx = document.getElementById('success_rate_by_quiz_chart');
     const success_rate_by_knowledge_ctx = document.getElementById('success_rate_by_knowledge_chart');
     const users_current_position_ctx = document.getElementById('users_current_position_chart');
+
 
     drawMatrixActivityChart(usersBydate);
 
@@ -71,7 +73,18 @@ $(document).ready(function () {
         progress_levels_values
     );
 
-    drawRadarChart(success_rate_by_question_ctx, questionLabels, successRateByQuestion, nbQuestions);
+    drawRadarChart(
+        success_rate_by_question_ctx,
+        questionLabels,
+        successRateByQuestion,
+        nbQuestions
+    );
+
+    drawRadarChart(
+        success_rate_by_quiz_ctx,
+        quizLabels,
+        successRateByQuiz,
+    );
 
     drawLinePercentChart(
         success_rate_by_knowledge_ctx,
@@ -79,7 +92,11 @@ $(document).ready(function () {
         categories_values
     );
 
-    drawLinePieChart(users_current_position_ctx,user_current_position, user_current_position_values);
+    drawLinePieChart(
+        users_current_position_ctx,
+        user_current_position,
+        user_current_position_values
+    );
 
     function drawMatrixActivityChart(data, start_date) {
         $('#surveys-activity').github_graph({
@@ -191,17 +208,28 @@ $(document).ready(function () {
     }
 
     function drawRadarChart(ctx, labels, values, nbElements) {
-        let radarChart = new Chart(ctx, {
+        let datasets = [];
+        for (let key in values) {
+            let data = values[key].map(value => value.success_rate)
+            datasets.push(
+                {
+                    label: key,
+                    data: nbElements ? data.slice(0, nbElements) : data,
+                }
+            )
+        }
+
+        new Chart(ctx, {
             type: "radar",
             data: {
                 labels: labels,
-                datasets: []
+                datasets: datasets
             },
             options: {
                 plugins: {
                     tooltip: {
                         callbacks: {
-                            label: function(context) {
+                            label: function (context) {
                                 return `${context.raw.toFixed()}%`;
                             }
                         }
@@ -214,7 +242,7 @@ $(document).ready(function () {
                         max: 100,
                         beginAtZero: true,
                         ticks: {
-                            callback: function(value) {
+                            callback: function (value) {
                                 return `${value}%`;
                             }
                         }
@@ -222,19 +250,7 @@ $(document).ready(function () {
                 },
             },
         });
-        for (let key in values) {
-            radarChart.data.datasets.push(
-                {
-                    label: key,
-                    data: values[key]
-                        .map(value => value.success_rate)
-                        .slice(0, nbElements)
-                }
-            )
-        }
-        radarChart.update();
     }
-
 
     function drawLinePercentChart(ctx, labels, values) {
         new Chart(ctx, {
@@ -301,15 +317,32 @@ $(document).ready(function () {
         }, {});
     }
 
-    function aggregateByLevel(data) {
-        return data.reduce((acc, obj) => {
+    function aggregateQuestionsByLevel(data) {
+        return data
+            .filter(question => !question.quiz_id)
+            .reduce((acc, obj) => {
+                obj.success_rate = obj.success_rate === null ? 0.0 : obj.success_rate * 100;
+                const key = obj.level__translations__name;
+                if (!acc[key]) {
+                    acc[key] = [];
+                }
+                acc[key].push(obj);
+                return acc;
+            }, {});
+    }
+
+    function aggregateQuizByLevel(data) {
+        let filterData = data.filter(question => question.quiz_id)
+        const quizIds = filterData.map(item => item.quiz_id);
+        const uniqueQuizIds = [...new Set(quizIds)];
+
+        return filterData.reduce((acc, obj) => {
             obj.success_rate = obj.success_rate === null ? 0.0 : obj.success_rate * 100;
             const key = obj.level__translations__name;
-            if (!acc[key]) {
-                acc[key] = [];
-            }
-
-            acc[key].push(obj);
+            const quizIndex = uniqueQuizIds.indexOf(obj.quiz_id);
+            acc[key] = acc[key] || [];
+            acc[key][quizIndex] = acc[key][quizIndex] || obj;
+            acc[key][quizIndex].success_rate = (acc[key][quizIndex].success_rate + obj.success_rate) / 2;
             return acc;
         }, {});
     }
@@ -318,11 +351,11 @@ $(document).ready(function () {
         return data.reduce((acc, obj) => {
             const key = obj.categories;
             if (key) {
-                let success_rate = obj.success_rate/100
+                let success_rate = obj.success_rate / 100
                 if (!acc[key]) {
                     acc[key] = success_rate;
-                }else{
-                    acc[key]=(acc[key] + success_rate)/2;
+                } else {
+                    acc[key] = (acc[key] + success_rate) / 2;
                 }
             }
             return acc;
@@ -335,6 +368,6 @@ $(document).ready(function () {
         data[Object.keys(data)[0]].map((value, index) => {
             labels.push(`Q${index + 1}`);
         })
-        return labels.slice(0, nbElements)
+        return nbElements ? labels.slice(0, nbElements) : labels
     }
 });
