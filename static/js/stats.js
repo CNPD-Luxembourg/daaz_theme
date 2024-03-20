@@ -337,7 +337,7 @@ $(document).ready(function () {
         const uniqueQuizIds = [...new Set(quizIds)];
 
         return filterData.reduce((acc, obj) => {
-            obj.success_rate = obj.success_rate === null ? 0.0 : obj.success_rate * 100;
+            obj.success_rate = obj.success_rate * 100;
             const key = obj.level__translations__name;
             const quizIndex = uniqueQuizIds.indexOf(obj.quiz_id);
             acc[key] = acc[key] || [];
@@ -349,7 +349,13 @@ $(document).ready(function () {
 
     function aggregateByCategory(data) {
         return data.reduce((acc, obj) => {
+            if (!obj.categories && obj.quiz_id) {
+                let quizCategories = data.find(c => c.quiz_id=== obj.quiz_id && c.categories).categories;
+                obj.categories = quizCategories
+            }
+
             const key = obj.categories;
+
             if (key) {
                 let success_rate = obj.success_rate / 100
                 if (!acc[key]) {
