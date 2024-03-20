@@ -1,8 +1,20 @@
 .sticker_results {
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: none;
+}
+
+.start-button:hover {
+    border-color: var(--bs-primary);
+    background-color: var(--bs-primary) !important;
+    color: var(--bs-white) !important;
+}
+
+@media (max-width: 576px) {
+    .progress {
+        height: 10px;
+    }
 }
 
 @media (max-width: 1600px) {
@@ -13,5 +25,38 @@
 @media (min-width: 1600px) {
     .small {
         font-size: 1em;
+    }
+    .module-title {
+        font-size: 1.5rem ;
+    }
+}
+
+@media (min-height: 576px) and (max-height: 700px) and (min-width: 576px) and (max-width: 1400px) {
+    .small {
+        font-size: 0.55em !important;
+    }
+    .small.fs-6 {
+        font-size: 0.7em !important;
+    }
+    .module-title {
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-height: 576px) and (min-width: 576px) and (max-width: 1400px) {
+    .small {
+        font-size: 0.45em !important;
+    }
+    .small.fs-6 {
+        font-size: 0.5em !important;
+    }
+    .module-title {
+        font-size: 0.6rem !important;
+    }
+}
+
+@media (max-height: 500px) and (max-width: 992px){
+    .level-image {
+        display: none !important;
     }
 }

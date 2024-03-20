@@ -18,20 +18,7 @@
             <img src="{% static 'media/images/logos/logo.svg' %}" alt="Logo Large" class="d-none d-sm-inline w-100 px-4 my-4" height="40px">
         </div>
 
-        <div class="w-100 px-3 pb-4 d-none d-sm-block {% if request.path == '/course' %}d-none{% endif %}">
-            <a class="start-button btn btn-primary align-self-center text-white fw-bold d-none d-sm-inline-block w-100 py-3" href="{% url 'course' %}" role="button">
-                <img src="{% static 'media/images/character-1.svg' %}" alt="Logo Large" class="mx-auto">
-                {% translate "Start your journey here!" %}
-            </a>
-        </div>
-
         <ul class="nav nav-pills w-100 flex-sm-column flex-row mb-sm-auto mb-0 align-items-center align-items-sm-start flex-grow-1 flex-sm-grow-0 text-sm-start text-center">
-            <li class="w-100 px-2 px-sm-0 d-none flex-grow-1 order-sm-0 order-2">
-                <a href="{% url 'course' %}"
-                    class="nav-link p-0 align-middle {% if request.path == '/course' %}text-primary fw-bold{% endif %}">
-                    <i class="bi-book"></i>
-                </a>
-            </li>
             <li class="w-100 px-2 px-sm-0 py-sm-1 flex-grow-1 flex-sm-grow-0 order-sm-1 order-0">
                 <a href="{% url 'dashboard' %}"
                     class="nav-link p-0 align-middle {% if request.path == '/dashboard' %}text-primary fw-bold{% endif %}">
@@ -40,7 +27,7 @@
                             class="selected-left-dot d-inline-block bg-primary ps-sm-2 opacity-0 {% if request.path == '/dashboard' %}opacity-100{% endif %}">
                         </div>
                     </span>
-                    <i class="bi-house"></i>
+                    <i class="bi-house" data-toggle="tooltip" data-placement="right" title='{% translate "Home" %}'></i>
                     <span class="ms-1 d-none d-sm-inline ms-sm-1">{% translate "Home" %}</span>
                     <div class="left-bar d-none bg-primary opacity-50"></div>
                 </a>
@@ -53,7 +40,7 @@
                             class="selected-left-dot d-inline-block bg-primary ps-sm-2 opacity-0 {% if request.path == '/resources' %}opacity-100{% endif %}">
                         </div>
                     </span>
-                    <i class="bi-folder"></i>
+                    <i class="bi-folder" data-toggle="tooltip" data-placement="right" title='{% translate "Ressources" %}'></i>
                     <span class="ms-1 d-none d-sm-inline ms-sm-1">{% translate "Ressources" %}</span>
                 </a>
             </li>
@@ -65,7 +52,7 @@
                             class="selected-left-dot d-inline-block bg-primary opacity-0 {% if request.path == '/helping_center' %}opacity-50{% endif %}">
                         </div>
                     </span>
-                    <i class="bi-gear"></i>
+                    <i class="bi-gear" data-toggle="tooltip" data-placement="right" title="{% translate 'Help Center'%} "></i>
                     <span class="ms-1 d-none d-sm-inline ms-sm-1">{% translate "Help Center" %}</span>
                 </a>
             </li>
@@ -75,7 +62,7 @@
                     <span class="left-dot">
                         <div class="selected-left-dot d-inline-block opacity-0"></div>
                     </span>
-                    <i class="bi-box-arrow-right"></i>
+                    <i class="bi-box-arrow-right" data-toggle="tooltip" data-placement="right" title='{% translate "Log out" %}'></i>
                     <span class="ms-1 d-none d-sm-inline ms-sm-1">{% translate "Log out" %}</span>
                 </a>
             </li>

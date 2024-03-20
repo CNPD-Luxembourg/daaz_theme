@@ -4,13 +4,12 @@
 {% block bootstrap5_extra_head %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/course_progress_bar.css' %}">
 {% endblock %}
-
-<div class="progress bg-white border border-primary border-2">
-    <div class="progress-bar" role="progressbar" style="width: {{ progress }}%" aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100">
+{% localize off %}
+    <div class="progress bg-white border border-primary border-2">
+        <div class="progress-bar" role="progressbar" style="width: {{ progress }}%" aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100">
+        </div>
     </div>
-</div>
-{% for quiz_id, quiz in quizzes.items %}
-    {% localize off %}
+    {% for quiz_id, quiz in quizzes.items %}
         {% if not forloop.last %}
         <div class="key align-items-center" style="left:calc({{quiz.percentage}}% - 22px)">
             {% if progress > quiz.percentage %}
@@ -20,8 +19,9 @@
             {% endif %}
         </div>
         {% endif %}
-    {% endlocalize %}
-{% endfor %}
+
+    {% endfor %}
+{% endlocalize %}
 
 <div class="trophy">
     {% if progress >= 100 %}
