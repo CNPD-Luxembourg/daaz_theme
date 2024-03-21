@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('.start').click(function() {
         var $popup = $("#start");
-        var popup_url = 'start/';
+        var popup_url = '/start/';
 
         $(".modal-dialog", $popup).load(popup_url, function () {
             $popup.modal("show");
@@ -12,7 +12,6 @@ $(document).ready(function () {
     $('.navbar .nav-link').click(function() {
       if ($(this).attr('href') !== undefined) {
           divId = $(this).attr('href').split("#").pop();
-          console.log($("#" + divId))
           $('html, body').animate({
             scrollTop: $("#" + divId).offset().top - 110
           }, 100);
@@ -22,7 +21,6 @@ $(document).ready(function () {
     $('.navbar .navbar-brand').click(function() {
       if ($(this).attr('href') !== undefined) {
           divId = $(this).attr('href').split("#").pop();
-          console.log($("#" + divId))
           $('html, body').animate({
             scrollTop: $("#" + divId).offset().top - 110
           }, 100);

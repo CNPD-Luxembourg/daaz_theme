@@ -108,14 +108,18 @@ $(document).ready(function () {
         $carouselControls.addClass('control_blocked')
         let carouselLength = $carouselCourse.find(".carousel-item").length
         const $updateProgressBar = $('<div class="course-progress-bar align-items-center pe-3"></div>');
-        $updateProgressBar.load(updateProgressBar_url + direction, function () {
-            $progressBarContainer.find('.course-progress-bar').remove()
-            $progressBarContainer.append($updateProgressBar)
-            if (direction === "next" && event.to === carouselLength - 1
-                || direction === "prev" && event.to === 0) {
-                loadSlide(direction)
+        $updateProgressBar.load(updateProgressBar_url + direction, function (response,status, xhr) {
+            if (status === 'error') {
+                window.location.href = "/";
             } else {
-                $carouselControls.removeClass('control_blocked')
+                $progressBarContainer.find('.course-progress-bar').remove()
+                $progressBarContainer.append($updateProgressBar)
+                if (direction === "next" && event.to === carouselLength - 1
+                    || direction === "prev" && event.to === 0) {
+                    loadSlide(direction)
+                } else {
+                    $carouselControls.removeClass('control_blocked')
+                }
             }
         });
     }
