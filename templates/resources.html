@@ -15,8 +15,10 @@
     <div id="resources" class="row row-cols-1 row-cols-sm-3 h-100 text-center pb-sm-0 pb-5">
         {% for level in levels %}
         <div class="{{ col_classes }}">
-            <img src="{% static 'media/images/resources/resources_level'%}{{level.index}}.svg" alt="Resources Image"
+            <a type="button" class="go-to-download" data-level-id="{{ level.id }}">
+                <img src="{% static 'media/images/resources/resources_level'%}{{level.index}}.svg" alt="Resources Image"
                 class="{{ img_classes }}" />
+            </a>
             <a type="button" class="{{ button_classes }}" data-level-id="{{ level.id }}">
                 <i class="{{ icon_classes }}"></i>
                 {% translate "Level" %} {{ level.index }} : {{ level.name }}
