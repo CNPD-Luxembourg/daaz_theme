@@ -54,7 +54,15 @@
                     <span class="ms-1 d-none d-sm-inline ms-sm-1">{% translate "Help Center" %}</span>
                 </a>
             </li>
-            <li class="w-100 px-2 px-sm-0 py-sm-1 flex-grow-1 flex-sm-grow-0 order-4">
+            <li class="language-selector w-100 ps-3 px-2 px-sm-0 py-sm-1 flex-grow-1 flex-sm-grow-0 order-4">
+                <div id="language_selector_expanded" class="nav-link p-0 align-middle d-none d-sm-inline">
+                    {% include "home/language_selector_sidebar.html" %}
+                </div>
+                <div id="language_selector_minimized" class="nav-link p-0 align-middle d-sm-none d-inline">
+                    {% include "home/language_selector_landing.html" %}
+                </div>
+            </li>
+            <li class="w-100 px-2 px-sm-0 py-sm-1 flex-grow-1 flex-sm-grow-0 order-5">
                 <a class="nav-link p-0 align-middle danger-link" data-bs-toggle="modal" data-bs-target="#finish"
                    role="button">
                     <span class="left-dot">
@@ -65,12 +73,5 @@
                 </a>
             </li>
         </ul>
-        <hr>
-        <div id="language_selector_expanded" class="mb-4 align-items-center align-items-sm-start d-none d-sm-inline">
-            {% include "home/language_selector_sidebar.html" %}
-        </div>
-      <div id="language_selector_minimized" class="mb-4 align-items-center align-items-sm-start d-none">
-            {% include "home/language_selector_landing.html" %}
-        </div>
     </div>
 </nav>
