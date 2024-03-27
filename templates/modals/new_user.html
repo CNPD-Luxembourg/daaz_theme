@@ -15,29 +15,28 @@
     <p id="user_uuid" class="font-monospace text-center text-nowrap">
       {{ request.session.user_uuid }}
     </p>
-
+    <a class="btn border border-primary rounded d-flex align-items-center text-start" role="button"
+      onClick="downloadTextFile()">
+      <i class="bi bi-download text-primary fs-3"></i>
+      <span class="d-inline flex-grow-1 px-3">{% translate "Download the TXT file with your ID" %}</span>
+    </a>
+    <div class="py-2">
+      <a class="btn border border-primary rounded d-flex align-items-center text-start" role="button"
+        onClick="downloadQRcode()">
+        <i class="bi bi-qr-code-scan text-primary fs-3"></i>
+        <span class="d-inline flex-grow-1 px-3">{% translate "Download a QR code" %}</span>
+      </a>
+    </div>
     <a class="btn border border-primary rounded d-flex align-items-center text-start" role="button"
       onClick="copyToClipboard()">
       <i class="bi bi-clipboard-plus text-primary fs-3"></i>
       <span class="d-inline flex-grow-1 px-3">{% translate "Copy your ID into the clipboard" %}</span>
     </a>
-    <div class="py-2">
-      <a class="btn border border-primary rounded d-flex align-items-center text-start" role="button"
-        onClick="downloadTextFile()">
-        <i class="bi bi-download text-primary fs-3"></i>
-        <span class="d-inline flex-grow-1 px-3">{% translate "Download a TXT file with your ID" %}</span>
-      </a>
-    </div>
-    <a class="btn border border-primary rounded d-flex align-items-center text-start" role="button"
-      onClick="downloadQRcode()">
-      <i class="bi bi-qr-code-scan text-primary fs-3"></i>
-      <span class="d-inline flex-grow-1 px-3">{% translate "Download a QR code" %}</span>
-    </a>
     {% include "modals/save_uuid_alert.html" %}
     <div class="text-center">
       <a id="id-management-validation" class="btn btn-lg btn-primary text-white disabled" href="{% url 'dashboard' %}"
         role="button">
-        {% translate "I have my ID and I want to start" %}
+        {% translate "Start" %}
       </a>
     </div>
   </div>

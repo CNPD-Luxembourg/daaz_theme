@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-05 08:49+0000\n"
+"POT-Creation-Date: 2024-03-27 10:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: theme/templates/accessibility.html:7
+#: theme/templates/accessibility.html:7 theme/templates/parts/footer.html:55
 msgid "Accessibility"
 msgstr ""
 
@@ -63,8 +63,10 @@ msgstr ""
 msgid "Maximum term"
 msgstr ""
 
-#: theme/templates/course.html:20 theme/templates/landing.html:278
-#: theme/templates/resources.html:22
+#: theme/templates/course.html:20 theme/templates/dashboard.html:58
+#: theme/templates/dashboard.html:94 theme/templates/dashboard.html:98
+#: theme/templates/dashboard.html:164 theme/templates/dashboard.html:168
+#: theme/templates/landing.html:278 theme/templates/resources.html:24
 msgid "Level"
 msgstr ""
 
@@ -95,78 +97,82 @@ msgstr ""
 msgid "Explication"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:136
+#: theme/templates/course_new_slide.html:134
 msgid "Congratulations"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:140
+#: theme/templates/course_new_slide.html:138
 #, python-format
 msgid "You have finished level %(index_level)s !"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:143
+#: theme/templates/course_new_slide.html:141
 msgid "Your score is "
 msgstr ""
 
-#: theme/templates/course_new_slide.html:147
+#: theme/templates/course_new_slide.html:145
 #, python-format
 msgid "You have unlocked story number %(next_level)s !"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:157
+#: theme/templates/course_new_slide.html:155
 msgid "Download the summary sheet"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:164
+#: theme/templates/course_new_slide.html:162
 msgid "Download the level report"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:170
+#: theme/templates/course_new_slide.html:165
+msgid "Downloading"
+msgstr ""
+
+#: theme/templates/course_new_slide.html:173
 msgid "Access the next level"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:192
+#: theme/templates/course_new_slide.html:195
 msgid "Download the fact sheet"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:195
+#: theme/templates/course_new_slide.html:198
 msgid "Download my template"
 msgstr ""
 
-#: theme/templates/dashboard.html:22
+#: theme/templates/dashboard.html:23
 msgid "My lessons"
 msgstr ""
 
-#: theme/templates/dashboard.html:27
-msgid "Resume"
+#: theme/templates/dashboard.html:27 theme/templates/dashboard.html:41
+msgid "Continue your journey here!"
 msgstr ""
 
-#: theme/templates/dashboard.html:41 theme/templates/dashboard.html:79
-#: theme/templates/dashboard.html:143 theme/templates/dashboard.html:147
-msgid "Module"
+#: theme/templates/dashboard.html:29 theme/templates/dashboard.html:43
+msgid "Start your journey here!"
 msgstr ""
 
-#: theme/templates/dashboard.html:53
+#: theme/templates/dashboard.html:70
 msgid "of progression"
 msgstr ""
 
-#: theme/templates/dashboard.html:59 theme/templates/dashboard.html:155
+#: theme/templates/dashboard.html:76 theme/templates/dashboard.html:176
 msgid "successful"
 msgstr ""
 
-#: theme/templates/dashboard.html:89
+#: theme/templates/dashboard.html:109
 msgid "Progression"
 msgstr ""
 
-#: theme/templates/dashboard.html:111
+#: theme/templates/dashboard.html:132
 msgid "Knowledge"
 msgstr ""
 
-#: theme/templates/dashboard.html:135
+#: theme/templates/dashboard.html:156
 msgid "Results"
 msgstr ""
 
-#: theme/templates/helping_center.html:7 theme/templates/parts/sidebar.html:67
+#: theme/templates/helping_center.html:7 theme/templates/parts/sidebar.html:53
+#: theme/templates/parts/sidebar.html:54
 msgid "Help Center"
 msgstr ""
 
@@ -351,17 +357,16 @@ msgid "Do you have your ID for your next visit?"
 msgstr ""
 
 #: theme/templates/modals/finish.html:24
-#: theme/templates/modals/new_user.html:22
+#: theme/templates/modals/new_user.html:33
 msgid "Copy your ID into the clipboard"
 msgstr ""
 
 #: theme/templates/modals/finish.html:30
-#: theme/templates/modals/new_user.html:28
 msgid "Download a TXT file with your ID"
 msgstr ""
 
 #: theme/templates/modals/finish.html:36
-#: theme/templates/modals/new_user.html:34
+#: theme/templates/modals/new_user.html:27
 msgid "Download a QR code"
 msgstr ""
 
@@ -377,15 +382,20 @@ msgstr ""
 msgid "Your ID:"
 msgstr ""
 
-#: theme/templates/modals/new_user.html:40
-msgid "I have my ID and I want to start"
+#: theme/templates/modals/new_user.html:21
+msgid "Download the TXT file with your ID"
 msgstr ""
 
-#: theme/templates/modals/resources_download.html:34
+#: theme/templates/modals/new_user.html:39 theme/templates/modals/start.html:22
+#: theme/templates/parts/header.html:37
+msgid "Start"
+msgstr ""
+
+#: theme/templates/modals/resources_download.html:36
 msgid "Sorry, no ressources available"
 msgstr ""
 
-#: theme/templates/modals/resources_download.html:39
+#: theme/templates/modals/resources_download.html:41
 msgid "Download"
 msgstr ""
 
@@ -398,7 +408,7 @@ msgid "Your identifier is unique and can't be recovered."
 msgstr ""
 
 #: theme/templates/modals/save_uuid_alert.html:9
-msgid "Please ensure to save a copy on your personnel hard drive."
+msgid "Please ensure to save a copy."
 msgstr ""
 
 #: theme/templates/modals/start.html:12
@@ -409,16 +419,12 @@ msgstr ""
 msgid "I will start a new journey"
 msgstr ""
 
-#: theme/templates/modals/start.html:22 theme/templates/parts/header.html:37
-msgid "Start"
-msgstr ""
-
 #: theme/templates/modals/start.html:26
 msgid "or"
 msgstr ""
 
 #: theme/templates/modals/start.html:30
-msgid "I will continue a previous journey using my unique identifier:"
+msgid "I resume a journey using my unique identifier:"
 msgstr ""
 
 #: theme/templates/modals/start.html:36
@@ -441,11 +447,7 @@ msgstr ""
 msgid "Cookies"
 msgstr ""
 
-#: theme/templates/parts/footer.html:55
-msgid "Accessibility statement"
-msgstr ""
-
-#: theme/templates/parts/header.html:31 theme/templates/parts/sidebar.html:42
+#: theme/templates/parts/header.html:31
 msgid "Home"
 msgstr ""
 
@@ -453,15 +455,15 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: theme/templates/parts/sidebar.html:22
-msgid "Start your journey here!"
+#: theme/templates/parts/sidebar.html:28 theme/templates/parts/sidebar.html:29
+msgid "Dashboard"
 msgstr ""
 
-#: theme/templates/parts/sidebar.html:55
+#: theme/templates/parts/sidebar.html:41 theme/templates/parts/sidebar.html:42
 msgid "Ressources"
 msgstr ""
 
-#: theme/templates/parts/sidebar.html:77
+#: theme/templates/parts/sidebar.html:71 theme/templates/parts/sidebar.html:72
 msgid "Log out"
 msgstr ""
 
@@ -514,20 +516,76 @@ msgstr ""
 msgid "My ressources"
 msgstr ""
 
-#: theme/templates/resources.html:33
+#: theme/templates/resources.html:35
 msgid "Summary sheets"
 msgstr ""
 
-#: theme/templates/resources.html:35
+#: theme/templates/resources.html:37
 msgid "Fact sheets"
 msgstr ""
 
-#: theme/templates/resources.html:37
+#: theme/templates/resources.html:39
 msgid "Templates"
 msgstr ""
 
-#: theme/templates/resources.html:46
+#: theme/templates/resources.html:48
 msgid "All files"
+msgstr ""
+
+#: theme/templates/stats.html:27
+msgid "Key figures"
+msgstr ""
+
+#: theme/templates/stats.html:30
+msgid "Total users"
+msgstr ""
+
+#: theme/templates/stats.html:34
+msgid "Global Average score"
+msgstr ""
+
+#: theme/templates/stats.html:43
+msgid "Activity over the past year"
+msgstr ""
+
+#: theme/templates/stats.html:50
+msgid "Less"
+msgstr ""
+
+#: theme/templates/stats.html:56
+msgid "More"
+msgstr ""
+
+#: theme/templates/stats.html:61
+msgid "Users by year"
+msgstr ""
+
+#: theme/templates/stats.html:65
+msgid "Users by level"
+msgstr ""
+
+#: theme/templates/stats.html:71
+msgid "Users and Score by level"
+msgstr ""
+
+#: theme/templates/stats.html:75
+msgid "Users and Progress by level"
+msgstr ""
+
+#: theme/templates/stats.html:81
+msgid "Success rate by question"
+msgstr ""
+
+#: theme/templates/stats.html:85
+msgid "Success rate by quiz"
+msgstr ""
+
+#: theme/templates/stats.html:91
+msgid "Success rate by knowledge"
+msgstr ""
+
+#: theme/templates/stats.html:95
+msgid "User's current position [Top 10]"
 msgstr ""
 
 #: theme/templates/tos.html:7
