@@ -6,6 +6,7 @@ $(document).ready(function () {
     const $carouselControls = $(".carousel-control");
     const $prevControlButton = $(".carousel-control-prev");
     const $nextControlButton = $(".carousel-control-next");
+    var $downloadReportButton = $("#download-report-button");
     var $questionCard = $carouselContainer.find(".active #question-card");
     var $checkboxesAndRadios = $questionCard.find(".front .form-check-input");
     var $answersCheckboxesAndRadios = $questionCard.find(".back .form-check-input");
@@ -104,11 +105,28 @@ $(document).ready(function () {
         if ($checkboxesAndRadios.length > 0) processCheckboxSelection();
     }
 
+    function delegateDownloadReport() {
+        $downloadReportButton = $("#download-report-button");
+        if ($downloadReportButton.length) {
+            $downloadReportButton.on("click", function () {
+                $("#download-label").hide();
+                $("#download-spinner").show();
+                $downloadReportButton.addClass('disabled')
+
+                setTimeout(function () {
+                    $("#download-spinner").hide();
+                    $("#download-label").show();
+                    $downloadReportButton.removeClass('disabled')
+                }, 15000);
+            });
+        }
+
+    }
     function update_progress_bar(event, direction) {
         $carouselControls.addClass('control_blocked')
         let carouselLength = $carouselCourse.find(".carousel-item").length
         const $updateProgressBar = $('<div class="course-progress-bar align-items-center pe-3"></div>');
-        $updateProgressBar.load(updateProgressBar_url + direction, function (response,status, xhr) {
+        $updateProgressBar.load(updateProgressBar_url + direction, function (response, status, xhr) {
             if (status === 'error') {
                 window.location.href = "/";
             } else {
@@ -168,7 +186,7 @@ $(document).ready(function () {
                 } else {
                     $(this).addClass('neutral-answer')
                 }
-                    $(this).prop('checked', true);
+                $(this).prop('checked', true);
 
             } else if (this.checked && this.type === 'checkbox') {
                 $(this).addClass('not-checked')
@@ -180,6 +198,7 @@ $(document).ready(function () {
     delegateSummitButtonClick()
     delegateInputClick()
     checkAndFlipQuestionCards()
+    delegateDownloadReport()
 
     if ($carouselContainer.find(".active #question-card").length > 0
         && $carouselContainer.find(".active #question-card").data("flip-model")
@@ -209,6 +228,7 @@ $(document).ready(function () {
                 $nextControlButton.removeClass('control_disabled')
             }
         }
+        delegateDownloadReport()
         update_progress_bar(event, direction)
     })
 });
