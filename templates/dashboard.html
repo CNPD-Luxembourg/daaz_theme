@@ -22,21 +22,21 @@
       <div class="row">
         <h4 class="col-12 col-sm-6">{% translate "My lessons" %}</h4>
         <div class="col-sm-6 text-center d-none d-sm-block">
-          <a class="start-button small bg-light-blue btn btn-primary btn-sm text-primary fw-bold text-decoration-none w-100" href="{% url 'course' %}">
-              {% if progress.0 > 0 %}
-              {% translate "Continue your journey here!" %}
-              {% else %}
-              {% translate "Start your journey here!" %}
-              {% endif %}
+          <a class="start-button small bg-light-red btn btn-danger btn-sm text-danger fw-bold text-decoration-none w-100"
+            href="{% url 'course' %}">
+            {% if progress.0 > 0 %}
+            {% translate "Continue your journey here!" %}
+            {% else %}
+            {% translate "Start your journey here!" %}
+            {% endif %}
           </a>
         </div>
-
       </div>
-
       <div class="row h-sm-40 h-md-45">
         <div class="d-sm-none d-inline">
           <div class="pt-1 pb-3 text-center">
-            <a class="start-button bg-light-blue btn btn-primary btn-sm text-primary fw-bold text-decoration-none w-100" href="{% url 'course' %}">
+            <a class="start-button bg-light-red btn btn-danger btn-sm text-danger fw-bold text-decoration-none w-100"
+              href="{% url 'course' %}">
               {% if progress.0 > 0 %}
               {% translate "Continue your journey here!" %}
               {% else %}
@@ -48,7 +48,8 @@
             <div class="carousel-inner">
               {% for score in scores %}
               <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                <div class="bg-light-blue rounded-3 p-4 h-sm-100">
+                <a role="button" class="btn rounded-3 p-4 h-sm-100 bg-secondary w-100 {% if user.current_level.id >= score.level.id %}bg-light-blue{% endif %}{% if user.current_level.id < score.level.id %}disabled border-0{% endif %}"
+                  href="{% url 'course' %}{% if user.current_level.id < score.level.id %}?level={{score.level.id}}{% endif %}">
                   <div class="row d-flex">
                     <div class="col-6 pe-0 my-auto h-100">
                       <p class="d-flex align-items-center m-0 text-nowrap">
@@ -65,7 +66,8 @@
                   </div>
                   <div class="row pt-3">
                     <div class="col-6">
-                      <canvas class="m-auto" id="progress_sm{{ score.level.index }}" width="100%" height="100%"></canvas>
+                      <canvas class="m-auto" id="progress_sm{{ score.level.index }}" width="100%"
+                        height="100%"></canvas>
                       <p class="small text-nowrap text-center mt-1 mb-2 fw-bold">
                         {% translate "of progression" %}
                       </p>
@@ -77,7 +79,7 @@
                       </p>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
               {% endfor %}
             </div>
@@ -86,7 +88,9 @@
         {% for score in scores %}
         <div class="col-sm-6 col-12 p-0 h-sm-100 d-none d-sm-block">
           <div class="p-2 h-sm-100">
-            <div class="col bg-light-blue rounded-3 p-1 p-lg-2 p-xl-3 h-sm-100">
+            <a role="button"
+              class="btn col rounded-3 p-1 p-lg-2 p-xl-3 h-sm-100 bg-secondary w-100 {% if user.current_level.id >= score.level.id %}bg-light-blue{% endif %}{% if user.current_level.id < score.level.id %}disabled border-0{% endif %}"
+              href="{% url 'course' %}{% if user.current_level.id < score.level.id %}?level={{score.level.id}}{% endif %}">
               <div class="row px-sm-2 h-65">
                 <div class="d-flex col-12 col-lg-6 ps-lg-2 pe-lg-0">
                   <div class="d-none d-lg-none d-sm-inline m-auto text-center">
@@ -99,7 +103,8 @@
                   </div>
                 </div>
                 <div class="col-12 col-lg-6 text-center level-image h-40 h-lg-100">
-                  <img src="{% static 'media/images/course/levels/level-'%}{{score.level.index}}.svg"
+                  <img
+                    src="{% static 'media/images/course/levels/level-'%}{{score.level.index}}{% if user.current_level.id < score.level.id %}-disabled{% endif %}.svg"
                     class="img-fluid h-100" />
                 </div>
               </div>
@@ -121,7 +126,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
         {% endfor %}
@@ -189,11 +194,11 @@
                 {% elif sticker_unlocked == '2' or sticker_unlocked == '3' %}border-primary
                 {% elif sticker_unlocked == '4' %}border-warning
                 {% endif %}">
-                <img src="{% static 'media/images/stickers/medal_blue.svg' %}" class="p-2 img-fluid h-70
+              <img src="{% static 'media/images/stickers/medal_blue.svg' %}" class="p-2 img-fluid h-70
                   {% if sticker_unlocked == '3' %}d-inline
                   {% else %}d-none
                   {% endif %}" />
-                <img src="{% static 'media/images/stickers/medal_gold.svg' %}" class="p-2 img-fluid h-70
+              <img src="{% static 'media/images/stickers/medal_gold.svg' %}" class="p-2 img-fluid h-70
                   {% if sticker_unlocked == '4' %}d-inline
                   {% else %}d-none
                   {% endif %}" />
@@ -205,13 +210,11 @@
                 {% elif sticker_unlocked == '2' or sticker_unlocked == '3' %}border-primary
                 {% elif sticker_unlocked == '4' %}border-warning
                 {% endif %}">
-                <img src="{% static 'media/images/stickers/medal_blue.svg' %}"
-                class="p-2 img-fluid h-50
+              <img src="{% static 'media/images/stickers/medal_blue.svg' %}" class="p-2 img-fluid h-50
                   {% if sticker_unlocked == '3' %}d-inline
                   {% else %}d-none
                   {% endif %}" />
-                <img src="{% static 'media/images/stickers/medal_gold.svg' %}"
-                class="p-2 img-fluid h-50
+              <img src="{% static 'media/images/stickers/medal_gold.svg' %}" class="p-2 img-fluid h-50
                   {% if sticker_unlocked == '4' %}d-inline
                   {% else %}d-none
                   {% endif %}" />
