@@ -12,7 +12,7 @@
 {{ slide.question.media }}
 {% with form=slide.question %}
 <div id="question-card" class="h-100 perspective-flip" value="{{ form.id }}">
-    <div class="front row overflow-auto border rounded border-light border-sm-secondary shadow-sm m-0 h-100">
+    <div class="front row overflow-auto border rounded border-light border-sm-secondary shadow-sm m-0 h-100 w-100">
         <form class="d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-100" method="post" id="question-form">
             <div class="m-auto">
                 {% if form.quiz %}
@@ -42,7 +42,7 @@
             {% endif %}
         </div>
     </div>
-    <div class="back row overflow-auto border rounded border-light border-sm-secondary shadow-sm m-0 h-100">
+    <div class="back row overflow-auto border rounded border-light border-sm-secondary shadow-sm m-0 h-100 w-100">
         <div class="d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-100">
             <div class="m-auto">
                 {% if form.quiz %}
@@ -63,23 +63,6 @@
                             {%if answer_choice.is_correct %}checked{% endif %} disabled>
                         <span>{{ answer_choice }}</span>
                     </label>
-                    {% endfor %}
-                </div>
-                {% endif %}
-                {% if form.type == "LI" %}
-                <div class="d-grid gap-2 ps-3 mb-5">
-                    {% for answer_choice in form.answer.field.queryset %}
-                    <div>
-                        <input
-                            class="form-check-input option-button-radio{% if answer_choice.is_correct %} correct_answer{% endif %}"
-                            type="{{ form.answer.field.widget.input_type }}" value="{{ answer_choice.pk }}"
-                            {%if answer_choice.is_correct %}checked{% endif %} disabled>
-                        <div
-                            class="btn btn-sm border border-primary {% if answer_choice.is_correct %} border-success bg-light-green{% endif %}">
-                            {{ answer_choice }}
-                        </div>
-                    </div>
-
                     {% endfor %}
                 </div>
                 {% endif %}

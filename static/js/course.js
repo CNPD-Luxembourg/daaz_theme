@@ -10,7 +10,6 @@ $(document).ready(function () {
     var $questionCard = $carouselContainer.find(".active #question-card");
     var $checkboxesAndRadios = $questionCard.find(".front .form-check-input");
     var $answersCheckboxesAndRadios = $questionCard.find(".back .form-check-input");
-    var $checkboxesAndRadiosLabels = $questionCard.find(".front .form-check-label")
     var $backSortingFields = $questionCard.find(".back .draggable-item");
     var $submitButton = $questionCard.find("#summitButton");
     const updateProgressBar_url = "update_progress_bar/?direction=";
@@ -117,7 +116,7 @@ $(document).ready(function () {
                     $("#download-spinner").hide();
                     $("#download-label").show();
                     $downloadReportButton.removeClass('disabled')
-                }, 15000);
+                }, 16000);
             });
         }
 
@@ -175,7 +174,7 @@ $(document).ready(function () {
     function checkSingleAndMultipleAnswers() {
         const nbCorrectQuestions = $questionCard.find(".back .form-check-input").not(".neutral-answer").filter(':checked').length;
         $answersCheckboxesAndRadios = $questionCard.find(".back .form-check-input")
-        const checkedValues = $checkboxesAndRadios.filter(':checked').map(function () {
+        let checkedValues = $questionCard.find(".front .form-check-input").filter(':checked').map(function () {
             return this.value;
         }).get();
 
