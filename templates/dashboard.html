@@ -49,7 +49,7 @@
               {% for score in scores %}
               <div class="carousel-item {% if forloop.first %}active{% endif %}">
                 <a role="button" class="btn rounded-3 p-4 h-sm-100 bg-secondary w-100 {% if user.current_level.id >= score.level.id %}bg-light-blue{% endif %}{% if user.current_level.id < score.level.id %}disabled border-0{% endif %}"
-                  href="{% url 'course' %}{% if user.current_level.id < score.level.id %}?level={{score.level.id}}{% endif %}">
+                  href="{% url 'course' %}{% if user.current_level.id > score.level.id %}?level={{score.level.id}}{% endif %}">
                   <div class="row d-flex">
                     <div class="col-6 pe-0 my-auto h-100">
                       <p class="d-flex align-items-center m-0 text-nowrap">
@@ -60,7 +60,8 @@
                       </h5>
                     </div>
                     <div class="col-6 text-center" style="height: 50px;">
-                      <img src="{% static 'media/images/course/levels/level-'%}{{score.level.index}}.svg"
+                      <img
+                        src="{% static 'media/images/course/levels/level-'%}{{score.level.index}}{% if user.current_level.id < score.level.id %}-disabled{% endif %}.svg"
                         class="img-fluid h-100" />
                     </div>
                   </div>
@@ -90,7 +91,7 @@
           <div class="p-2 h-sm-100">
             <a role="button"
               class="btn col rounded-3 p-1 p-lg-2 p-xl-3 h-sm-100 bg-secondary w-100 {% if user.current_level.id >= score.level.id %}bg-light-blue{% endif %}{% if user.current_level.id < score.level.id %}disabled border-0{% endif %}"
-              href="{% url 'course' %}{% if user.current_level.id < score.level.id %}?level={{score.level.id}}{% endif %}">
+              href="{% url 'course' %}{% if user.current_level.id > score.level.id %}?level={{score.level.id}}{% endif %}">
               <div class="row px-sm-2 h-65">
                 <div class="d-flex col-12 col-lg-6 ps-lg-2 pe-lg-0">
                   <div class="d-none d-lg-none d-sm-inline m-auto text-center">
