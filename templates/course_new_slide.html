@@ -17,11 +17,13 @@
             <div class="m-auto">
                 {% if form.quiz %}
                 <h3 class="text-primary">{% translate "Quiz"%} {{ form.quiz_index}}.{{ form.question_quiz_index }}</h3>
+                {% if form.type == "M" %}<p class="small fst-italic lh-lg mb-2">{% translate "Select all the answers that apply, then confirm." %}</p>{% endif %}
                 {% if form.display_quiz_label %}
                 <p><strong><em>{% translate "Script"%}:</em></strong></span> {{ form.quiz.name }}</p>
                 {% endif %}
                 {% else %}
                 <h3 class="text-primary">{% translate "Question"%} {{ form.question_index }}</h3>
+                {% if form.type == "M" %}<p class="small fst-italic lh-lg mb-2">{% translate "Select all the answers that apply, then confirm." %}</p>{% endif %}
                 {% endif %}
                 {% csrf_token %}
                 {% bootstrap_form_errors form %}
