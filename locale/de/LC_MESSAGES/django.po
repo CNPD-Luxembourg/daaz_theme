@@ -4,13 +4,12 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #: theme/templates/accessibility.html:9 theme/templates/legal.html:9
-#: theme/templates/tos.html:9
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-27 10:17+0000\n"
+"POT-Creation-Date: 2024-04-04 08:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: theme/templates/accessibility.html:7 theme/templates/parts/footer.html:55
+#: theme/templates/accessibility.html:7 theme/templates/parts/footer.html:52
 msgid "Accessibility"
 msgstr ""
 
@@ -63,79 +62,84 @@ msgstr ""
 msgid "Maximum term"
 msgstr ""
 
-#: theme/templates/course.html:20 theme/templates/dashboard.html:58
-#: theme/templates/dashboard.html:94 theme/templates/dashboard.html:98
-#: theme/templates/dashboard.html:164 theme/templates/dashboard.html:168
+#: theme/templates/course.html:20 theme/templates/dashboard.html:59
+#: theme/templates/dashboard.html:99 theme/templates/dashboard.html:103
+#: theme/templates/dashboard.html:170 theme/templates/dashboard.html:174
 #: theme/templates/landing.html:278 theme/templates/resources.html:24
 msgid "Level"
 msgstr ""
 
 #: theme/templates/course_new_slide.html:19
-#: theme/templates/course_new_slide.html:49
+#: theme/templates/course_new_slide.html:51
 #: theme/templates/report/questions.html:7
 msgid "Quiz"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:21
-#: theme/templates/course_new_slide.html:51
+#: theme/templates/course_new_slide.html:20
+#: theme/templates/course_new_slide.html:26
+msgid "Select all the answers that apply, then confirm."
+msgstr ""
+
+#: theme/templates/course_new_slide.html:22
+#: theme/templates/course_new_slide.html:53
 #: theme/templates/report/questions.html:9
 msgid "Script"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:24
-#: theme/templates/course_new_slide.html:54
-#: theme/templates/course_new_slide.html:118
+#: theme/templates/course_new_slide.html:25
+#: theme/templates/course_new_slide.html:56
+#: theme/templates/course_new_slide.html:103
 #: theme/templates/report/questions.html:12
 msgid "Question"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:32
+#: theme/templates/course_new_slide.html:34
 msgid "Confirm"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:119
+#: theme/templates/course_new_slide.html:104
 msgid "Explication"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:134
+#: theme/templates/course_new_slide.html:119
 msgid "Congratulations"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:138
+#: theme/templates/course_new_slide.html:123
 #, python-format
 msgid "You have finished level %(index_level)s !"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:141
+#: theme/templates/course_new_slide.html:126
 msgid "Your score is "
 msgstr ""
 
-#: theme/templates/course_new_slide.html:145
+#: theme/templates/course_new_slide.html:130
 #, python-format
 msgid "You have unlocked story number %(next_level)s !"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:155
+#: theme/templates/course_new_slide.html:140
 msgid "Download the summary sheet"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:162
+#: theme/templates/course_new_slide.html:147
 msgid "Download the level report"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:165
+#: theme/templates/course_new_slide.html:150
 msgid "Downloading"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:173
+#: theme/templates/course_new_slide.html:158
 msgid "Access the next level"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:195
+#: theme/templates/course_new_slide.html:180
 msgid "Download the fact sheet"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:198
+#: theme/templates/course_new_slide.html:183
 msgid "Download my template"
 msgstr ""
 
@@ -143,31 +147,31 @@ msgstr ""
 msgid "My lessons"
 msgstr ""
 
-#: theme/templates/dashboard.html:27 theme/templates/dashboard.html:41
+#: theme/templates/dashboard.html:28 theme/templates/dashboard.html:41
 msgid "Continue your journey here!"
 msgstr ""
 
-#: theme/templates/dashboard.html:29 theme/templates/dashboard.html:43
+#: theme/templates/dashboard.html:30 theme/templates/dashboard.html:43
 msgid "Start your journey here!"
 msgstr ""
 
-#: theme/templates/dashboard.html:70
+#: theme/templates/dashboard.html:73
 msgid "of progression"
 msgstr ""
 
-#: theme/templates/dashboard.html:76 theme/templates/dashboard.html:176
+#: theme/templates/dashboard.html:79 theme/templates/dashboard.html:182
 msgid "successful"
 msgstr ""
 
-#: theme/templates/dashboard.html:109
+#: theme/templates/dashboard.html:115
 msgid "Progression"
 msgstr ""
 
-#: theme/templates/dashboard.html:132
+#: theme/templates/dashboard.html:138
 msgid "Knowledge"
 msgstr ""
 
-#: theme/templates/dashboard.html:156
+#: theme/templates/dashboard.html:162
 msgid "Results"
 msgstr ""
 
@@ -356,21 +360,7 @@ msgstr ""
 msgid "Do you have your ID for your next visit?"
 msgstr ""
 
-#: theme/templates/modals/finish.html:24
-#: theme/templates/modals/new_user.html:33
-msgid "Copy your ID into the clipboard"
-msgstr ""
-
-#: theme/templates/modals/finish.html:30
-msgid "Download a TXT file with your ID"
-msgstr ""
-
-#: theme/templates/modals/finish.html:36
-#: theme/templates/modals/new_user.html:27
-msgid "Download a QR code"
-msgstr ""
-
-#: theme/templates/modals/finish.html:42
+#: theme/templates/modals/finish.html:23
 msgid "I have my ID and I will be back"
 msgstr ""
 
@@ -382,11 +372,7 @@ msgstr ""
 msgid "Your ID:"
 msgstr ""
 
-#: theme/templates/modals/new_user.html:21
-msgid "Download the TXT file with your ID"
-msgstr ""
-
-#: theme/templates/modals/new_user.html:39 theme/templates/modals/start.html:22
+#: theme/templates/modals/new_user.html:20 theme/templates/modals/start.html:22
 #: theme/templates/parts/header.html:37
 msgid "Start"
 msgstr ""
@@ -401,6 +387,18 @@ msgstr ""
 
 #: theme/templates/modals/resources_download_base.html:12
 msgid "Select all"
+msgstr ""
+
+#: theme/templates/modals/save_options.html:8
+msgid "Download the TXT file with your ID"
+msgstr ""
+
+#: theme/templates/modals/save_options.html:14
+msgid "Download a QR code"
+msgstr ""
+
+#: theme/templates/modals/save_options.html:20
+msgid "Copy your ID into the clipboard"
 msgstr ""
 
 #: theme/templates/modals/save_uuid_alert.html:8
@@ -436,14 +434,10 @@ msgid "Legal notice"
 msgstr ""
 
 #: theme/templates/parts/footer.html:43
-msgid "General terms of use"
-msgstr ""
-
-#: theme/templates/parts/footer.html:46
 msgid "Privacy notice"
 msgstr ""
 
-#: theme/templates/parts/footer.html:49
+#: theme/templates/parts/footer.html:46
 msgid "Cookies"
 msgstr ""
 
@@ -586,8 +580,4 @@ msgstr ""
 
 #: theme/templates/stats.html:95
 msgid "User's current position [Top 10]"
-msgstr ""
-
-#: theme/templates/tos.html:7
-msgid "Terms of service"
 msgstr ""

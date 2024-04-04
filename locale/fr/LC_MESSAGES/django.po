@@ -1,12 +1,11 @@
 # This file was generated from messages.xlsx
 #: theme/templates/accessibility.html:9 theme/templates/legal.html:9
-#: theme/templates/tos.html:9
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-27 10:17+0000\n"
-"PO-Revision-Date: 2024-03-27 13:09+0100\n"
+"POT-Creation-Date: 2024-04-04 08:05+0000\n"
+"PO-Revision-Date: 2024-04-04 10:10+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -16,7 +15,7 @@ msgstr ""
 "Generated-By: xls-to-po 1.0\n"
 "X-Generator: Poedit 3.4.2\n"
 
-#: theme/templates/accessibility.html:7 theme/templates/parts/footer.html:55
+#: theme/templates/accessibility.html:7 theme/templates/parts/footer.html:52
 msgid "Accessibility"
 msgstr "Accessibilité"
 
@@ -67,79 +66,84 @@ msgstr "Content"
 msgid "Maximum term"
 msgstr "Durée maximum"
 
-#: theme/templates/course.html:20 theme/templates/dashboard.html:58
-#: theme/templates/dashboard.html:94 theme/templates/dashboard.html:98
-#: theme/templates/dashboard.html:164 theme/templates/dashboard.html:168
+#: theme/templates/course.html:20 theme/templates/dashboard.html:59
+#: theme/templates/dashboard.html:99 theme/templates/dashboard.html:103
+#: theme/templates/dashboard.html:170 theme/templates/dashboard.html:174
 #: theme/templates/landing.html:278 theme/templates/resources.html:24
 msgid "Level"
 msgstr "Niveau"
 
 #: theme/templates/course_new_slide.html:19
-#: theme/templates/course_new_slide.html:49
+#: theme/templates/course_new_slide.html:51
 #: theme/templates/report/questions.html:7
 msgid "Quiz"
 msgstr "Quiz"
 
-#: theme/templates/course_new_slide.html:21
-#: theme/templates/course_new_slide.html:51
+#: theme/templates/course_new_slide.html:20
+#: theme/templates/course_new_slide.html:26
+msgid "Select all the answers that apply, then confirm."
+msgstr "Choisissez toutes les réponses qui s'appliquent puis valider."
+
+#: theme/templates/course_new_slide.html:22
+#: theme/templates/course_new_slide.html:53
 #: theme/templates/report/questions.html:9
 msgid "Script"
 msgstr "Scénario"
 
-#: theme/templates/course_new_slide.html:24
-#: theme/templates/course_new_slide.html:54
-#: theme/templates/course_new_slide.html:118
+#: theme/templates/course_new_slide.html:25
+#: theme/templates/course_new_slide.html:56
+#: theme/templates/course_new_slide.html:103
 #: theme/templates/report/questions.html:12
 msgid "Question"
 msgstr "Question"
 
-#: theme/templates/course_new_slide.html:32
+#: theme/templates/course_new_slide.html:34
 msgid "Confirm"
 msgstr "Valider"
 
-#: theme/templates/course_new_slide.html:119
+#: theme/templates/course_new_slide.html:104
 msgid "Explication"
 msgstr "Explication"
 
-#: theme/templates/course_new_slide.html:134
+#: theme/templates/course_new_slide.html:119
 msgid "Congratulations"
 msgstr "Félicitations"
 
-#: theme/templates/course_new_slide.html:138
+#: theme/templates/course_new_slide.html:123
 #, python-format
 msgid "You have finished level %(index_level)s !"
 msgstr "Vous avez terminé le niveau %(index_level)s !"
 
-#: theme/templates/course_new_slide.html:141
+#: theme/templates/course_new_slide.html:126
 msgid "Your score is "
 msgstr "Votre score est de "
 
-#: theme/templates/course_new_slide.html:145
+#: theme/templates/course_new_slide.html:130
 #, python-format
 msgid "You have unlocked story number %(next_level)s !"
 msgstr "Vous avez débloqué l’histoire numéro %(next_level)s !"
 
-#: theme/templates/course_new_slide.html:155
+#: theme/templates/course_new_slide.html:140
 msgid "Download the summary sheet"
 msgstr "Télécharger la fiche récapitulative"
 
-#: theme/templates/course_new_slide.html:162
+#: theme/templates/course_new_slide.html:147
 msgid "Download the level report"
 msgstr "Télécharger le rapport de niveau"
 
-#: theme/templates/course_new_slide.html:165
+#: theme/templates/course_new_slide.html:150
 msgid "Downloading"
 msgstr "Téléchargement"
 
-#: theme/templates/course_new_slide.html:173
+#: theme/templates/course_new_slide.html:158
 msgid "Access the next level"
 msgstr "Accéder au niveau suivant"
 
-#: theme/templates/course_new_slide.html:195
+#: theme/templates/course_new_slide.html:180
 msgid "Download the fact sheet"
 msgstr "Télécharger la fiche pratique"
 
-#: theme/templates/course_new_slide.html:198
+#: theme/templates/course_new_slide.html:183
 msgid "Download my template"
 msgstr "Télécharger mon template"
 
@@ -147,31 +151,31 @@ msgstr "Télécharger mon template"
 msgid "My lessons"
 msgstr "Mes cours"
 
-#: theme/templates/dashboard.html:27 theme/templates/dashboard.html:41
+#: theme/templates/dashboard.html:28 theme/templates/dashboard.html:41
 msgid "Continue your journey here!"
 msgstr "Poursuivez votre aventure ici !"
 
-#: theme/templates/dashboard.html:29 theme/templates/dashboard.html:43
+#: theme/templates/dashboard.html:30 theme/templates/dashboard.html:43
 msgid "Start your journey here!"
 msgstr "Commencer l'aventure ici!"
 
-#: theme/templates/dashboard.html:70
+#: theme/templates/dashboard.html:73
 msgid "of progression"
 msgstr "de progression"
 
-#: theme/templates/dashboard.html:76 theme/templates/dashboard.html:176
+#: theme/templates/dashboard.html:79 theme/templates/dashboard.html:182
 msgid "successful"
 msgstr "de réussite"
 
-#: theme/templates/dashboard.html:109
+#: theme/templates/dashboard.html:115
 msgid "Progression"
 msgstr "Progression"
 
-#: theme/templates/dashboard.html:132
+#: theme/templates/dashboard.html:138
 msgid "Knowledge"
 msgstr "Connaissances"
 
-#: theme/templates/dashboard.html:156
+#: theme/templates/dashboard.html:162
 msgid "Results"
 msgstr "Résultats"
 
@@ -369,21 +373,7 @@ msgstr "A bientôt !"
 msgid "Do you have your ID for your next visit?"
 msgstr "Avez-vous votre ID pour votre prochaine visite?"
 
-#: theme/templates/modals/finish.html:24
-#: theme/templates/modals/new_user.html:33
-msgid "Copy your ID into the clipboard"
-msgstr "Copier l’ID dans le presse-papier"
-
-#: theme/templates/modals/finish.html:30
-msgid "Download a TXT file with your ID"
-msgstr "Télécharger un fichier TXT avec votre ID"
-
-#: theme/templates/modals/finish.html:36
-#: theme/templates/modals/new_user.html:27
-msgid "Download a QR code"
-msgstr "Télécharger le QR code"
-
-#: theme/templates/modals/finish.html:42
+#: theme/templates/modals/finish.html:23
 msgid "I have my ID and I will be back"
 msgstr "J’ai mon ID et je reviendrai"
 
@@ -395,11 +385,7 @@ msgstr "Nouveau Parcours"
 msgid "Your ID:"
 msgstr "Voici votre ID:"
 
-#: theme/templates/modals/new_user.html:21
-msgid "Download the TXT file with your ID"
-msgstr "Télécharger le fichier TXT avec votre ID"
-
-#: theme/templates/modals/new_user.html:39 theme/templates/modals/start.html:22
+#: theme/templates/modals/new_user.html:20 theme/templates/modals/start.html:22
 #: theme/templates/parts/header.html:37
 msgid "Start"
 msgstr "Commencer"
@@ -415,6 +401,18 @@ msgstr "Télécharger"
 #: theme/templates/modals/resources_download_base.html:12
 msgid "Select all"
 msgstr "Tout sélectionner"
+
+#: theme/templates/modals/save_options.html:8
+msgid "Download the TXT file with your ID"
+msgstr "Télécharger le fichier TXT avec votre ID"
+
+#: theme/templates/modals/save_options.html:14
+msgid "Download a QR code"
+msgstr "Télécharger le QR code"
+
+#: theme/templates/modals/save_options.html:20
+msgid "Copy your ID into the clipboard"
+msgstr "Copier l’ID dans le presse-papier"
 
 #: theme/templates/modals/save_uuid_alert.html:8
 msgid "Your identifier is unique and can't be recovered."
@@ -449,14 +447,10 @@ msgid "Legal notice"
 msgstr "Mentions légales"
 
 #: theme/templates/parts/footer.html:43
-msgid "General terms of use"
-msgstr "Conditions générales d'utilisation"
-
-#: theme/templates/parts/footer.html:46
 msgid "Privacy notice"
 msgstr "Politique de confidentialité"
 
-#: theme/templates/parts/footer.html:49
+#: theme/templates/parts/footer.html:46
 msgid "Cookies"
 msgstr "Gestion des cookies"
 
@@ -513,8 +507,8 @@ msgstr ""
 "d'assurer l'analyse des réponses données et le bon fonctionnement technique. "
 "<br><br> Pour toute question concernant les traitements de données à "
 "caractère personnel effectués par la CNPD, vous pouvez contacter le délégué "
-"à la protection des données (DPO) de la CNPD : <a href=\"mailto:dpo@cnpd.lu"
-"\">dpo@cnpd.lu</a>"
+"à la protection des données (DPO) de la CNPD : <a href=\"mailto:dpo@cnpd."
+"lu\">dpo@cnpd.lu</a>"
 
 #: theme/templates/report/cover.html:6 theme/templates/report/template.html:9
 msgid "Level report"
@@ -562,60 +556,56 @@ msgstr "Tous les fichiers"
 
 #: theme/templates/stats.html:27
 msgid "Key figures"
-msgstr ""
+msgstr "Chiffres clés"
 
 #: theme/templates/stats.html:30
 msgid "Total users"
-msgstr ""
+msgstr "Total des utilisateurs"
 
 #: theme/templates/stats.html:34
 msgid "Global Average score"
-msgstr ""
+msgstr "Score moyen global"
 
 #: theme/templates/stats.html:43
 msgid "Activity over the past year"
-msgstr ""
+msgstr "Activité au cours de la dernière année"
 
 #: theme/templates/stats.html:50
 msgid "Less"
-msgstr ""
+msgstr "Moins"
 
 #: theme/templates/stats.html:56
 msgid "More"
-msgstr ""
+msgstr "Plus"
 
 #: theme/templates/stats.html:61
 msgid "Users by year"
-msgstr ""
+msgstr "Utilisateurs par année"
 
 #: theme/templates/stats.html:65
 msgid "Users by level"
-msgstr ""
+msgstr "Utilisateurs par niveau"
 
 #: theme/templates/stats.html:71
 msgid "Users and Score by level"
-msgstr ""
+msgstr "Utilisateurs et score par niveau"
 
 #: theme/templates/stats.html:75
 msgid "Users and Progress by level"
-msgstr ""
+msgstr "Utilisateurs et progrès par niveau"
 
 #: theme/templates/stats.html:81
 msgid "Success rate by question"
-msgstr ""
+msgstr "Taux de réussite par question"
 
 #: theme/templates/stats.html:85
 msgid "Success rate by quiz"
-msgstr ""
+msgstr "Taux de réussite par quiz"
 
 #: theme/templates/stats.html:91
 msgid "Success rate by knowledge"
-msgstr ""
+msgstr "Taux de réussite par connaissance"
 
 #: theme/templates/stats.html:95
 msgid "User's current position [Top 10]"
-msgstr ""
-
-#: theme/templates/tos.html:7
-msgid "Terms of service"
-msgstr "Conditions d'utilisation"
+msgstr "Position actuelle de l'utilisateur [Top 10]"
