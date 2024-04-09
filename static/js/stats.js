@@ -4,10 +4,10 @@ $(document).ready(function () {
 
     let usersBydate = JSON.parse(document.getElementById('users_by_date').textContent);
     let usersByLevel = JSON.parse(document.getElementById('users_by_level').textContent);
-    let scoreBylevel = JSON.parse(document.getElementById('avg_score_by_level').textContent);
-    let progressBylevel = JSON.parse(document.getElementById('avg_progress_by_level').textContent);
+    let scoreAndProgressBylevel = JSON.parse(document.getElementById('avg_score_and_progress_by_level').textContent);
     let questionsSuccessRate = JSON.parse(document.getElementById('questions_success_rate').textContent);
     let users_current_position = JSON.parse(document.getElementById('users_current_position').textContent);
+
 
     let aggregatedUsersBydate = aggregateByYear(usersBydate);
     let successRateByQuestion = aggregateQuestionsByLevel(questionsSuccessRate);
@@ -21,8 +21,10 @@ $(document).ready(function () {
     let user_dates = Object.keys(aggregatedUsersBydate);
     let user_levels = usersByLevel.map(user => `Level ${user.level_index}: ${user.level_name}`);
     let user_levels_values = usersByLevel.map(user => user.count);
-    let score_levels_values = scoreBylevel.map(user => user.avg_score / 100);
-    let progress_levels_values = progressBylevel.map(user => user.avg_progress / 100);
+    let score_levels = scoreAndProgressBylevel.map(user => `Level ${user.level_index}: ${user.level_name}`);
+    let score_user_values = scoreAndProgressBylevel.map(user => user.count);
+    let score_levels_values = scoreAndProgressBylevel.map(user => user.avg_score / 100);
+    let progress_levels_values = scoreAndProgressBylevel.map(user => user.avg_progress / 100);
     let user_current_position = users_current_position.map(position => `Level ${position.current_level__index} Slide ${position.current_position}`).slice(0, topOfCurrentPosition);
     let user_current_position_values = users_current_position.map(position => position.total_users).slice(0, topOfCurrentPosition);
 
@@ -56,9 +58,9 @@ $(document).ready(function () {
     drawMultipleAxisChart(
         'bar',
         users_and_score_by_level_ctx,
-        user_levels,
+        score_levels,
         'Users',
-        user_levels_values,
+        score_user_values,
         'Average score',
         score_levels_values
     );
@@ -66,9 +68,9 @@ $(document).ready(function () {
     drawMultipleAxisChart(
         'bar',
         users_and_progress_by_level_ctx,
-        user_levels,
+        score_levels,
         'Users',
-        user_levels_values,
+        score_user_values,
         'Average progress',
         progress_levels_values
     );

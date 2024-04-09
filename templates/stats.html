@@ -11,8 +11,7 @@
 {% block bootstrap5_extra_script %}
 {{ users_by_date|json_script:"users_by_date" }}
 {{ users_by_level|json_script:"users_by_level" }}
-{{ avg_score_by_level|json_script:"avg_score_by_level" }}
-{{ avg_progress_by_level|json_script:"avg_progress_by_level" }}
+{{ avg_score_and_progress_by_level|json_script:"avg_score_and_progress_by_level" }}
 {{ questions_success_rate|json_script:"questions_success_rate" }}
 {{ users_current_position|json_script:"users_current_position" }}
 <script src='{% static "js/github_contribution.js" %}'></script>
