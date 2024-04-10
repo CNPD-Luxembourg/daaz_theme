@@ -8,8 +8,8 @@ $(document).ready(function () {
     let questionsSuccessRate = JSON.parse(document.getElementById('questions_success_rate').textContent);
     let users_current_position = JSON.parse(document.getElementById('users_current_position').textContent);
 
-
-    let aggregatedUsersBydate = aggregateByYear(usersBydate);
+    let aggregatedUsersStartedBydate = aggregateByYear(usersBydate.filter(user => !user.is_unstarted));
+    let aggregatedUsersUnStartedBydate = aggregateByYear(usersBydate.filter(user => user.is_unstarted));
     let successRateByQuestion = aggregateQuestionsByLevel(questionsSuccessRate);
     let questionLabels = getQuestionLabels(successRateByQuestion, nbQuestions);
     let successRateByQuiz = aggregateQuizByLevel(questionsSuccessRate);
@@ -17,8 +17,8 @@ $(document).ready(function () {
     let successRateByCategory = aggregateByCategory(questionsSuccessRate);
     let categoryLabels = Object.keys(successRateByCategory);
     let categories_values = Object.values(successRateByCategory);
-    let user_dates_values = Object.values(aggregatedUsersBydate);
-    let user_dates = Object.keys(aggregatedUsersBydate);
+    let user_dates_values = [{label:'started', data: Object.values(aggregatedUsersStartedBydate)},{label:'unstarted', data: Object.values(aggregatedUsersUnStartedBydate)}];
+    let user_dates = Object.keys(aggregatedUsersStartedBydate);
     let user_levels = usersByLevel.map(user => `Level ${user.level_index}: ${user.level_name}`);
     let user_levels_values = usersByLevel.map(user => user.count);
     let score_levels = scoreAndProgressBylevel.map(user => `Level ${user.level_index}: ${user.level_name}`);
@@ -45,14 +45,15 @@ $(document).ready(function () {
         users_by_year_ctx,
         user_dates,
         user_dates_values,
-        'time'
+        'time',
+        true
     );
 
     drawSingleAxisChart(
         'bar',
         users_by_level_ctx,
         user_levels,
-        user_levels_values
+        user_levels_values,
     );
 
     drawMultipleAxisChart(
@@ -113,19 +114,17 @@ $(document).ready(function () {
         });
     }
 
-    function drawSingleAxisChart(chartType, ctx, labels, values, typeXaxis = 'category') {
+    function drawSingleAxisChart(chartType, ctx, labels, values, typeXaxis = 'category', multiseries = false) {
         new Chart(ctx, {
             type: chartType,
             data: {
                 labels: labels,
-                datasets: [{
-                    data: values,
-                }]
+                datasets: multiseries ? values : [{data: values}],
             },
             options: {
                 plugins: {
                     legend: {
-                        display: false
+                        display: multiseries
                     }
                 },
                 responsive: true,
