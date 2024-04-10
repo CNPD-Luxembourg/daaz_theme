@@ -17,8 +17,11 @@ $(document).ready(function () {
     let successRateByCategory = aggregateByCategory(questionsSuccessRate);
     let categoryLabels = Object.keys(successRateByCategory);
     let categories_values = Object.values(successRateByCategory);
-    let user_dates_values = [{label:'started', data: Object.values(aggregatedUsersStartedBydate)},{label:'unstarted', data: Object.values(aggregatedUsersUnStartedBydate)}];
-    let user_dates = Object.keys(aggregatedUsersStartedBydate);
+    let user_dates = [...new Set(Object.keys(aggregatedUsersStartedBydate).concat(Object.keys(aggregatedUsersUnStartedBydate)).sort())];
+    let user_dates_values = [
+        { label: 'started', data: user_dates.map(year => aggregatedUsersStartedBydate[year] || 0) },
+        { label: 'unstarted', data: user_dates.map(year => aggregatedUsersUnStartedBydate[year] || 0) }
+    ]
     let user_levels = usersByLevel.map(user => `Level ${user.level_index}: ${user.level_name}`);
     let user_levels_values = usersByLevel.map(user => user.count);
     let score_levels = scoreAndProgressBylevel.map(user => `Level ${user.level_index}: ${user.level_name}`);
