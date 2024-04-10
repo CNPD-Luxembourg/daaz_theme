@@ -12,7 +12,7 @@
         </p>
         <p>
             <span class="fw-bold">{% translate "End date of level" %}:</span>
-            {{ end_level_date }}
+            {{ end_level_date|date:"SHORT_DATE_FORMAT" }}
         </p>
         <p>
             <span class="fw-bold">{% translate "Success" %}:</span>
