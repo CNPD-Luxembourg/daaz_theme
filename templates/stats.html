@@ -1,6 +1,7 @@
 {% extends 'index.html' %}
 {% load static %}
 {% load i18n %}
+{% load custom_filters %}
 {% block bootstrap5_extra_head %}
 {{ block.super}}
 <script src='{% static "npm_components/chart.js/dist/chart.umd.js" %}'></script>
@@ -14,6 +15,7 @@
 {{ avg_score_and_progress_by_level|json_script:"avg_score_and_progress_by_level" }}
 {{ questions_success_rate|json_script:"questions_success_rate" }}
 {{ users_current_position|json_script:"users_current_position" }}
+{{ average_duration_by_level|json_script:"average_duration_by_level" }}
 <script src='{% static "js/github_contribution.js" %}'></script>
 <link href="{% static 'css/github_contribution_graph.css' %}" media="all" rel="stylesheet">
 <script src='{% static "js/stats.js" %}'></script>
@@ -22,7 +24,7 @@
 {% block content %}
 <div class="container-xxl">
     <div class="row">
-        <div class="col-12 col-md-3">
+        <div class="col-12 col-md-4">
             <h4>{% translate "Key figures" %}</h4>
             <ul class="list-group">
                 <li class="list-group-item d-flex justify-content-between align-items-center mb-0">
@@ -32,6 +34,10 @@
                 <li class="list-group-item d-flex justify-content-between align-items-center mb-0">
                     {% translate "Global Average score" %}
                     <span class="badge bg-primary rounded-pill">{{ global_avg_score|floatformat:'0' }}%</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center mb-0">
+                    {% translate "Global Average duration" %}
+                    <span class="badge bg-primary rounded-pill">{{ global_avg_duration|duration }}</span>
                 </li>
             </ul>
         </div>
@@ -56,13 +62,17 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-md-6 my-2">
+        <div class="col-12 col-md-4 my-2">
             <h4 class="text-primary text-center">{% translate "Users by year" %}</h4>
             <canvas id="users_by_year_chart"></canvas>
         </div>
-        <div class="col-12 col-md-6 my-2">
+        <div class="col-12 col-md-4 my-2">
             <h4 class="text-primary text-center">{% translate "Users by level" %}</h4>
             <canvas id="users_by_level_chart"></canvas>
+        </div>
+        <div class="col-12 col-md-4 my-2">
+            <h4 class="text-primary text-center">{% translate "Duration by level" %}</h4>
+            <canvas id="duration_by_level_chart"></canvas>
         </div>
     </div>
     <div class="row">

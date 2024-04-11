@@ -7,6 +7,7 @@ $(document).ready(function () {
     let scoreAndProgressBylevel = JSON.parse(document.getElementById('avg_score_and_progress_by_level').textContent);
     let questionsSuccessRate = JSON.parse(document.getElementById('questions_success_rate').textContent);
     let users_current_position = JSON.parse(document.getElementById('users_current_position').textContent);
+    let durationBylevel = JSON.parse(document.getElementById('average_duration_by_level').textContent);
 
     let aggregatedUsersStartedBydate = aggregateByYear(usersBydate.filter(user => !user.is_unstarted));
     let aggregatedUsersUnStartedBydate = aggregateByYear(usersBydate.filter(user => user.is_unstarted));
@@ -30,6 +31,8 @@ $(document).ready(function () {
     let progress_levels_values = scoreAndProgressBylevel.map(user => user.avg_progress / 100);
     let user_current_position = users_current_position.map(position => `Level ${position.current_level__index} Slide ${position.current_position}`).slice(0, topOfCurrentPosition);
     let user_current_position_values = users_current_position.map(position => position.total_users).slice(0, topOfCurrentPosition);
+    let durationLabels = durationBylevel.map(d => `Level ${d.level_index}: ${d.level_name}`);
+    let duration_values = durationBylevel.map(d => d.avg_duration);
 
     const users_by_year_ctx = document.getElementById('users_by_year_chart');
     const users_by_level_ctx = document.getElementById('users_by_level_chart');
@@ -39,6 +42,7 @@ $(document).ready(function () {
     const success_rate_by_quiz_ctx = document.getElementById('success_rate_by_quiz_chart');
     const success_rate_by_knowledge_ctx = document.getElementById('success_rate_by_knowledge_chart');
     const users_current_position_ctx = document.getElementById('users_current_position_chart');
+    const duration_by_level_ctx = document.getElementById('duration_by_level_chart');
 
 
     drawMatrixActivityChart(usersBydate);
@@ -104,6 +108,12 @@ $(document).ready(function () {
         user_current_position_values
     );
 
+    drawDurationChart(
+        duration_by_level_ctx,
+        durationLabels,
+        duration_values,
+    )
+
     function drawMatrixActivityChart(data, start_date) {
         $('#surveys-activity').github_graph({
             start_date: start_date ? start_date : null,
@@ -122,7 +132,7 @@ $(document).ready(function () {
             type: chartType,
             data: {
                 labels: labels,
-                datasets: multiseries ? values : [{data: values}],
+                datasets: multiseries ? values : [{ data: values }],
             },
             options: {
                 plugins: {
@@ -309,6 +319,43 @@ $(document).ready(function () {
         });
     }
 
+    function drawDurationChart(ctx, labels, values) {
+        let maxValue = Math.max(...values)
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Average Duration',
+                    data: values,
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    },
+                    y: {
+                        type: 'linear',
+                        ticks: {
+                            callback: seconds => getTicks(seconds, maxValue)
+                        },
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: context => secondsToLabel(context.raw)
+                        }
+                    }
+                }
+            },
+        });
+    }
     function aggregateByYear(data) {
         return data.reduce((acc, entry) => {
             const year = new Date(entry.timestamp);
@@ -354,7 +401,7 @@ $(document).ready(function () {
     function aggregateByCategory(data) {
         return data.reduce((acc, obj) => {
             if (!obj.categories && obj.quiz_id) {
-                let quizCategories = data.find(c => c.quiz_id=== obj.quiz_id && c.categories).categories;
+                let quizCategories = data.find(c => c.quiz_id === obj.quiz_id && c.categories).categories;
                 obj.categories = quizCategories
             }
 
@@ -379,5 +426,37 @@ $(document).ready(function () {
             labels.push(`Q${index + 1}`);
         })
         return nbElements ? labels.slice(0, nbElements) : labels
+    }
+
+    function secondsToLabel(seconds) {
+        let days = Math.floor(seconds / 86400);
+        let remaining_hours = seconds % 86400;
+        let remaining_minutes = remaining_hours % 3600
+        let hours = Math.floor(remaining_hours / 3600);
+        let minutes = Math.floor(remaining_minutes / 60);
+        let remaining_seconds = Math.round(remaining_minutes / 60)
+        let label = "";
+        if (days > 0) {
+            label += days + "d";
+        }
+        if (hours > 0) {
+            label += " " + hours + "h";
+        }
+        if (minutes > 0) {
+            label += " " + minutes + "m";
+        }
+        if (remaining_seconds > 0) {
+            label += " " + remaining_seconds + "s";
+        }
+        return label;
+    }
+
+    function getTicks(seconds, maxValue) {
+        let tick = ""
+        if (maxValue < 60) tick = seconds + "s"
+        if (maxValue >= 60 && maxValue < 3600) tick = Math.round(seconds / 60) + "m"
+        if (maxValue >= 3600 && maxValue < 86400) tick = Math.round(seconds / 3600) + "h"
+        if (maxValue >= 86400) tick = Math.round(seconds / 86400) + "d"
+        return tick;
     }
 });
