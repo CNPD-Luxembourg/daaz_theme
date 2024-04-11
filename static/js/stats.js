@@ -334,6 +334,9 @@ $(document).ready(function () {
             },
             options: {
                 responsive: true,
+                layout: {
+                    padding: 10
+                },
                 scales: {
                     x: {
                         beginAtZero: true
@@ -360,6 +363,12 @@ $(document).ready(function () {
                     datalabels: {
                         anchor: 'end',
                         align: 'end',
+                        clamp: true,
+                        offset: 0,
+                        padding : {
+                            top: 0,
+                            bottom: 0
+                        },
                         font: {
                             weight: 'bold',
                         },
