@@ -6,6 +6,7 @@
 {{ block.super}}
 <script src='{% static "npm_components/chart.js/dist/chart.umd.js" %}'></script>
 <script src='{% static "npm_components/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js" %}'></script>
+<script src='{% static "npm_components/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js" %}'></script>
 <link rel="stylesheet" type="text/css" href="{% static 'css/stats.css' %}">
 {% endblock %}
 
@@ -62,15 +63,17 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-md-4 my-2">
+        <div class="col-12 col-md-6 my-2">
             <h4 class="text-primary text-center">{% translate "Users by year" %}</h4>
             <canvas id="users_by_year_chart"></canvas>
         </div>
-        <div class="col-12 col-md-4 my-2">
+        <div class="col-12 col-md-6 my-2">
             <h4 class="text-primary text-center">{% translate "Users by level" %}</h4>
             <canvas id="users_by_level_chart"></canvas>
         </div>
-        <div class="col-12 col-md-4 my-2">
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6 my-2 mx-auto">
             <h4 class="text-primary text-center">{% translate "Duration by level" %}</h4>
             <canvas id="duration_by_level_chart"></canvas>
         </div>

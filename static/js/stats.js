@@ -319,16 +319,17 @@ $(document).ready(function () {
         });
     }
 
+
+
     function drawDurationChart(ctx, labels, values) {
-        let maxValue = Math.max(...values)
         new Chart(ctx, {
+            plugins: [ChartDataLabels],
             type: 'bar',
             data: {
                 labels: labels,
                 datasets: [{
                     label: 'Average Duration',
                     data: values,
-                    bounds:"data",
                 }]
             },
             options: {
@@ -339,10 +340,11 @@ $(document).ready(function () {
                     },
                     y: {
                         type: 'linear',
+                        grid:{
+                            display: false,
+                        },
                         ticks: {
-                            // stepSize: 1,
-                            // autoSkip: true,
-                            callback: seconds => getTicks(seconds, maxValue)
+                            display: false
                         },
                     }
                 },
@@ -354,8 +356,19 @@ $(document).ready(function () {
                         callbacks: {
                             label: context => secondsToLabel(context.raw)
                         }
-                    }
-                }
+                    },
+                    datalabels: {
+                        anchor: 'end',
+                        align: 'end',
+                        font: {
+                            weight: 'bold',
+                        },
+                        formatter: function (value, context) {
+                            return secondsToLabel(value);
+                        }
+                    },
+                },
+
             },
         });
     }
@@ -452,32 +465,5 @@ $(document).ready(function () {
             label += " " + remaining_seconds + "s";
         }
         return label;
-    }
-
-    function getTicks(seconds, maxValue) {
-        let tick = "";
-        let result;
-
-        if (maxValue < 60) {
-            tick = seconds + "s";
-        } else if (maxValue >= 60 && maxValue < 3600) {
-            result = customRound(seconds / 60);
-            tick = result + "m";
-        } else if (maxValue >= 3600 && maxValue < 86400) {
-            result = customRound(seconds / 3600);
-            tick = result + "h";
-        } else if (maxValue >= 86400) {
-            result = customRound(seconds / 86400);
-            tick = result + "d";
-        }
-        return tick;
-    }
-
-    function customRound(value) {
-        let rounded = Math.round(value * 2) / 2;
-        if (rounded % 1 === 0) {
-            return Math.floor(rounded);
-        }
-        return rounded;
     }
 });
