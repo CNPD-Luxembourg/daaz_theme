@@ -328,7 +328,6 @@ $(document).ready(function () {
             data: {
                 labels: labels,
                 datasets: [{
-                    label: 'Average Duration',
                     data: values,
                 }]
             },
@@ -372,9 +371,7 @@ $(document).ready(function () {
                         font: {
                             weight: 'bold',
                         },
-                        formatter: function (value, context) {
-                            return secondsToLabel(value);
-                        }
+                        formatter: value => secondsToLabel(value)
                     },
                 },
 
