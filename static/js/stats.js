@@ -461,23 +461,15 @@ $(document).ready(function () {
         if (maxValue < 60) {
             tick = seconds + "s";
         } else if (maxValue >= 60 && maxValue < 3600) {
-            result = customRound(seconds / 60);
+            result = Math.floor(seconds / 60);
             tick = result + "m";
         } else if (maxValue >= 3600 && maxValue < 86400) {
-            result = customRound(seconds / 3600);
+            result = Math.floor(seconds / 3600);
             tick = result + "h";
         } else if (maxValue >= 86400) {
-            result = customRound(seconds / 86400);
+            result = Math.floor(seconds / 86400);
             tick = result + "d";
         }
         return tick;
-    }
-
-    function customRound(value) {
-        let rounded = Math.round(value * 2) / 2;
-        if (rounded % 1 === 0) {
-            return Math.floor(rounded);
-        }
-        return rounded;
     }
 });
