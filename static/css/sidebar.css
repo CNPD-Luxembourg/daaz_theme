@@ -90,8 +90,11 @@
         padding-left: 3px;
     }
 
-    #sidebar:not(.minimized) li {
+    #sidebar:not(.minimized) li:not(.language-selector) {
         padding-left: 25px !important;
+    }
+    #sidebar:not(.minimized) .language-selector {
+        padding-left: 36px !important;
     }
 
     #sidebar:not(.minimized) {
@@ -143,4 +146,5 @@
     #sidebar li {
         font-size: 24px;
     }
+
 }

@@ -27,7 +27,7 @@
     </div>
     <div class="border border-primary rounded-3 py-3 px-3">
       <p>
-        {% translate "I will continue a previous journey using my unique identifier:" %}
+        {% translate "I resume a journey using my unique identifier:" %}
       </p>
       <form action="{% url 'start' %}" method="post">
         {% csrf_token %}

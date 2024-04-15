@@ -17,11 +17,13 @@
                 <div class="me-2 option">
                     {{ form.resource }}
                 </div>
-                <i class="bi bi-file-earmark-richtext-fill fs-3 {{ form.icon_class }}"></i>
+                <label for="{{ form.resource.id_for_label }}">
+                    <i class="bi bi-file-earmark-richtext-fill fs-3 {{ form.icon_class }}"></i>
+                </label>
                 <div class="container small">
                     <div class="row">
                         <div class="col-4 fw-light my-auto">
-                            {{ form.resource_type }}
+                            <label for="{{ form.resource.id_for_label }}">{{ form.resource_type }}</label>
                         </div>
                         <div class="col-7 p-0 my-auto">
                             {{ form.resource.label_tag }}

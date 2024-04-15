@@ -9,7 +9,7 @@
     color: grey;
 }
 
-#language_selector {
+#language_selector_minimized, #language_selector_expanded {
     color: grey;
 }
 
@@ -21,18 +21,21 @@
 
 .language_selector_form:hover,
 .language_selector_form:focus,
-#language_selector:hover,
-#language_selector:focus {
+#language_selector_expanded:hover,
+#language_selector_expanded:focus,
+#language_selector_minimized:hover,
+#language_selector_minimized:focus {
     color: var(--bs-primary);
     border: none !important;
     cursor:pointer;
 }
 
-#user-tools #language_selector {
+#user-tools #language_selector_minimized {
     background-image: unset;
 }
 
-#sidebar #language_selector {
+#sidebar #language_selector_minimized,
+#sidebar #language_selector_expanded {
     background-image: unset;
     padding-right: 10px;
     appearance: none;

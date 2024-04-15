@@ -12,8 +12,12 @@ $(document).ready(function () {
             var popup_url = 'resources_download/' + '?resource_type='+ $(this).data("rt-id");
         }
 
-        $(".modal-body", $popup).load(popup_url, function () {
-            $popup.modal("show");
+        $(".modal-body", $popup).load(popup_url, function (response,status, xhr) {
+            if (status === 'error') {
+                window.location.href = "/";
+            } else {
+                $popup.modal("show");
+            }
         });
     });
 

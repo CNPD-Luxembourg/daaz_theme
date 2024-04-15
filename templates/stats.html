@@ -1,20 +1,22 @@
 {% extends 'index.html' %}
 {% load static %}
 {% load i18n %}
+{% load custom_filters %}
 {% block bootstrap5_extra_head %}
 {{ block.super}}
 <script src='{% static "npm_components/chart.js/dist/chart.umd.js" %}'></script>
 <script src='{% static "npm_components/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js" %}'></script>
+<script src='{% static "npm_components/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js" %}'></script>
 <link rel="stylesheet" type="text/css" href="{% static 'css/stats.css' %}">
 {% endblock %}
 
 {% block bootstrap5_extra_script %}
 {{ users_by_date|json_script:"users_by_date" }}
 {{ users_by_level|json_script:"users_by_level" }}
-{{ avg_score_by_level|json_script:"avg_score_by_level" }}
-{{ avg_progress_by_level|json_script:"avg_progress_by_level" }}
+{{ avg_score_and_progress_by_level|json_script:"avg_score_and_progress_by_level" }}
 {{ questions_success_rate|json_script:"questions_success_rate" }}
 {{ users_current_position|json_script:"users_current_position" }}
+{{ average_duration_by_level|json_script:"average_duration_by_level" }}
 <script src='{% static "js/github_contribution.js" %}'></script>
 <link href="{% static 'css/github_contribution_graph.css' %}" media="all" rel="stylesheet">
 <script src='{% static "js/stats.js" %}'></script>
@@ -23,7 +25,7 @@
 {% block content %}
 <div class="container-xxl">
     <div class="row">
-        <div class="col-12 col-md-3">
+        <div class="col-12 col-md-4">
             <h4>{% translate "Key figures" %}</h4>
             <ul class="list-group">
                 <li class="list-group-item d-flex justify-content-between align-items-center mb-0">
@@ -33,6 +35,10 @@
                 <li class="list-group-item d-flex justify-content-between align-items-center mb-0">
                     {% translate "Global Average score" %}
                     <span class="badge bg-primary rounded-pill">{{ global_avg_score|floatformat:'0' }}%</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center mb-0">
+                    {% translate "Global Average duration" %}
+                    <span class="badge bg-primary rounded-pill">{{ global_avg_duration|duration }}</span>
                 </li>
             </ul>
         </div>
@@ -67,6 +73,12 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-12 col-md-6 my-2 mx-auto">
+            <h4 class="text-primary text-center">{% translate "Duration by level" %}</h4>
+            <canvas id="duration_by_level_chart"></canvas>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-12 col-md-6 my-2">
             <h4 class="text-primary text-center">{% translate "Users and Score by level" %}</h4>
             <canvas id="users_and_score_by_level_chart"></canvas>
@@ -82,11 +94,15 @@
             <canvas id="success_rate_by_question_chart"></canvas>
         </div>
         <div class="col-12 col-md-6 my-2">
-            <h4 class="text-primary text-center">{% translate "Success rate by knowledge" %}</h4>
-            <canvas id="success_rate_by_knowledge_chart"></canvas>
+            <h4 class="text-primary text-center">{% translate "Success rate by quiz" %}</h4>
+            <canvas id="success_rate_by_quiz_chart"></canvas>
         </div>
     </div>
     <div class="row">
+        <div class="col-12 col-md-6 my-2">
+            <h4 class="text-primary text-center">{% translate "Success rate by knowledge" %}</h4>
+            <canvas id="success_rate_by_knowledge_chart"></canvas>
+        </div>
         <div class="col-12 col-md-6 my-2">
             <h4 class="text-primary text-center">{% translate "User's current position [Top 10]" %}</h4>
             <canvas id="users_current_position_chart"></canvas>

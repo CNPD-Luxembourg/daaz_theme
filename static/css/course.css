@@ -32,6 +32,10 @@
     color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
 }
 
+.carousel-item ul {
+    margin-bottom: 0;
+}
+
 .perspective-flip {
     perspective: 2400px !important;
 }

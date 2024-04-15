@@ -6,10 +6,14 @@
 }
 
 .start-button:hover {
-    border-color: var(--bs-primary);
-    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-danger);
+    background-color: var(--bs-danger) !important;
     color: var(--bs-white) !important;
 }
+
+/* #level-button.disabled {
+    border-radius: ;
+} */
 
 @media (max-width: 576px) {
     .progress {
