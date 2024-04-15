@@ -6,16 +6,18 @@
 {% endblock %}
 {% with sidebarstate=request.session.sidebar_state %}
 {{ sidebarstate|json_script:"sidebarState" }}
-<nav id="sidebar" class="col-auto col-md-2 col-lg-2 px-0 bg-white shadow-sm sticky-sidebar">
+<nav id="sidebar" class="col-auto col-md-2 col-lg-2 px-0 bg-white shadow-sm sticky-sidebar {%if sidebarstate == 'minimized' %}minimized{% endif %}">
     <div class="d-flex flex-sm-column flex-row align-items-center pt-2 min-vh-100 justify-content-evenly">
         <button id="sidebarToggle" class="btn btn-link align-self-end d-none d-sm-block my-sm-3 mx-2">
-            <i class="bi bi-arrow-left text-primary d-none d-sm-inline"></i>
-            <i id="open_sidebar" class="bi bi-arrow-right text-primary d-none d-sm-none"></i>
+            <i class="switching-item {%if sidebarstate == 'minimized' %}d-sm-none{% else %}d-sm-inline{% endif %} bi bi-arrow-left text-primary"></i>
+            <i class="switching-item {%if sidebarstate == 'minimized' %}d-sm-inline{% else %}d-sm-none{% endif %} bi bi-arrow-right text-primary"></i>
         </button>
         <div class="d-none d-sm-block pb-4">
-            <img id="logo_small" src="{% static 'media/images/logos/logo_minimized.svg' %}" alt="Logo Small" width="30px"
-                class="d-sm-none">
-            <img src="{% static 'media/images/logos/logo.svg' %}" alt="Logo Large" class="d-none d-sm-inline w-100 px-4 my-4" height="40px">
+            <img src="{% static 'media/images/logos/logo_minimized.svg' %}" alt="Logo Small" width="30px"
+                class="switching-item {%if sidebarstate == 'minimized' %}d-sm-inline{% else %}d-sm-none{% endif %}">
+            <img src="{% static 'media/images/logos/logo.svg' %}" alt="Logo Large"
+            class="switching-item {%if sidebarstate == 'minimized' %}d-sm-none{% else %}d-sm-inline{% endif %} w-100 px-4 my-4"
+            height="40px">
         </div>
 
         <ul class="nav nav-pills w-100 flex-sm-column flex-row mb-sm-auto mb-0 align-items-center align-items-sm-start flex-grow-1 flex-sm-grow-0 text-sm-start text-center">
@@ -28,7 +30,9 @@
                         </div>
                     </span>
                     <i class="bi-house" data-toggle="tooltip" data-placement="right" title='{% translate "Dashboard" %}'></i>
-                    <span class="ms-1 d-none d-sm-inline ms-sm-1">{% translate "Dashboard" %}</span>
+                    <span class="switching-item d-none {%if sidebarstate == 'minimized' %}d-sm-none{% else %}d-sm-inline{% endif %} ms-1 ms-sm-1">
+                        {% translate "Dashboard" %}
+                    </span>
                     <div class="left-bar d-none bg-primary opacity-50"></div>
                 </a>
             </li>
@@ -41,7 +45,9 @@
                         </div>
                     </span>
                     <i class="bi-folder" data-toggle="tooltip" data-placement="right" title='{% translate "Ressources" %}'></i>
-                    <span class="ms-1 d-none d-sm-inline ms-sm-1">{% translate "Ressources" %}</span>
+                    <span class="switching-item d-none {%if sidebarstate == 'minimized' %}d-sm-none{% else %}d-sm-inline{% endif %} ms-1 ms-sm-1">
+                        {% translate "Ressources" %}
+                    </span>
                 </a>
             </li>
             <li class="w-100 px-2 px-sm-0 py-sm-1 flex-grow-1 flex-sm-grow-0 order-3">
@@ -53,14 +59,16 @@
                         </div>
                     </span>
                     <i class="bi-gear" data-toggle="tooltip" data-placement="right" title="{% translate 'Help Center'%} "></i>
-                    <span class="ms-1 d-none d-sm-inline ms-sm-1">{% translate "Help Center" %}</span>
+                    <span class="switching-item d-none {%if sidebarstate == 'minimized' %}d-sm-none{% else %}d-sm-inline{% endif %} ms-1 ms-sm-1">
+                        {% translate "Help Center" %}
+                    </span>
                 </a>
             </li>
             <li class="language-selector w-100 ps-3 px-2 px-sm-0 py-sm-1 flex-grow-1 flex-sm-grow-0 order-4">
-                <div id="language_selector_expanded" class="nav-link p-0 align-middle d-none d-sm-inline">
+                <div id="language_selector_expanded" class="switching-item d-none {%if sidebarstate == 'minimized' %}d-sm-none{% else %}d-sm-inline{% endif %} nav-link p-0 align-middle">
                     {% include "home/language_selector_sidebar.html" %}
                 </div>
-                <div id="language_selector_minimized" class="nav-link p-0 align-middle d-sm-none d-inline">
+                <div id="language_selector_minimized" class="switching-item {%if sidebarstate == 'minimized' %}d-sm-inline{% else %}d-sm-none{% endif %} nav-link p-0 align-middle">
                     {% include "home/language_selector_landing.html" %}
                 </div>
             </li>
@@ -71,7 +79,9 @@
                         <div class="selected-left-dot d-inline-block opacity-0"></div>
                     </span>
                     <i class="bi-box-arrow-right" data-toggle="tooltip" data-placement="right" title='{% translate "Log out" %}'></i>
-                    <span class="ms-1 d-none d-sm-inline ms-sm-1">{% translate "Log out" %}</span>
+                    <span class="switching-item d-none {%if sidebarstate == 'minimized' %}d-sm-none{% else %}d-sm-inline{% endif %} ms-1 ms-sm-1">
+                        {% translate "Log out" %}
+                    </span>
                 </a>
             </li>
         </ul>
