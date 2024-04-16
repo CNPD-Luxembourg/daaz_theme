@@ -14,6 +14,7 @@ $(document).ready(function () {
     let successRateByQuestion = aggregateQuestionsByLevel(questionsSuccessRate);
     let questionLabels = getQuestionLabels(successRateByQuestion, nbQuestions);
     let successRateByQuiz = aggregateQuizByLevel(questionsSuccessRate);
+    console.log(successRateByQuiz);
     let quizLabels = getQuestionLabels(successRateByQuiz)
     let successRateByCategory = aggregateByCategory(questionsSuccessRate);
     let categoryLabels = Object.keys(successRateByCategory);
@@ -224,7 +225,7 @@ $(document).ready(function () {
     function drawRadarChart(ctx, labels, values, nbElements) {
         let datasets = [];
         for (let key in values) {
-            let data = values[key].map(value => value.success_rate)
+            let data = values[key].map(value => value.success_rate).flat();
             datasets.push(
                 {
                     label: key,
