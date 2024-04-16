@@ -14,7 +14,6 @@ $(document).ready(function () {
     let successRateByQuestion = aggregateQuestionsByLevel(questionsSuccessRate);
     let questionLabels = getQuestionLabels(successRateByQuestion, nbQuestions);
     let successRateByQuiz = aggregateQuizByLevel(questionsSuccessRate);
-    console.log(successRateByQuiz);
     let quizLabels = getQuestionLabels(successRateByQuiz)
     let successRateByCategory = aggregateByCategory(questionsSuccessRate);
     let categoryLabels = Object.keys(successRateByCategory);
