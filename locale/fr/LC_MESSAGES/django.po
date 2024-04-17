@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-04 08:05+0000\n"
-"PO-Revision-Date: 2024-04-04 10:10+0200\n"
+"POT-Creation-Date: 2024-04-17 09:40+0000\n"
+"PO-Revision-Date: 2024-04-17 11:42+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -81,8 +81,8 @@ msgstr "Quiz"
 
 #: theme/templates/course_new_slide.html:20
 #: theme/templates/course_new_slide.html:26
-msgid "Select all the answers that apply, then confirm."
-msgstr "Choisissez toutes les réponses qui s'appliquent puis valider."
+msgid "Choose all the answers that apply, then click 'Confirm'."
+msgstr "Choisissez toutes les réponses qui s'appliquent puis cliquez 'Valider'"
 
 #: theme/templates/course_new_slide.html:22
 #: theme/templates/course_new_slide.html:53
@@ -179,8 +179,8 @@ msgstr "Connaissances"
 msgid "Results"
 msgstr "Résultats"
 
-#: theme/templates/helping_center.html:7 theme/templates/parts/sidebar.html:53
-#: theme/templates/parts/sidebar.html:54
+#: theme/templates/helping_center.html:7 theme/templates/parts/sidebar.html:61
+#: theme/templates/parts/sidebar.html:63
 msgid "Help Center"
 msgstr "Centre d'aide"
 
@@ -462,15 +462,15 @@ msgstr "Accueil"
 msgid "About"
 msgstr "A propos"
 
-#: theme/templates/parts/sidebar.html:28 theme/templates/parts/sidebar.html:29
+#: theme/templates/parts/sidebar.html:32 theme/templates/parts/sidebar.html:34
 msgid "Dashboard"
 msgstr "Tableau de bord"
 
-#: theme/templates/parts/sidebar.html:41 theme/templates/parts/sidebar.html:42
+#: theme/templates/parts/sidebar.html:47 theme/templates/parts/sidebar.html:49
 msgid "Ressources"
 msgstr "Ressources"
 
-#: theme/templates/parts/sidebar.html:71 theme/templates/parts/sidebar.html:72
+#: theme/templates/parts/sidebar.html:81 theme/templates/parts/sidebar.html:83
 msgid "Log out"
 msgstr "Déconnexion"
 
@@ -554,58 +554,66 @@ msgstr "Les templates"
 msgid "All files"
 msgstr "Tous les fichiers"
 
-#: theme/templates/stats.html:27
+#: theme/templates/stats.html:29
 msgid "Key figures"
 msgstr "Chiffres clés"
 
-#: theme/templates/stats.html:30
+#: theme/templates/stats.html:32
 msgid "Total users"
 msgstr "Total des utilisateurs"
 
-#: theme/templates/stats.html:34
+#: theme/templates/stats.html:36
 msgid "Global Average score"
 msgstr "Score moyen global"
 
-#: theme/templates/stats.html:43
+#: theme/templates/stats.html:40
+msgid "Global Average duration"
+msgstr "Durée moyenne globale"
+
+#: theme/templates/stats.html:49
 msgid "Activity over the past year"
 msgstr "Activité au cours de la dernière année"
 
-#: theme/templates/stats.html:50
+#: theme/templates/stats.html:56
 msgid "Less"
 msgstr "Moins"
 
-#: theme/templates/stats.html:56
+#: theme/templates/stats.html:62
 msgid "More"
 msgstr "Plus"
 
-#: theme/templates/stats.html:61
+#: theme/templates/stats.html:67
 msgid "Users by year"
 msgstr "Utilisateurs par année"
 
-#: theme/templates/stats.html:65
+#: theme/templates/stats.html:71
 msgid "Users by level"
 msgstr "Utilisateurs par niveau"
 
-#: theme/templates/stats.html:71
+#: theme/templates/stats.html:77
+msgid "Duration by level"
+msgstr "Durée par niveau"
+
+#: theme/templates/stats.html:83
 msgid "Users and Score by level"
 msgstr "Utilisateurs et score par niveau"
 
-#: theme/templates/stats.html:75
+#: theme/templates/stats.html:87
 msgid "Users and Progress by level"
 msgstr "Utilisateurs et progrès par niveau"
 
-#: theme/templates/stats.html:81
+#: theme/templates/stats.html:93
 msgid "Success rate by question"
 msgstr "Taux de réussite par question"
 
-#: theme/templates/stats.html:85
+#: theme/templates/stats.html:97
 msgid "Success rate by quiz"
 msgstr "Taux de réussite par quiz"
 
-#: theme/templates/stats.html:91
+#: theme/templates/stats.html:103
 msgid "Success rate by knowledge"
 msgstr "Taux de réussite par connaissance"
 
-#: theme/templates/stats.html:95
+#: theme/templates/stats.html:107
 msgid "User's current position [Top 10]"
 msgstr "Position actuelle de l'utilisateur [Top 10]"
