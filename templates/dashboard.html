@@ -62,7 +62,7 @@
                     <div class="col-6 text-center" style="height: 50px;">
                       <img
                         src="{% static 'media/images/course/levels/level-'%}{{level.index}}{% if user.current_level.id < level.id %}-disabled{% endif %}.svg"
-                        class="img-fluid h-100" />
+                        class="img-fluid h-100" alt="">
                     </div>
                   </div>
                   <div class="row pt-3">
@@ -106,7 +106,7 @@
                 <div class="col-12 col-lg-6 text-center level-image h-40 h-lg-100">
                   <img
                     src="{% static 'media/images/course/levels/level-'%}{{level.index}}{% if user.current_level.id < level.id %}-disabled{% endif %}.svg"
-                    class="img-fluid h-100" />
+                    class="img-fluid h-100" alt="">
                 </div>
               </div>
               <div class="col px-sm-2 h-35">
@@ -198,11 +198,11 @@
               <img src="{% static 'media/images/stickers/medal_blue.svg' %}" class="p-2 img-fluid h-70
                   {% if sticker_unlocked == '3' %}d-inline
                   {% else %}d-none
-                  {% endif %}" />
+                  {% endif %}" alt="blue medal">
               <img src="{% static 'media/images/stickers/medal_gold.svg' %}" class="p-2 img-fluid h-70
                   {% if sticker_unlocked == '4' %}d-inline
                   {% else %}d-none
-                  {% endif %}" />
+                  {% endif %}" alt="gold medal">
             </div>
             <div
               style="background-image: url({% static 'media/images/stickers/1x1/level-' %}{{ level.index }}-{{sticker_unlocked}}.svg);"
@@ -214,11 +214,11 @@
               <img src="{% static 'media/images/stickers/medal_blue.svg' %}" class="p-2 img-fluid h-50
                   {% if sticker_unlocked == '3' %}d-inline
                   {% else %}d-none
-                  {% endif %}" />
+                  {% endif %}" alt="blue medal">
               <img src="{% static 'media/images/stickers/medal_gold.svg' %}" class="p-2 img-fluid h-50
                   {% if sticker_unlocked == '4' %}d-inline
                   {% else %}d-none
-                  {% endif %}" />
+                  {% endif %}" alt="gold medal">
             </div>
             {% endwith %}
           </div>

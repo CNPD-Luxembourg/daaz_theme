@@ -38,9 +38,9 @@
         </form>
         <div class="col-6 p-0 text-end d-none d-md-inline h-100">
             {% if form.quiz %}
-            <img class="img-fluid h-100" src="{% static 'media/images/course/quiz_image.svg' %}" alt="Question image" />
+            <img class="img-fluid h-100" src="{% static 'media/images/course/quiz_image.svg' %}" alt="">
             {% else %}
-            <img class="img-fluid h-100" src="{% static 'media/images/course/question_image.svg' %}" alt="Quiz image" />
+            <img class="img-fluid h-100" src="{% static 'media/images/course/question_image.svg' %}" alt="">
             {% endif %}
         </div>
     </div>
@@ -88,9 +88,9 @@
         </div>
         <div class="col-6 p-0 text-end d-none d-md-inline h-100">
             {% if form.quiz %}
-            <img class="img-fluid h-100" src="{% static 'media/images/course/quiz_image.svg' %}" alt="Question image" />
+            <img class="img-fluid h-100" src="{% static 'media/images/course/quiz_image.svg' %}" alt="">
             {% else %}
-            <img class="img-fluid h-100" src="{% static 'media/images/course/question_image.svg' %}" alt="Quiz image" />
+            <img class="img-fluid h-100" src="{% static 'media/images/course/question_image.svg' %}" alt="">
             {% endif %}
         </div>
     </div>
@@ -106,7 +106,7 @@
         </div>
     </div>
     <div class="col-6 p-0 text-end d-none d-md-inline h-100">
-        <img class="img-fluid h-100" src="{% static 'media/images/course/explanation_image.svg' %}" alt="Final image" />
+        <img class="img-fluid h-100" src="{% static 'media/images/course/explanation_image.svg' %}" alt="">
     </div>
 </div>
 {% elif slide.context %}
@@ -191,7 +191,7 @@
     <div class="col-12 col-md-6 h-md-100 text-center">
         {% for media in slide.context.medias %}
         <img class="img-fluid h-100 w-50 w-sm-100 {{ media.css_classes|join:' ' }} {{ text.position }}"
-            src="{% static media.media.path|extract_static %}" alt="{{ media.media.name }}" />
+            src="{% static media.media.path|extract_static %}" alt="">
         {% endfor %}
     </div>
 </div>

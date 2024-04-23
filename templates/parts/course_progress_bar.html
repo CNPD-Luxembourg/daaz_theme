@@ -13,9 +13,9 @@
         {% if not forloop.last %}
         <div class="key align-items-center" style="left:calc({{quiz.percentage}}% - 22px)">
             {% if progress > quiz.percentage %}
-            <img class="img-fluid" src="{% static 'media/images/icons/key-yellow.svg' %}" />
+            <img class="img-fluid" src="{% static 'media/images/icons/key-yellow.svg' %}" alt="yellow key">
             {% else %}
-            <img class="img-fluid" src="{% static 'media/images/icons/key-white.svg' %}" />
+            <img class="img-fluid" src="{% static 'media/images/icons/key-white.svg' %}" alt="white key">
             {% endif %}
         </div>
         {% endif %}
@@ -25,8 +25,8 @@
 
 <div class="trophy">
     {% if progress >= 100 %}
-    <img class="img-fluid" src="{% static '/media/images/icons/trophy-yellow.svg' %}" />
+    <img class="img-fluid" src="{% static '/media/images/icons/trophy-yellow.svg' %}" alt="yellow trophy"/>
     {% else %}
-    <img class="img-fluid" src="{% static '/media/images/icons/trophy-white.svg' %}" />
+    <img class="img-fluid" src="{% static '/media/images/icons/trophy-white.svg' %}" alt="white trophy"/>
     {% endif %}
 </div>

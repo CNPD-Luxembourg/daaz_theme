@@ -16,7 +16,7 @@
         {% for level in levels %}
         <div class="{{ col_classes }}">
             <a type="button" class="go-to-download" data-level-id="{{ level.id }}">
-                <img src="{% static 'media/images/resources/resources_level'%}{{level.index}}.svg" alt="Resources Image"
+                <img src="{% static 'media/images/resources/resources_level'%}{{level.index}}.svg" alt=""
                 class="{{ img_classes }}" />
             </a>
             <a type="button" class="{{ button_classes }}" data-level-id="{{ level.id }}">
@@ -27,7 +27,7 @@
         {% endfor %}
         {% for rt in resourcesType %}
         <div class="{{ col_classes }}">
-            <img src="{% static 'media/images/resources/resources_type'%}{{rt.index}}.svg" alt="Resources Image"
+            <img src="{% static 'media/images/resources/resources_type'%}{{rt.index}}.svg" alt=""
                 class="{{ img_classes }}" />
             <a type="button" class="{{ button_classes }}" data-rt-id="{{ rt.id }}">
                 <i class="{{ icon_classes }}"></i>
@@ -42,7 +42,7 @@
         </div>
         {% endfor %}
         <div class="{{ col_classes }}">
-            <img src="{% static 'media/images/resources/resources_all.svg'%}" alt="Resources Image" class="{{ img_classes }}" />
+            <img src="{% static 'media/images/resources/resources_all.svg'%}" alt="" class="{{ img_classes }}" />
             <a type="button" class="{{ button_classes }}">
                 <i class="{{ icon_classes }}"></i>
                 {% translate "All files" %}
