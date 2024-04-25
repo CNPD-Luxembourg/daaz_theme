@@ -5,6 +5,10 @@
 <script src='{% static "js/sidebar.js" %}'></script>
 {% endblock %}
 {% with sidebarstate=request.session.sidebar_state %}
+{% csrf_token %}
+<script>
+    var csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+</script>
 {{ sidebarstate|json_script:"sidebarState" }}
 <nav id="sidebar" class="col-auto col-md-2 col-lg-2 px-0 bg-white shadow-sm sticky-sidebar {%if sidebarstate == 'minimized' %}minimized{% endif %}">
     <div class="d-flex flex-sm-column flex-row align-items-center pt-2 min-vh-100 justify-content-evenly">

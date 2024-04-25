@@ -11,23 +11,6 @@ $(document).ready(function () {
     const tooltips =  $('[data-toggle="tooltip"]')
     tooltips.tooltip({placement: 'auto'})
 
-    function getCookie(name) {
-        let cookieValue = null;
-        if (document.cookie && document.cookie !== '') {
-            const cookies = document.cookie.split(';');
-            for (let i = 0; i < cookies.length; i++) {
-                const cookie = cookies[i].trim();
-                if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                    break;
-                }
-            }
-        }
-        return cookieValue;
-    }
-
-    const csrftoken = getCookie('csrftoken');
-
     $('#sidebarToggle').on("click", function () {
         let newSidebarState = (sidebarState === 'expanded') ? 'minimized' : 'expanded';
         toggleSidebar();

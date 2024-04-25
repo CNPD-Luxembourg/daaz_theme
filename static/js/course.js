@@ -15,21 +15,6 @@ $(document).ready(function () {
     const updateProgressBar_url = "update_progress_bar/?direction=";
     const changeSlide_url = "change_slide/?direction=";
 
-    function getCookie(name) {
-        let cookieValue = null;
-        if (document.cookie && document.cookie !== '') {
-            const cookies = document.cookie.split(';');
-            for (let i = 0; i < cookies.length; i++) {
-                const cookie = cookies[i].trim();
-                if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                    break;
-                }
-            }
-        }
-        return cookieValue;
-    }
-
     function processCheckboxSelection() {
         const nbCorrectQuestions = $questionCard.find(".back .form-check-input").filter(':checked').length;
         const $checkedCheckboxes = $checkboxesAndRadios.filter(':checkbox:checked');
@@ -67,7 +52,6 @@ $(document).ready(function () {
         $submitButton = $questionCard.find("#summitButton");
         $submitButton.on("click", function (e) {
             e.preventDefault();
-            const csrftoken = getCookie('csrftoken');
             const $frontSortingFields = $(".active .front .draggable-item");
             let formdata = $questionCard.find("#question-form").serialize();
 
