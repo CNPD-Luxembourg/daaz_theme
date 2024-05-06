@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // set the temporal cookie.
         let secure = window.location.hostname === 'localhost' ? "" : "secure";
-        document.cookie = `cookiebanner=${encodeURIComponent(enable_cookies)}; path=/; ${secure}`;
+        document.cookie = `cookiebanner=__temp__${encodeURIComponent(enable_cookies)}; path=/; ${secure}`;
         location.reload();
     })
 });
