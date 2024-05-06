@@ -1,8 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let keyValue = document.cookie.match('(^|;) ?cookiebanner=([^;]*)(;|$)');
-    let cookiebannerCookie = keyValue ? decodeURIComponent(keyValue[2]) : null;
-    if (cookiebannerCookie) return;
-
     window.onload = () => {
         $('#cookiebannerModal').modal('show');
     }
@@ -21,11 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 .map((x) => x.id);
         }
 
-        // set the cookie.
-        let max_age = (180 * 24 * 60 * 60);
-
+        // set the temporal cookie.
         let secure = window.location.hostname === 'localhost' ? "" : "secure";
-        document.cookie = `cookiebanner=${encodeURIComponent(enable_cookies)}; path=/; max-age=${max_age}; ${secure}`;
+        document.cookie = `cookiebanner=${encodeURIComponent(enable_cookies)}; path=/; ${secure}`;
         location.reload();
     })
 });
