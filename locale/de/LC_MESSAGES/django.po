@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-17 09:40+0000\n"
+"POT-Creation-Date: 2024-05-08 11:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,12 +65,12 @@ msgstr ""
 #: theme/templates/course.html:20 theme/templates/dashboard.html:59
 #: theme/templates/dashboard.html:99 theme/templates/dashboard.html:103
 #: theme/templates/dashboard.html:170 theme/templates/dashboard.html:174
-#: theme/templates/landing.html:278 theme/templates/resources.html:24
+#: theme/templates/landing.html:280 theme/templates/resources.html:24
 msgid "Level"
 msgstr ""
 
 #: theme/templates/course_new_slide.html:19
-#: theme/templates/course_new_slide.html:51
+#: theme/templates/course_new_slide.html:54
 #: theme/templates/report/questions.html:7
 msgid "Quiz"
 msgstr ""
@@ -81,65 +81,65 @@ msgid "Choose all the answers that apply, then click 'Confirm'."
 msgstr ""
 
 #: theme/templates/course_new_slide.html:22
-#: theme/templates/course_new_slide.html:53
+#: theme/templates/course_new_slide.html:56
 #: theme/templates/report/questions.html:9
 msgid "Script"
 msgstr ""
 
 #: theme/templates/course_new_slide.html:25
-#: theme/templates/course_new_slide.html:56
-#: theme/templates/course_new_slide.html:103
+#: theme/templates/course_new_slide.html:59
+#: theme/templates/course_new_slide.html:106
 #: theme/templates/report/questions.html:12
 msgid "Question"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:34
+#: theme/templates/course_new_slide.html:37
 msgid "Confirm"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:104
+#: theme/templates/course_new_slide.html:107
 msgid "Explication"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:119
+#: theme/templates/course_new_slide.html:122
 msgid "Congratulations"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:123
+#: theme/templates/course_new_slide.html:126
 #, python-format
 msgid "You have finished level %(index_level)s !"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:126
+#: theme/templates/course_new_slide.html:129
 msgid "Your score is "
 msgstr ""
 
-#: theme/templates/course_new_slide.html:130
+#: theme/templates/course_new_slide.html:133
 #, python-format
 msgid "You have unlocked story number %(next_level)s !"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:140
+#: theme/templates/course_new_slide.html:143
 msgid "Download the summary sheet"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:147
+#: theme/templates/course_new_slide.html:150
 msgid "Download the level report"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:150
+#: theme/templates/course_new_slide.html:153
 msgid "Downloading"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:158
+#: theme/templates/course_new_slide.html:161
 msgid "Access the next level"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:180
+#: theme/templates/course_new_slide.html:183
 msgid "Download the fact sheet"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:183
+#: theme/templates/course_new_slide.html:186
 msgid "Download my template"
 msgstr ""
 
@@ -175,166 +175,166 @@ msgstr ""
 msgid "Results"
 msgstr ""
 
-#: theme/templates/helping_center.html:7 theme/templates/parts/sidebar.html:61
-#: theme/templates/parts/sidebar.html:63
+#: theme/templates/helping_center.html:7 theme/templates/parts/sidebar.html:65
+#: theme/templates/parts/sidebar.html:67
 msgid "Help Center"
 msgstr ""
 
-#: theme/templates/landing.html:24
+#: theme/templates/landing.html:26
 msgid "The intuitive path to"
 msgstr ""
 
-#: theme/templates/landing.html:26
+#: theme/templates/landing.html:28
 msgid "data protection"
 msgstr ""
 
-#: theme/templates/landing.html:29
+#: theme/templates/landing.html:31
 msgid "Costumized training for SME's"
 msgstr ""
 
-#: theme/templates/landing.html:31
+#: theme/templates/landing.html:33
 msgid "based on real examples"
 msgstr ""
 
-#: theme/templates/landing.html:40 theme/templates/landing.html:246
-#: theme/templates/landing.html:301
+#: theme/templates/landing.html:42 theme/templates/landing.html:248
+#: theme/templates/landing.html:303
 msgid "Start the journey"
 msgstr ""
 
-#: theme/templates/landing.html:45
+#: theme/templates/landing.html:47
 msgid "Developed by the National Commission"
 msgstr ""
 
-#: theme/templates/landing.html:47
+#: theme/templates/landing.html:49
 msgid "for Data Protection"
 msgstr ""
 
-#: theme/templates/landing.html:71
+#: theme/templates/landing.html:73
 msgid "Suitable"
 msgstr ""
 
-#: theme/templates/landing.html:74
+#: theme/templates/landing.html:76
 msgid "The GDPR with the"
 msgstr ""
 
-#: theme/templates/landing.html:76
+#: theme/templates/landing.html:78
 msgid "words of everyday life"
 msgstr ""
 
-#: theme/templates/landing.html:88
+#: theme/templates/landing.html:90
 msgid "Flexible"
 msgstr ""
 
-#: theme/templates/landing.html:91
+#: theme/templates/landing.html:93
 msgid "A training to follow"
 msgstr ""
 
-#: theme/templates/landing.html:93
+#: theme/templates/landing.html:95
 msgid "at your own pace"
 msgstr ""
 
-#: theme/templates/landing.html:105
+#: theme/templates/landing.html:107
 msgid "Reliable"
 msgstr ""
 
-#: theme/templates/landing.html:108
+#: theme/templates/landing.html:110
 msgid "Verified content"
 msgstr ""
 
-#: theme/templates/landing.html:110
+#: theme/templates/landing.html:112
 msgid "and secure"
 msgstr ""
 
-#: theme/templates/landing.html:126
+#: theme/templates/landing.html:128
 msgid "The GDPR from A to Zen!"
 msgstr ""
 
-#: theme/templates/landing.html:138
+#: theme/templates/landing.html:140
 msgid "Story-Learning"
 msgstr ""
 
-#: theme/templates/landing.html:141
+#: theme/templates/landing.html:143
 msgid "A captivating story with"
 msgstr ""
 
-#: theme/templates/landing.html:143
+#: theme/templates/landing.html:145
 msgid "characters"
 msgstr ""
 
-#: theme/templates/landing.html:154
+#: theme/templates/landing.html:156
 msgid "Achievement"
 msgstr ""
 
-#: theme/templates/landing.html:157
+#: theme/templates/landing.html:159
 msgid "Questions and challenges"
 msgstr ""
 
-#: theme/templates/landing.html:159
+#: theme/templates/landing.html:161
 msgid "to test your progression"
 msgstr ""
 
-#: theme/templates/landing.html:170
+#: theme/templates/landing.html:172
 msgid "Experience"
 msgstr ""
 
-#: theme/templates/landing.html:173
+#: theme/templates/landing.html:175
 msgid "Based on concrete cases"
 msgstr ""
 
-#: theme/templates/landing.html:175
+#: theme/templates/landing.html:177
 msgid "met by experts"
 msgstr ""
 
-#: theme/templates/landing.html:186
+#: theme/templates/landing.html:188
 msgid "Implication"
 msgstr ""
 
-#: theme/templates/landing.html:189
+#: theme/templates/landing.html:191
 msgid "Useful fact sheets"
 msgstr ""
 
-#: theme/templates/landing.html:191
+#: theme/templates/landing.html:193
 msgid "in your everyday life"
 msgstr ""
 
-#: theme/templates/landing.html:209
+#: theme/templates/landing.html:211
 msgid "On the way to compliance !"
 msgstr ""
 
-#: theme/templates/landing.html:217
+#: theme/templates/landing.html:219
 msgid "A story of an SME"
 msgstr ""
 
-#: theme/templates/landing.html:223
+#: theme/templates/landing.html:225
 msgid ""
 "Follow the adventure of our hero Dominique Schummer, a dynamic businessmann "
 "faced with the General Data Protection Regulation, also called <b>“GDPR”</b>."
 msgstr ""
 
-#: theme/templates/landing.html:231
+#: theme/templates/landing.html:233
 msgid ""
 "Aided by his team, Dominique will discover and implement the GDPR to ensure "
 "a respectful handling of the data subject's data."
 msgstr ""
 
-#: theme/templates/landing.html:238
+#: theme/templates/landing.html:240
 msgid ""
 "Explore the world of data protection alongside Dominique and gain new skills!"
 msgstr ""
 
-#: theme/templates/landing.html:267
+#: theme/templates/landing.html:269
 msgid "A 4-level journey"
 msgstr ""
 
-#: theme/templates/landing.html:315
+#: theme/templates/landing.html:317
 msgid "Testimonies"
 msgstr ""
 
-#: theme/templates/landing.html:318
+#: theme/templates/landing.html:320
 msgid "What other users said about it"
 msgstr ""
 
-#: theme/templates/landing.html:409
+#: theme/templates/landing.html:411
 msgid "Our partners"
 msgstr ""
 
@@ -449,15 +449,19 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: theme/templates/parts/sidebar.html:32 theme/templates/parts/sidebar.html:34
+#: theme/templates/parts/sidebar.html:36 theme/templates/parts/sidebar.html:38
 msgid "Dashboard"
 msgstr ""
 
-#: theme/templates/parts/sidebar.html:47 theme/templates/parts/sidebar.html:49
+#: theme/templates/parts/sidebar.html:51
 msgid "Ressources"
 msgstr ""
 
-#: theme/templates/parts/sidebar.html:81 theme/templates/parts/sidebar.html:83
+#: theme/templates/parts/sidebar.html:53
+msgid "Resources"
+msgstr ""
+
+#: theme/templates/parts/sidebar.html:85 theme/templates/parts/sidebar.html:87
 msgid "Log out"
 msgstr ""
 
