@@ -129,9 +129,11 @@
                         {% blocktranslate %}Your score is {% endblocktranslate %}
                         <span class="text-primary">{{ score }}%</span>
                     </p>
-                    <p>
-                        {% blocktranslate %}You have unlocked story number {{ next_level }} !{% endblocktranslate %}
-                    </p>
+                    {% if index_level < 4 %}
+                        <p>
+                            {% blocktranslate %}You have unlocked story number {{ next_level }} !{% endblocktranslate %}
+                        </p>
+                    {% endif %}
                     {% endwith %}
                 </div>
                 <div class="container py-2">
@@ -156,10 +158,17 @@
                             </a>
                         </div>
                         <div class="col mx-auto">
+                            {% if index_level < 4 %}
                             <a type="button" href="{% url 'course' %}"
                                 class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button">
                                 {% translate "Access the next level" %}
                             </a>
+                            {% else %}
+                            <a id="downloadButton" class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button"
+                                href="{% static 'media/documents/DAAZ_Certificate.pdf' %}" download>
+                                {% translate "Download the DAAZ certificate" %}
+                            </a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
