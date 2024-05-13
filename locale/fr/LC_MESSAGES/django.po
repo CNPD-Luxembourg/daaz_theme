@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-08 11:08+0000\n"
-"PO-Revision-Date: 2024-05-08 13:09+0200\n"
+"POT-Creation-Date: 2024-05-13 12:25+0000\n"
+"PO-Revision-Date: 2024-05-13 14:27+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -374,8 +374,8 @@ msgid "Do you have your ID for your next visit?"
 msgstr "Avez-vous votre ID pour votre prochaine visite?"
 
 #: theme/templates/modals/finish.html:23
-msgid "I have my ID and I will be back"
-msgstr "J’ai mon ID et je reviendrai"
+msgid "Leaving the adventure"
+msgstr "Quitter l'aventure"
 
 #: theme/templates/modals/new_user.html:7
 msgid "New journey"
@@ -466,11 +466,7 @@ msgstr "A propos"
 msgid "Dashboard"
 msgstr "Tableau de bord"
 
-#: theme/templates/parts/sidebar.html:51
-msgid "Ressources"
-msgstr "Ressources"
-
-#: theme/templates/parts/sidebar.html:53
+#: theme/templates/parts/sidebar.html:51 theme/templates/parts/sidebar.html:53
 msgid "Resources"
 msgstr "Ressources"
 
