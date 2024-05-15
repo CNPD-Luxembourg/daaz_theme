@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-13 12:25+0000\n"
+"POT-Creation-Date: 2024-05-15 08:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,6 +21,28 @@ msgstr ""
 
 #: theme/templates/accessibility.html:7 theme/templates/parts/footer.html:52
 msgid "Accessibility"
+msgstr ""
+
+#: theme/templates/certificate/template.html:9
+msgid "Certificate"
+msgstr ""
+
+#: theme/templates/certificate/template.html:16
+msgid "Congratulations!"
+msgstr ""
+
+#: theme/templates/certificate/template.html:19
+msgid ""
+"Dominique and his team are delighted to be able to present you with this "
+"certificate of achievement for the DAAZ tool!"
+msgstr ""
+
+#: theme/templates/certificate/template.html:25
+msgid "Signature"
+msgstr ""
+
+#: theme/templates/certificate/template.html:31
+msgid "This document only means that you have completed the DAAZ tool."
 msgstr ""
 
 #: theme/templates/cookiebanner/bootstrap5.html:22
@@ -114,32 +136,36 @@ msgstr ""
 msgid "Your score is "
 msgstr ""
 
-#: theme/templates/course_new_slide.html:133
+#: theme/templates/course_new_slide.html:134
 #, python-format
 msgid "You have unlocked story number %(next_level)s !"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:143
+#: theme/templates/course_new_slide.html:145
 msgid "Download the summary sheet"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:150
+#: theme/templates/course_new_slide.html:152
 msgid "Download the level report"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:153
+#: theme/templates/course_new_slide.html:155
 msgid "Downloading"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:161
+#: theme/templates/course_new_slide.html:164
 msgid "Access the next level"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:183
+#: theme/templates/course_new_slide.html:169
+msgid "Download the DAAZ certificate"
+msgstr ""
+
+#: theme/templates/course_new_slide.html:192
 msgid "Download the fact sheet"
 msgstr ""
 
-#: theme/templates/course_new_slide.html:186
+#: theme/templates/course_new_slide.html:195
 msgid "Download my template"
 msgstr ""
 

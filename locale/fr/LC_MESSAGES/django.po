@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-13 12:25+0000\n"
-"PO-Revision-Date: 2024-05-13 14:27+0200\n"
+"POT-Creation-Date: 2024-05-15 08:19+0000\n"
+"PO-Revision-Date: 2024-05-15 10:19+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -18,6 +18,30 @@ msgstr ""
 #: theme/templates/accessibility.html:7 theme/templates/parts/footer.html:52
 msgid "Accessibility"
 msgstr "Accessibilité"
+
+#: theme/templates/certificate/template.html:9
+msgid "Certificate"
+msgstr "Certificat"
+
+#: theme/templates/certificate/template.html:16
+msgid "Congratulations!"
+msgstr "Félicitations !"
+
+#: theme/templates/certificate/template.html:19
+msgid ""
+"Dominique and his team are delighted to be able to present you with this "
+"certificate of achievement for the DAAZ tool!"
+msgstr ""
+"Dominique et son équipe sont heureux de pouvoir vous décener ce certificat "
+"d'accomplissement de l'outil DAAZ!"
+
+#: theme/templates/certificate/template.html:25
+msgid "Signature"
+msgstr "Signature"
+
+#: theme/templates/certificate/template.html:31
+msgid "This document only means that you have completed the DAAZ tool."
+msgstr "Ce document signifie exclusiement que vous avez terminé l’outil DAAZ."
 
 #: theme/templates/cookiebanner/bootstrap5.html:22
 msgid "Details"
@@ -118,32 +142,36 @@ msgstr "Vous avez terminé le niveau %(index_level)s !"
 msgid "Your score is "
 msgstr "Votre score est de "
 
-#: theme/templates/course_new_slide.html:133
+#: theme/templates/course_new_slide.html:134
 #, python-format
 msgid "You have unlocked story number %(next_level)s !"
 msgstr "Vous avez débloqué l’histoire numéro %(next_level)s !"
 
-#: theme/templates/course_new_slide.html:143
+#: theme/templates/course_new_slide.html:145
 msgid "Download the summary sheet"
 msgstr "Télécharger la fiche récapitulative"
 
-#: theme/templates/course_new_slide.html:150
+#: theme/templates/course_new_slide.html:152
 msgid "Download the level report"
 msgstr "Télécharger le rapport de niveau"
 
-#: theme/templates/course_new_slide.html:153
+#: theme/templates/course_new_slide.html:155
 msgid "Downloading"
 msgstr "Téléchargement"
 
-#: theme/templates/course_new_slide.html:161
+#: theme/templates/course_new_slide.html:164
 msgid "Access the next level"
 msgstr "Accéder au niveau suivant"
 
-#: theme/templates/course_new_slide.html:183
+#: theme/templates/course_new_slide.html:169
+msgid "Download the DAAZ certificate"
+msgstr "Télécharger le certificat DAAZ"
+
+#: theme/templates/course_new_slide.html:192
 msgid "Download the fact sheet"
 msgstr "Télécharger la fiche pratique"
 
-#: theme/templates/course_new_slide.html:186
+#: theme/templates/course_new_slide.html:195
 msgid "Download my template"
 msgstr "Télécharger mon template"
 
