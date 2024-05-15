@@ -1,0 +1,38 @@
+@page {
+    size: A4 landscape; 
+    margin: 0; 
+    padding: 0;
+}
+
+.big-title {
+    font-size: 60px;
+}
+
+.signature {
+    position: absolute;
+    bottom: 160px;
+    right: 175px;
+}
+
+.vertical-text {
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+}
+.vertical-text.left {
+    left: 0;
+    margin-bottom: 30px;
+    margin-left: 25px;
+    transform-origin: left bottom;
+    transform: rotate(-90deg) translate(0%, 100%);    
+
+}
+.vertical-text.right {
+    right: 0;
+    margin-bottom: 90px;
+    margin-right: 25px;
+    transform-origin: right bottom;
+    transform: rotate(-90deg) translate(100%, 0%);    
+}
+
+

@@ -164,9 +164,9 @@
                                 {% translate "Access the next level" %}
                             </a>
                             {% else %}
-                            <a id="downloadButton" class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button"
-                                href="{% static 'media/documents/DAAZ_Certificate.pdf' %}" download>
-                                {% translate "Download the DAAZ certificate" %}
+                            <a id="downloadButton" href="{% url 'certificate' %}"
+                                class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button" >
+                                {% translate "Download the DAAZ certificate" %}   
                             </a>
                             {% endif %}
                         </div>

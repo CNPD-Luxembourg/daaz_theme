@@ -1,0 +1,34 @@
+{% load i18n %}
+
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE|default:'en_us' }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{% translate "Certificate" %} DAAZ</title>
+    </head>
+    <body
+        style="background-image: url(file:{{ static_theme_dir }}/media/images/certificate/background.svg); background-repeat: no-repeat;">
+        <div class="mt-5">
+            <div class="text-center">
+                <h1 class="big-title fw-bold text-warning">
+                    {% translate "Congratulations!" %}
+                </h1>
+                <p class="col-4 text-warning mx-auto">
+                    {% translate "Dominique and his team are delighted to be able to present you with this certificate of achievement for the DAAZ tool!" %}
+                </p>
+                
+            </div>
+        </div>
+        <div class="signature">
+            <h5>{% translate "Signature" %}:</h5>
+        </div>
+        <div class="vertical-text left">
+            <span>ID:{{ user_id }}</span>
+        </div>
+        <div class="text-danger vertical-text right">
+            <span>{% translate "This document only means that you have completed the DAAZ tool." %}</span> 
+        </div>
+    </body>
+</html>
