@@ -17,20 +17,20 @@
             <div class="m-auto">
                 {% if form.quiz %}
                 <h3 class="text-primary">{% translate "Quiz"%} {{ form.quiz_index}}.{{ form.question_quiz_index }}</h3>
-                {% if form.type == "M" %}<p class="small fst-italic lh-lg mb-2">{% translate "Choose all the answers that apply, then click 'Confirm'." %}</p>{% endif %}
                 {% if form.display_quiz_label %}
                 <p><strong><em>{% translate "Script"%}:</em></strong></span> {{ form.quiz.name }}</p>
                 {% endif %}
                 {% else %}
                 <h3 class="text-primary">{% translate "Question"%} {{ form.question_index }}</h3>
-                {% if form.type == "M" %}<p class="small fst-italic lh-lg mb-2">{% translate "Choose all the answers that apply, then click 'Confirm'." %}</p>{% endif %}
                 {% endif %}
                 {% csrf_token %}
                 <script>
                     var csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
                 </script>
                 {% bootstrap_form_errors form %}
-                {% bootstrap_field form.answer show_label=True label_class="pb-3" %}
+                {% bootstrap_label form.answer.label label_class="pb-3" %}
+                {% if form.type == "M" %}<p class="small fst-italic lh-lg mb-2">{% translate "Choose all the answers that apply, then click 'Confirm'." %}</p>{% endif %}
+                {% bootstrap_field form.answer show_label=False label_class="pb-3" %}
                 <div class="text-center pb-2">
                     <button id="summitButton" type="button"
                         class="flip btn text-primary course-button fw-bolder border-primary border border-3 shadow rounded p-2">
