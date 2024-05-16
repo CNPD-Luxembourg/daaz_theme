@@ -12,11 +12,11 @@
 {{ slide.question.media }}
 {% with form=slide.question %}
 <div id="question-card" class="h-100 perspective-flip" value="{{ form.id }}">
-    <div class="front row overflow-auto border rounded border-light border-sm-secondary shadow-sm m-0 h-100 w-100">
-        <form class="d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-100" method="post" id="question-form">
+    <div class="front row border rounded border-light border-sm-secondary shadow-sm m-0 h-100 w-100">
+        <form class="overflow-auto d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-100" method="post" id="question-form">
             <div class="m-auto">
                 {% if form.quiz %}
-                <h3 class="text-primary">{% translate "Quiz"%} {{ form.quiz_index}}.{{ form.question_quiz_index }}</h3>
+                <h3 class="text-primary">{% translate "Quiz"%} {{ level.index|accumulate_quiz_index:form.quiz_index }}.{{ form.question_quiz_index }}</h3>
                 {% if form.display_quiz_label %}
                 <p><strong><em>{% translate "Script"%}:</em></strong></span> {{ form.quiz.name }}</p>
                 {% endif %}
@@ -28,7 +28,7 @@
                     var csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
                 </script>
                 {% bootstrap_form_errors form %}
-                {% bootstrap_label form.answer.label label_class="pb-3" %}
+                {% bootstrap_label form.answer.label|safe label_class="pb-3" %}
                 {% if form.type == "M" %}<p class="small fst-italic lh-lg mb-2">{% translate "Choose all the answers that apply, then click 'Confirm'." %}</p>{% endif %}
                 {% bootstrap_field form.answer show_label=False label_class="pb-3" %}
                 <div class="text-center pb-2">
@@ -47,11 +47,11 @@
             {% endif %}
         </div>
     </div>
-    <div class="back row overflow-auto border rounded border-light border-sm-secondary shadow-sm m-0 h-100 w-100">
-        <div class="d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-100">
+    <div class="back row border rounded border-light border-sm-secondary shadow-sm m-0 h-100 w-100">
+        <div class="overflow-auto d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-100">
             <div class="m-auto">
                 {% if form.quiz %}
-                <h3 class="text-primary">{% translate "Quiz"%} {{ form.quiz_index }}.{{ form.question_quiz_index }}</h3>
+                <h3 class="text-primary">{% translate "Quiz"%} {{ level.index|accumulate_quiz_index:form.quiz_index }}.{{ form.question_quiz_index }}</h3>
                 {% if form.display_quiz_label %}
                 <p><strong><em>{% translate "Script"%}:</em></strong></span> {{ form.quiz.name }}</p>
                 {% endif %}
@@ -100,12 +100,12 @@
 </div>
 {% endwith %}
 {% elif slide.explanation %}
-<div class="row overflow-auto border rounded border-light border-sm-secondary shadow-sm m-0 h-100">
-    <div class="d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-100">
+<div class="row border rounded border-light border-sm-secondary shadow-sm m-0 h-100">
+    <div class="overflow-auto d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-100">
         <div class="m-auto">
             <h3 class="text-primary">{% translate "Question"%} {{ slide.explanation.question_index }}</h3>
             <h6 class="fw-bold">{% translate "Explication"%}:</h6>
-            {{ slide.explanation.label |safe|linebreaksbr }}
+            {{ slide.explanation.label|safe|linebreaksbr }}
         </div>
     </div>
     <div class="col-6 p-0 text-end d-none d-md-inline h-100">
@@ -113,8 +113,8 @@
     </div>
 </div>
 {% elif slide.context %}
-<div class="row overflow-auto border rounded border-light border-sm-secondary shadow-sm m-0 h-100">
-    <div class="d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-md-100">
+<div class="row border rounded border-light border-sm-secondary shadow-sm m-0 h-100">
+    <div class="overflow-auto d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-md-100">
         <div class="m-auto">
             {% if slide.context.label|contains:"final" %}
                 <div class="text-center">
@@ -176,11 +176,11 @@
                 {% for text in slide.context.texts %}
                     <div
                         class="{{ text.css_classes|join:' ' }} {{ text.position }} {% if text.text.get_t_type_display == 'Title'%}text-primary{%endif%} d-none d-md-inline">
-                        {{ text.text.description|wordwrap:60|linebreaks|safe }}
+                        {{ text.text.description|safe|wordwrap:60|linebreaks }}
                     </div>
                     <div
                         class="{{ text.css_classes|join:' ' }} {{ text.position }} {% if text.text.get_t_type_display == 'Title'%}text-primary{%endif%}  d-md-none d-inline">
-                        {{ text.text.description|linebreaks|safe }}
+                        {{ text.text.description|safe|linebreaks }}
                     </div>
                 {% endfor %}
                 {% for resource in slide.context.resources %}
