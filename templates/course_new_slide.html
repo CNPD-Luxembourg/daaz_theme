@@ -58,7 +58,7 @@
                 {% else %}
                 <h3 class="text-primary">{% translate "Question"%} {{ form.question_index }}</h3>
                 {% endif %}
-                <div class="pb-3">{{ form.answer.label_tag }}</div>
+                <div class="pb-3">{{ form.answer.label_tag|safe }}</div>
                 {% if form.type == "S" or form.type == "M" %}
                 <div class="d-grid gap-2 ps-3 mb-5">
                     {% for answer_choice in form.answer.field.queryset %}
