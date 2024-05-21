@@ -22,7 +22,7 @@
       <div class="row">
         <h4 class="col-12 col-sm-6">{% translate "My lessons" %}</h4>
         <div class="col-sm-6 text-center d-none d-sm-block">
-          <a class="start-button small bg-light-red btn btn-danger btn-sm text-danger fw-bold text-decoration-none w-100 {% if user.current_level.index == 4 and progress.3 == 100 %}disabled{% endif %}"
+          <a class="start-button small btn btn-sm fw-bold text-decoration-none w-100 {% if user.current_level.index == 4 and progress.3 == 100 %}disabled bg-secondary{% else %}bg-light-red btn-danger text-danger{% endif %}"
             href="{% url 'course' %}">
             {% if progress.0 > 0 %}
             {% translate "Continue your journey here!" %}
