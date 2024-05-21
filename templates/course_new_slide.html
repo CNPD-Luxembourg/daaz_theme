@@ -12,8 +12,8 @@
 {{ slide.question.media }}
 {% with form=slide.question %}
 <div id="question-card" class="h-100 perspective-flip" value="{{ form.id }}">
-    <div class="front row border rounded border-light border-sm-secondary shadow-sm m-0 h-100 w-100">
-        <form class="overflow-auto d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-100" method="post" id="question-form">
+    <div class="overflow-auto front row border rounded border-light border-sm-secondary shadow-sm m-0 h-100 w-100">
+        <form class="overflow-md-auto d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-100" method="post" id="question-form">
             <div class="m-auto">
                 {% if form.quiz %}
                 <h3 class="text-primary">{% translate "Quiz"%} {{ level.index|accumulate_quiz_index:form.quiz_index }}.{{ form.question_quiz_index }}</h3>
@@ -47,8 +47,8 @@
             {% endif %}
         </div>
     </div>
-    <div class="back row border rounded border-light border-sm-secondary shadow-sm m-0 h-100 w-100">
-        <div class="overflow-auto d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-100">
+    <div class="overflow-auto back row border rounded border-light border-sm-secondary shadow-sm m-0 h-100 w-100">
+        <div class="overflow-md-auto d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-100">
             <div class="m-auto">
                 {% if form.quiz %}
                 <h3 class="text-primary">{% translate "Quiz"%} {{ level.index|accumulate_quiz_index:form.quiz_index }}.{{ form.question_quiz_index }}</h3>
@@ -100,8 +100,8 @@
 </div>
 {% endwith %}
 {% elif slide.explanation %}
-<div class="row border rounded border-light border-sm-secondary shadow-sm m-0 h-100">
-    <div class="overflow-auto d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-100">
+<div class="overflow-auto row border rounded border-light border-sm-secondary shadow-sm m-0 h-100">
+    <div class="overflow-md-auto d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-100">
         <div class="m-auto">
             <h3 class="text-primary">{% translate "Question"%} {{ slide.explanation.question_index }}</h3>
             <h6 class="fw-bold">{% translate "Explication"%}:</h6>
@@ -113,8 +113,8 @@
     </div>
 </div>
 {% elif slide.context %}
-<div class="row border rounded border-light border-sm-secondary shadow-sm m-0 h-100">
-    <div class="overflow-auto d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-md-100">
+<div class="overflow-auto row border rounded border-light border-sm-secondary shadow-sm m-0 h-100">
+    <div class="overflow-md-auto d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-md-100">
         <div class="m-auto">
             {% if slide.context.label|contains:"final" %}
                 <div class="text-center">
