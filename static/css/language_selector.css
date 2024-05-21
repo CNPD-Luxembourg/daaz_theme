@@ -28,14 +28,21 @@
     color: var(--bs-primary);
     border: none !important;
     cursor:pointer;
+    box-shadow: none;
 }
 
 #user-tools #language_selector_minimized {
     background-image: unset;
 }
 
+#language_selector_expanded:focus-visible, 
+#language_selector_minimized:focus-visible {
+    outline: none !important;
+}
+
 #sidebar #language_selector_minimized,
 #sidebar #language_selector_expanded {
+    background-color: transparent;
     background-image: unset;
     padding-right: 10px;
     appearance: none;
