@@ -4,6 +4,282 @@
 
 {% block content_area %}
 <div class="flex-column d-flex h-100">
-    <h4>{% translate "Help Center" %}</h4>
+    <h4>{% translate "CENTRE D’AIDE DAAZ" %}</h4>
+    <div class="accordion" id="helpCenterMenu">
+        <ol class="p-0">
+            <!-- Répondre au questionnaire de satisfaction -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <li class="fw-bold ms-3">{% translate "Répondre au questionnaire de satisfaction" %}</li>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#helpCenterMenu">
+                    <div class="accordion-body small">
+                        {% blocktranslate trimmed %}
+                        Le questionnaire de satisfaction est accessible après accomplissement intégral du parcours DAAZ
+                        {% endblocktranslate %}
+                        <ol type="a">
+                            <li>
+                                {% blocktranslate trimmed %}
+                                Lien vers le questionnaire en ligne [à développer avec le LHC-NC3]
+                                {% endblocktranslate %}
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- A propos -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <li class="fw-bold ms-3">{% translate "A propos" %}</li>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#helpCenterMenu">
+                    <div class="accordion-body small">
+                        <ol type="a">
+                            <li>
+                                {% translate "Editeur" %}
+                            </li>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Vous êtes sur l’outil DAAZ.
+                                {% endblocktranslate %}
+                            </p>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                L'objectif de cet outil est de fournir aux PME un outil d’auto-évaluation simple,
+                                intuitif et gratuit permettant à ces dernières d’intégrer les obligations RGPD dans le
+                                cadre de leur activité. L’accent sera mis notamment sur les principes fondamentaux
+                                prévus par le RGPD ainsi que le renforcement du respect des droits des individus dans le
+                                cadre des traitements de données personnelles envisagés et en cours. ALTO s’adresse à
+                                toutes les PME devant se conformer au RGPD, tant en qualité de responsable de traitement
+                                que de sous-traitant.
+                                {% endblocktranslate %}
+                            </p>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Il est édité par le service « IA, Innovation et Numérique » de la Commission Nationale
+                                pour la Protection des Données (CNPD) en collaboration avec le Luxembourg National
+                                Cybersecurity Competence Center (NC3), entité de la Luxembourg House of Security.
+                                {% endblocktranslate %}
+                            </p>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Il a été co-financé par l’Union européenne.
+                                {% endblocktranslate %}
+                            </p>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Pour toute question sur cet outil et son contenu, vous pouvez nous contacter via notre
+                                formulaire de contact.
+                                {% endblocktranslate %}
+                            </p>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Consultez la notice légale en bas de la page d’accueil pour prendre connaissance des
+                                mentions légales et des informations sur l'hébergement de ce site.
+                                {% endblocktranslate %}
+                            </p>
+                            <li>
+                                {% translate "Qualité" %}
+                            </li>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Un soin particulier a été pris pour garantir un niveau de qualité et d'accessibilité
+                                satisfaisant.
+                                {% endblocktranslate %}
+                            </p>
+                            <li>
+                                {% translate "Déclaration d’accessibilité" %}
+                            </li>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                La Commission Nationale pour la Protection des données poursuit l'objectif de rendre les
+                                sites internet accessibles au plus grand nombre. Vous pouvez consulter notre politique
+                                en matière d'accessibilité sur le site renow.public.lu pour obtenir plus d'informations.
+                                Ce site a été conçu sur ces principes et nous nous engageons à améliorer l'accessibilité
+                                des contenus pour que la consultation du site ne souffre d'aucune discrimination.
+                                {% endblocktranslate %}
+                            </p>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <li class="fw-bold ms-3">{% translate "Contact" %}</li>
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#helpCenterMenu">
+                    <div class="accordion-body small">
+                        {% blocktranslate trimmed %}
+                        Il est possible de nous contacter
+                        {% endblocktranslate %}
+                        <ol type="a">
+                            <li>
+                                {% blocktranslate trimmed %}
+                                directement via l’adresse électronique suivant : <a
+                                    href="mailto:alto@cnpd.lu">alto@cnpd.lu</a>
+                                {% endblocktranslate %}
+                            </li>
+                            <li>
+                                {% blocktranslate trimmed %}
+                                en remplissant les champs obligatoires de notre formulaire de contact suivant :
+                                {% endblocktranslate %}
+                                <ol type="i">
+                                    <li>{% translate "E-mail" %}</li>
+                                    <li>{% translate "Objet de votre message" %}</li>
+                                    <li>{% translate "Message" %}</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plan de site -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <li class="fw-bold ms-3">{% translate "Plan de site" %}</li>
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#helpCenterMenu">
+                    <div class="accordion-body small">
+                        <ol type="a">
+                            <li>{% translate "Commencer l’aventure" %}</li>
+                            <li>{% translate "Ressources" %}</li>
+                            <li>{% translate "Langues" %}</li>
+                            <li>{% translate "Déconnexion" %}</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parcours DAAZ -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        <li class="fw-bold ms-3">{% translate "Parcours DAAZ" %}</li>
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                    data-bs-parent="#helpCenterMenu">
+                    <div class="accordion-body small">
+                        <ol type="a">
+                            <li>{% translate "Le schéma du parcours" %}</li>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Le parcours DAAZ est composé de 4 niveaux qui comprennent chacun :
+                                {% endblocktranslate %}
+                            <ul>
+                                <li>
+                                    {% translate "1 histoire qui est cohérente et continue sur l’ensemble des 4 niveaux" %}
+                                </li>
+                                <li>
+                                    {% translate "20 questions illustrées" %}
+                                </li>
+                                <li>
+                                    {% translate "4 quizz" %}
+                                </li>
+                                <li>
+                                    {% translate "4 fiches pratiques à débloquer" %}
+                                </li>
+                                <li>
+                                    {% translate "1 fiche récapitulative à débloquer en fin de niveau" %}
+                                </li>
+                                <li>
+                                    {% translate "1 document Template à remplir en fin de chaque niveau, à titre de challenge" %}
+                                </li>
+                            </ul>
+                            {% blocktranslate trimmed %}
+                            Le parcours DAAZ est composé de 4 niveaux qui peuvent être schématisés comme suit :
+                            {% endblocktranslate %}
+                            </p>
+                            <li>{% translate "Le contenu des niveaux" %}</li>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Chaque niveau à ses spécificités en matière de protection des données
+                                {% endblocktranslate %}
+                            <ol type="i">
+                                <li class="fw-bold">
+                                    {% translate "Niveau 1 – Bases" %}</>
+                                </li>
+                                <strong>{% translate "Notions abordées :" %}</strong>
+                                <ul>
+                                    <li>{% translate "Données à caractère personnel" %}</li>
+                                    <li>{% translate "Responsable de traitement et sous-traitant" %}</li>
+                                    <li>{% translate "Licéité du traitement" %}</li>
+                                    <li>{% translate "Données sensibles" %}</li>
+                                    <li>{% translate "Exercice de droits" %}</li>
+                                    <li>{% translate "Autorité de protection des données" %}</li>
+                                </ul>
+                                <li class="fw-bold">
+                                    {% translate "Niveau 2 – Gouvernance" %}
+                                </li>
+                                <strong>{% translate "Notions abordées :" %}</strong>
+                                <ul>
+                                    <li>{% translate "Registre des activités de traitement" %}</li>
+                                    <li>{% translate "Analyse d’impact relative à la protection des données" %}
+                                    </li>
+                                    <li>{% translate "Le DPO" %}</li>
+                                    <li>{% translate "Registre des violations" %}</li>
+                                    <li>{% translate "Notification à la CNPD et aux personnes concernées" %}
+                                    </li>
+                                    <li>{% translate "Transparence vis-à-vis des personnes concernées" %}</li>
+                                    <li>{% translate "Conservation des données" %}</li>
+                                </ul>
+                                <li class="fw-bold">
+                                    {% translate "Niveau 3 – Sécurité" %}
+                                </li>
+                                <strong>{% translate "Notions abordées :" %}</strong>
+                                <ul>
+                                    <li>{% translate "Violations de données" %}</li>
+                                    <li>{% translate "Sous-traitance" %}</li>
+                                    <li>{% translate "Sécurisation des données" %}</li>
+                                    <li>{% translate "Confidentialité" %}</li>
+                                    <li>{% translate "Intégrité" %}</li>
+                                    <li>{% translate "Disponibilité" %}</li>
+                                    <li>{% translate "Droits des personnes" %}</li>
+                                    <li>{% translate "Privacy by design et by default" %}</li>
+                                    <li>{% translate "Chiffrement" %}</li>
+                                    <li>{% translate "Gestion des incidents" %}</li>
+                                    <li>{% translate "Continuité d’activité" %}</li>
+                                    <li>{% translate "Accès aux données" %}</li>
+                                </ul>
+                                <li class="fw-bold">
+                                    {% translate "Niveau 4 – Evaluation" %}
+                                </li>
+                                <strong>{% translate "Notions abordées :" %}</strong>
+                                <ul>
+                                    <li>{% translate "Audits" %}</li>
+                                    <li>{% translate "Revue de la gouvernance" %}</li>
+                                    <li>{% translate "Revue des processus" %}</li>
+                                    <li>{% translate "Mise à jour des procédures" %}</li>
+                                    <li>{% translate "Mise à jour des registres" %}</li>
+                                </ul>
+                            </ol>
+                            </p>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </ol>
+    </div>
 </div>
 {% endblock %}

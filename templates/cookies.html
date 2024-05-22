@@ -1,7 +1,9 @@
 {% extends 'index.html' %}
 {% load static %}
 {% load i18n %}
-{% block bootstrap5_title %}{% endblock %}
+{% block bootstrap5_title %}
+{% translate "Cookies" %}
+{% endblock %}
 {% block content %}
 <div class="container-xl py-5">
   <h1 class="text-primary">{% translate "Cookie settings" %}</h1>
