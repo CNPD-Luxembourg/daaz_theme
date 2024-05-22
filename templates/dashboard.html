@@ -35,8 +35,8 @@
       <div class="row h-sm-40 h-md-45">
         <div class="d-sm-none d-inline">
           <div class="pt-1 pb-3 text-center">
-            <a class="start-button bg-light-red btn btn-danger btn-sm text-danger fw-bold text-decoration-none w-100 {% if user.current_level.index == 4 and progress.3 == 100 %}disabled{% endif %}"
-              href="{% url 'course' %}">
+            <a class="start-button small btn btn-sm fw-bold text-decoration-none w-100 {% if user.current_level.index == 4 and progress.3 == 100 %}disabled bg-secondary{% else %}bg-light-red btn-danger text-danger{% endif %}"
+            href="{% url 'course' %}">
               {% if progress.0 > 0 %}
               {% translate "Continue your journey here!" %}
               {% else %}
