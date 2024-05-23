@@ -1,30 +1,119 @@
 {% extends 'index.html' %}
 {% load static %}
 {% load i18n %}
-{% block bootstrap5_title %}{% endblock %}
+{% block bootstrap5_title %}{% translate "Privacy policy" %}{% endblock %}
 {% block content %}
 <div class="container-xl py-5">
   <h1 class="text-primary">{% translate "Privacy policy" %}</h1>
-  <p class="text-justify">
+  <ol>
+    <li class="fw-bold">
+      {% blocktranslate trimmed %}
+      Responsable du traitement
+      {% endblocktranslate %}
+    </li>
     {% blocktranslate trimmed %}
-    This questionnaire is anonymous and does not require the collection of personal data from the people who replies to
-    it.
-    <br><br>
-    Users are invited to answer this questionnaire, taking care not to communicate, in the free-text fields of it, any
-    information allowing the identification of a natural person (e.g. surname, first name, contact details, etc.). In
-    the
-    event that personal data is however entered in the free-text fields of the online questionnaire, these will be
-    deleted.
-    <br><br>
-    The answers to the online questionnaire will be accessible only by the Commissioner and the CNPD agents as well as
-    by
-    the LHC-NC3 agents dedicated to the ALTO project, in order to ensure the analysis of the answers given and the
-    proper
-    technical operation.
-    <br><br>
-    For any questions regarding the processing of personal data by the CNPD, you can contact the CNPD's Data Protection
-    Officer (DPO): <a href="mailto:dpo@cnpd.lu">dpo@cnpd.lu</a>
+    <p>
+      La Commission nationale pour la protection des données (CNPD) est responsable du traitement des données à
+      caractère personnel effectué dans le cadre du projet DAAZ.
+    </p>
+    <p>
+      Les coordonnées de la CNPD sont les suivantes :
+    </p>
     {% endblocktranslate %}
-  </p>
+    Commission nationale pour la protection des données <br>
+    15, Boulevard du Jazz<br>
+    L-4370 Belvaux<br>
+    Tél. : (+352) 26 10 60 -1<br>
+    </p>
+    <li class="fw-bold">
+      {% blocktranslate trimmed %}
+      Finalités et base juridique du traitement
+      {% endblocktranslate %}
+    </li>
+    <p>
+      {% blocktranslate trimmed %}
+      Le projet DAAZ contribue à encourager la sensibilisation des responsables du traitement et des sous-traitants en
+      ce qui concerne les obligations qui leur incombent en vertu du RGPD. La réalisation de ce projet s’inscrit dans le
+      cadre d’une mission d’intérêt public qui incombe à la CNPD sur base de l’article 57, paragraphe 1, sous d) du
+      RGPD.
+      {% endblocktranslate %}
+    </p>
+    <p>
+      {% blocktranslate trimmed %}
+      L’anonymat des utilisateurs est préservé grâce à un identifiant unique généré automatiquement lors de la première
+      connexion. La CNPD et son partenaire le LHC-NC3 (Luxembourg House of Cybersecurity, National Cybersecurity
+      Competence Center) ne sont donc pas en mesure d’identifier l’utilisateur dans le cadre de son parcours de
+      formation.
+      {% endblocktranslate %}
+    </p>
+    <p>
+      {% blocktranslate trimmed %}
+      Néanmoins, en cas de demande de support adressée à la CNPD de la part d’un utilisateur (via l’adresse
+      <a href="mailto:daaz@cnpd.lu)">daaz@cnpd.lu</a>), des données à caractère personnel (à savoir le nom, le prénom et
+      l’adresse email de la personne
+      concernée) seront traitées afin de pouvoir y donner suite. L’attention des utilisateurs est attirée sur le fait
+      qu’ils ne devraient transmettre à daaz@cnpd.lu que les éléments d’information nécessaires au traitement de leur
+      demande.
+      {% endblocktranslate %}
+    </p>
+    <li class="fw-bold">
+      {% blocktranslate trimmed %}
+      Destinataires
+      {% endblocktranslate %}
+    </li>
+    <p>
+      {% blocktranslate trimmed %}
+      Les données à caractère personnel traitées dans le cadre d’une demande de support ne seront accessibles qu’aux
+      Commissaires et agents de la CNPD en charge du projet DAAZ ainsi qu’aux agents désignés au sein du LHC-NC3.
+      {% endblocktranslate %}
+    </p>
+    <li class="fw-bold">
+      {% blocktranslate trimmed %}
+      Durée de conservation
+      {% endblocktranslate %}
+    </li>
+    <p>
+      {% blocktranslate trimmed %}
+      Dans le cadre d’une demande de support, les données traitées seront conservées pour une durée de trois mois à
+      compter de la demande. {% endblocktranslate %}
+    </p>
+    <li class="fw-bold">
+      {% blocktranslate trimmed %}
+      Droits des personnes concernées
+      {% endblocktranslate %}
+    </li>
+    <p>
+      {% blocktranslate trimmed %}
+      Vous avez le droit d’accéder aux données vous concernant traitées dans le cadre de votre demande de support et
+      d’en obtenir une copie (article 15 du règlement général sur la protection des données), d’obtenir la rectification
+      de données inexactes ou incomplètes (article 16 du règlement général sur la protection des données), de vous
+      opposer au traitement de vos données (article 21 du règlement général sur la protection des données), d’obtenir
+      l’effacement de celles-ci dans les conditions prévues par l’article 17 du règlement général sur la protection des
+      données et la limitation du traitement dans les conditions prévues par l’article 18 de ce même règlement. le cadre
+      d’une demande de support, les données traitées seront conservées pour une durée de trois mois à compter de la
+      demande.
+      {% endblocktranslate %}
+    </p>
+    <p>
+      {% blocktranslate trimmed %}
+      Pour toute question concernant le traitement de données à caractère personnel effectué par la CNPD, et pour toute
+      demande relative à l’exercice de vos droits, vous pouvez contacter le délégué à la protection des données (DPO) de
+      la CNPD : <a href="mailto:dpo@cnpd.lu)">dpo@cnpd.lu</a>.
+      {% endblocktranslate %}
+    </p>
+    <li class="fw-bold">
+      {% blocktranslate trimmed %}
+      Réclamation
+      {% endblocktranslate %}
+    </li>
+    <p>
+      {% blocktranslate trimmed %}
+      Si vous estimez que le traitement de vos données effectué par la CNPD constitue une violation du règlement général
+      sur la protection des données, vous pouvez introduire une <a
+        href="https://cnpd.public.lu/fr/particuliers/faire-valoir/formulaire-plainte.html" target="_blank"
+        rel="noopener noreferrer">réclamation auprès de la CNPD</a>.
+      {% endblocktranslate %}
+    </p>
+  </ol>
 </div>
 {% endblock %}
