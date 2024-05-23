@@ -130,8 +130,8 @@
                         <ol type="a">
                             <li>
                                 {% blocktranslate trimmed %}
-                                directement via l’adresse électronique suivant : <a
-                                    href="mailto:alto@cnpd.lu">alto@cnpd.lu</a>
+                                directement via l’adresse électronique suivant :
+                                <a href="mailto:alto@cnpd.lu">alto@cnpd.lu</a>
                                 {% endblocktranslate %}
                             </li>
                             <li>
@@ -175,7 +175,9 @@
                 <h2 class="accordion-header" id="headingFive">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        <li class="fw-bold ms-3">{% translate "Parcours DAAZ" %}</li>
+                        <li class="fw-bold ms-3">
+                            {% translate "Parcours DAAZ" %}
+                        </li>
                     </button>
                 </h2>
                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
@@ -188,24 +190,39 @@
                                 Le parcours DAAZ est composé de 4 niveaux qui comprennent chacun :
                                 {% endblocktranslate %}
                             <ul>
-                                <li>
-                                    {% translate "1 histoire qui est cohérente et continue sur l’ensemble des 4 niveaux" %}
-                                </li>
-                                <li>
-                                    {% translate "20 questions illustrées" %}
-                                </li>
-                                <li>
-                                    {% translate "4 quizz" %}
-                                </li>
-                                <li>
-                                    {% translate "4 fiches pratiques à débloquer" %}
-                                </li>
-                                <li>
-                                    {% translate "1 fiche récapitulative à débloquer en fin de niveau" %}
-                                </li>
-                                <li>
-                                    {% translate "1 document Template à remplir en fin de chaque niveau, à titre de challenge" %}
-                                </li>
+                                <p>
+                                    <li>
+                                        {% blocktranslate trimmed %}
+                                        1 histoire qui est cohérente et continue sur l’ensemble des 4 niveaux
+                                        {% endblocktranslate %}
+                                    </li>
+                                    <li>
+                                        {% blocktranslate trimmed %}
+                                        20 questions illustrées
+                                        {% endblocktranslate %}
+                                    </li>
+                                    <li>
+                                        {% blocktranslate trimmed %}
+                                        4 quizz
+                                        {% endblocktranslate %}
+                                    </li>
+                                    <li>
+                                        {% blocktranslate trimmed %}
+                                        4 fiches pratiques à débloquer
+                                        {% endblocktranslate %}
+                                    </li>
+                                    <li>
+                                        {% blocktranslate trimmed %}
+                                        1 fiche récapitulative à débloquer en fin de niveau
+                                        {% endblocktranslate %}
+                                    </li>
+                                    <li>
+                                        {% blocktranslate trimmed %}
+                                        1 document Template à remplir en fin de chaque niveau, à titre de
+                                        challenge
+                                        {% endblocktranslate %}
+                                    </li>
+                                </p>
                             </ul>
                             {% blocktranslate trimmed %}
                             Le parcours DAAZ est composé de 4 niveaux qui peuvent être schématisés comme suit :
@@ -229,6 +246,10 @@
                                     <li>{% translate "Exercice de droits" %}</li>
                                     <li>{% translate "Autorité de protection des données" %}</li>
                                 </ul>
+                                <strong>{% translate "Document à remplir :" %}</strong>
+                                <ul>
+                                    <li>{% translate "Registre des traitements" %}</li>
+                                </ul>
                                 <li class="fw-bold">
                                     {% translate "Niveau 2 – Gouvernance" %}
                                 </li>
@@ -243,6 +264,10 @@
                                     </li>
                                     <li>{% translate "Transparence vis-à-vis des personnes concernées" %}</li>
                                     <li>{% translate "Conservation des données" %}</li>
+                                </ul>
+                                <strong>{% translate "Document à remplir :" %}</strong>
+                                <ul>
+                                    <li>{% translate "Politique de confidentialité" %}</li>
                                 </ul>
                                 <li class="fw-bold">
                                     {% translate "Niveau 3 – Sécurité" %}
@@ -262,6 +287,11 @@
                                     <li>{% translate "Continuité d’activité" %}</li>
                                     <li>{% translate "Accès aux données" %}</li>
                                 </ul>
+                                <strong>{% translate "Document à remplir :" %}</strong>
+                                <ul>
+                                    <li>{% translate "Contrat de sous-traitance" %}</li>
+                                    <li>{% translate "Registre des violations" %}</li>
+                                </ul>
                                 <li class="fw-bold">
                                     {% translate "Niveau 4 – Evaluation" %}
                                 </li>
@@ -273,7 +303,669 @@
                                     <li>{% translate "Mise à jour des procédures" %}</li>
                                     <li>{% translate "Mise à jour des registres" %}</li>
                                 </ul>
+                                <strong>{% translate "Document à remplir :" %}</strong>
+                                <ul>
+                                    <li>{% translate "Tableau Amélioration continue" %}</li>
+                                </ul>
                             </ol>
+                            </p>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fonctionnalité de DAAZ -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        <li class="fw-bold ms-3">
+                            {% translate "Fonctionnalité de DAAZ" %}
+                        </li>
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                    data-bs-parent="#helpCenterMenu">
+                    <div class="accordion-body small">
+                        <div class="accordion" id="featuresMenu">
+                            <ol type="a" class="p-0">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading6.1">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#featuresMenu_1" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            <li class="fw-bold ms-3">
+                                                {% translate "Commencer/poursuivre le parcours" %}
+                                            </li>
+                                        </button>
+                                    </h2>
+                                    <div id="featuresMenu_1" class="accordion-collapse collapse show"
+                                        aria-labelledby="heading6.1" data-bs-parent="#featuresMenu">
+                                        <div class="accordion-body">
+                                            <ol type="i">
+                                                <li>
+                                                    <strong>{% translate "Pour commencer le parcours" %}</strong>,
+                                                    {% blocktranslate trimmed %}
+                                                    Cliquez sur le bouton rouge « Commencer l’aventure ici ! » ou sur le
+                                                    Buton bleu « Niveau 1 ».
+                                                    {% endblocktranslate %}
+                                                </li>
+                                                <li>
+                                                    <strong>{% translate "Pour poursuivre le parcours" %}</strong>,
+                                                    {% blocktranslate trimmed %}
+                                                    Cliquez sur le bouton rouge « Poursuivez votre aventure ici ! » ou
+                                                    sur le buton bleu correspondant au niveau, lorsque vous avez quitté
+                                                    le parcours.
+                                                    {% endblocktranslate %}
+                                                </li>
+                                                <li>
+                                                    <strong>{% translate "L’accomplissement d’un niveau" %}</strong>
+                                                    {% blocktranslate trimmed %}
+                                                    ouvre l’accès au niveau suivant. Le parcours contient 4 niveaux.
+                                                    {% endblocktranslate %}
+                                                </li>
+                                                <li>
+                                                    <strong>{% translate "L’accomplissement du quatrième" %}</strong>
+                                                    {% blocktranslate trimmed %}
+                                                    et dernier niveau débloque le certificat d’accomplissement unique,
+                                                    renseignant de votre identifiant unique.
+                                                    {% endblocktranslate %}
+                                                </li>
+                                                <li>
+                                                    <strong>{% translate "Retrouver un contenu spécifique" %}</strong>
+                                                    <p>
+                                                        {% blocktranslate trimmed %}
+                                                        À tout moment, vous pouvez revenir à un niveau précédent pour
+                                                        retrouver un contenu spécifique.
+                                                        Pour cela il convient :
+                                                        {% endblocktranslate %}
+                                                    </p>
+                                                    <ul>
+                                                        <p>
+                                                            <li>
+                                                                {% blocktranslate trimmed %}
+                                                                de cliquer sur le logo correspondant au « Dashboard »
+                                                                qui se
+                                                                trouve dans la bar verticale à gauche de l’écran
+                                                                (version
+                                                                ordinateur) ou en bas de votre écran (version mobile) ;
+                                                                {% endblocktranslate %}
+                                                            </li>
+                                                            <li>
+                                                                {% blocktranslate trimmed %}
+                                                                de cliquer ensuite sur le buton correspondant au niveau
+                                                                dans
+                                                                lequel se trouve le contenu recherché.
+                                                                {% endblocktranslate %}
+                                                            </li>
+                                                        </p>
+                                                    </ul>
+                                                    <p>
+                                                        {% blocktranslate trimmed %}
+                                                        Le contenu des explications des réponses se trouve intégralement
+                                                        dans les fiches récapitulatives à télécharger à chaque fin de
+                                                        niveau, soit depuis la fenêtre dédiée, soit depuis la rubrique «
+                                                        Ressources » du Dashboard.
+                                                        {% endblocktranslate %}
+                                                    </p>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading6.2">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#featuresMenu_2"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            <li class="fw-bold ms-3">
+                                                {% translate "Questions simples et questions/quiz à choix multiple" %}
+                                            </li>
+                                        </button>
+                                    </h2>
+                                    <div id="featuresMenu_2" class="accordion-collapse collapse"
+                                        aria-labelledby="heading6.2" data-bs-parent="#featuresMenu">
+                                        <div class="accordion-body">
+                                            <ol type="i">
+                                                <li class="fw-bold">
+                                                    {% translate "Questions simples" %}
+                                                </li>
+                                                <p>
+                                                    {% blocktranslate trimmed %}
+                                                    Pour sélectionner la bonne réponse, il convient de cliquer sur le
+                                                    point liée à la réponse ou sur la réponse en elle-même.<br>
+                                                    Une fois la réponse sélectionnée, il convient de cliquer sur «
+                                                    valider » pour valider la réponse.<br>
+                                                    Une réponse juste sélectionnée sera colorée en vert dans la slide de
+                                                    correction.<br>
+                                                    Une réponse juste non sélectionnée sera colorée en bleu dans le
+                                                    slide de correction.<br>
+                                                    Une réponse fausse sélectionnée sera colorée en rouge dans le slide
+                                                    de correction.<br>
+                                                    {% endblocktranslate %}
+                                                </p>
+                                                <li class="fw-bold">
+                                                    {% translate "Questions et quizz à choix multiple" %}
+                                                </li>
+                                                <p>
+                                                    {% blocktranslate trimmed %}
+                                                    Les questions à choix multiple sont reconnaissables :
+                                                    {% endblocktranslate %}
+                                                </p>
+                                                <ul>
+                                                    <p>
+                                                        <li>
+                                                            {% blocktranslate trimmed %}
+                                                            au carré bleu « <span class="text-primary">□</span> » des
+                                                            cases
+                                                            à sélectionner, correspondant au design spécifique pour les
+                                                            questions à choix multiple, ainsi que par ;
+                                                            {% endblocktranslate %}
+                                                        </li>
+                                                        <li>
+                                                            {% blocktranslate trimmed %}
+                                                            le message « Choisissez toutes les réponses qui s'appliquent
+                                                            puis cliquez 'Valider' ».
+                                                            {% endblocktranslate %}
+                                                        </li>
+                                                    </p>
+                                                </ul>
+                                                <p>
+                                                    {% blocktranslate trimmed %}
+                                                    Pour chaque question à choix multiple, il est possible de
+                                                    sélectionner un nombre limité de réponse, à savoir celui
+                                                    correspondant au nombre de bonnes réponses possible par question.
+                                                    Une fois le nombre limité de réponses sélectionnées, les autres
+                                                    réponses sont grisées pour informer l’utilisateur qu’il a
+                                                    sélectionner le maximum de bonnes réponses sur une réponse ou quiz à
+                                                    choix multiple.
+                                                    {% endblocktranslate %}
+                                                </p>
+                                                <p>
+                                                    {% blocktranslate trimmed %}
+                                                    Une réponse juste sélectionnée sera colorée en vert dans la slide de
+                                                    correction. <br>
+                                                    Une réponse juste non sélectionnée sera colorée en bleu dans le
+                                                    slide de correction.<br>
+                                                    Une réponse fausse sélectionnée sera colorée en rouge dans le slide
+                                                    de correction.<br>
+                                                    {% endblocktranslate %}
+                                                </p>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading6.3">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#featuresMenu_3"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            <li class="fw-bold ms-3">
+                                                {% translate "Score et récompenses" %}
+                                            </li>
+                                        </button>
+                                    </h2>
+                                    <div id="featuresMenu_3" class="accordion-collapse collapse"
+                                        aria-labelledby="heading6.3" data-bs-parent="#featuresMenu">
+                                        <div class="accordion-body">
+                                            <ol type="i">
+                                                <li>
+                                                    <p>
+                                                        {% blocktranslate trimmed %}
+                                                        <strong>Récompenses :</strong>
+                                                        tout au long du parcours DAAZ du contenu pratique ou
+                                                        récapitulatif
+                                                        ainsi qu’un certificat d’accomplissement sont à débloquer, pour
+                                                        être
+                                                        téléchargés, à titre de récompenses.
+                                                        Tout document débloqué depuis le parcours peut, à tout moment,
+                                                        être
+                                                        récupéré et téléchargé depuis la rubrique «
+                                                        <strong>Ressources</strong> » du Dashboard.
+                                                        {% endblocktranslate %}
+
+                                                    </p>
+                                                    <p>
+                                                        {% blocktranslate trimmed %}
+                                                        Chaque parcours permet de débloquer, 4 fiches pratiques, 1 fiche
+                                                        récapitulative, un rapport de niveau et 1 ou plusieurs
+                                                        Templates.
+                                                        {% endblocktranslate %}
+                                                    <ol>
+                                                        <li>
+                                                            {% blocktranslate trimmed %}
+                                                            <u>Une fiche pratique</u> est un document portant sur une
+                                                            thématique spécifique, afin d’attirer l’attention sur des
+                                                            aspects importants du RGPD. Leur contenu n’est pas
+                                                            exhaustif.
+                                                            Pour l’obtenir, il convient de répondre à un des 4 quiz du
+                                                            niveau et de valider la(les) réponse(-s) sélectionnée(-s).
+                                                            {% endblocktranslate %}
+                                                        </li>
+                                                        <li>
+                                                            {% blocktranslate trimmed %}
+                                                            <u>Un Template</u> est un document fourni pour vous
+                                                            permettre de documenter votre conformité au RGPD. Il doit
+                                                            être rempli de manière adéquate en fonction des traitements
+                                                            effectués.
+                                                            Pour l’obtenir, il convient d’attendre le « Challenge » de
+                                                            fin de niveau.
+                                                            {% endblocktranslate %}
+                                                        </li>
+                                                        <li>
+                                                            {% blocktranslate trimmed %}
+                                                            <u>Une fiche récapitulative</u> est un document synthétisant
+                                                            de manière structurée, les explications fournies pour
+                                                            chacune des 20 questions. Leur contenu n’est pas exhaustif.
+                                                            Pour l’obtenir, il convient d’accomplir un niveau
+                                                            intégralement.
+                                                            {% endblocktranslate %}
+                                                        </li>
+                                                        <li>
+                                                            {% blocktranslate trimmed %}
+                                                            <u>Un rapport de niveau</u> est un document retranscrivant
+                                                            l’intégralité des réponses données et le score obtenu par
+                                                            niveau.
+                                                            Pour l’obtenir, il convient d’accomplir un niveau
+                                                            intégralement.
+                                                            {% endblocktranslate %}
+                                                        </li>
+                                                        <li>
+                                                            {% blocktranslate trimmed %}
+                                                            <u>Un certificat d’accomplissement</u> eest document qui
+                                                            valide la réalisation du parcours DAAZ. C’est un peu votre
+                                                            diplôme attestant de votre connaissance globale des
+                                                            obligations du RGPD acquises tout au long du parcours DAAZ.
+                                                            Pour l’obtenir, il convient d’accomplir le parcours DAAZ
+                                                            intégralement.
+                                                            {% endblocktranslate %}
+                                                        </li>
+                                                    </ol>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <strong>{% translate "Résultat" %} :</strong>
+                                                    <ol>
+                                                        <p>
+                                                            <li>
+                                                                {% blocktranslate trimmed %}
+                                                                <u>le Score</u> est fonction de votre total de bonnes
+                                                                réponses aux 20 questions et 4 quiz pour chacun des 4
+                                                                niveaux du parcours.<br>
+                                                                Chaque bonne réponse vaut 1 point.<br>
+                                                                Une question à choix unique apporte 1 point.<br>
+                                                                Une réponse à choix multiple apporte autant de points
+                                                                qu’il y a de bonnes réponses à sélectionner pour ce type
+                                                                de question.<br>
+                                                                Une mauvaise réponse n’apporte pas de point négatif.<br>
+                                                                {% endblocktranslate %}
+                                                            </li>
+                                                        </p>
+                                                        <p>
+                                                            <li>
+                                                                {% blocktranslate trimmed %}
+                                                                <u>Les stickers</u> du Dashboard sont évolutifs en
+                                                                fonction
+                                                                du score.<br>
+                                                                Une fois 75% de bonnes réponses acquises, un fanion se
+                                                                débloque et apparaît sur l’image.<br>
+                                                                Une fois 90% de bonnes réponses acquises, les stickers
+                                                                dorés
+                                                                se débloquent.<br>
+                                                                {% endblocktranslate %}
+                                                            </li>
+                                                        </p>
+                                                    </ol>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        {% blocktranslate trimmed %}
+                                                        <strong>Connaissance :</strong> le pourcentage de connaisse est
+                                                        acquis après chaque explication, chaque téléchargement de fiche
+                                                        pratique et chaque téléchargement de template par challenge.
+                                                        {% endblocktranslate %}
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        {% blocktranslate trimmed %}
+                                                        <strong>Cours :</strong> le pourcentage de réalisation par
+                                                        niveau
+                                                        évolue au fur et à mesure de votre avancement dans le parcours
+                                                        DAAZ.
+                                                        {% endblocktranslate %}
+
+                                                    </p>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conditions générales d’utilisation -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        <li class="fw-bold ms-3">{% translate "Conditions générales d’utilisation" %}</li>
+                    </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                    data-bs-parent="#helpCenterMenu">
+                    <div class="accordion-body small">
+                        <p class="fst-italic">
+                            {% blocktranslate trimmed %}
+                            Veuillez prendre connaissance des conditions générales d’utilisation du site daaz-gdpr.lu.
+                            En cas de désaccord avec
+                            celles-ci, veuillez de ne pas utiliser ce site. Toute personne faisant usage du site
+                            daaz-gdpr.lu et de l’outil
+                            d’aide à la conformité DAAZ accessible sur celui-ci est réputée avoir pris connaissance et
+                            accepté l'intégralité des
+                            présentes conditions générales d'utilisation.
+                            {% endblocktranslate %}
+                        </p>
+                        <p>
+                            {% blocktranslate trimmed %}
+                            L’outil d’aide à la conformité DAAZ est mis à disposition des utilisateurs sur le site
+                            daaz-gdpr.lu (ci-après, le «
+                            site ») par la Commission nationale pour la protection des données (CNPD, 15, Boulevard du
+                            Jazz, L-4370 Belvaux), en
+                            collaboration avec le LHC-NC3 (Luxembourg House of Cybersecurity, National Cybersecurity
+                            Competence Center, 122 Rue
+                            Adolphe Fischer, L-1521 Luxembourg) et avec le support technique du Centre des technologies
+                            de l’information de
+                            l’Etat (CTIE - 560 Rue de Neudorf, L-2220 Luxembourg).
+                            {% endblocktranslate %}
+                        </p>
+                        <ol>
+                            <li class="fw-bold">
+                                {% translate "Accès au site" %}
+                            </li>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                L’accès au site se fait par Internet. L’utilisateur déclare en connaître les risques et
+                                les accepter. Il doit se
+                                prémunir contre les effets de la piraterie informatique en adoptant une configuration
+                                informatique adaptée et
+                                sécurisée.
+                                {% endblocktranslate %}
+                            </p>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                La CNPD ne saurait être tenue responsable d'un quelconque dommage, que l’utilisateur
+                                subirait, lié directement ou
+                                indirectement à sa navigation sur ce site et à l’utilisation en ligne de l’outil d’aide
+                                à la conformité DAAZ.
+                                {% endblocktranslate %}
+                            </p>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Le CTIE assurera au mieux la sécurité du système informatique et une disponibilité
+                                maximale de ce site. Toutefois,
+                                sa responsabilité ne saurait être retenue en cas d’attaque du système informatique ou
+                                d’indisponibilité momentanée
+                                partielle ou totale du site.
+                                {% endblocktranslate %}
+                            </p>
+                            <li class="fw-bold">
+                                {% translate "Absence d’engagement quant à la mise en conformité de l’utilisateur" %}
+                            </li>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                L'utilisation du site, en ce compris de l’outil d’aide à la conformité DAAZ, est
+                                gratuite. L’utilisation de cet
+                                outil, entièrement volontaire, vise à permettre à l’utilisateur d’acquérir les notions
+                                nécessaires pour renforcer
+                                et favoriser la mise en conformité au règlement général sur la protection des données
+                                (RGPD) au sein de petites et
+                                moyennes entreprises.
+                                {% endblocktranslate %}
+                            </p>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                L’utilisation de l’outil d’aide à la conformité DAAZ n’a néanmoins pas pour objet de
+                                constituer une garantie quant
+                                à la mise en conformité au RGPD des traitements de données à caractère personnel
+                                éventuellement mis en œuvre par
+                                l’utilisateur et n’implique aucun engagement de la CNPD à cet égard.
+                                {% endblocktranslate %}
+                            </p>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Si l’utilisateur souhaite obtenir des informations plus spécifiques concernant la
+                                protection des données, il peut
+                                contacter la CNPD via son <a href="https://cnpd.public.lu/fr/support/contact.html"
+                                    target="_blank" rel="noopener noreferrer">formulaire de contact</a>.
+                                {% endblocktranslate %}
+                            </p>
+                            <li class="fw-bold">
+                                {% translate "Utilisation du site" %}
+                            </li>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Le site, en ce compris l’outil d’aide à la conformité DAAZ, ne peut être utilisé que
+                                dans le respect des présentes
+                                conditions générales. Il est interdit d’en détourner l’utilisation, de quelque façon que
+                                ce soit, notamment à des
+                                fins commerciales. Le contenu de l’outil d’aide à la conformité DAAZ peut être adapté
+                                afin de prendre en compte
+                                des aspects spécifiques du droit et des pratiques en matière de protection des données
+                                et des évolutions dans ce
+                                domaine. Une telle adaptation, qui exclut toute exploitation directe ou indirecte à des
+                                fins commerciales et qui
+                                ne peut en aucun cas viser à modifier l’outil tel qu’il est accessible sur le site, est
+                                uniquement possible par le
+                                biais de la version GitHub de l’outil. La version GitHub de l’outil est accessible en
+                                bas de page de la page
+                                d’accueil du site.
+                                {% endblocktranslate %}
+                            </p>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                L’utilisateur ne peut prétendre à aucun droit de propriété, à aucune cession, implicite
+                                ou non, à l’égard de
+                                l’ensemble des éléments du site et de l’outil d’aide à la conformité DAAZ mis à
+                                disposition par la CNPD en
+                                collaboration avec le LHC-NC3.
+                                {% endblocktranslate %}
+                            </p>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Toute utilisation ou opération effectuée par l’utilisateur (par exemple via
+                                l’utilisation de logiciels) qui
+                                pourrait porter atteinte ou altérer, de quelque façon que soit, le fonctionnement normal
+                                du site et/ou le contenu
+                                proposé sur celui-ci, est interdite.
+                                {% endblocktranslate %}
+                            </p>
+                            <li class="fw-bold">
+                                {% translate "Suspension du site" %}
+                            </li>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                L’utilisation du site, en ce compris de l’outil d’aide à la conformité, peut être
+                                suspendue à tout moment et sans
+                                préavis par la CNPD avec le support technique du CTIE, notamment pour des raisons de
+                                maintenance ou encore dans le
+                                cas où le site ferait l’objet d’une utilisation abusive, sans que la CNPD ne soit tenue
+                                de justifier le motif de
+                                la suspension.
+                                {% endblocktranslate %}
+                            </p>
+                            <li class="fw-bold">
+                                {% translate "Informations publiées et modification du site" %}
+                            </li>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                L'objectif est de diffuser des informations exactes et à jour, mais la CNPD ne saurait
+                                toutefois éviter tout
+                                risque d'erreur matérielle. Les informations publiées sur ce site ne sont pas
+                                constitutives d’un engagement de la
+                                part de la CNPD et peuvent ne pas être exhaustives.
+                                {% endblocktranslate %}
+                            </p>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                La responsabilité de la CNPD ne saurait être retenue en cas d’inexactitudes, de lacunes
+                                ou d’erreurs dans les
+                                informations fournies sur le site, y compris en cas d’omission de mise à jour d’une
+                                information ou d’un document
+                                ou encore en cas d’erreurs de manipulation du système ou d’encodage.
+                                {% endblocktranslate %}
+                            </p>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Le site, en compris l’outil d’aide à la conformité DAAZ, peut être mis à jour et modifié
+                                à tout moment par la
+                                CNPD, sans préavis. La CNPD peut notamment à tout moment retirer, ajouter, compléter ou
+                                préciser tout ou une
+                                partie des informations, contenus et fonctionnalités accessibles sur le site. Aucune
+                                responsabilité pour un
+                                quelconque dommage direct ou indirect en lien avec de telles mises à jour et
+                                modifications ne pourra être retenue
+                                à l’encontre de la CNPD.
+                                {% endblocktranslate %}
+                            </p>
+                            <li class="fw-bold">
+                                {% translate "Liens vers d’autres sites" %}
+                            </li>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Pour la convenance des utilisateurs, ce site peut contenir des liens vers d’autres sites
+                                qui peuvent leur être
+                                utiles ou qui peuvent les intéresser.
+                                {% endblocktranslate %}
+                            </p>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                La CNPD ne contrôle pas systématiquement le contenu de ces sites. Elle ne peut dès lors
+                                être tenue responsable des
+                                contenus présentés sur lesdits sites, qu’il s’agisse de leur légalité ou de l'exactitude
+                                des informations qui s'y
+                                trouvent et des éventuels dégâts matériels qui découleraient de leur utilisation.
+                                {% endblocktranslate %}
+                            </p>
+                            <li class="fw-bold">
+                                {% translate "Propriété intellectuelle (Copyright)" %}
+                            </li>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                L’ensemble des éléments de ce site, en ce compris l’outil d’aide à la conformité DAAZ
+                                ainsi que son logo sont
+                                protégés par les lois sur la propriété intellectuelle, sur les droits d’auteur et le
+                                droit des marques.
+                                L’utilisation du site et de l’outil d’aide à la conformité DAAZ, conformément aux
+                                présentes conditions générales,
+                                ne constitue en aucun cas une cession de droits de propriété intellectuelle détenus par
+                                la CNPD.
+                                {% endblocktranslate %}
+                            </p>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Aucune autorisation d’exploitation n’est accordée par la CNPD à l’égard de l’ensemble
+                                des éléments du site
+                                protégés par des droits de propriété intellectuelle.
+                                {% endblocktranslate %}
+                            </p>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Sans préjudice des possibilités d’adaptation du contenu de l’outil décrites au point 3
+                                des présentes conditions
+                                générales, les modifications, reproductions ou adaptations des éléments de ce site, de
+                                l’outil d’aide à la
+                                conformité DAAZ tel qu’il est accessible sur celui-ci et de la marque figurative DAAZ,
+                                ne sont pas autorisés, sous
+                                quelque forme que ce soit et par quelque moyen que ce soit.
+                                {% endblocktranslate %}
+                            </p>
+                            <li class="fw-bold">
+                                {% translate "Modification des conditions générales d'utilisation" %}
+                            </li>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Les présentes conditions générales d'utilisation pourront être modifiées ou complétées à
+                                tout moment, sans
+                                préavis, en fonction de modifications apportées au site, de l'évolution de la
+                                législation ou pour tout autre motif
+                                jugé nécessaire. Il appartient à l’utilisateur de s’informer des conditions générales
+                                d'utilisation du site, dont
+                                seule la version actualisée accessible en ligne est réputée en vigueur.
+                                {% endblocktranslate %}
+                            </p>
+                            <li class="fw-bold">
+                                {% translate "Loi applicable et juridictions compétentes" %}
+                            </li>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Tout litige relatif à l'utilisation de ce site et de l’outil d’aide à la conformité DAAZ
+                                est soumis à la loi
+                                luxembourgeoise et de la compétence exclusive des juridictions du Grand-Duché de
+                                Luxembourg.
+                                {% endblocktranslate %}
+                            </p>
+                            <li class="fw-bold">
+                                {% blocktranslate trimmed %} 
+                                Traitements de données à caractère personnel effectués par la CNPD via le
+                                site daaz-gdpr.lu
+                                {% endblocktranslate %}
+                            </li>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Un identifiant unique généré automatiquement lors de la première connexion à l’outil
+                                d’aide à la conformité DAAZ
+                                permet de préserver l’anonymat de l’utilisateur. Des données à caractère personnel
+                                peuvent néanmoins être traitées
+                                par la CNPD en cas de demande de support.
+                                {% endblocktranslate %}
+                            </p>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Les informations relatives aux traitements de données à caractère personnel effectués
+                                par la CNPD dans ce contexte
+                                sont détaillées
+                                {% endblocktranslate %}
+                                <a href="{% url 'privacy' %}" rel="noopener noreferrer">{% translate "ici" %}</a>.
+                            </p>
+                            <li class="fw-bold">
+                                {% translate "Gestion des cookies" %}
+                            </li>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Un cookie est un fichier texte envoyé au navigateur de l’utilisateur et enregistré sur
+                                le disque dur de son
+                                terminal (PC, ordinateur portable ou smartphone, par exemple) lors de la visite d’un
+                                site internet.
+                                {% endblocktranslate %}
+                            </p>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Des cookies peuvent par exemple être utilisés afin d’assurer le bon fonctionnement d’un
+                                site et d’optimiser son
+                                ergonomie et ses fonctionnalités. Les informations relatives aux cookies utilisés par le
+                                site daaz-gdpr.lu sont
+                                détaillées
+                                {% endblocktranslate %}
+                                <a href="{% url 'cookies' %}" rel="noopener noreferrer">{% translate "ici" %}</a>.
+                            </p>
+                            <li class="fw-bold">
+                                {% translate "Langues" %}
+                            </li>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Le site est proposé en trois langues, à savoir l’anglais, l’allemand et le français.
+                                {% endblocktranslate %}
+                            </p>
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Dans la mesure du possible, il sera répondu à toute question/sollicitation dans la
+                                langue du destinataire de la
+                                réponse.
+                                {% endblocktranslate %}
                             </p>
                         </ol>
                     </div>
