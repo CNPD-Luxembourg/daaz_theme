@@ -1,6 +1,7 @@
 {% extends 'main.html' %}
 {% load i18n %}
 {% load static %}
+{% block bootstrap5_title %}DAAZ - {% translate "My ressources" %}{% endblock %}
 
 {% block bootstrap5_extra_head %}
 {{ block.super }}
@@ -11,7 +12,7 @@
 {% block content_area %}
 {% with img_classes="img-fluid" button_classes="btn btn-outline-light text-primary fw-bolder shadow w-75 rounded-pill p-2 go-to-download" icon_classes="bi bi-arrow-up-right-circle-fill text-primary ps-0" col_classes="p-2 align-self-center" %}
 <div class="flex-column d-flex h-100">
-    <h4> {% translate "My ressources" %}</h4>
+    <h4>{% translate "My ressources" %}</h4>
     <div id="resources" class="row row-cols-1 row-cols-sm-3 h-100 text-center pb-sm-0 pb-5">
         {% for level in levels %}
         <div class="{{ col_classes }}">
