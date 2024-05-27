@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-15 08:19+0000\n"
-"PO-Revision-Date: 2024-05-15 10:19+0200\n"
+"PO-Revision-Date: 2024-05-27 09:10+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -32,7 +32,7 @@ msgid ""
 "Dominique and his team are delighted to be able to present you with this "
 "certificate of achievement for the DAAZ tool!"
 msgstr ""
-"Dominique et son équipe sont heureux de pouvoir vous décener ce certificat "
+"Dominique et son équipe sont heureux de pouvoir vous décerner ce certificate "
 "d'accomplissement de l'outil DAAZ!"
 
 #: theme/templates/certificate/template.html:25
@@ -41,7 +41,7 @@ msgstr "Signature"
 
 #: theme/templates/certificate/template.html:31
 msgid "This document only means that you have completed the DAAZ tool."
-msgstr "Ce document signifie exclusiement que vous avez terminé l’outil DAAZ."
+msgstr "Ce document signifie exclusivement que vous avez terminé l’outil DAAZ."
 
 #: theme/templates/cookiebanner/bootstrap5.html:22
 msgid "Details"
