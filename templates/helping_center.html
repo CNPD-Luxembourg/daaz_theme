@@ -8,7 +8,7 @@
     <div class="accordion" id="helpCenterMenu">
         <ol class="p-0">
             <!-- Répondre au questionnaire de satisfaction -->
-            <div class="accordion-item">
+            <!-- <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -30,7 +30,7 @@
                         </ol>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- A propos -->
             <div class="accordion-item">
@@ -125,23 +125,12 @@
                     data-bs-parent="#helpCenterMenu">
                     <div class="accordion-body small">
                         {% blocktranslate trimmed %}
-                        Il est possible de nous contacter <span class="text-danger">en cas de demande de support technique exclusivement</span> :
+                        Il est possible de nous contacter <span class="text-danger">en cas de demande de support
+                            technique exclusivement</span> directement via l’adresse électronique suivant : <a
+                            href="mailto:alto@cnpd.lu">alto@cnpd.lu</a> ou sur notre <a
+                            href="https://cnpd.public.lu/fr/support/contact.html" target="_blank"
+                            rel="noopener noreferrer">formulaire de contact</a>.
                         {% endblocktranslate %}
-
-                        <ol type="a">
-                            <li>
-                                {% blocktranslate trimmed %}
-                                directement via l’adresse électronique suivant :
-                                <a href="mailto:alto@cnpd.lu">alto@cnpd.lu</a>
-                                {% endblocktranslate %}
-                            </li>
-                            <li>
-                                {% blocktranslate trimmed %}
-                                en remplissant les champs obligatoires de notre <a href="https://cnpd.public.lu/fr/support/contact.html"
-                                target="_blank" rel="noopener noreferrer">formulaire de contact</a>.
-                                {% endblocktranslate %}
-                            </li>
-                        </ol>
                     </div>
                 </div>
             </div>
@@ -233,7 +222,7 @@
                             <li>{% translate "Le contenu des niveaux" %}</li>
                             <p>
                                 {% blocktranslate trimmed %}
-                                Chaque niveau à ses spécificités en matière de protection des données
+                                Chaque niveau à ses spécificités en matière de protection des données personnelles.
                                 {% endblocktranslate %}
                             <ol type="i">
                                 <li class="fw-bold">
@@ -334,30 +323,30 @@
                                         <div class="accordion-body">
                                             <ol type="i">
                                                 <li>
-                                                    <strong>{% translate "Pour commencer le parcours" %}</strong>,
                                                     {% blocktranslate trimmed %}
+                                                    <strong>Pour commencer le parcours</strong>,
                                                     Cliquez sur le bouton rouge « Commencer l’aventure ici ! » ou sur le
-                                                    Buton bleu « Niveau 1 ».
+                                                    bouton bleu « Niveau 1 ».
                                                     {% endblocktranslate %}
                                                 </li>
                                                 <li>
-                                                    <strong>{% translate "Pour poursuivre le parcours" %}</strong>,
                                                     {% blocktranslate trimmed %}
+                                                    <strong>Pour poursuivre le parcours</strong>,
                                                     Cliquez sur le bouton rouge « Poursuivez votre aventure ici ! » ou
                                                     sur le buton bleu correspondant au niveau, lorsque vous avez quitté
                                                     le parcours.
                                                     {% endblocktranslate %}
                                                 </li>
                                                 <li>
-                                                    <strong>{% translate "L’accomplissement d’un niveau" %}</strong>
                                                     {% blocktranslate trimmed %}
+                                                    <strong>L’accomplissement d’un niveau</strong>
                                                     ouvre l’accès au niveau suivant. Le parcours contient 4 niveaux.
                                                     {% endblocktranslate %}
                                                 </li>
                                                 <li>
-                                                    <strong>{% translate "L’accomplissement du quatrième" %}</strong>
                                                     {% blocktranslate trimmed %}
-                                                    et dernier niveau débloque le certificat d’accomplissement unique,
+                                                    <strong>L’accomplissement du quatrième et dernier niveau</strong>
+                                                    débloque le certificat d’accomplissement unique,
                                                     renseignant de votre identifiant unique.
                                                     {% endblocktranslate %}
                                                 </li>
@@ -367,6 +356,10 @@
                                                         {% blocktranslate trimmed %}
                                                         À tout moment, vous pouvez revenir à un niveau précédent pour
                                                         retrouver un contenu spécifique.
+                                                        {% endblocktranslate %}
+                                                    </p>
+                                                    <p>
+                                                        {% blocktranslate trimmed %}
                                                         Pour cela il convient :
                                                         {% endblocktranslate %}
                                                     </p>
@@ -374,28 +367,27 @@
                                                         <p>
                                                             <li>
                                                                 {% blocktranslate trimmed %}
-                                                                de cliquer sur le logo correspondant au « Dashboard »
-                                                                qui se
+                                                                de cliquer sur le bouton « Ressources » qui se
                                                                 trouve dans la bar verticale à gauche de l’écran
-                                                                (version
-                                                                ordinateur) ou en bas de votre écran (version mobile) ;
+                                                                (version ordinateur) ou en bas de votre écran (version
+                                                                mobile) ;
                                                                 {% endblocktranslate %}
                                                             </li>
                                                             <li>
                                                                 {% blocktranslate trimmed %}
-                                                                de cliquer ensuite sur le buton correspondant au niveau
-                                                                dans
-                                                                lequel se trouve le contenu recherché.
+                                                                de cliquer ensuite sur le bouton correspondant au niveau
+                                                                ou au type de document recherché.
                                                                 {% endblocktranslate %}
                                                             </li>
                                                         </p>
                                                     </ul>
                                                     <p>
                                                         {% blocktranslate trimmed %}
-                                                        Le contenu des explications des réponses se trouve intégralement
-                                                        dans les fiches récapitulatives à télécharger à chaque fin de
-                                                        niveau, soit depuis la fenêtre dédiée, soit depuis la rubrique «
-                                                        Ressources » du Dashboard.
+                                                        Le contenu des explications fourni pour chacune des 20 questions
+                                                        se trouve intégralement dans les fiches récapitulatives à
+                                                        télécharger à chaque fin de niveau, soit depuis la fenêtre
+                                                        dédiée du parcours, soit depuis la rubrique « Ressources » du
+                                                        tableau de bord.
                                                         {% endblocktranslate %}
                                                     </p>
                                                 </li>
@@ -423,7 +415,7 @@
                                                 <p>
                                                     {% blocktranslate trimmed %}
                                                     Pour sélectionner la bonne réponse, il convient de cliquer sur le
-                                                    point liée à la réponse ou sur la réponse en elle-même.<br>
+                                                    point lié à la réponse ou sur la réponse en elle-même.<br>
                                                     Une fois la réponse sélectionnée, il convient de cliquer sur «
                                                     valider » pour valider la réponse.<br>
                                                     Une réponse juste sélectionnée sera colorée en vert dans la slide de
@@ -511,61 +503,62 @@
                                                         Tout document débloqué depuis le parcours peut, à tout moment,
                                                         être
                                                         récupéré et téléchargé depuis la rubrique «
-                                                        <strong>Ressources</strong> » du Dashboard.
+                                                        <strong>Ressources</strong> » du tableau de bord.
                                                         {% endblocktranslate %}
 
                                                     </p>
                                                     <p>
                                                         {% blocktranslate trimmed %}
-                                                        Chaque parcours permet de débloquer, 4 fiches pratiques, 1 fiche
-                                                        récapitulative, un rapport de niveau et 1 ou plusieurs
-                                                        Templates.
+                                                        Chaque niveau permet de débloquer, 4 fiches pratiques, 1 fiche
+                                                        récapitulative, un rapport de niveau et 1 document Template.
                                                         {% endblocktranslate %}
                                                     <ol>
                                                         <li>
                                                             {% blocktranslate trimmed %}
-                                                            <u>Une fiche pratique</u> est un document portant sur une
+                                                            <strong>Une fiche pratique</strong> est un document portant sur une
                                                             thématique spécifique, afin d’attirer l’attention sur des
                                                             aspects importants du RGPD. Leur contenu n’est pas
-                                                            exhaustif.
+                                                            exhaustif.<br>
                                                             Pour l’obtenir, il convient de répondre à un des 4 quiz du
                                                             niveau et de valider la(les) réponse(-s) sélectionnée(-s).
                                                             {% endblocktranslate %}
                                                         </li>
                                                         <li>
                                                             {% blocktranslate trimmed %}
-                                                            <u>Un Template</u> est un document fourni pour vous
+                                                            <strong>Une fiche récapitulative</strong> est un document synthétisant
+                                                            de manière structurée, les explications fournies pour
+                                                            chacune des 20 questions. Leur contenu n’est pas exhaustif.<br>
+                                                            Pour l’obtenir, il convient d’accomplir un niveau
+                                                            intégralement.
+                                                            {% endblocktranslate %}
+                                                        </li>
+                                                        <li>
+                                                            {% blocktranslate trimmed %}
+                                                            <strong>Un document Template</strong> est un document fourni pour vous
                                                             permettre de documenter votre conformité au RGPD. Il doit
                                                             être rempli de manière adéquate en fonction des traitements
-                                                            effectués.
+                                                            effectués.<br>
                                                             Pour l’obtenir, il convient d’attendre le « Challenge » de
                                                             fin de niveau.
                                                             {% endblocktranslate %}
                                                         </li>
                                                         <li>
                                                             {% blocktranslate trimmed %}
-                                                            <u>Une fiche récapitulative</u> est un document synthétisant
-                                                            de manière structurée, les explications fournies pour
-                                                            chacune des 20 questions. Leur contenu n’est pas exhaustif.
+                                                            <strong>Un rapport de niveau</strong> est un document retranscrivant
+                                                            l’intégralité des réponses données ainsi que le score obtenu
+                                                            par niveau.<br>
                                                             Pour l’obtenir, il convient d’accomplir un niveau
                                                             intégralement.
                                                             {% endblocktranslate %}
                                                         </li>
                                                         <li>
                                                             {% blocktranslate trimmed %}
-                                                            <u>Un rapport de niveau</u> est un document retranscrivant
-                                                            l’intégralité des réponses données et le score obtenu par
-                                                            niveau.
-                                                            Pour l’obtenir, il convient d’accomplir un niveau
-                                                            intégralement.
-                                                            {% endblocktranslate %}
-                                                        </li>
-                                                        <li>
-                                                            {% blocktranslate trimmed %}
-                                                            <u>Un certificat d’accomplissement</u> eest document qui
-                                                            valide la réalisation du parcours DAAZ. C’est un peu votre
+                                                            <strong>Un certificat d’accomplissement</strong> est le document qui
+                                                            valide la réalisation du parcours DAAZ. C’est en quelque
+                                                            sorte le
                                                             diplôme attestant de votre connaissance globale des
-                                                            obligations du RGPD acquises tout au long du parcours DAAZ.
+                                                            principes et des obligations du RGPD acquise tout au long du
+                                                            parcours DAAZ.<br>
                                                             Pour l’obtenir, il convient d’accomplir le parcours DAAZ
                                                             intégralement.
                                                             {% endblocktranslate %}
@@ -594,14 +587,12 @@
                                                         <p>
                                                             <li>
                                                                 {% blocktranslate trimmed %}
-                                                                <u>Les stickers</u> du Dashboard sont évolutifs en
-                                                                fonction
-                                                                du score.<br>
-                                                                Une fois 75% de bonnes réponses acquises, un fanion se
+                                                                <u>Les stickers</u> du tableau de bord sont évolutifs en
+                                                                fonction du score.<br>
+                                                                Une fois 70% de bonnes réponses acquises, un fanion se
                                                                 débloque et apparaît sur l’image.<br>
                                                                 Une fois 90% de bonnes réponses acquises, les stickers
-                                                                dorés
-                                                                se débloquent.<br>
+                                                                dorés se débloquent.<br>
                                                                 {% endblocktranslate %}
                                                             </li>
                                                         </p>
@@ -611,8 +602,9 @@
                                                     <p>
                                                         {% blocktranslate trimmed %}
                                                         <strong>Connaissance :</strong> le pourcentage de connaisse est
-                                                        acquis après chaque explication, chaque téléchargement de fiche
-                                                        pratique et chaque téléchargement de template par challenge.
+                                                        acquis et augmente tout au long du parcours DAAZ, après chaque
+                                                        explication, chaque fiche pratique débloquée et document
+                                                        Template débloqué au moment du challenge de fin de niveau.
                                                         {% endblocktranslate %}
                                                     </p>
                                                 </li>
@@ -620,9 +612,8 @@
                                                     <p>
                                                         {% blocktranslate trimmed %}
                                                         <strong>Cours :</strong> le pourcentage de réalisation par
-                                                        niveau
-                                                        évolue au fur et à mesure de votre avancement dans le parcours
-                                                        DAAZ.
+                                                        niveau évolue au fur et à mesure de votre avancement dans le
+                                                        parcours DAAZ.
                                                         {% endblocktranslate %}
 
                                                     </p>
