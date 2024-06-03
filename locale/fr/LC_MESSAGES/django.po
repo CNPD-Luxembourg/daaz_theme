@@ -221,7 +221,7 @@ msgid "data protection"
 msgstr "la protection des données"
 
 #: theme/templates/landing.html:31
-msgid "Costumized training for SME's"
+msgid "Customized training for SME's"
 msgstr "Une formation sur mesure pour les PME"
 
 #: theme/templates/landing.html:33
