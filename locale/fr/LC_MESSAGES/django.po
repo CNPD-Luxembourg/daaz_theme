@@ -238,8 +238,8 @@ msgid "Developed by the National Commission"
 msgstr "Conçue par la Commission Nationale"
 
 #: theme/templates/landing.html:49
-msgid "for Data Protection"
-msgstr "pour la Protection des Données"
+msgid "for Data Protection of Luxembourg"
+msgstr "pour la Protection des Données du Luxembourg"
 
 #: theme/templates/landing.html:73
 msgid "Suitable"
