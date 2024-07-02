@@ -169,8 +169,10 @@ $(document).ready(function () {
                         x: {
                             type: typeXaxis,
                             time: timeformat,
+                            stacked: true,
                         },
                         y: {
+                            stacked: true,
                             beginAtZero: true,
                             ticks: {
                                 precision: 0,
