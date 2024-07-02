@@ -18,11 +18,16 @@ $(document).ready(function () {
     let successRateByCategory = aggregateByCategory(questionsSuccessRate);
     let categoryLabels = Object.keys(successRateByCategory);
     let categories_values = Object.values(successRateByCategory);
-    let user_dates = [...new Set(Object.keys(aggregatedUsersStartedBydate).concat(Object.keys(aggregatedUsersUnStartedBydate)).sort())];
+    let user_dates_year = [...new Set(Object.keys(aggregatedUsersStartedBydate).concat(Object.keys(aggregatedUsersUnStartedBydate)).sort())];
+    let user_dates_year_values = [
+        { label: 'started', data: user_dates_year.map(year => aggregatedUsersStartedBydate[year] || 0) },
+        { label: 'unstarted', data: user_dates_year.map(year => aggregatedUsersUnStartedBydate[year] || 0) }
+    ];
+    let user_dates_timestamp = usersBydate.map(user => t = new Date(user.timestamp));
     let user_dates_values = [
-        { label: 'started', data: user_dates.map(year => aggregatedUsersStartedBydate[year] || 0) },
-        { label: 'unstarted', data: user_dates.map(year => aggregatedUsersUnStartedBydate[year] || 0) }
-    ]
+        { label: 'started', data: usersBydate.map(user => !user.is_unstarted ? user.count : 0) },
+        { label: 'unstarted', data: usersBydate.map(user => user.is_unstarted ? user.count : 0) }
+    ];
     let user_levels = usersByLevel.map(user => `Level ${user.level_index}: ${user.level_name}`);
     let user_levels_values = usersByLevel.map(user => user.count);
     let score_levels = scoreAndProgressBylevel.map(user => `Level ${user.level_index}: ${user.level_name}`);
@@ -35,6 +40,7 @@ $(document).ready(function () {
     let duration_values = durationBylevel.map(d => d.avg_duration);
 
     const users_by_year_ctx = document.getElementById('users_by_year_chart');
+    const users_by_month_ctx = document.getElementById('users_by_month_chart');
     const users_by_level_ctx = document.getElementById('users_by_level_chart');
     const users_and_score_by_level_ctx = document.getElementById('users_and_score_by_level_chart');
     const users_and_progress_by_level_ctx = document.getElementById('users_and_progress_by_level_chart');
@@ -50,9 +56,20 @@ $(document).ready(function () {
     drawSingleAxisChart(
         'bar',
         users_by_year_ctx,
-        user_dates,
+        user_dates_year,
+        user_dates_year_values,
+        'time',
+        'year',
+        true
+    );
+
+    drawSingleAxisChart(
+        'bar',
+        users_by_month_ctx,
+        user_dates_timestamp,
         user_dates_values,
         'time',
+        'month',
         true
     );
 
@@ -127,43 +144,41 @@ $(document).ready(function () {
         });
     }
 
-    function drawSingleAxisChart(chartType, ctx, labels, values, typeXaxis = 'category', multiseries = false) {
-        new Chart(ctx, {
-            type: chartType,
-            data: {
-                labels: labels,
-                datasets: multiseries ? values : [{ data: values }],
-            },
-            options: {
-                plugins: {
-                    legend: {
-                        display: multiseries
-                    }
+    function drawSingleAxisChart(chartType, ctx, labels, values, typeXaxis = 'category', timeUnit = 'year', multiseries = false) {
+        timeformat = {
+            unit: timeUnit,
+            tooltipFormat: timeUnit == 'year' ? 'yyyy' : 'MMM yyyy',
+        },
+            new Chart(ctx, {
+                type: chartType,
+                data: {
+                    labels: labels,
+                    datasets: multiseries ? values : [{ data: values }],
                 },
-                responsive: true,
-                scales: {
-                    x: {
-                        type: typeXaxis,
-                        time: {
-                            unit: 'year',
-                            displayFormats: {
-                                year: 'yyyy'
-                            },
-                            tooltipFormat: 'yyyy'
-                        },
-                        ticks: {
-                            source: 'labels'
+                options: {
+                    plugins: {
+                        legend: {
+                            display: multiseries
                         }
                     },
-                    y: {
-                        beginAtZero: true,
-                        ticks: {
-                            precision: 0,
+                    responsive: true,
+                    scales: {
+                        x: {
+                            type: typeXaxis,
+                            time: timeformat,
+                            ticks: {
+                                source: 'labels'
+                            }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                precision: 0,
+                            }
                         }
-                    }
+                    },
                 },
-            },
-        });
+            });
     }
 
     function drawMultipleAxisChart(chartType, ctx, labels, legendYaxis, valuesYaxis, legendY2axis, valuesY2axis, typeXaxis = 'category') {
@@ -342,7 +357,7 @@ $(document).ready(function () {
                     },
                     y: {
                         type: 'linear',
-                        grid:{
+                        grid: {
                             display: false,
                         },
                         ticks: {
@@ -364,7 +379,7 @@ $(document).ready(function () {
                         align: 'end',
                         clamp: true,
                         offset: 0,
-                        padding : {
+                        padding: {
                             top: 0,
                             bottom: 0
                         },
