@@ -9,8 +9,10 @@ $(document).ready(function () {
     let users_current_position = JSON.parse(document.getElementById('users_current_position').textContent);
     let durationBylevel = JSON.parse(document.getElementById('average_duration_by_level').textContent);
 
-    let aggregatedUsersStartedBydate = aggregateByYear(usersBydate.filter(user => !user.is_unstarted));
-    let aggregatedUsersUnStartedBydate = aggregateByYear(usersBydate.filter(user => user.is_unstarted));
+    let aggregatedUsersStartedByYearDate = aggregateByYear(usersBydate.filter(user => !user.is_unstarted));
+    let aggregatedUsersUnStartedByYearDate = aggregateByYear(usersBydate.filter(user => user.is_unstarted));
+    let aggregatedUsersStartedByMonthDate = aggregateByMonthAndYear(usersBydate.filter(user => !user.is_unstarted));
+    let aggregatedUsersUnStartedByMonthDate = aggregateByMonthAndYear(usersBydate.filter(user => user.is_unstarted));
     let successRateByQuestion = aggregateQuestionsByLevel(questionsSuccessRate);
     let questionLabels = getQuestionLabels(successRateByQuestion, nbQuestions);
     let successRateByQuiz = aggregateQuizByLevel(questionsSuccessRate);
@@ -18,16 +20,17 @@ $(document).ready(function () {
     let successRateByCategory = aggregateByCategory(questionsSuccessRate);
     let categoryLabels = Object.keys(successRateByCategory);
     let categories_values = Object.values(successRateByCategory);
-    let user_dates_year = [...new Set(Object.keys(aggregatedUsersStartedBydate).concat(Object.keys(aggregatedUsersUnStartedBydate)).sort())];
+    let user_dates_year = [...new Set(Object.keys(aggregatedUsersStartedByYearDate).concat(Object.keys(aggregatedUsersUnStartedByYearDate)).sort())];
     let user_dates_year_values = [
-        { label: 'started', data: user_dates_year.map(year => aggregatedUsersStartedBydate[year] || 0) },
-        { label: 'unstarted', data: user_dates_year.map(year => aggregatedUsersUnStartedBydate[year] || 0) }
+        { label: 'started', data: user_dates_year.map(year => aggregatedUsersStartedByYearDate[year] || 0) },
+        { label: 'unstarted', data: user_dates_year.map(year => aggregatedUsersUnStartedByYearDate[year] || 0) }
     ];
-    let user_dates_timestamp = usersBydate.map(user => t = new Date(user.timestamp));
-    let user_dates_values = [
-        { label: 'started', data: usersBydate.map(user => !user.is_unstarted ? user.count : 0) },
-        { label: 'unstarted', data: usersBydate.map(user => user.is_unstarted ? user.count : 0) }
+    let user_dates_month = [...new Set(Object.keys(aggregatedUsersStartedByMonthDate).concat(Object.keys(aggregatedUsersUnStartedByMonthDate)).sort())];
+    let user_dates_month_values =[
+        { label: 'started', data: user_dates_month.map(month => aggregatedUsersStartedByMonthDate[month] || 0) },
+        { label: 'unstarted', data: user_dates_month.map(month => aggregatedUsersUnStartedByMonthDate[month] || 0) }
     ];
+
     let user_levels = usersByLevel.map(user => `Level ${user.level_index}: ${user.level_name}`);
     let user_levels_values = usersByLevel.map(user => user.count);
     let score_levels = scoreAndProgressBylevel.map(user => `Level ${user.level_index}: ${user.level_name}`);
@@ -66,8 +69,8 @@ $(document).ready(function () {
     drawSingleAxisChart(
         'bar',
         users_by_month_ctx,
-        user_dates_timestamp,
-        user_dates_values,
+        user_dates_month,
+        user_dates_month_values,
         'time',
         'month',
         true
@@ -166,9 +169,6 @@ $(document).ready(function () {
                         x: {
                             type: typeXaxis,
                             time: timeformat,
-                            ticks: {
-                                source: 'labels'
-                            }
                         },
                         y: {
                             beginAtZero: true,
@@ -401,6 +401,21 @@ $(document).ready(function () {
                 acc[yearKey] = 0;
             }
             acc[yearKey] += entry.count;
+            return acc;
+        }, {});
+    }
+
+    function aggregateByMonthAndYear(data) {
+        return data.reduce((acc, entry) => {
+            const date = new Date(entry.timestamp);
+            const year = date.getFullYear();
+            const month = date.getMonth() + 1;
+            const yearMonthKey = `${year}-${month.toString().padStart(2, '0')}`;
+            
+            if (!acc[yearMonthKey]) {
+                acc[yearMonthKey] = 0;
+            }
+            acc[yearMonthKey] += entry.count;
             return acc;
         }, {});
     }
