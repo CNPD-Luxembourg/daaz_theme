@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-02 13:31+0000\n"
-"PO-Revision-Date: 2024-07-02 15:38+0200\n"
+"PO-Revision-Date: 2024-07-02 15:44+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -1511,7 +1511,7 @@ msgstr "Total des utilisateurs"
 
 #: theme/templates/stats.html:37
 msgid "Course completion rate"
-msgstr "Taux d'achèvement des cours"
+msgstr "Taux d'achèvement du cours"
 
 #: theme/templates/stats.html:41
 msgid "Global Average score"
