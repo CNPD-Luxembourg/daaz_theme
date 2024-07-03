@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+{% load django_bootstrap5 %}
+{% load static %}
+{% load i18n %}
+{% block bootstrap5_title %}
+{% translate "Login" %}
+{% endblock %}
+
+{% block content %}
+<div class="col-10 col-md-6 col-lg-3 m-auto py-6">
+    <div class="card">
+        <div class="card-header  text-center p-3">
+            <h2>
+                <i class="bi bi-shield-lock-fill text-primary"></i>
+                {% translate "Acces restricted" %}
+            </h2>
+
+        </div>
+        <div class="card-body ">
+            <form method="post">
+                {% csrf_token %}
+                {% bootstrap_form_errors form %}
+                {% bootstrap_form form  %}
+                <div class="text-center">
+                    <button class="btn btn-primary text-white" role="submit">
+                        {% translate "Log in" %}
+                      </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
