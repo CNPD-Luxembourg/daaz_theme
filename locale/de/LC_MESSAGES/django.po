@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-02 13:31+0000\n"
+"POT-Creation-Date: 2024-07-03 08:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1251,7 +1251,7 @@ msgid "Your ID:"
 msgstr ""
 
 #: theme/templates/modals/new_user.html:20 theme/templates/modals/start.html:22
-#: theme/templates/parts/header.html:37
+#: theme/templates/parts/header.html:36
 msgid "Start"
 msgstr ""
 
@@ -1311,11 +1311,11 @@ msgstr ""
 msgid "Privacy notice"
 msgstr ""
 
-#: theme/templates/parts/header.html:31
+#: theme/templates/parts/header.html:30
 msgid "Home"
 msgstr ""
 
-#: theme/templates/parts/header.html:34
+#: theme/templates/parts/header.html:33
 msgid "About"
 msgstr ""
 
@@ -1435,6 +1435,15 @@ msgid ""
 "vous pouvez introduire une <a href=\"https://cnpd.public.lu/fr/particuliers/"
 "faire-valoir/formulaire-plainte.html\" target=\"_blank\" rel=\"noopener "
 "noreferrer\">réclamation auprès de la CNPD</a>."
+msgstr ""
+
+#: theme/templates/registration/login.html:6
+#: theme/templates/registration/login.html:26
+msgid "Log in"
+msgstr ""
+
+#: theme/templates/registration/login.html:15
+msgid "Restricted Access"
 msgstr ""
 
 #: theme/templates/report/cover.html:6 theme/templates/report/template.html:9

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-02 13:31+0000\n"
-"PO-Revision-Date: 2024-07-02 15:44+0200\n"
+"POT-Creation-Date: 2024-07-03 08:56+0000\n"
+"PO-Revision-Date: 2024-07-03 10:58+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -1267,7 +1267,7 @@ msgid "Your ID:"
 msgstr "Voici votre ID:"
 
 #: theme/templates/modals/new_user.html:20 theme/templates/modals/start.html:22
-#: theme/templates/parts/header.html:37
+#: theme/templates/parts/header.html:36
 msgid "Start"
 msgstr "Commencer"
 
@@ -1313,7 +1313,7 @@ msgstr "Je commence un nouveau parcours"
 
 #: theme/templates/modals/start.html:26
 msgid "or"
-msgstr "or"
+msgstr "ou"
 
 #: theme/templates/modals/start.html:30
 msgid "I resume a journey using my unique identifier:"
@@ -1327,11 +1327,11 @@ msgstr "Accéder à mon espace"
 msgid "Privacy notice"
 msgstr "Politique de confidentialité"
 
-#: theme/templates/parts/header.html:31
+#: theme/templates/parts/header.html:30
 msgid "Home"
 msgstr "Accueil"
 
-#: theme/templates/parts/header.html:34
+#: theme/templates/parts/header.html:33
 msgid "About"
 msgstr "A propos"
 
@@ -1452,6 +1452,15 @@ msgid ""
 "faire-valoir/formulaire-plainte.html\" target=\"_blank\" rel=\"noopener "
 "noreferrer\">réclamation auprès de la CNPD</a>."
 msgstr ""
+
+#: theme/templates/registration/login.html:6
+#: theme/templates/registration/login.html:26
+msgid "Log in"
+msgstr "Connexion"
+
+#: theme/templates/registration/login.html:15
+msgid "Restricted Access"
+msgstr "Accès restreint"
 
 #: theme/templates/report/cover.html:6 theme/templates/report/template.html:9
 msgid "Level report"
