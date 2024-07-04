@@ -34,6 +34,10 @@
                     <span class="badge bg-primary rounded-pill">{{ global_total_users }}</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center mb-0">
+                    {% translate "Total users completed course" %}
+                    <span class="badge bg-primary rounded-pill">{{ completed_users_count }}</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center mb-0">
                     {% translate "Course completion rate" %}
                     <span class="badge bg-primary rounded-pill">{{ course_completion_rate| floatformat:'0' }}%</span>
                 </li>
