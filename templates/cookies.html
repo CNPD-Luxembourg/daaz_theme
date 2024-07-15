@@ -2,21 +2,17 @@
 {% load static %}
 {% load i18n %}
 {% block bootstrap5_title %}
-{% translate "Cookies" %}
+{% translate "Cookie management" %}
 {% endblock %}
 {% block content %}
 <div class="container-xl py-5">
   <h1 class="text-primary">DAAZ - {% translate "Cookie settings" %}</h1>
   <p class="text-justify">
     {% blocktranslate trimmed %}
-    A cookie is a text file sent to your browser and saved on the hard drive of your terminal (PC, laptop or smartphone,
-    for example) when visiting a website.
-    <br><br>
-    Cookies can for example be used to ensure the proper functioning of a site and to optimize its ergonomics and its
-    functionalities.
-    <br><br>
-    The cookies we use on this site are strictly necessary to ensure its proper functioning and to allow you to complete
-    the online form, namely:
+    A cookie is a text file sent to your browser and stored on the hard drive of your device (PC, laptop or smartphone,
+    for example) when visiting a website. <br><br> Cookies can for example, be used to ensure the proper functioning of
+    a site and to optimize its ergonomics and its functionalities. <br><br> The cookies we use on this site are strictly
+    necessary to ensure its proper functioning and to allow you to complete the online form, namely:
     {% endblocktranslate %}
   </p>
   <div class="p-3">
@@ -27,7 +23,7 @@
           <th scope="col">{{ _('Name') }}</th>
           <th scope="col">{{ _('Description') }}</th>
           <th scope="col">{{ _('Content') }}</th>
-          <th scope="col">{{ _('Maximum term') }}</th>
+          <th scope="col">{{ _('Maximum duration') }}</th>
         </tr>
       </thead>
       <tbody>

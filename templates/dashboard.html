@@ -26,9 +26,9 @@
           <a class="start-button small btn btn-sm fw-bold text-decoration-none w-100 {% if user.current_level.index == 4 and progress.3 == 100 %}disabled bg-secondary{% else %}bg-light-red btn-danger text-danger{% endif %}"
             href="{% url 'course' %}">
             {% if progress.0 > 0 %}
-            {% translate "Continue your journey here!" %}
+            {% translate "Continue your adventure here!" %}
             {% else %}
-            {% translate "Start your journey here!" %}
+            {% translate "Start your adventure here!" %}
             {% endif %}
           </a>
         </div>
@@ -39,9 +39,9 @@
             <a class="start-button small btn btn-sm fw-bold text-decoration-none w-100 {% if user.current_level.index == 4 and progress.3 == 100 %}disabled bg-secondary{% else %}bg-light-red btn-danger text-danger{% endif %}"
             href="{% url 'course' %}">
               {% if progress.0 > 0 %}
-              {% translate "Continue your journey here!" %}
+              {% translate "Continue your adventure here!" %}
               {% else %}
-              {% translate "Start your journey here!" %}
+              {% translate "Start your adventure here!" %}
               {% endif %}
             </a>
           </div>
@@ -71,7 +71,7 @@
                       <canvas class="m-auto" id="progress_sm{{ level.index }}" width="100%"
                         height="100%"></canvas>
                       <p class="small text-nowrap text-center mt-1 mb-2 fw-bold">
-                        {% translate "of progression" %}
+                        {% translate "Progress" %}
                       </p>
                     </div>
                     <div class="col-6 m-auto">

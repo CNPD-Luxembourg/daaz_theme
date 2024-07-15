@@ -18,7 +18,7 @@
                 {% if form.quiz %}
                 <h3 class="text-primary">{% translate "Quiz"%} {{ level.index|accumulate_quiz_index:form.quiz_index }}.{{ form.question_quiz_index }}</h3>
                 {% if form.display_quiz_label %}
-                <p><strong><em>{% translate "Script"%}:</em></strong></span> {{ form.quiz.name }}</p>
+                <p><strong><em>{% translate "Scenario"%}:</em></strong></span> {{ form.quiz.name }}</p>
                 {% endif %}
                 {% else %}
                 <h3 class="text-primary">{% translate "Question"%} {{ form.question_index }}</h3>
@@ -53,7 +53,7 @@
                 {% if form.quiz %}
                 <h3 class="text-primary">{% translate "Quiz"%} {{ level.index|accumulate_quiz_index:form.quiz_index }}.{{ form.question_quiz_index }}</h3>
                 {% if form.display_quiz_label %}
-                <p><strong><em>{% translate "Script"%}:</em></strong></span> {{ form.quiz.name }}</p>
+                <p><strong><em>{% translate "Scenario"%}:</em></strong></span> {{ form.quiz.name }}</p>
                 {% endif %}
                 {% else %}
                 <h3 class="text-primary">{% translate "Question"%} {{ form.question_index }}</h3>
@@ -104,7 +104,7 @@
     <div class="overflow-md-auto d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-100">
         <div class="m-auto">
             <h3 class="text-primary">{% translate "Question"%} {{ slide.explanation.question_index }}</h3>
-            <h6 class="fw-bold">{% translate "Explication"%}:</h6>
+            <h6 class="fw-bold">{% translate "Explanation"%}:</h6>
             {{ slide.explanation.label|safe|linebreaksbr }}
         </div>
     </div>
@@ -123,7 +123,7 @@
                 </h2>
                 {% with index_level=level.index next_level=level.index|add:1 score=score|floatformat:'0'|default:0 %}
                 <p class="fw-bolder text-primary">
-                    {% blocktranslate %}You have finished level {{ index_level }} !{% endblocktranslate %}
+                    {% blocktranslate %}You have completed level {{ index_level }} !{% endblocktranslate %}
                 </p>
                 <p>
                     {% blocktranslate %}Your score is {% endblocktranslate %}
@@ -162,7 +162,7 @@
                     <div class="col mx-auto">
                         <a type="button" href="{% url 'course' %}"
                             class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button">
-                            {% translate "Access the next level" %}
+                            {% translate "Go to the next level" %}
                         </a>
                     </div>
                     {% else %}
@@ -198,7 +198,7 @@
                             class="btn text-primary course-button fw-bolder border-primary border border-3 shadow rounded mx-auto {{ resource.css_classes|join:' ' }}"
                             href="{% static resource.resource.path|extract_static %}" download>
                             {% if slide.context.label|contains:"fiche pratique" %}
-                            {% translate "Download the fact sheet"%}
+                            {% translate "Download the practical sheet"%}
                             {% endif %}
                             {% if slide.context.label|contains:"challenge" %}
                             {% translate "Download my template"%}
