@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-15 13:36+0000\n"
+"POT-Creation-Date: 2024-07-15 14:16+0000\n"
 "PO-Revision-Date: 2024-07-15 15:38+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -56,14 +56,11 @@ msgstr "Détails"
 msgid "Do not display anymore"
 msgstr "Ne plus afficher"
 
-#: theme/templates/cookies.html:5 theme/templates/helping_center.html:842
-#: theme/templates/legal.html:230 theme/templates/parts/footer.html:46
+#: theme/templates/cookies.html:5 theme/templates/cookies.html:9
+#: theme/templates/helping_center.html:842 theme/templates/legal.html:230
+#: theme/templates/parts/footer.html:46
 msgid "Cookie management"
 msgstr "Gestion des cookies"
-
-#: theme/templates/cookies.html:9
-msgid "Cookie settings"
-msgstr "Paramètres des cookies"
 
 #: theme/templates/cookies.html:11
 msgid ""
