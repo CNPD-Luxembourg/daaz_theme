@@ -117,61 +117,70 @@
     <div class="overflow-md-auto d-flex col-12 col-md-6 ps-sm-5 pe-sm-4 pb-sm-0 p-2 h-md-100">
         <div class="m-auto">
             {% if slide.context.label|contains:"final" %}
-                <div class="text-center">
-                    <h2 class="fw-bolder text-warning">
-                        {% translate "Congratulations" %} !
-                    </h2>
-                    {% with index_level=level.index next_level=level.index|add:1 score=score|floatformat:'0'|default:0 %}
-                    <p class="fw-bolder text-primary">
-                        {% blocktranslate %}You have finished level {{ index_level }} !{% endblocktranslate %}
+            <div class="text-center">
+                <h2 class="fw-bolder text-warning">
+                    {% translate "Congratulations" %} !
+                </h2>
+                {% with index_level=level.index next_level=level.index|add:1 score=score|floatformat:'0'|default:0 %}
+                <p class="fw-bolder text-primary">
+                    {% blocktranslate %}You have finished level {{ index_level }} !{% endblocktranslate %}
+                </p>
+                <p>
+                    {% blocktranslate %}Your score is {% endblocktranslate %}
+                    <span class="text-primary">{{ score }}%</span>
+                </p>
+                {% if index_level < 4 %} <p>
+                    {% blocktranslate %}You have unlocked story number {{ next_level }} !{% endblocktranslate %}
                     </p>
-                    <p>
-                        {% blocktranslate %}Your score is {% endblocktranslate %}
-                        <span class="text-primary">{{ score }}%</span>
-                    </p>
-                    {% if index_level < 4 %}
-                        <p>
-                            {% blocktranslate %}You have unlocked story number {{ next_level }} !{% endblocktranslate %}
-                        </p>
                     {% endif %}
                     {% endwith %}
-                </div>
-                <div class="container py-2">
-                    <div class="row row-cols-1 row-cols-md-2 text-center g-4">
-                        {% for resource in slide.context.resources %}
-                        <div class="col">
-                            <a class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button {{ resource.css_classes|join:' ' }}"
-                                href="{% static resource.resource.path|extract_static %}" download>
-                                {% translate "Download the summary sheet" %}
-                            </a>
-                        </div>
-                        {% endfor %}
-                        <div class="col">
-                            <a id="download-report-button" class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button"
-                            href="{% url 'report' %}">
-                                <span id="download-label">{% translate "Download the level report" %}</span>
-                                <div id="download-spinner" style="display: none">
-                                    <span id="download-spinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                    {% translate "Downloading" %}...
-                                </div>
-
-                            </a>
-                        </div>
-                        <div class="col mx-auto">
-                            {% if level.index < 4 %}
-                            <a type="button" href="{% url 'course' %}"
-                                class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button">
-                                {% translate "Access the next level" %}
-                            </a>
-                            {% else %}
-                            <a id="downloadButton" href="{% url 'certificate' %}"
-                                class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button" >
-                                {% translate "Download the DAAZ certificate" %}   
-                            </a>
-                            {% endif %}
-                        </div>
+            </div>
+            <div class="container py-2">
+                <div class="row row-cols-1 row-cols-md-2 text-center g-4">
+                    {% for resource in slide.context.resources %}
+                    <div class="col">
+                        <a class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button {{ resource.css_classes|join:' ' }}"
+                            href="{% static resource.resource.path|extract_static %}" download>
+                            {% translate "Download the summary sheet" %}
+                        </a>
                     </div>
+                    {% endfor %}
+                    <div class="col">
+                        <a id="download-report-button"
+                            class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button"
+                            href="{% url 'report' %}">
+                            <span id="download-label">{% translate "Download the level report" %}</span>
+                            <div id="download-spinner" style="display: none">
+                                <span id="download-spinner" class="spinner-border spinner-border-sm" role="status"
+                                    aria-hidden="true"></span>
+                                {% translate "Downloading" %}...
+                            </div>
+
+                        </a>
+                    </div>
+                    {% if level.index < 4 %}
+                    <div class="col mx-auto">
+                        <a type="button" href="{% url 'course' %}"
+                            class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button">
+                            {% translate "Access the next level" %}
+                        </a>
+                    </div>
+                    {% else %}
+                    <div class="col">
+                        <a id="downloadButton" href="{% url 'certificate' %}"
+                            class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button">
+                            {% translate "Download the DAAZ certificate" %}
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a type="button" href="https://alto.nc3.lu" target="_blank" rel="noopener noreferrer"
+                            class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button">
+                            {% translate "Satisfaction survey" %}
+                        </a>
+                    </div>
+                    {% endif %}
                 </div>
+            </div>
             {% else %}
                 {% for text in slide.context.texts %}
                     <div
