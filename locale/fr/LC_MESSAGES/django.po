@@ -1,11 +1,11 @@
-# This file was generated from messages.xlsx
+# This file was generated from trans.xlsx
 #: theme/templates/accessibility.html:9
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-03 08:56+0000\n"
-"PO-Revision-Date: 2024-07-03 10:58+0200\n"
+"POT-Creation-Date: 2024-07-15 12:05+0000\n"
+"PO-Revision-Date: 2024-07-15 14:05+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: xls-to-po 1.0\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: theme/templates/accessibility.html:4 theme/templates/accessibility.html:7
 #: theme/templates/parts/footer.html:52
@@ -34,7 +34,7 @@ msgstr "Félicitations !"
 
 #: theme/templates/certificate/template.html:19
 msgid ""
-"Dominique and his team are delighted to be able to present you with this "
+"Dominique and his team are delighted to be able to award you this "
 "certificate of achievement for the DAAZ tool!"
 msgstr ""
 "Dominique et son équipe sont heureux de pouvoir vous décerner ce certificate "
@@ -56,8 +56,9 @@ msgstr "Détails"
 msgid "Do not display anymore"
 msgstr "Ne plus afficher"
 
-#: theme/templates/cookies.html:5 theme/templates/parts/footer.html:46
-msgid "Cookies"
+#: theme/templates/cookies.html:5 theme/templates/helping_center.html:842
+#: theme/templates/legal.html:230 theme/templates/parts/footer.html:46
+msgid "Cookie management"
 msgstr "Gestion des cookies"
 
 #: theme/templates/cookies.html:9
@@ -66,13 +67,12 @@ msgstr "Paramètres des cookies"
 
 #: theme/templates/cookies.html:11
 msgid ""
-"A cookie is a text file sent to your browser and saved on the hard drive of "
-"your terminal (PC, laptop or smartphone, for example) when visiting a "
-"website. <br><br> Cookies can for example be used to ensure the proper "
-"functioning of a site and to optimize its ergonomics and its "
-"functionalities. <br><br> The cookies we use on this site are strictly "
-"necessary to ensure its proper functioning and to allow you to complete the "
-"online form, namely:"
+"A cookie is a text file sent to your browser and stored on the hard drive of "
+"your device (PC, laptop or smartphone, for example) when visiting a website. "
+"<br><br> Cookies can for example, be used to ensure the proper functioning "
+"of a site and to optimize its ergonomics and its functionalities. <br><br> "
+"The cookies we use on this site are strictly necessary to ensure its proper "
+"functioning and to allow you to complete the online form, namely:"
 msgstr ""
 "Un cookie est un fichier texte envoyé à votre navigateur et enregistré sur "
 "le disque dur de votre terminal (PC, ordinateur portable ou smartphone, par "
@@ -83,26 +83,26 @@ msgstr ""
 "bon fonctionnement et pour vous permettre de compléter le formulaire en "
 "ligne, à savoir :"
 
-#: theme/templates/cookies.html:27
+#: theme/templates/cookies.html:23
 msgid "Name"
 msgstr "Nom"
 
-#: theme/templates/cookies.html:28
+#: theme/templates/cookies.html:24
 msgid "Description"
 msgstr "Description"
 
-#: theme/templates/cookies.html:29
+#: theme/templates/cookies.html:25
 msgid "Content"
 msgstr "Content"
 
-#: theme/templates/cookies.html:30
-msgid "Maximum term"
+#: theme/templates/cookies.html:26
+msgid "Maximum duration"
 msgstr "Durée maximum"
 
 #: theme/templates/course.html:5 theme/templates/course.html:21
 #: theme/templates/dashboard.html:60 theme/templates/dashboard.html:100
 #: theme/templates/dashboard.html:104 theme/templates/dashboard.html:171
-#: theme/templates/dashboard.html:175 theme/templates/landing.html:284
+#: theme/templates/dashboard.html:175 theme/templates/landing.html:283
 #: theme/templates/resources.html:25
 msgid "Level"
 msgstr "Niveau"
@@ -116,7 +116,7 @@ msgstr "Quiz"
 #: theme/templates/course_new_slide.html:21
 #: theme/templates/course_new_slide.html:56
 #: theme/templates/report/questions.html:9
-msgid "Script"
+msgid "Scenario"
 msgstr "Scénario"
 
 #: theme/templates/course_new_slide.html:24
@@ -136,7 +136,7 @@ msgid "Confirm"
 msgstr "Valider"
 
 #: theme/templates/course_new_slide.html:107
-msgid "Explication"
+msgid "Explanation"
 msgstr "Explication"
 
 #: theme/templates/course_new_slide.html:122
@@ -145,19 +145,19 @@ msgstr "Félicitations"
 
 #: theme/templates/course_new_slide.html:126
 #, python-format
-msgid "You have finished level %(index_level)s !"
+msgid "You have completed level %(index_level)s !"
 msgstr "Vous avez terminé le niveau %(index_level)s !"
 
 #: theme/templates/course_new_slide.html:129
 msgid "Your score is "
 msgstr "Votre score est de "
 
-#: theme/templates/course_new_slide.html:134
+#: theme/templates/course_new_slide.html:133
 #, python-format
 msgid "You have unlocked story number %(next_level)s !"
 msgstr "Vous avez débloqué l’histoire numéro %(next_level)s !"
 
-#: theme/templates/course_new_slide.html:145
+#: theme/templates/course_new_slide.html:144
 msgid "Download the summary sheet"
 msgstr "Télécharger la fiche récapitulative"
 
@@ -165,23 +165,27 @@ msgstr "Télécharger la fiche récapitulative"
 msgid "Download the level report"
 msgstr "Télécharger le rapport de niveau"
 
-#: theme/templates/course_new_slide.html:155
+#: theme/templates/course_new_slide.html:156
 msgid "Downloading"
 msgstr "Téléchargement"
 
-#: theme/templates/course_new_slide.html:164
-msgid "Access the next level"
+#: theme/templates/course_new_slide.html:165
+msgid "Go to the next level"
 msgstr "Accéder au niveau suivant"
 
-#: theme/templates/course_new_slide.html:169
+#: theme/templates/course_new_slide.html:172
 msgid "Download the DAAZ certificate"
 msgstr "Télécharger le certificat DAAZ"
 
-#: theme/templates/course_new_slide.html:192
-msgid "Download the fact sheet"
+#: theme/templates/course_new_slide.html:178
+msgid "Satisfaction survey"
+msgstr "Questionnaire de satisfaction"
+
+#: theme/templates/course_new_slide.html:201
+msgid "Download the practical sheet"
 msgstr "Télécharger la fiche pratique"
 
-#: theme/templates/course_new_slide.html:195
+#: theme/templates/course_new_slide.html:204
 msgid "Download my template"
 msgstr "Télécharger mon template"
 
@@ -195,15 +199,16 @@ msgid "My lessons"
 msgstr "Mes cours"
 
 #: theme/templates/dashboard.html:29 theme/templates/dashboard.html:42
-msgid "Continue your journey here!"
+msgid "Continue your adventure here!"
 msgstr "Poursuivez votre aventure ici !"
 
 #: theme/templates/dashboard.html:31 theme/templates/dashboard.html:44
-msgid "Start your journey here!"
-msgstr "Commencer l'aventure ici!"
+#: theme/templates/helping_center.html:158
+msgid "Start your adventure here!"
+msgstr "Commencer l'aventure ici !"
 
 #: theme/templates/dashboard.html:74
-msgid "of progression"
+msgid "Progress"
 msgstr "de progression"
 
 #: theme/templates/dashboard.html:80 theme/templates/dashboard.html:183
@@ -211,8 +216,8 @@ msgid "successful"
 msgstr "de réussite"
 
 #: theme/templates/dashboard.html:116
-msgid "Progression"
-msgstr "Progression"
+msgid "Progress:"
+msgstr "Progression:"
 
 #: theme/templates/dashboard.html:139
 msgid "Knowledge"
@@ -224,37 +229,47 @@ msgstr "Résultats"
 
 #: theme/templates/helping_center.html:4 theme/templates/helping_center.html:8
 #: theme/templates/parts/sidebar.html:65 theme/templates/parts/sidebar.html:67
-msgid "Help Center"
+msgid "Help Centre"
 msgstr "Centre d'aide"
 
 #: theme/templates/helping_center.html:16
-msgid "Répondre au questionnaire de satisfaction"
-msgstr ""
+msgid "Respond to the satisfaction questionnaire"
+msgstr "Répondre au questionnaire de satisfaction"
 
 #: theme/templates/helping_center.html:22
 msgid ""
+"The satisfaction questionnaire is accessible after full completion of the "
+"DAAZ journey"
+msgstr ""
 "Le questionnaire de satisfaction est accessible après accomplissement "
 "intégral du parcours DAAZ"
-msgstr ""
 
 #: theme/templates/helping_center.html:27
-msgid "Lien vers le questionnaire en ligne [à développer avec le LHC-NC3]"
-msgstr ""
+msgid "Link to online questionnaire [to be developed with LHC-NC3]"
+msgstr "Lien vers le questionnaire en ligne [à développer avec le LHC-NC3]"
 
-#: theme/templates/helping_center.html:41
-msgid "A propos"
-msgstr ""
+#: theme/templates/helping_center.html:41 theme/templates/parts/header.html:33
+msgid "About"
+msgstr "A propos"
 
 #: theme/templates/helping_center.html:49
-msgid "Editeur"
-msgstr ""
+msgid "Publisher"
+msgstr "Editeur"
 
 #: theme/templates/helping_center.html:52
-msgid "Vous êtes sur l’outil DAAZ."
-msgstr ""
+msgid "You are on the DAAZ tool."
+msgstr "Vous êtes sur l’outil DAAZ."
 
 #: theme/templates/helping_center.html:57
 msgid ""
+"The aim of this tool is to provide SMEs with a simple, intuitive and free "
+"self-assessment tool allowing them to integrate GDPR obligations into their "
+"business. Emphasis will be placed in particular on the fundamental "
+"principles laid down in the GDPR and on strengthening respect for the rights "
+"of individuals in the context of the envisaged and ongoing processing of "
+"personal data. ALTO is aimed at all SMEs that need to comply with the GDPR, "
+"both as controllers and processors."
+msgstr ""
 "L'objectif de cet outil est de fournir aux PME un outil d’auto-évaluation "
 "simple, intuitif et gratuit permettant à ces dernières d’intégrer les "
 "obligations RGPD dans le cadre de leur activité. L’accent sera mis notamment "
@@ -263,360 +278,408 @@ msgid ""
 "personnelles envisagés et en cours. ALTO s’adresse à toutes les PME devant "
 "se conformer au RGPD, tant en qualité de responsable de traitement que de "
 "sous-traitant."
-msgstr ""
 
-#: theme/templates/helping_center.html:68
+#: theme/templates/helping_center.html:67
 msgid ""
+"It is published by the \"AI, Innovation and Digital\" department of the "
+"National Commission for Data Protection (CNPD) in collaboration with the "
+"Luxembourg National Cybersecurity Competence Center (NC3), an entity of the "
+"Luxembourg House of Security."
+msgstr ""
 "Il est édité par le service « IA, Innovation et Numérique » de la Commission "
 "Nationale pour la Protection des Données (CNPD) en collaboration avec le "
 "Luxembourg National Cybersecurity Competence Center (NC3), entité de la "
 "Luxembourg House of Security."
-msgstr ""
 
-#: theme/templates/helping_center.html:75
-msgid "Il a été co-financé par l’Union européenne."
-msgstr ""
+#: theme/templates/helping_center.html:74
+msgid "It was co-financed by the European Union."
+msgstr "Il a été co-financé par l’Union européenne."
 
-#: theme/templates/helping_center.html:80
+#: theme/templates/helping_center.html:79
 msgid ""
+"For any questions about this tool and its content, you can contact us via "
+"our contact form."
+msgstr ""
 "Pour toute question sur cet outil et son contenu, vous pouvez nous contacter "
 "via notre formulaire de contact."
-msgstr ""
 
-#: theme/templates/helping_center.html:86
+#: theme/templates/helping_center.html:85
 msgid ""
+"Consult the legal notice at the bottom of the homepage for the legal notice "
+"and information on the hosting of this site."
+msgstr ""
 "Consultez la notice légale en bas de la page d’accueil pour prendre "
 "connaissance des mentions légales et des informations sur l'hébergement de "
 "ce site."
-msgstr ""
 
-#: theme/templates/helping_center.html:92
-msgid "Qualité"
-msgstr ""
+#: theme/templates/helping_center.html:91
+msgid "Quality"
+msgstr "Qualité"
 
-#: theme/templates/helping_center.html:95
+#: theme/templates/helping_center.html:94
 msgid ""
+"Particular care has been taken to ensure a satisfactory level of quality and "
+"accessibility."
+msgstr ""
 "Un soin particulier a été pris pour garantir un niveau de qualité et "
 "d'accessibilité satisfaisant."
-msgstr ""
 
-#: theme/templates/helping_center.html:101
-msgid "Déclaration d’accessibilité"
-msgstr ""
+#: theme/templates/helping_center.html:100
+msgid "Accessibility Statement"
+msgstr "Déclaration d’accessibilité"
 
-#: theme/templates/helping_center.html:104
+#: theme/templates/helping_center.html:103
 msgid ""
+"The National Commission for Data Protection pursues the objective of making "
+"websites accessible to as many people as possible. You can consult our "
+"accessibility policy at renow.public.lu for more information. This site has "
+"been designed on these principles and we are committed to improving the "
+"accessibility of content so that the consultation of the site does not "
+"suffer from any discrimination."
+msgstr ""
 "La Commission Nationale pour la Protection des données poursuit l'objectif "
 "de rendre les sites internet accessibles au plus grand nombre. Vous pouvez "
 "consulter notre politique en matière d'accessibilité sur le site renow."
 "public.lu pour obtenir plus d'informations. Ce site a été conçu sur ces "
 "principes et nous nous engageons à améliorer l'accessibilité des contenus "
 "pour que la consultation du site ne souffre d'aucune discrimination."
-msgstr ""
 
-#: theme/templates/helping_center.html:122
+#: theme/templates/helping_center.html:121
 msgid "Contact"
-msgstr ""
+msgstr "Contact"
 
-#: theme/templates/helping_center.html:129
+#: theme/templates/helping_center.html:128
 msgid ""
+"For any technical questions or requests for assistance regarding the CNPD e-"
+"learning platform (DAAZ), please contact us directly via the following email "
+"address: <a href=\"mailto:daaz@cnpd.lu\">daaz@cnpd.lu</a>"
+msgstr ""
 "Pour toutes vos questions ou demandes d’aide d’ordre technique concernant la "
 "plateforme d’apprentissage en ligne de la CNPD (DAAZ), veuillez nous "
 "contacter directement via l’adresse électronique suivant : <a href=\"mailto:"
 "daaz@cnpd.lu\">daaz@cnpd.lu</a>"
-msgstr ""
 
-#: theme/templates/helping_center.html:136
+#: theme/templates/helping_center.html:135
 msgid ""
+"For all your more specific questions in relation to the protection of "
+"personal data, please contact the CNPD via its <a href=\"https://cnpd.public."
+"lu/en/support/contact.html\" target=\"_blank\" rel=\"noopener "
+"noreferrer\">contact</a> form."
+msgstr ""
 "Pour toutes vos questions plus spécifiques en relation avec la protection "
 "des données à caractère personnel, veuillez contacter la CNPD via son <a "
 "href=\"https://cnpd.public.lu/fr/support/contact.html\" target=\"_blank\" "
 "rel=\"noopener noreferrer\">formulaire de contact</a>."
-msgstr ""
 
-#: theme/templates/helping_center.html:153
-msgid "Plan de site"
-msgstr ""
+#: theme/templates/helping_center.html:151
+msgid "Sitemap"
+msgstr "Plan de site"
+
+#: theme/templates/helping_center.html:159
+#: theme/templates/parts/sidebar.html:51 theme/templates/parts/sidebar.html:53
+msgid "Resources"
+msgstr "Ressources"
 
 #: theme/templates/helping_center.html:160
-msgid "Commencer l’aventure"
-msgstr ""
+#: theme/templates/helping_center.html:859 theme/templates/legal.html:247
+msgid "Languages"
+msgstr "Langues"
 
 #: theme/templates/helping_center.html:161
-msgid "Ressources"
-msgstr ""
+#: theme/templates/parts/sidebar.html:85 theme/templates/parts/sidebar.html:87
+msgid "Log out"
+msgstr "Déconnexion"
 
-#: theme/templates/helping_center.html:162
-#: theme/templates/helping_center.html:953 theme/templates/legal.html:241
-msgid "Langues"
-msgstr ""
+#: theme/templates/helping_center.html:173
+msgid "DAAZ journey"
+msgstr "Parcours DAAZ"
 
-#: theme/templates/helping_center.html:163
-msgid "Déconnexion"
-msgstr ""
-
-#: theme/templates/helping_center.html:175
-msgid "Parcours DAAZ"
-msgstr ""
+#: theme/templates/helping_center.html:181
+msgid "The diagram of the journey"
+msgstr "Le schéma du parcours"
 
 #: theme/templates/helping_center.html:183
-msgid "Le schéma du parcours"
-msgstr ""
+msgid "The DAAZ journey consists of 4 levels, each of which includes:"
+msgstr "Le parcours DAAZ est composé de 4 niveaux qui comprennent chacun :"
 
-#: theme/templates/helping_center.html:185
-msgid "Le parcours DAAZ est composé de 4 niveaux qui comprennent chacun :"
-msgstr ""
+#: theme/templates/helping_center.html:189
+msgid "1 story that is consistent and continuous across all 4 levels"
+msgstr "1 histoire qui est cohérente et continue sur l’ensemble des 4 niveaux"
 
-#: theme/templates/helping_center.html:191
-msgid "1 histoire qui est cohérente et continue sur l’ensemble des 4 niveaux"
-msgstr ""
+#: theme/templates/helping_center.html:194
+msgid "20 illustrated questions"
+msgstr "20 questions illustrées"
 
-#: theme/templates/helping_center.html:196
-msgid "20 questions illustrées"
-msgstr ""
+#: theme/templates/helping_center.html:199
+msgid "4 quizzes"
+msgstr "4 quizz"
 
-#: theme/templates/helping_center.html:201
-msgid "4 quizz"
-msgstr ""
+#: theme/templates/helping_center.html:204
+msgid "4 practical sheets to unlock"
+msgstr "4 fiches pratiques à débloquer"
 
-#: theme/templates/helping_center.html:206
-msgid "4 fiches pratiques à débloquer"
-msgstr ""
+#: theme/templates/helping_center.html:209
+msgid "1 summary sheet to unlock at the end of the level"
+msgstr "1 fiche récapitulative à débloquer en fin de niveau"
 
-#: theme/templates/helping_center.html:211
-msgid "1 fiche récapitulative à débloquer en fin de niveau"
-msgstr ""
-
-#: theme/templates/helping_center.html:216
+#: theme/templates/helping_center.html:214
 msgid ""
+"1 template document to complete at the end of each level, as a challenge"
+msgstr ""
 "1 document Template à remplir en fin de chaque niveau, à titre de challenge"
-msgstr ""
 
-#: theme/templates/helping_center.html:223
+#: theme/templates/helping_center.html:220
 msgid ""
+"The DAAZ journey consists of four levels, which can be summarised as follows:"
+msgstr ""
 "Le parcours DAAZ est composé de 4 niveaux qui peuvent être schématisés comme "
 "suit :"
-msgstr ""
 
-#: theme/templates/helping_center.html:232
-msgid "Le contenu des niveaux"
-msgstr ""
+#: theme/templates/helping_center.html:229
+msgid "The content of the levels"
+msgstr "Le contenu des niveaux"
 
-#: theme/templates/helping_center.html:234
-msgid ""
+#: theme/templates/helping_center.html:231
+msgid "Each level has its specificities in terms of personal data protection."
+msgstr ""
 "Chaque niveau à ses spécificités en matière de protection des données "
 "personnelles."
-msgstr ""
 
-#: theme/templates/helping_center.html:239
-msgid "Niveau 1 – Bases"
-msgstr ""
+#: theme/templates/helping_center.html:236
+msgid "Level 1 – Basics"
+msgstr "Niveau 1 – Bases"
+
+#: theme/templates/helping_center.html:238
+#: theme/templates/helping_center.html:252
+#: theme/templates/helping_center.html:267
+#: theme/templates/helping_center.html:284
+msgid "Concepts discussed:"
+msgstr "Notions abordées :"
+
+#: theme/templates/helping_center.html:240
+msgid "Personal data"
+msgstr "Données à caractère personnel"
 
 #: theme/templates/helping_center.html:241
-#: theme/templates/helping_center.html:255
-#: theme/templates/helping_center.html:270
-#: theme/templates/helping_center.html:287
-msgid "Notions abordées :"
-msgstr ""
+msgid "Data mapping"
+msgstr "Cartographie des données"
+
+#: theme/templates/helping_center.html:242
+msgid "Processing of customer data"
+msgstr "Traitement des données de clients"
 
 #: theme/templates/helping_center.html:243
-msgid "Données à caractère personnel"
-msgstr ""
-
-#: theme/templates/helping_center.html:244
-msgid "Cartographie des données"
-msgstr ""
+msgid "Request for exercise of rights by the data subject"
+msgstr "Demande d’exercice de droit par la personne concernée"
 
 #: theme/templates/helping_center.html:245
-msgid "Traitement des données de clients"
-msgstr ""
+#: theme/templates/helping_center.html:260
+#: theme/templates/helping_center.html:276
+#: theme/templates/helping_center.html:292
+msgid "Document to be completed:"
+msgstr "Document à remplir :"
 
-#: theme/templates/helping_center.html:246
-msgid "Demande d’exercice de droit par la personne concernée"
-msgstr ""
-
-#: theme/templates/helping_center.html:248
-#: theme/templates/helping_center.html:263
-#: theme/templates/helping_center.html:279
-#: theme/templates/helping_center.html:295
-msgid "Document à remplir :"
-msgstr ""
+#: theme/templates/helping_center.html:247
+msgid "Register of processing activities"
+msgstr "Registre des traitements"
 
 #: theme/templates/helping_center.html:250
-msgid "Registre des traitements"
-msgstr ""
+msgid "Level 2 – Design"
+msgstr "Niveau 2 – Conception"
 
-#: theme/templates/helping_center.html:253
-msgid "Niveau 2 – Conception"
-msgstr ""
+#: theme/templates/helping_center.html:254
+msgid "Obligation to provide information"
+msgstr "Obligation d’information"
+
+#: theme/templates/helping_center.html:255
+msgid "Processing of employee data"
+msgstr "Traitement des données des salariés"
+
+#: theme/templates/helping_center.html:256
+msgid "Sensitive data"
+msgstr "Données sensibles"
 
 #: theme/templates/helping_center.html:257
-msgid "Obligation d’information"
-msgstr ""
+msgid "CCTV surveillance"
+msgstr "Vidéosurveillance"
 
 #: theme/templates/helping_center.html:258
-msgid "Traitement des données des salariés"
-msgstr ""
+msgid "Geolocation"
+msgstr "Géolocalisation"
 
-#: theme/templates/helping_center.html:259
-msgid "Données sensibles"
-msgstr ""
-
-#: theme/templates/helping_center.html:260
-msgid "Vidéosurveillance"
-msgstr ""
-
-#: theme/templates/helping_center.html:261
-msgid "Géolocalisation"
-msgstr ""
+#: theme/templates/helping_center.html:262 theme/templates/parts/footer.html:43
+#: theme/templates/privacy_policy.html:4 theme/templates/privacy_policy.html:7
+msgid "Privacy Policy"
+msgstr "Politique de confidentialité"
 
 #: theme/templates/helping_center.html:265
-msgid "Politique de confidentialité"
-msgstr ""
+msgid "Level 3 – Implementation"
+msgstr "Niveau 3 – Mise en œuvre"
 
-#: theme/templates/helping_center.html:268
-msgid "Niveau 3 – Mise en œuvre"
-msgstr ""
+#: theme/templates/helping_center.html:269
+msgid "Data breaches"
+msgstr "Violations de données"
+
+#: theme/templates/helping_center.html:270
+msgid "Security measures"
+msgstr "Mesures de sécurité"
+
+#: theme/templates/helping_center.html:271
+msgid "Anonymisation"
+msgstr "Anonymisation"
 
 #: theme/templates/helping_center.html:272
-msgid "Violations de données"
-msgstr ""
+msgid "Processing"
+msgstr "Sous-Traitance"
 
 #: theme/templates/helping_center.html:273
-msgid "Mesures de sécurité"
-msgstr ""
+msgid "Transfer outside E.E.E."
+msgstr "Transfert hors E.E.E."
 
 #: theme/templates/helping_center.html:274
-msgid "Anonymisation"
-msgstr ""
+msgid "Standard contractual clauses"
+msgstr "Clauses contractuelles types"
 
-#: theme/templates/helping_center.html:275
-msgid "Sous-Traitance"
-msgstr ""
+#: theme/templates/helping_center.html:278
+msgid "Processing contracts"
+msgstr "Contrat de sous-traitance"
 
-#: theme/templates/helping_center.html:276
-msgid "Transfert hors E.E.E"
-msgstr ""
-
-#: theme/templates/helping_center.html:277
-msgid "Clauses contractuelles types"
-msgstr ""
-
-#: theme/templates/helping_center.html:281
-msgid "Contrat de sous-traitance"
-msgstr ""
+#: theme/templates/helping_center.html:279
+msgid "Register of violations"
+msgstr "Registre des violations"
 
 #: theme/templates/helping_center.html:282
-msgid "Registre des violations"
-msgstr ""
+msgid "Level 4 – Governance 2.0"
+msgstr "Niveau 4 – Gouvernance 2.0"
 
-#: theme/templates/helping_center.html:285
-msgid "Niveau 4 – Gouvernance 2.0"
-msgstr ""
+#: theme/templates/helping_center.html:286
+msgid "Children's data"
+msgstr "Données relatives aux enfants"
+
+#: theme/templates/helping_center.html:287
+msgid "Processing of pictures"
+msgstr "Traitement des photos"
+
+#: theme/templates/helping_center.html:288
+msgid "Complaint procedure"
+msgstr "Procédure de réclamation"
 
 #: theme/templates/helping_center.html:289
-msgid "Données relatives aux enfants"
-msgstr ""
+msgid "European cooperation"
+msgstr "Coopération européenne"
 
 #: theme/templates/helping_center.html:290
-msgid "Traitement des photos"
-msgstr ""
+msgid "Lead authority"
+msgstr "Autorité chef de file"
 
-#: theme/templates/helping_center.html:291
-msgid "Procédure de réclamation"
-msgstr ""
+#: theme/templates/helping_center.html:294
+msgid "Table of continuous improvement"
+msgstr "Tableau Amélioration continue"
 
-#: theme/templates/helping_center.html:292
-msgid "Coopération européenne"
-msgstr ""
+#: theme/templates/helping_center.html:309
+msgid "Functionality of DAAZ"
+msgstr "Fonctionnalité de DAAZ"
 
-#: theme/templates/helping_center.html:293
-msgid "Autorité chef de file"
-msgstr ""
+#: theme/templates/helping_center.html:324
+msgid "Start/continue the journey"
+msgstr "Commencer/poursuivre le parcours"
 
-#: theme/templates/helping_center.html:297
-msgid "Tableau Amélioration continue"
-msgstr ""
-
-#: theme/templates/helping_center.html:312
-msgid "Fonctionnalité de DAAZ"
-msgstr ""
-
-#: theme/templates/helping_center.html:327
-msgid "Commencer/poursuivre le parcours"
-msgstr ""
-
-#: theme/templates/helping_center.html:336
+#: theme/templates/helping_center.html:333
 msgid ""
+"<strong>To start the journey</strong>, click on the red button “Start the "
+"adventure here! or on the blue \"Level 1\" button."
+msgstr ""
 "<strong>Pour commencer le parcours</strong>, Cliquez sur le bouton rouge « "
 "Commencer l’aventure ici ! » ou sur le bouton bleu « Niveau 1 »."
-msgstr ""
 
-#: theme/templates/helping_center.html:343
+#: theme/templates/helping_center.html:339
 msgid ""
+"<strong>To continue the journey</strong>, Click on the red button \"Continue "
+"your adventure here!\" or on the blue button corresponding to the level, "
+"when you left the journey."
+msgstr ""
 "<strong>Pour poursuivre le parcours</strong>, Cliquez sur le bouton rouge « "
 "Poursuivez votre aventure ici ! » ou sur le buton bleu correspondant au "
 "niveau, lorsque vous avez quitté le parcours."
-msgstr ""
 
-#: theme/templates/helping_center.html:351
+#: theme/templates/helping_center.html:346
 msgid ""
+"<strong>Completing a level</strong> opens access to the next level. The "
+"journey contains 4 levels."
+msgstr ""
 "<strong>L’accomplissement d’un niveau</strong> ouvre l’accès au niveau "
 "suivant. Le parcours contient 4 niveaux."
-msgstr ""
 
-#: theme/templates/helping_center.html:357
+#: theme/templates/helping_center.html:352
 msgid ""
+"<strong>Completion of the fourth and final level</strong> unlocks the unique "
+"certificate of achievement, providing your unique identifier."
+msgstr ""
 "<strong>L’accomplissement du quatrième et dernier niveau</strong> débloque "
 "le certificat d’accomplissement unique, renseignant de votre identifiant "
 "unique."
-msgstr ""
 
-#: theme/templates/helping_center.html:364
-msgid "Retrouver un contenu spécifique"
-msgstr ""
+#: theme/templates/helping_center.html:359
+msgid "Find a specific content"
+msgstr "Retrouver un contenu spécifique"
 
-#: theme/templates/helping_center.html:366
+#: theme/templates/helping_center.html:361
 msgid ""
+"At any time, you can go back to a previous level to find specific content."
+msgstr ""
 "À tout moment, vous pouvez revenir à un niveau précédent pour retrouver un "
 "contenu spécifique."
-msgstr ""
 
-#: theme/templates/helping_center.html:372
-msgid "Pour cela il convient :"
-msgstr ""
+#: theme/templates/helping_center.html:367
+msgid "In order to do so, it is necessary to:"
+msgstr "Pour cela il convient :"
 
-#: theme/templates/helping_center.html:379
+#: theme/templates/helping_center.html:374
 msgid ""
+"click on the ‘Resources’ button in the vertical bar to the left of the "
+"screen (computer version) or at the bottom of your screen (mobile version);"
+msgstr ""
 "de cliquer sur le bouton « Ressources » qui se trouve dans la bar verticale "
 "à gauche de l’écran (version ordinateur) ou en bas de votre écran (version "
 "mobile) ;"
-msgstr ""
 
-#: theme/templates/helping_center.html:387
+#: theme/templates/helping_center.html:381
 msgid ""
+"then click on the button corresponding to the level or type of document you "
+"are looking for."
+msgstr ""
 "de cliquer ensuite sur le bouton correspondant au niveau ou au type de "
 "document recherché."
-msgstr ""
 
-#: theme/templates/helping_center.html:395
+#: theme/templates/helping_center.html:389
 msgid ""
+"The content of the explanations provided for each of the 20 questions can be "
+"found in full in the summary sheets to be downloaded at the end of each "
+"level, either from the dedicated window of the journey or from the "
+"\"Resources\" section of the dashboard."
+msgstr ""
 "Le contenu des explications fourni pour chacune des 20 questions se trouve "
 "intégralement dans les fiches récapitulatives à télécharger à chaque fin de "
 "niveau, soit depuis la fenêtre dédiée du parcours, soit depuis la rubrique « "
 "Ressources » du tableau de bord."
-msgstr ""
 
-#: theme/templates/helping_center.html:414
-msgid "Questions simples et questions/quiz à choix multiple"
-msgstr ""
+#: theme/templates/helping_center.html:408
+msgid "Simple questions and multiple choice questions/quiz"
+msgstr "Questions simples et questions/quiz à choix multiple"
 
-#: theme/templates/helping_center.html:423
-msgid "Questions simples"
-msgstr ""
+#: theme/templates/helping_center.html:417
+msgid "Simple questions"
+msgstr "Questions simples"
 
-#: theme/templates/helping_center.html:426
+#: theme/templates/helping_center.html:420
 msgid ""
+"To select the correct answer, click on the point related to the answer or on "
+"the answer itself.<br> Once the answer is selected, click on \"validate\" to "
+"validate the answer.<br> A correctly selected answer will be coloured green "
+"in the correction slide.<br> A correctly not selected answer will be "
+"coloured blue in the correction slide.<br> A wrong selected answer will be "
+"coloured red in the correction slide.<br>"
+msgstr ""
 "Pour sélectionner la bonne réponse, il convient de cliquer sur le point lié "
 "à la réponse ou sur la réponse en elle-même.<br> Une fois la réponse "
 "sélectionnée, il convient de cliquer sur « valider » pour valider la réponse."
@@ -624,160 +687,226 @@ msgid ""
 "correction.<br> Une réponse juste non sélectionnée sera colorée en bleu dans "
 "le slide de correction.<br> Une réponse fausse sélectionnée sera colorée en "
 "rouge dans le slide de correction.<br>"
-msgstr ""
 
-#: theme/templates/helping_center.html:440
-msgid "Questions et quizz à choix multiple"
-msgstr ""
+#: theme/templates/helping_center.html:431
+msgid "Multiple choice questions and quizzes"
+msgstr "Questions et quizz à choix multiple"
 
-#: theme/templates/helping_center.html:443
-msgid "Les questions à choix multiple sont reconnaissables :"
-msgstr ""
+#: theme/templates/helping_center.html:434
+msgid "Multiple-choice questions are recognisable:"
+msgstr "Les questions à choix multiple sont reconnaissables :"
 
-#: theme/templates/helping_center.html:450
+#: theme/templates/helping_center.html:441
 msgid ""
+"by the blue square \"<span class=\"text-primary\">□</span>\" of the boxes to "
+"be selected, corresponding to the specific design for multiple-choice "
+"questions, as well as by ;"
+msgstr ""
 "au carré bleu « <span class=\"text-primary\">□</span> » des cases à "
 "sélectionner, correspondant au design spécifique pour les questions à choix "
 "multiple, ainsi que par ;"
-msgstr ""
 
-#: theme/templates/helping_center.html:458
-msgid ""
+#: theme/templates/helping_center.html:448
+msgid "the message \"Choose all the answers that apply and click 'Validate'\"."
+msgstr ""
 "le message « Choisissez toutes les réponses qui s'appliquent puis cliquez "
 "'Valider' »."
-msgstr ""
 
-#: theme/templates/helping_center.html:466
+#: theme/templates/helping_center.html:456
 msgid ""
+"For each multiple-choice question, it is possible to select a limited number "
+"of answers, i.e. one corresponding to the number of possible correct answers "
+"per question. Once the limited number of answers is selected, the remaining "
+"answers are greyed out to inform the user that they have selected the "
+"maximum number of correct answers on a multiple choice answer or quiz."
+msgstr ""
 "Pour chaque question à choix multiple, il est possible de sélectionner un "
 "nombre limité de réponse, à savoir celui correspondant au nombre de bonnes "
 "réponses possible par question. Une fois le nombre limité de réponses "
 "sélectionnées, les autres réponses sont grisées pour informer l’utilisateur "
 "qu’il a sélectionner le maximum de bonnes réponses sur une réponse ou quiz à "
 "choix multiple."
-msgstr ""
 
-#: theme/templates/helping_center.html:477
+#: theme/templates/helping_center.html:466
 msgid ""
+"A correctly selected answer will be coloured green in the correction slide. "
+"<br> A correctly not selected answer will be coloured blue in the correction "
+"slide.<br> A selected false answer will be coloured red in the correction "
+"slide.<br>"
+msgstr ""
 "Une réponse juste sélectionnée sera colorée en vert dans la slide de "
 "correction. <br> Une réponse juste non sélectionnée sera colorée en bleu "
 "dans le slide de correction.<br> Une réponse fausse sélectionnée sera "
 "colorée en rouge dans le slide de correction.<br>"
-msgstr ""
 
-#: theme/templates/helping_center.html:496
-msgid "Score et récompenses"
-msgstr ""
+#: theme/templates/helping_center.html:483
+msgid "Score and rewards"
+msgstr "Score et récompenses"
 
-#: theme/templates/helping_center.html:506
+#: theme/templates/helping_center.html:493
 msgid ""
+"<strong>Rewards:</strong> throughout the DAAZ journey, practical or summary "
+"content and a certificate of achievement must be unlocked to be downloaded "
+"as rewards. Any document unlocked from the path can, at any time, be "
+"retrieved and downloaded from the \"<strong>Resources</strong>\" section of "
+"the dashboard."
+msgstr ""
 "<strong>Récompenses :</strong> tout au long du parcours DAAZ du contenu "
 "pratique ou récapitulatif ainsi qu’un certificat d’accomplissement sont à "
 "débloquer, pour être téléchargés, à titre de récompenses. Tout document "
 "débloqué depuis le parcours peut, à tout moment, être récupéré et téléchargé "
 "depuis la rubrique « <strong>Ressources</strong> » du tableau de bord."
-msgstr ""
 
-#: theme/templates/helping_center.html:521
+#: theme/templates/helping_center.html:503
 msgid ""
+"Each level allows you to unlock, 4 practical sheets, 1 summary sheet, a "
+"level report and 1 template document."
+msgstr ""
 "Chaque niveau permet de débloquer, 4 fiches pratiques, 1 fiche "
 "récapitulative, un rapport de niveau et 1 document Template."
-msgstr ""
 
-#: theme/templates/helping_center.html:527
+#: theme/templates/helping_center.html:509
 msgid ""
+"<strong>A practical sheet</strong> is a document on a specific topic, to "
+"draw attention to important aspects of the GDPR. Their content is not "
+"exhaustive.<br> To obtain it, it is necessary to answer one of the 4 quizzes "
+"of the level and to validate the selected answer(s)."
+msgstr ""
 "<strong>Une fiche pratique</strong> est un document portant sur une "
 "thématique spécifique, afin d’attirer l’attention sur des aspects importants "
 "du RGPD. Leur contenu n’est pas exhaustif.<br> Pour l’obtenir, il convient "
 "de répondre à un des 4 quiz du niveau et de valider la(les) réponse(-s) "
 "sélectionnée(-s)."
-msgstr ""
 
-#: theme/templates/helping_center.html:538
+#: theme/templates/helping_center.html:518
 msgid ""
+"<strong>A summary sheet</strong> is a document summarizing in a structured "
+"way, the explanations provided for each of the 20 questions. Their content "
+"is not exhaustive.<br> To obtain it, it is necessary to complete a level in "
+"its entirety."
+msgstr ""
 "<strong>Une fiche récapitulative</strong> est un document synthétisant de "
 "manière structurée, les explications fournies pour chacune des 20 questions. "
 "Leur contenu n’est pas exhaustif.<br> Pour l’obtenir, il convient "
 "d’accomplir un niveau intégralement."
-msgstr ""
 
-#: theme/templates/helping_center.html:549
+#: theme/templates/helping_center.html:527
 msgid ""
+"<strong>A Template</strong> document is a document provided to allow you to "
+"document your compliance with the GDPR. It must be completed adequately "
+"according to the treatments carried out. To obtain it, it is necessary to "
+"wait for the ‘Challenge’ at the end of the level."
+msgstr ""
 "<strong>Un document Template</strong> est un document fourni pour vous "
 "permettre de documenter votre conformité au RGPD. Il doit être rempli de "
 "manière adéquate en fonction des traitements effectués.<br> Pour l’obtenir, "
 "il convient d’attendre le « Challenge » de fin de niveau."
-msgstr ""
 
-#: theme/templates/helping_center.html:560
+#: theme/templates/helping_center.html:536
 msgid ""
+"<strong>A level report</strong> is a document transcribing all the answers "
+"given and the score obtained by level.<br> To obtain it, a level must be "
+"completed in its entirety."
+msgstr ""
 "<strong>Un rapport de niveau</strong> est un document retranscrivant "
 "l’intégralité des réponses données ainsi que le score obtenu par niveau.<br> "
 "Pour l’obtenir, il convient d’accomplir un niveau intégralement."
-msgstr ""
 
-#: theme/templates/helping_center.html:570
+#: theme/templates/helping_center.html:543
 msgid ""
+"<strong>A certificate of completion</strong> is the document that validates "
+"the completion of the DAAZ journey. It is, in a way, the diploma attesting "
+"to your overall knowledge of the principles and obligations of the GDPR "
+"acquired throughout the DAAZ.<br> To obtain it, you must complete the DAAZ "
+"journey in its entirety."
+msgstr ""
 "<strong>Un certificat d’accomplissement</strong> est le document qui valide "
 "la réalisation du parcours DAAZ. C’est en quelque sorte le diplôme attestant "
 "de votre connaissance globale des principes et des obligations du RGPD "
 "acquise tout au long du parcours DAAZ.<br> Pour l’obtenir, il convient "
 "d’accomplir le parcours DAAZ intégralement."
-msgstr ""
 
-#: theme/templates/helping_center.html:586
-msgid "Résultat"
-msgstr ""
+#: theme/templates/helping_center.html:556
+msgid "Result"
+msgstr "Résultat"
 
-#: theme/templates/helping_center.html:590
+#: theme/templates/helping_center.html:560
 msgid ""
+"<u>The Score</u> is based on your total of correct answers to the 20 "
+"questions and 4 quizzes for each of the 4 levels of the journey.<br> Each "
+"correct answer is worth 1 point.<br> A single choice question brings 1 point."
+"<br> A multiple choice answer brings as many points as there are correct "
+"answers to select for this type of question.<br> A wrong answer does not "
+"bring a negative point.<br>"
+msgstr ""
 "<u>le Score</u> est fonction de votre total de bonnes réponses aux 20 "
 "questions et 4 quiz pour chacun des 4 niveaux du parcours.<br> Chaque bonne "
 "réponse vaut 1 point.<br> Une question à choix unique apporte 1 point.<br> "
 "Une réponse à choix multiple apporte autant de points qu’il y a de bonnes "
 "réponses à sélectionner pour ce type de question.<br> Une mauvaise réponse "
 "n’apporte pas de point négatif.<br>"
-msgstr ""
 
-#: theme/templates/helping_center.html:605
+#: theme/templates/helping_center.html:574
 #, python-format
 msgid ""
+"<u>Dashboard stickers</u> are scalable based on score.<br> Once 70%% of "
+"correct answers are acquired, a pennant unlocks and appears on the image. "
+"<br> Once 90%% of correct answers are acquired, golden stickers unlock.<br>"
+msgstr ""
 "<u>Les stickers</u> du tableau de bord sont évolutifs en fonction du score."
 "<br> Une fois 70%% de bonnes réponses acquises, un fanion se débloque et "
 "apparaît sur l’image.<br> Une fois 90%% de bonnes réponses acquises, les "
 "stickers dorés se débloquent.<br>"
-msgstr ""
 
-#: theme/templates/helping_center.html:619
+#: theme/templates/helping_center.html:587
 msgid ""
+"<strong>Knowledge:</strong> the percentage of knowledge is acquired and "
+"increases throughout the DAAZ journey, after each explanation, each practice "
+"sheet unlocked and template document unlocked at the time of the end-of-"
+"level challenge."
+msgstr ""
 "<strong>Connaissance :</strong> le pourcentage de connaisse est acquis et "
 "augmente tout au long du parcours DAAZ, après chaque explication, chaque "
 "fiche pratique débloquée et document Template débloqué au moment du "
 "challenge de fin de niveau."
-msgstr ""
 
-#: theme/templates/helping_center.html:629
+#: theme/templates/helping_center.html:597
 msgid ""
+"<strong>journey:</strong> the percentage of achievement per level changes as "
+"you progress through the DAAZ journey."
+msgstr ""
 "<strong>Cours :</strong> le pourcentage de réalisation par niveau évolue au "
 "fur et à mesure de votre avancement dans le parcours DAAZ."
-msgstr ""
 
-#: theme/templates/helping_center.html:652
-msgid "Conditions générales d’utilisation"
-msgstr ""
+#: theme/templates/helping_center.html:619
+msgid "General conditions of use"
+msgstr "Conditions générales d’utilisation"
 
-#: theme/templates/helping_center.html:659 theme/templates/legal.html:14
+#: theme/templates/helping_center.html:626 theme/templates/legal.html:14
 msgid ""
+"Please read the general terms and conditions of use of the daaz-gdpr.lu "
+"website. In case of disagreement with them, please do not use this site. Any "
+"person making use of the daaz-gdpr.lu website and the DAAZ compliance tool "
+"accessible on it shall be deemed to have read and accepted all of these "
+"general terms and conditions of use."
+msgstr ""
 "Veuillez prendre connaissance des conditions générales d’utilisation du site "
 "daaz-gdpr.lu. En cas de désaccord avec celles-ci, veuillez de ne pas "
 "utiliser ce site. Toute personne faisant usage du site daaz-gdpr.lu et de "
 "l’outil d’aide à la conformité DAAZ accessible sur celui-ci est réputée "
 "avoir pris connaissance et accepté l'intégralité des présentes conditions "
 "générales d'utilisation."
-msgstr ""
 
-#: theme/templates/helping_center.html:670 theme/templates/legal.html:22
+#: theme/templates/helping_center.html:634 theme/templates/legal.html:22
 msgid ""
+"The DAAZ compliance tool is made available to users on the daaz-gdpr.lu "
+"website (‘the website’) by the Commission nationale pour la protection des "
+"données (CNPD, 15, Boulevard du Jazz, L-4370 Belvaux), in collaboration with "
+"the LHC-NC3 (Luxembourg House of Cybersecurity, National Cybersecurity "
+"Competence Center, 122 Rue Adolphe Fischer, L-1521 Luxembourg) and with the "
+"technical support of the Centre des technologies de l’information de l’Etat "
+"(CTIE - 560 Rue de Neudorf, L-2220 Luxembourg)."
+msgstr ""
 "L’outil d’aide à la conformité DAAZ est mis à disposition des utilisateurs "
 "sur le site daaz-gdpr.lu (ci-après, le « site ») par la Commission nationale "
 "pour la protection des données (CNPD, 15, Boulevard du Jazz, L-4370 "
@@ -786,70 +915,103 @@ msgid ""
 "Fischer, L-1521 Luxembourg) et avec le support technique du Centre des "
 "technologies de l’information de l’Etat (CTIE - 560 Rue de Neudorf, L-2220 "
 "Luxembourg)."
-msgstr ""
 
-#: theme/templates/helping_center.html:684 theme/templates/legal.html:32
-msgid "Accès au site"
-msgstr ""
+#: theme/templates/helping_center.html:645 theme/templates/legal.html:33
+msgid "Access to the site"
+msgstr "Accès au site"
 
-#: theme/templates/helping_center.html:687 theme/templates/legal.html:35
+#: theme/templates/helping_center.html:648 theme/templates/legal.html:36
 msgid ""
+"Access to the website is via the Internet. The user declares that he is "
+"aware of the risks and accepts them. It must guard against the effects of "
+"computer piracy by adopting a suitable and secure computer configuration."
+msgstr ""
 "L’accès au site se fait par Internet. L’utilisateur déclare en connaître les "
 "risques et les accepter. Il doit se prémunir contre les effets de la "
 "piraterie informatique en adoptant une configuration informatique adaptée et "
 "sécurisée."
-msgstr ""
 
-#: theme/templates/helping_center.html:696 theme/templates/legal.html:42
+#: theme/templates/helping_center.html:655 theme/templates/legal.html:43
 msgid ""
+"The CNPD cannot be held liable for any damage that the user suffers, "
+"directly or indirectly related to his navigation on this site and the online "
+"use of the compliance tool DAAZ."
+msgstr ""
 "La CNPD ne saurait être tenue responsable d'un quelconque dommage, que "
 "l’utilisateur subirait, lié directement ou indirectement à sa navigation sur "
 "ce site et à l’utilisation en ligne de l’outil d’aide à la conformité DAAZ."
-msgstr ""
 
-#: theme/templates/helping_center.html:704 theme/templates/legal.html:48
+#: theme/templates/helping_center.html:662 theme/templates/legal.html:50
 msgid ""
+"The CTIE will best ensure the security of the computer system and maximum "
+"availability of this site. However, it cannot be held liable in the event of "
+"an attack on the computer system or partial or total temporary "
+"unavailability of the site."
+msgstr ""
 "Le CTIE assurera au mieux la sécurité du système informatique et une "
 "disponibilité maximale de ce site. Toutefois, sa responsabilité ne saurait "
 "être retenue en cas d’attaque du système informatique ou d’indisponibilité "
 "momentanée partielle ou totale du site."
-msgstr ""
 
-#: theme/templates/helping_center.html:713 theme/templates/legal.html:55
-msgid "Absence d’engagement quant à la mise en conformité de l’utilisateur"
-msgstr ""
+#: theme/templates/helping_center.html:669 theme/templates/legal.html:57
+msgid "Lack of commitment to user compliance"
+msgstr "Absence d’engagement quant à la mise en conformité de l’utilisateur"
 
-#: theme/templates/helping_center.html:716 theme/templates/legal.html:58
+#: theme/templates/helping_center.html:672 theme/templates/legal.html:60
 msgid ""
+"Use of the site, including the DAAZ compliance tool, is free of charge. The "
+"use of this tool, which is entirely voluntary, aims to enable the user to "
+"acquire the concepts necessary to strengthen and promote compliance with the "
+"General Data Protection Regulation (GDPR) in small and medium-sized "
+"enterprises."
+msgstr ""
 "L'utilisation du site, en ce compris de l’outil d’aide à la conformité DAAZ, "
 "est gratuite. L’utilisation de cet outil, entièrement volontaire, vise à "
 "permettre à l’utilisateur d’acquérir les notions nécessaires pour renforcer "
 "et favoriser la mise en conformité au règlement général sur la protection "
 "des données (RGPD) au sein de petites et moyennes entreprises."
-msgstr ""
 
-#: theme/templates/helping_center.html:727 theme/templates/legal.html:66
+#: theme/templates/helping_center.html:680 theme/templates/legal.html:68
 msgid ""
+"However, the use of the DAAZ compliance tool is not intended to constitute a "
+"guarantee that any processing of personal data carried out by the user will "
+"comply with the GDPR and does not imply any commitment on the part of the "
+"CNPD in that regard."
+msgstr ""
 "L’utilisation de l’outil d’aide à la conformité DAAZ n’a néanmoins pas pour "
 "objet de constituer une garantie quant à la mise en conformité au RGPD des "
 "traitements de données à caractère personnel éventuellement mis en œuvre par "
 "l’utilisateur et n’implique aucun engagement de la CNPD à cet égard."
-msgstr ""
 
-#: theme/templates/helping_center.html:736 theme/templates/legal.html:73
+#: theme/templates/helping_center.html:687
 msgid ""
+"If the user wishes to obtain more specific information on data protection, "
+"he/she can contact the CNPD via the<a href=\"https://cnpd.public.lu/en/"
+"support/contact.html\" target=\"_blank\" rel=\"noopener "
+"noreferrer\">contact</a> form."
+msgstr ""
 "Si l’utilisateur souhaite obtenir des informations plus spécifiques "
 "concernant la protection des données, il peut contacter la CNPD via son <a "
 "href=\"https://cnpd.public.lu/fr/support/contact.html\" target=\"_blank\" "
 "rel=\"noopener noreferrer\">formulaire de contact</a>."
-msgstr ""
 
-#: theme/templates/helping_center.html:744 theme/templates/legal.html:80
-msgid "Utilisation du site"
-msgstr ""
+#: theme/templates/helping_center.html:694 theme/templates/legal.html:82
+msgid "Use of the site"
+msgstr "Utilisation du site"
 
-#: theme/templates/helping_center.html:747 theme/templates/legal.html:83
+#: theme/templates/helping_center.html:697 theme/templates/legal.html:85
 msgid ""
+"The site, including the DAAZ compliance tool, may only be used in compliance "
+"with these terms and conditions. It shall be prohibited to divert its use in "
+"any way, including for commercial purposes. The content of the DAAZ "
+"compliance tool can be adapted to take into account specific aspects of data "
+"protection law and practices and developments. Such adaptation, which "
+"excludes any direct or indirect exploitation for commercial purposes and "
+"which may under no circumstances aim at modifying the tool as accessible on "
+"the website, is only possible through the GitHub version of the tool. The "
+"GitHub version of the tool is accessible at the bottom of the homepage of "
+"the website."
+msgstr ""
 "Le site, en ce compris l’outil d’aide à la conformité DAAZ, ne peut être "
 "utilisé que dans le respect des présentes conditions générales. Il est "
 "interdit d’en détourner l’utilisation, de quelque façon que ce soit, "
@@ -861,59 +1023,83 @@ msgid ""
 "aucun cas viser à modifier l’outil tel qu’il est accessible sur le site, est "
 "uniquement possible par le biais de la version GitHub de l’outil. La version "
 "GitHub de l’outil est accessible en bas de page de la page d’accueil du site."
-msgstr ""
 
-#: theme/templates/helping_center.html:766 theme/templates/legal.html:95
+#: theme/templates/helping_center.html:709 theme/templates/legal.html:97
 msgid ""
+"The user cannot claim any right of ownership or any assignment, implicit or "
+"not, with regard to all the elements of the site and the DAAZ compliance "
+"tool made available by the CNPD in collaboration with the LHC-NC3."
+msgstr ""
 "L’utilisateur ne peut prétendre à aucun droit de propriété, à aucune "
 "cession, implicite ou non, à l’égard de l’ensemble des éléments du site et "
 "de l’outil d’aide à la conformité DAAZ mis à disposition par la CNPD en "
 "collaboration avec le LHC-NC3."
-msgstr ""
 
-#: theme/templates/helping_center.html:775 theme/templates/legal.html:102
+#: theme/templates/helping_center.html:716 theme/templates/legal.html:104
 msgid ""
+"Any use or operation carried out by the user (for example through the use of "
+"software) that could harm or alter, in any way, the normal functioning of "
+"the site and/or the content offered on it, is prohibited."
+msgstr ""
 "Toute utilisation ou opération effectuée par l’utilisateur (par exemple via "
 "l’utilisation de logiciels) qui pourrait porter atteinte ou altérer, de "
 "quelque façon que soit, le fonctionnement normal du site et/ou le contenu "
 "proposé sur celui-ci, est interdite."
-msgstr ""
 
-#: theme/templates/helping_center.html:784 theme/templates/legal.html:109
-msgid "Suspension du site"
-msgstr ""
+#: theme/templates/helping_center.html:723 theme/templates/legal.html:111
+msgid "Suspension of the site"
+msgstr "Suspension du site"
 
-#: theme/templates/helping_center.html:787 theme/templates/legal.html:112
+#: theme/templates/helping_center.html:726 theme/templates/legal.html:114
 msgid ""
+"The use of the site, including the compliance tool, may be suspended at any "
+"time and without notice by the CNPD with the technical support of the CTIE, "
+"in particular for maintenance reasons or in the event of misuse of the site, "
+"without the CNPD being required to justify the reason for the suspension."
+msgstr ""
 "L’utilisation du site, en ce compris de l’outil d’aide à la conformité, peut "
 "être suspendue à tout moment et sans préavis par la CNPD avec le support "
 "technique du CTIE, notamment pour des raisons de maintenance ou encore dans "
 "le cas où le site ferait l’objet d’une utilisation abusive, sans que la CNPD "
 "ne soit tenue de justifier le motif de la suspension."
-msgstr ""
 
-#: theme/templates/helping_center.html:798 theme/templates/legal.html:120
-msgid "Informations publiées et modification du site"
-msgstr ""
+#: theme/templates/helping_center.html:734 theme/templates/legal.html:122
+msgid "Information published and modification of the site"
+msgstr "Informations publiées et modification du site"
 
-#: theme/templates/helping_center.html:801 theme/templates/legal.html:123
+#: theme/templates/helping_center.html:737 theme/templates/legal.html:125
 msgid ""
+"The aim is to disseminate accurate and up-to-date information, but the CNPD "
+"cannot avoid any risk of material error. The information published on this "
+"site does not constitute a commitment on the part of the CNPD and may not be "
+"exhaustive."
+msgstr ""
 "L'objectif est de diffuser des informations exactes et à jour, mais la CNPD "
 "ne saurait toutefois éviter tout risque d'erreur matérielle. Les "
 "informations publiées sur ce site ne sont pas constitutives d’un engagement "
 "de la part de la CNPD et peuvent ne pas être exhaustives."
-msgstr ""
 
-#: theme/templates/helping_center.html:810 theme/templates/legal.html:130
+#: theme/templates/helping_center.html:744 theme/templates/legal.html:132
 msgid ""
+"The CNPD cannot be held liable in the event of inaccuracies, gaps or errors "
+"in the information provided on the site, including in the event of failure "
+"to update information or a document or in the event of errors in system "
+"manipulation or encoding."
+msgstr ""
 "La responsabilité de la CNPD ne saurait être retenue en cas d’inexactitudes, "
 "de lacunes ou d’erreurs dans les informations fournies sur le site, y "
 "compris en cas d’omission de mise à jour d’une information ou d’un document "
 "ou encore en cas d’erreurs de manipulation du système ou d’encodage."
-msgstr ""
 
-#: theme/templates/helping_center.html:819 theme/templates/legal.html:137
+#: theme/templates/helping_center.html:751 theme/templates/legal.html:139
 msgid ""
+"The site, including the DAAZ compliance tool, may be updated and modified at "
+"any time by the CNPD, without prior notice. In particular, the CNPD may at "
+"any time remove, add, supplement or specify all or part of the information, "
+"content and functionalities accessible on the site. No liability for any "
+"direct or indirect damage in connection with such updates and modifications "
+"can be held against the CNPD."
+msgstr ""
 "Le site, en compris l’outil d’aide à la conformité DAAZ, peut être mis à "
 "jour et modifié à tout moment par la CNPD, sans préavis. La CNPD peut "
 "notamment à tout moment retirer, ajouter, compléter ou préciser tout ou une "
@@ -921,139 +1107,174 @@ msgid ""
 "site. Aucune responsabilité pour un quelconque dommage direct ou indirect en "
 "lien avec de telles mises à jour et modifications ne pourra être retenue à "
 "l’encontre de la CNPD."
-msgstr ""
 
-#: theme/templates/helping_center.html:832 theme/templates/legal.html:146
-msgid "Liens vers d’autres sites"
-msgstr ""
+#: theme/templates/helping_center.html:760 theme/templates/legal.html:148
+msgid "Links to other sites"
+msgstr "Liens vers d’autres sites"
 
-#: theme/templates/helping_center.html:835 theme/templates/legal.html:149
+#: theme/templates/helping_center.html:763 theme/templates/legal.html:151
 msgid ""
+"For the convenience of users, this site may contain links to other sites "
+"that may be useful or of interest to them."
+msgstr ""
 "Pour la convenance des utilisateurs, ce site peut contenir des liens vers "
 "d’autres sites qui peuvent leur être utiles ou qui peuvent les intéresser."
-msgstr ""
 
-#: theme/templates/helping_center.html:842 theme/templates/legal.html:155
+#: theme/templates/helping_center.html:769 theme/templates/legal.html:157
 msgid ""
+"The CNPD does not systematically monitor the content of these sites. It can "
+"therefore not be held responsible for the content presented on these sites, "
+"whether it is their legality or the accuracy of the information contained "
+"therein and any material damage that may result from their use."
+msgstr ""
 "La CNPD ne contrôle pas systématiquement le contenu de ces sites. Elle ne "
 "peut dès lors être tenue responsable des contenus présentés sur lesdits "
 "sites, qu’il s’agisse de leur légalité ou de l'exactitude des informations "
 "qui s'y trouvent et des éventuels dégâts matériels qui découleraient de leur "
 "utilisation."
-msgstr ""
 
-#: theme/templates/helping_center.html:851 theme/templates/legal.html:162
-msgid "Propriété intellectuelle (Copyright)"
-msgstr ""
+#: theme/templates/helping_center.html:777 theme/templates/legal.html:165
+msgid "Intellectual Property (Copyright)"
+msgstr "Propriété intellectuelle (Copyright)"
 
-#: theme/templates/helping_center.html:854 theme/templates/legal.html:165
+#: theme/templates/helping_center.html:780 theme/templates/legal.html:168
 msgid ""
+"All elements of this website, including the DAAZ compliance tool and its "
+"logo, are protected by intellectual property, copyright and trademark laws. "
+"The use of the website and the DAAZ compliance tool, in accordance with "
+"these general terms and conditions, does not constitute an assignment of "
+"intellectual property rights held by the CNPD."
+msgstr ""
 "L’ensemble des éléments de ce site, en ce compris l’outil d’aide à la "
 "conformité DAAZ ainsi que son logo sont protégés par les lois sur la "
 "propriété intellectuelle, sur les droits d’auteur et le droit des marques. "
 "L’utilisation du site et de l’outil d’aide à la conformité DAAZ, "
 "conformément aux présentes conditions générales, ne constitue en aucun cas "
 "une cession de droits de propriété intellectuelle détenus par la CNPD."
-msgstr ""
 
-#: theme/templates/helping_center.html:866 theme/templates/legal.html:173
+#: theme/templates/helping_center.html:788 theme/templates/legal.html:176
 msgid ""
+"No operating authorisation is granted by the CNPD in respect of all the "
+"elements of the site protected by intellectual property rights."
+msgstr ""
 "Aucune autorisation d’exploitation n’est accordée par la CNPD à l’égard de "
 "l’ensemble des éléments du site protégés par des droits de propriété "
 "intellectuelle."
-msgstr ""
 
-#: theme/templates/helping_center.html:873 theme/templates/legal.html:179
+#: theme/templates/helping_center.html:794 theme/templates/legal.html:182
 msgid ""
+"Without prejudice to the possibilities of adapting the content of the tool "
+"described in point 3 of these general conditions, modifications, "
+"reproductions or adaptations of the elements of this site, of the DAAZ "
+"compliance tool as accessible on it and of the figurative mark DAAZ, are not "
+"authorised, in any form and by any means whatsoever."
+msgstr ""
 "Sans préjudice des possibilités d’adaptation du contenu de l’outil décrites "
 "au point 3 des présentes conditions générales, les modifications, "
 "reproductions ou adaptations des éléments de ce site, de l’outil d’aide à la "
 "conformité DAAZ tel qu’il est accessible sur celui-ci et de la marque "
 "figurative DAAZ, ne sont pas autorisés, sous quelque forme que ce soit et "
 "par quelque moyen que ce soit."
-msgstr ""
 
-#: theme/templates/helping_center.html:884 theme/templates/legal.html:187
-msgid "Modification des conditions générales d'utilisation"
-msgstr ""
+#: theme/templates/helping_center.html:802 theme/templates/legal.html:190
+msgid "Modification of the general conditions of use"
+msgstr "Modification des conditions générales d'utilisation"
 
-#: theme/templates/helping_center.html:887 theme/templates/legal.html:190
+#: theme/templates/helping_center.html:805 theme/templates/legal.html:193
 msgid ""
+"These terms and conditions of use may be modified or supplemented at any "
+"time, without notice, depending on changes to the site, changes in "
+"legislation or for any other reason deemed necessary. It is up to the user "
+"to inquire about the general conditions of use of the site, of which only "
+"the updated version accessible online is deemed to be in force."
+msgstr ""
 "Les présentes conditions générales d'utilisation pourront être modifiées ou "
 "complétées à tout moment, sans préavis, en fonction de modifications "
 "apportées au site, de l'évolution de la législation ou pour tout autre motif "
 "jugé nécessaire. Il appartient à l’utilisateur de s’informer des conditions "
 "générales d'utilisation du site, dont seule la version actualisée accessible "
 "en ligne est réputée en vigueur."
-msgstr ""
 
-#: theme/templates/helping_center.html:898 theme/templates/legal.html:198
-msgid "Loi applicable et juridictions compétentes"
-msgstr ""
+#: theme/templates/helping_center.html:813 theme/templates/legal.html:201
+msgid "Applicable law and competent courts"
+msgstr "Loi applicable et juridictions compétentes"
 
-#: theme/templates/helping_center.html:901 theme/templates/legal.html:201
+#: theme/templates/helping_center.html:816 theme/templates/legal.html:204
 msgid ""
+"Any dispute relating to the use of this website and the DAAZ compliance tool "
+"is subject to Luxembourg law and the exclusive jurisdiction of the courts of "
+"the Grand Duchy of Luxembourg."
+msgstr ""
 "Tout litige relatif à l'utilisation de ce site et de l’outil d’aide à la "
 "conformité DAAZ est soumis à la loi luxembourgeoise et de la compétence "
 "exclusive des juridictions du Grand-Duché de Luxembourg."
-msgstr ""
 
-#: theme/templates/helping_center.html:909 theme/templates/legal.html:207
-msgid ""
+#: theme/templates/helping_center.html:823 theme/templates/legal.html:211
+msgid "Processing of personal data by the CNPD via the daaz-gdpr.lu website"
+msgstr ""
 "Traitements de données à caractère personnel effectués par la CNPD via le "
 "site daaz-gdpr.lu"
-msgstr ""
 
-#: theme/templates/helping_center.html:915 theme/templates/legal.html:210
+#: theme/templates/helping_center.html:828 theme/templates/legal.html:216
 msgid ""
+"A unique identifier that is automatically generated when you first log in to "
+"the DAAZ compliance tool preserves the anonymity of the user. Personal data "
+"may nevertheless be processed by the CNPD in the event of a request for "
+"support."
+msgstr ""
 "Un identifiant unique généré automatiquement lors de la première connexion à "
 "l’outil d’aide à la conformité DAAZ permet de préserver l’anonymat de "
 "l’utilisateur. Des données à caractère personnel peuvent néanmoins être "
 "traitées par la CNPD en cas de demande de support."
-msgstr ""
 
-#: theme/templates/helping_center.html:924 theme/templates/legal.html:217
+#: theme/templates/helping_center.html:835 theme/templates/legal.html:223
 msgid ""
+"The information on the processing of personal data carried out by the CNPD "
+"in this context is detailed"
+msgstr ""
 "Les informations relatives aux traitements de données à caractère personnel "
 "effectués par la CNPD dans ce contexte sont détaillées"
-msgstr ""
 
-#: theme/templates/helping_center.html:929
-#: theme/templates/helping_center.html:950 theme/templates/legal.html:221
-#: theme/templates/legal.html:238
-msgid "ici"
-msgstr ""
+#: theme/templates/helping_center.html:839
+#: theme/templates/helping_center.html:856 theme/templates/legal.html:227
+#: theme/templates/legal.html:244
+msgid "here"
+msgstr "ici"
 
-#: theme/templates/helping_center.html:932 theme/templates/legal.html:224
-msgid "Gestion des cookies"
-msgstr ""
-
-#: theme/templates/helping_center.html:935 theme/templates/legal.html:227
+#: theme/templates/helping_center.html:845 theme/templates/legal.html:233
 msgid ""
+"A cookie is a text file sent to the user’s browser and stored on the hard "
+"drive of the user’s terminal (e.g. PC, laptop or smartphone) when visiting a "
+"website."
+msgstr ""
 "Un cookie est un fichier texte envoyé au navigateur de l’utilisateur et "
 "enregistré sur le disque dur de son terminal (PC, ordinateur portable ou "
 "smartphone, par exemple) lors de la visite d’un site internet."
-msgstr ""
 
-#: theme/templates/helping_center.html:943 theme/templates/legal.html:233
+#: theme/templates/helping_center.html:851 theme/templates/legal.html:239
 msgid ""
+"For example, cookies may be used to ensure the proper functioning of a "
+"website and to optimise its usability and functionality. The information "
+"relating to the cookies used by the site daaz-gdpr.lu are detailed"
+msgstr ""
 "Des cookies peuvent par exemple être utilisés afin d’assurer le bon "
 "fonctionnement d’un site et d’optimiser son ergonomie et ses "
 "fonctionnalités. Les informations relatives aux cookies utilisés par le site "
 "daaz-gdpr.lu sont détaillées"
-msgstr ""
 
-#: theme/templates/helping_center.html:956 theme/templates/legal.html:244
-msgid ""
+#: theme/templates/helping_center.html:862 theme/templates/legal.html:250
+msgid "The site is available in three languages, English, German and French."
+msgstr ""
 "Le site est proposé en trois langues, à savoir l’anglais, l’allemand et le "
 "français."
-msgstr ""
 
-#: theme/templates/helping_center.html:961 theme/templates/legal.html:249
+#: theme/templates/helping_center.html:867 theme/templates/legal.html:255
 msgid ""
+"As far as possible, any questions/solicitations will be answered in the "
+"language of the recipient of the answer."
+msgstr ""
 "Dans la mesure du possible, il sera répondu à toute question/sollicitation "
 "dans la langue du destinataire de la réponse."
-msgstr ""
 
 #: theme/templates/landing.html:28
 msgid "The intuitive path to"
@@ -1064,15 +1285,15 @@ msgid "data protection"
 msgstr "la protection des données"
 
 #: theme/templates/landing.html:33
-msgid "Customized training for SME's"
+msgid "Tailor-made training for SMEs"
 msgstr "Une formation sur mesure pour les PME"
 
 #: theme/templates/landing.html:35
 msgid "based on real examples"
 msgstr "basée sur des exemples réels"
 
-#: theme/templates/landing.html:44 theme/templates/landing.html:251
-#: theme/templates/landing.html:307
+#: theme/templates/landing.html:44 theme/templates/landing.html:250
+#: theme/templates/landing.html:306
 msgid "Start the journey"
 msgstr "Lancer le parcours"
 
@@ -1093,7 +1314,7 @@ msgid "The GDPR with the"
 msgstr "Le RGPD avec les"
 
 #: theme/templates/landing.html:81
-msgid "words of everyday life"
+msgid "everyday words"
 msgstr "mots du quotidien"
 
 #: theme/templates/landing.html:93
@@ -1101,7 +1322,7 @@ msgid "Flexible"
 msgstr "Flexible"
 
 #: theme/templates/landing.html:96
-msgid "A training to follow"
+msgid "Training to go through"
 msgstr "Une formation à parcourir"
 
 #: theme/templates/landing.html:98
@@ -1121,7 +1342,7 @@ msgid "and secure"
 msgstr "et sécurisé"
 
 #: theme/templates/landing.html:131
-msgid "The GDPR from A to Zen!"
+msgid "GDPR from A to Zen!"
 msgstr "Le RGPD de A à Zen !"
 
 #: theme/templates/landing.html:143
@@ -1161,11 +1382,11 @@ msgid "met by experts"
 msgstr "rencontrés par les experts"
 
 #: theme/templates/landing.html:191
-msgid "Implication"
+msgid "Involvement"
 msgstr "Implication"
 
 #: theme/templates/landing.html:194
-msgid "Useful fact sheets"
+msgid "Useful practical sheets"
 msgstr "Des fiches pratiques utiles"
 
 #: theme/templates/landing.html:196
@@ -1173,7 +1394,7 @@ msgid "in your everyday life"
 msgstr "à votre quotidien"
 
 #: theme/templates/landing.html:214
-msgid "On the way to compliance !"
+msgid "On the road to compliance!"
 msgstr "En route vers la conformité !"
 
 #: theme/templates/landing.html:222
@@ -1182,41 +1403,42 @@ msgstr "Une histoire de PME"
 
 #: theme/templates/landing.html:228
 msgid ""
-"Follow the adventure of our hero Dominique Schummer, a dynamic businessmann "
-"faced with the General Data Protection Regulation, also called <b>“GDPR”</b>."
+"Follow the adventure of our hero Dominique Schummer, a dynamic businessman "
+"faced with the General Data Protection Regulation, also known as <b>“GDPR”</"
+"b>."
 msgstr ""
 "Suivez l’aventure de notre héros Dominique Schummer, un entrepreneur "
 "dynamique confronté au Règlement Général sur la Protection des Données, dit "
 "aussi <b>“RGPD”</b>."
 
-#: theme/templates/landing.html:236
+#: theme/templates/landing.html:235
 msgid ""
-"Aided by his team, Dominique will discover and implement the GDPR to ensure "
-"a respectful handling of the data subject's data."
+"Supported by his team, Dominique will discover and implement the GDPR to "
+"ensure a respectful handling of the data subject's data."
 msgstr ""
 "Soutenu par son équipe, Dominique découvrira et mettra en pratique le RGPD "
 "pour garantir un traitement de données respectueux des personnes concernées."
 
-#: theme/templates/landing.html:243
+#: theme/templates/landing.html:242
 msgid ""
 "Explore the world of data protection alongside Dominique and gain new skills!"
 msgstr ""
 "Explorez la protection des données personnelles aux côtés de Dominique et "
 "montez en compétence !"
 
-#: theme/templates/landing.html:272
+#: theme/templates/landing.html:271
 msgid "A 4-level journey"
 msgstr "Un parcours à 4 niveaux"
 
-#: theme/templates/landing.html:321
-msgid "Testimonies"
+#: theme/templates/landing.html:320
+msgid "Testimonials"
 msgstr "Témoignages"
 
-#: theme/templates/landing.html:324
+#: theme/templates/landing.html:323
 msgid "What other users said about it"
 msgstr "Ce qu’en disent les utilisateurs"
 
-#: theme/templates/landing.html:403
+#: theme/templates/landing.html:402
 msgid "Our partners"
 msgstr "Nos partenaires"
 
@@ -1225,14 +1447,28 @@ msgid "Legal notice"
 msgstr "Mentions légales"
 
 #: theme/templates/legal.html:8
-msgid "Aspects légaux"
-msgstr ""
+msgid "Legal aspects"
+msgstr "Aspects légaux"
 
 #: theme/templates/legal.html:11
 msgid ""
+"Terms and conditions of use of the daaz-gdpr.lu website and the DAAZ "
+"compliance tool"
+msgstr ""
 "Conditions générales d'utilisation du site daaz-gdpr.lu et de l’outil d’aide "
 "à la conformité DAAZ"
+
+#: theme/templates/legal.html:75
+msgid ""
+"If the user wishes to obtain more specific information on data protection, "
+"he/she can contact the CNPD via the<a href=\"https://cnpd.public.lu/en/"
+"support/contact.html\" target=\"_blank\" rel=\"noopener "
+"noreferrer\">contact</a>form."
 msgstr ""
+"Si l’utilisateur souhaite obtenir des informations plus spécifiques "
+"concernant la protection des données, il peut contacter la CNPD via son <a "
+"href=\"https://cnpd.public.lu/fr/support/contact.html\" target=\"_blank\" "
+"rel=\"noopener noreferrer\">formulaire de contact</a>."
 
 #: theme/templates/modals/confidentiality_alert.html:6
 msgid "Privacy is your ally"
@@ -1240,8 +1476,8 @@ msgstr "La confidentialité est votre alliée"
 
 #: theme/templates/modals/confidentiality_alert.html:10
 msgid ""
-"Your anonimity is garantied during the training by means of a unique "
-"identifier generated automatically upon your first connection."
+"Your anonymity is guarantied during the training by means of a unique "
+"identifier automatically generated upon your first connection."
 msgstr ""
 "Votre anonymat est préservé pendant votre formation grâce à un identifiant "
 "unique généré automatiquement lors de votre première connexion."
@@ -1272,12 +1508,12 @@ msgid "Start"
 msgstr "Commencer"
 
 #: theme/templates/modals/resources_download.html:36
-msgid "Sorry, no ressources available"
+msgid "Sorry, no resources available"
 msgstr "Désolé, aucune ressource n'est disponible"
 
 #: theme/templates/modals/resources_download.html:41
 msgid "Download"
-msgstr "Télécharger"
+msgstr "Téléchargement"
 
 #: theme/templates/modals/resources_download_base.html:12
 msgid "Select all"
@@ -1300,7 +1536,7 @@ msgid "Your identifier is unique and can't be recovered."
 msgstr "Votre identifiant est unique et ne pourra pas être récupéré."
 
 #: theme/templates/modals/save_uuid_alert.html:9
-msgid "Please ensure to save a copy."
+msgid "Make sure you keep a copy."
 msgstr "Assurez-vous d’en garder une copie."
 
 #: theme/templates/modals/start.html:12
@@ -1308,7 +1544,7 @@ msgid "Let's go !"
 msgstr "C’est parti !"
 
 #: theme/templates/modals/start.html:19
-msgid "I will start a new journey"
+msgid "I'm starting a new journey"
 msgstr "Je commence un nouveau parcours"
 
 #: theme/templates/modals/start.html:26
@@ -1323,66 +1559,65 @@ msgstr "Je reprends un parcours grâce à mon identifiant unique :"
 msgid "Access my space"
 msgstr "Accéder à mon espace"
 
-#: theme/templates/parts/footer.html:43
-msgid "Privacy notice"
-msgstr "Politique de confidentialité"
-
 #: theme/templates/parts/header.html:30
 msgid "Home"
 msgstr "Accueil"
 
-#: theme/templates/parts/header.html:33
-msgid "About"
-msgstr "A propos"
-
-#: theme/templates/parts/sidebar.html:51 theme/templates/parts/sidebar.html:53
-msgid "Resources"
-msgstr "Ressources"
-
-#: theme/templates/parts/sidebar.html:85 theme/templates/parts/sidebar.html:87
-msgid "Log out"
-msgstr "Déconnexion"
-
-#: theme/templates/privacy_policy.html:4 theme/templates/privacy_policy.html:7
-msgid "Privacy policy"
-msgstr "Politique de confidentialité"
-
 #: theme/templates/privacy_policy.html:10
-msgid "Responsable du traitement"
-msgstr ""
+msgid "Controller"
+msgstr "Responsable du traitement"
 
 #: theme/templates/privacy_policy.html:14
 msgid ""
+"<p> The National Commission for Data Protection (CNPD) is responsible for "
+"the processing of personal data carried out within the framework of the DAAZ "
+"project. </p> <p> The contact details of the CNPD are as follows: </p>"
+msgstr ""
 "<p> La Commission nationale pour la protection des données (CNPD) est "
 "responsable du traitement des données à caractère personnel effectué dans le "
 "cadre du projet DAAZ. </p> <p> Les coordonnées de la CNPD sont les "
 "suivantes : </p>"
-msgstr ""
 
-#: theme/templates/privacy_policy.html:29
-msgid "Finalités et base juridique du traitement"
-msgstr ""
+#: theme/templates/privacy_policy.html:25
+msgid "Purposes and legal basis of processing"
+msgstr "Finalités et base juridique du traitement"
 
-#: theme/templates/privacy_policy.html:34
+#: theme/templates/privacy_policy.html:30
 msgid ""
+"The DAAZ project helps to promote awareness among controllers and processors "
+"of their obligations under the GDPR. The implementation of that project is "
+"part of a public-interest mission which falls to the CNPD on the basis of "
+"Article 57(1)(d) of the GDPR."
+msgstr ""
 "Le projet DAAZ contribue à encourager la sensibilisation des responsables du "
 "traitement et des sous-traitants en ce qui concerne les obligations qui leur "
 "incombent en vertu du RGPD. La réalisation de ce projet s’inscrit dans le "
 "cadre d’une mission d’intérêt public qui incombe à la CNPD sur base de "
 "l’article 57, paragraphe 1, sous d) du RGPD."
-msgstr ""
 
-#: theme/templates/privacy_policy.html:42
+#: theme/templates/privacy_policy.html:37
 msgid ""
+"The anonymity of users is preserved thanks to a unique identifier "
+"automatically generated at the first connection. The CNPD and its partner "
+"the LHC-NC3 (Luxembourg House of Cybersecurity, National Cybersecurity "
+"Competence Center) are therefore unable to identify the user as part of "
+"their training journey."
+msgstr ""
 "L’anonymat des utilisateurs est préservé grâce à un identifiant unique "
 "généré automatiquement lors de la première connexion. La CNPD et son "
 "partenaire le LHC-NC3 (Luxembourg House of Cybersecurity, National "
 "Cybersecurity Competence Center) ne sont donc pas en mesure d’identifier "
 "l’utilisateur dans le cadre de son parcours de formation."
-msgstr ""
 
-#: theme/templates/privacy_policy.html:50
+#: theme/templates/privacy_policy.html:44
 msgid ""
+"However, if a user requests support from the CNPD (via the address <a "
+"href=\"mailto:daaz@cnpd.lu)\">daaz@cnpd.lu</a>), personal data (name, "
+"surname and email address of the data subject) will be processed in order to "
+"be able to respond to them. <span class=\"text-danger\"> Users' attention is "
+"drawn to the fact that they should only provide daaz@cnpd.lu with the "
+"information necessary to process their request. </span>"
+msgstr ""
 "Néanmoins, en cas de demande de support adressée à la CNPD de la part d’un "
 "utilisateur (via l’adresse <a href=\"mailto:daaz@cnpd.lu)\">daaz@cnpd.lu</"
 "a>), des données à caractère personnel (à savoir le nom, le prénom et "
@@ -1390,35 +1625,49 @@ msgid ""
 "donner suite. <span class=\"text-danger\"> L’attention des utilisateurs est "
 "attirée sur le fait qu’ils ne devraient transmettre à daaz@cnpd.lu que les "
 "éléments d’information nécessaires au traitement de leur demande. </span>"
-msgstr ""
 
-#: theme/templates/privacy_policy.html:63
-msgid "Destinataires"
-msgstr ""
+#: theme/templates/privacy_policy.html:54
+msgid "Recipients"
+msgstr "Destinataires"
 
-#: theme/templates/privacy_policy.html:68
+#: theme/templates/privacy_policy.html:59
 msgid ""
+"The personal data processed in the context of a support request will be "
+"accessible only to the Commissioners and agents of the CNPD in charge of the "
+"DAAZ project as well as to the agents appointed within the LHC-NC3."
+msgstr ""
 "Les données à caractère personnel traitées dans le cadre d’une demande de "
 "support ne seront accessibles qu’aux Commissaires et agents de la CNPD en "
 "charge du projet DAAZ ainsi qu’aux agents désignés au sein du LHC-NC3."
-msgstr ""
 
-#: theme/templates/privacy_policy.html:74
-msgid "Durée de conservation"
-msgstr ""
+#: theme/templates/privacy_policy.html:65
+msgid "Retention period"
+msgstr "Durée de conservation"
 
-#: theme/templates/privacy_policy.html:79
+#: theme/templates/privacy_policy.html:70
 msgid ""
+"As part of a support request, the processed data will be kept for a period "
+"of three months from the request."
+msgstr ""
 "Dans le cadre d’une demande de support, les données traitées seront "
 "conservées pour une durée de trois mois à compter de la demande."
-msgstr ""
 
-#: theme/templates/privacy_policy.html:84
-msgid "Droits des personnes concernées"
-msgstr ""
+#: theme/templates/privacy_policy.html:75
+msgid "Rights of data subjects"
+msgstr "Droits des personnes concernées"
 
-#: theme/templates/privacy_policy.html:89
+#: theme/templates/privacy_policy.html:80
 msgid ""
+"You have the right to access and obtain a copy of the data concerning you "
+"processed in the context of your support request (Article 15 of the General "
+"Data Protection Regulation), to obtain the rectification of inaccurate or "
+"incomplete data (Article 16 of the General Data Protection Regulation), to "
+"object to the processing of your data (Article 21 of the General Data "
+"Protection Regulation), to obtain the erasure of your data under the "
+"conditions laid down in Article 17 of the General Data Protection Regulation "
+"and to restrict processing under the conditions laid down in Article 18 of "
+"the General Data Protection Regulation."
+msgstr ""
 "Vous avez le droit d’accéder aux données vous concernant traitées dans le "
 "cadre de votre demande de support et d’en obtenir une copie (article 15 du "
 "règlement général sur la protection des données), d’obtenir la rectification "
@@ -1430,32 +1679,40 @@ msgid ""
 "traitement dans les conditions prévues par l’article 18 de ce même "
 "règlement. le cadre d’une demande de support, les données traitées seront "
 "conservées pour une durée de trois mois à compter de la demande."
-msgstr ""
 
-#: theme/templates/privacy_policy.html:101
+#: theme/templates/privacy_policy.html:90
 msgid ""
+"For any questions concerning the processing of personal data by the CNPD, "
+"and for any request relating to the exercise of your rights, you can contact "
+"the Data Protection Officer (DPO) of the CNPD: <a href=\"mailto:dpo@cnpd."
+"lu)\">dpo@cnpd.lu</a>."
+msgstr ""
 "Pour toute question concernant le traitement de données à caractère "
 "personnel effectué par la CNPD, et pour toute demande relative à l’exercice "
 "de vos droits, vous pouvez contacter le délégué à la protection des données "
 "(DPO) de la CNPD : <a href=\"mailto:dpo@cnpd.lu)\">dpo@cnpd.lu</a>."
-msgstr ""
 
-#: theme/templates/privacy_policy.html:108
-msgid "Réclamation"
-msgstr ""
+#: theme/templates/privacy_policy.html:97
+msgid "Complaint"
+msgstr "Réclamation"
 
-#: theme/templates/privacy_policy.html:113
+#: theme/templates/privacy_policy.html:102
 msgid ""
+"If you consider that the processing of your data by the CNPD constitutes a "
+"breach of the General Data Protection Regulation, you can enter a <a "
+"href=\"https://cnpd.public.lu/en/particuliers/faire-valoir/formulaire-"
+"plainte.html\" target=\"_blank\" rel=\"noopener noreferrer\">complaint to "
+"the CNPD</a>."
+msgstr ""
 "Si vous estimez que le traitement de vos données effectué par la CNPD "
 "constitue une violation du règlement général sur la protection des données, "
 "vous pouvez introduire une <a href=\"https://cnpd.public.lu/fr/particuliers/"
 "faire-valoir/formulaire-plainte.html\" target=\"_blank\" rel=\"noopener "
 "noreferrer\">réclamation auprès de la CNPD</a>."
-msgstr ""
 
 #: theme/templates/registration/login.html:6
 #: theme/templates/registration/login.html:26
-msgid "Log in"
+msgid "Login"
 msgstr "Connexion"
 
 #: theme/templates/registration/login.html:15
@@ -1471,7 +1728,7 @@ msgid "Unique identifier"
 msgstr "Identifiant unique"
 
 #: theme/templates/report/cover.html:14
-msgid "End date of level"
+msgid "Level end date"
 msgstr "Date de fin du niveau"
 
 #: theme/templates/report/cover.html:18
@@ -1487,7 +1744,7 @@ msgid "Table of contents"
 msgstr "Table des matières"
 
 #: theme/templates/resources.html:4 theme/templates/resources.html:15
-msgid "My ressources"
+msgid "My resources"
 msgstr "Mes ressources"
 
 #: theme/templates/resources.html:36
@@ -1495,7 +1752,7 @@ msgid "Summary sheets"
 msgstr "Les fiches récapitulatives"
 
 #: theme/templates/resources.html:38
-msgid "Fact sheets"
+msgid "Practical sheets"
 msgstr "Les fiches pratiques"
 
 #: theme/templates/resources.html:40
@@ -1507,7 +1764,7 @@ msgid "All files"
 msgstr "Tous les fichiers"
 
 #: theme/templates/stats.html:4
-msgid "Stats"
+msgid "Statistics"
 msgstr "Statistiques"
 
 #: theme/templates/stats.html:30
@@ -1519,65 +1776,69 @@ msgid "Total users"
 msgstr "Total des utilisateurs"
 
 #: theme/templates/stats.html:37
+msgid "Total users completed course"
+msgstr "Total des utilisateurs ayant suivi le cours"
+
+#: theme/templates/stats.html:41
 msgid "Course completion rate"
 msgstr "Taux d'achèvement du cours"
 
-#: theme/templates/stats.html:41
-msgid "Global Average score"
+#: theme/templates/stats.html:45
+msgid "Overall Average score"
 msgstr "Score moyen global"
 
-#: theme/templates/stats.html:45
-msgid "Global Average duration"
+#: theme/templates/stats.html:49
+msgid "Overall Average duration"
 msgstr "Durée moyenne globale"
 
-#: theme/templates/stats.html:54
+#: theme/templates/stats.html:58
 msgid "Activity over the past year"
 msgstr "Activité au cours de la dernière année"
 
-#: theme/templates/stats.html:61
+#: theme/templates/stats.html:65
 msgid "Less"
 msgstr "Moins"
 
-#: theme/templates/stats.html:67
+#: theme/templates/stats.html:71
 msgid "More"
 msgstr "Plus"
 
-#: theme/templates/stats.html:72
+#: theme/templates/stats.html:76
 msgid "Users by year"
 msgstr "Utilisateurs par année"
 
-#: theme/templates/stats.html:76
+#: theme/templates/stats.html:80
 msgid "Users by month"
 msgstr "Utilisateurs par mois"
 
-#: theme/templates/stats.html:82
+#: theme/templates/stats.html:86
 msgid "Users by level"
 msgstr "Utilisateurs par niveau"
 
-#: theme/templates/stats.html:86
+#: theme/templates/stats.html:90
 msgid "Duration by level"
 msgstr "Durée par niveau"
 
-#: theme/templates/stats.html:92
+#: theme/templates/stats.html:96
 msgid "Users and Score by level"
 msgstr "Utilisateurs et score par niveau"
 
-#: theme/templates/stats.html:96
+#: theme/templates/stats.html:100
 msgid "Users and Progress by level"
 msgstr "Utilisateurs et progrès par niveau"
 
-#: theme/templates/stats.html:102
+#: theme/templates/stats.html:106
 msgid "Success rate by question"
 msgstr "Taux de réussite par question"
 
-#: theme/templates/stats.html:106
+#: theme/templates/stats.html:110
 msgid "Success rate by quiz"
 msgstr "Taux de réussite par quiz"
 
-#: theme/templates/stats.html:112
+#: theme/templates/stats.html:116
 msgid "Success rate by knowledge"
 msgstr "Taux de réussite par connaissance"
 
-#: theme/templates/stats.html:116
+#: theme/templates/stats.html:120
 msgid "User's current position [Top 10]"
 msgstr "Position actuelle de l'utilisateur [Top 10]"
