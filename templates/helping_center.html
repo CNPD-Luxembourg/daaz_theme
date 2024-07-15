@@ -1,6 +1,7 @@
 {% extends 'main.html' %}
 {% load i18n %}
 {% load static %}
+{% load custom_filters %}
 {% block bootstrap5_title %}DAAZ - {% translate "Help Centre" %}{% endblock %}
 
 {% block content_area %}
@@ -9,7 +10,9 @@
     <div class="accordion" id="helpCenterMenu">
         <ol class="p-0">
             <!-- Respond to the satisfaction questionnaire -->
-            <!-- <div class="accordion-item">
+            {% settings_value "SATISFACTION_SURVEY_URL" as survey_url %}
+            {% if survey_url %}
+            <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -22,16 +25,15 @@
                         {% blocktranslate trimmed %}
                         The satisfaction questionnaire is accessible after full completion of the DAAZ journey
                         {% endblocktranslate %}
-                        <ol type="a">
-                            <li>
-                                {% blocktranslate trimmed %}
-                                Link to online questionnaire [to be developed with LHC-NC3]
-                                {% endblocktranslate %}
+                        <ul>
+                            <li>                            
+                                <a href="{{ survey_url }}" target="_blank" rel="noopener noreferrer">{{ survey_url }}</a>
                             </li>
-                        </ol>
+                        </ul>
                     </div>
                 </div>
-            </div> -->
+            </div>
+            {% endif %}
 
             <!-- A propos -->
             <div class="accordion-item">

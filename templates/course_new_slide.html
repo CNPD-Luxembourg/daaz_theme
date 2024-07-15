@@ -166,18 +166,21 @@
                         </a>
                     </div>
                     {% else %}
-                    <div class="col">
-                        <a id="downloadButton" href="{% url 'certificate' %}"
-                            class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button">
-                            {% translate "Download the DAAZ certificate" %}
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a type="button" href="https://alto.nc3.lu" target="_blank" rel="noopener noreferrer"
-                            class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button">
-                            {% translate "Satisfaction survey" %}
-                        </a>
-                    </div>
+                    {% settings_value "SATISFACTION_SURVEY_URL" as survey_url %}
+                        <div class="col {% if not survey_url%}mx-auto{% endif %}">
+                            <a id="downloadButton" href="{% url 'certificate' %}"
+                                class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button">
+                                {% translate "Download the DAAZ certificate" %}
+                            </a>
+                        </div>
+                        {% if survey_url %}
+                        <div class="col">
+                            <a type="button" href="https://alto.nc3.lu" target="_blank" rel="noopener noreferrer"
+                                class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button">
+                                {% translate "Satisfaction survey" %}
+                            </a>
+                        </div>
+                        {% endif %}
                     {% endif %}
                 </div>
             </div>
