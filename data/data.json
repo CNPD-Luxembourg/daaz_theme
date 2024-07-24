@@ -4367,7 +4367,7 @@
     "pk": 1349,
     "fields": {
         "language_code": "fr",
-        "name": "L’intérêt légitime du responsable du traitement mis en balance avec les intérêts, les droits et obligations des personnes concernées",
+        "name": "L’intérêt légitime du responsable du traitement mis en balance avec les intérêts ou les libertés et droits fondamentaux des personnes concernées",
         "tooltip": "",
         "master": 1183
     }
@@ -8650,6 +8650,1126 @@
         "name": "Provide  practicies with a misleading design in order to misguide the useres such as \"dark patterns\".",
         "tooltip": "",
         "master": 792
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2291,
+    "fields": {
+        "language_code": "en",
+        "name": "Processing carried out with the aim of delivering an order to the right address",
+        "tooltip": "",
+        "master": 1140
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2292,
+    "fields": {
+        "language_code": "en",
+        "name": "Processing carried out for the purpose of recruitment management",
+        "tooltip": "",
+        "master": 1141
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2293,
+    "fields": {
+        "language_code": "en",
+        "name": "Processing carried out in order to offer age and gender appropriate gifts to the children of employees",
+        "tooltip": "",
+        "master": 1142
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2294,
+    "fields": {
+        "language_code": "en",
+        "name": "Processing carried out for a satisfaction survey",
+        "tooltip": "",
+        "master": 1143
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2295,
+    "fields": {
+        "language_code": "en",
+        "name": "Processing carried out on order to protect goods and people",
+        "tooltip": "",
+        "master": 1144
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2296,
+    "fields": {
+        "language_code": "en",
+        "name": "Processing carried out for the organisation of a corporate event for social purposes",
+        "tooltip": "",
+        "master": 1145
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2297,
+    "fields": {
+        "language_code": "en",
+        "name": "Day, month and year of birth of the child",
+        "tooltip": "",
+        "master": 1146
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2298,
+    "fields": {
+        "language_code": "en",
+        "name": "Name and first name of the child",
+        "tooltip": "",
+        "master": 1147
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2299,
+    "fields": {
+        "language_code": "en",
+        "name": "Gender of the child",
+        "tooltip": "",
+        "master": 1148
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2300,
+    "fields": {
+        "language_code": "en",
+        "name": "Year of birth of the child",
+        "tooltip": "",
+        "master": 1149
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2301,
+    "fields": {
+        "language_code": "en",
+        "name": "Place of residence of the child",
+        "tooltip": "",
+        "master": 1150
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2302,
+    "fields": {
+        "language_code": "en",
+        "name": "Racial origin of the child",
+        "tooltip": "",
+        "master": 1151
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2303,
+    "fields": {
+        "language_code": "en",
+        "name": "Only the Child's first name",
+        "tooltip": "",
+        "master": 1152
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2304,
+    "fields": {
+        "language_code": "en",
+        "name": "None, it is carried out in a professional context and not online",
+        "tooltip": "",
+        "master": 1153
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2305,
+    "fields": {
+        "language_code": "en",
+        "name": "Obtain the consent of parents or legal guardians",
+        "tooltip": "",
+        "master": 1154
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2306,
+    "fields": {
+        "language_code": "en",
+        "name": "The consent of the parents is not required, the \"Kleeschen\" is held in the interest of the children.",
+        "tooltip": "",
+        "master": 1155
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2307,
+    "fields": {
+        "language_code": "en",
+        "name": "Provide parents with information about the data processing in simple and clear terms",
+        "tooltip": "",
+        "master": 1156
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2308,
+    "fields": {
+        "language_code": "en",
+        "name": "Processing operations which consist of or include regular and systematic monitoring of employees' activities - provided that they may produce legal effects in respect of employees or affect them to the same extent",
+        "tooltip": "",
+        "master": 1157
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2309,
+    "fields": {
+        "language_code": "en",
+        "name": "Processing operations involving the direct collection of data for the purpose of paying employees' salaries",
+        "tooltip": "",
+        "master": 1158
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2310,
+    "fields": {
+        "language_code": "en",
+        "name": "Processing operations consisting of systematically tracking the whereabouts of natural persons",
+        "tooltip": "",
+        "master": 1159
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2311,
+    "fields": {
+        "language_code": "en",
+        "name": "Processing operations involving the supervision of goods in a warehouse",
+        "tooltip": "",
+        "master": 1160
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2312,
+    "fields": {
+        "language_code": "en",
+        "name": "Determine internal and external data transfers",
+        "tooltip": "",
+        "master": 1161
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2313,
+    "fields": {
+        "language_code": "en",
+        "name": "Determine the purpose(s) of the processing",
+        "tooltip": "",
+        "master": 1162
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2314,
+    "fields": {
+        "language_code": "en",
+        "name": "Determine the appropriate legal basis",
+        "tooltip": "",
+        "master": 1163
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2315,
+    "fields": {
+        "language_code": "en",
+        "name": "Where appropriate, identify sensitive data",
+        "tooltip": "",
+        "master": 1164
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2316,
+    "fields": {
+        "language_code": "en",
+        "name": "Determine the nature of the data processing",
+        "tooltip": "",
+        "master": 1165
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2317,
+    "fields": {
+        "language_code": "en",
+        "name": "Determine the data's retention period",
+        "tooltip": "",
+        "master": 1166
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2318,
+    "fields": {
+        "language_code": "en",
+        "name": "Determine the people concerned by the data processing",
+        "tooltip": "",
+        "master": 1167
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2319,
+    "fields": {
+        "language_code": "en",
+        "name": "Determine what data is necessary in order to complete the data processing",
+        "tooltip": "",
+        "master": 1168
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2320,
+    "fields": {
+        "language_code": "en",
+        "name": "Determine where the data is stored",
+        "tooltip": "",
+        "master": 1169
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2321,
+    "fields": {
+        "language_code": "en",
+        "name": "Determine whether or not a DPIA needs to be carried out",
+        "tooltip": "",
+        "master": 1170
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2322,
+    "fields": {
+        "language_code": "en",
+        "name": "Determine the technical and organizational measures to put in place",
+        "tooltip": "",
+        "master": 1171
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2323,
+    "fields": {
+        "language_code": "en",
+        "name": "To the data controller (LuxXport)",
+        "tooltip": "",
+        "master": 1172
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2324,
+    "fields": {
+        "language_code": "en",
+        "name": "To the data processor (Choc'event)",
+        "tooltip": "",
+        "master": 1173
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2325,
+    "fields": {
+        "language_code": "en",
+        "name": "Provide the contact details of the data controller on the information leaflet reproduced on the front of the flyer",
+        "tooltip": "",
+        "master": 1174
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2326,
+    "fields": {
+        "language_code": "en",
+        "name": "Provide the controller's contact details if an employee asks",
+        "tooltip": "",
+        "master": 1175
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2327,
+    "fields": {
+        "language_code": "en",
+        "name": "Use the flyer to direct employees to the data controller's contact details given in the data protection policy attached to the employment contract",
+        "tooltip": "",
+        "master": 1176
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2328,
+    "fields": {
+        "language_code": "en",
+        "name": "Provide the processor's address and e-mail address",
+        "tooltip": "",
+        "master": 1177
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2329,
+    "fields": {
+        "language_code": "en",
+        "name": "The specific consent of the data subject",
+        "tooltip": "",
+        "master": 1178
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2330,
+    "fields": {
+        "language_code": "en",
+        "name": "Performance of an employment contract or service contract",
+        "tooltip": "",
+        "master": 1179
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2331,
+    "fields": {
+        "language_code": "en",
+        "name": "Compliance with a legal obligation",
+        "tooltip": "",
+        "master": 1180
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2332,
+    "fields": {
+        "language_code": "en",
+        "name": "Safeguarding vital interests",
+        "tooltip": "",
+        "master": 1181
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2333,
+    "fields": {
+        "language_code": "en",
+        "name": "Carrying out a mission of public interest",
+        "tooltip": "",
+        "master": 1182
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2334,
+    "fields": {
+        "language_code": "en",
+        "name": "The legitimate interests pursued by the controller balanced against the interests or fundamental rights and freedoms of the data subjects",
+        "tooltip": "",
+        "master": 1183
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2335,
+    "fields": {
+        "language_code": "en",
+        "name": "Yes, in principle",
+        "tooltip": "",
+        "master": 1184
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2336,
+    "fields": {
+        "language_code": "en",
+        "name": "No, it's not advisable",
+        "tooltip": "",
+        "master": 1185
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2337,
+    "fields": {
+        "language_code": "en",
+        "name": "Processing of employee in order to pay the employees",
+        "tooltip": "",
+        "master": 1186
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2338,
+    "fields": {
+        "language_code": "en",
+        "name": "Processing of customer data for prospecting purposes",
+        "tooltip": "",
+        "master": 1187
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2339,
+    "fields": {
+        "language_code": "en",
+        "name": "Processing of employee data for sick leave",
+        "tooltip": "",
+        "master": 1188
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2340,
+    "fields": {
+        "language_code": "en",
+        "name": "Processing of employee data in order to take picture for the publication of an internal newsletter",
+        "tooltip": "",
+        "master": 1189
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2341,
+    "fields": {
+        "language_code": "en",
+        "name": "Processing of data in order to secure the premises",
+        "tooltip": "",
+        "master": 1190
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2342,
+    "fields": {
+        "language_code": "en",
+        "name": "Processing of customer data in order fulfil a service",
+        "tooltip": "",
+        "master": 1191
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2343,
+    "fields": {
+        "language_code": "en",
+        "name": "Processing of data in order to guarantee the security of the network and information",
+        "tooltip": "",
+        "master": 1192
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2344,
+    "fields": {
+        "language_code": "en",
+        "name": "Processing of customer data for the delivery of goods ordered online",
+        "tooltip": "",
+        "master": 1193
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2345,
+    "fields": {
+        "language_code": "en",
+        "name": "Yes, the employees of LuxXport work in Luxembourg",
+        "tooltip": "",
+        "master": 1194
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2346,
+    "fields": {
+        "language_code": "en",
+        "name": "Yes, the company LuxXport is established in Luxembourg",
+        "tooltip": "",
+        "master": 1196
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2347,
+    "fields": {
+        "language_code": "en",
+        "name": "No, the company Choc'event is established in France",
+        "tooltip": "",
+        "master": 1197
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2348,
+    "fields": {
+        "language_code": "en",
+        "name": "One authority takes the lead and is responsible for preparing draft decisions without consensus.",
+        "tooltip": "",
+        "master": 1198
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2349,
+    "fields": {
+        "language_code": "en",
+        "name": "One authority takes the lead and is responsible for preparing draft decisions, working with the other authorities to reach a consensus.",
+        "tooltip": "",
+        "master": 1199
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2350,
+    "fields": {
+        "language_code": "en",
+        "name": "One authority takes the lead and instructs the other authorities on the tasks to be undertaken in order to reach a joint decision.",
+        "tooltip": "",
+        "master": 1200
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2351,
+    "fields": {
+        "language_code": "en",
+        "name": "The employees",
+        "tooltip": "",
+        "master": 1201
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2352,
+    "fields": {
+        "language_code": "en",
+        "name": "The company LuxXport",
+        "tooltip": "",
+        "master": 1202
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2353,
+    "fields": {
+        "language_code": "en",
+        "name": "The company Choc'event",
+        "tooltip": "",
+        "master": 1203
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2354,
+    "fields": {
+        "language_code": "en",
+        "name": "The CNPD, as the supervisory authority concerned",
+        "tooltip": "",
+        "master": 1204
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2355,
+    "fields": {
+        "language_code": "en",
+        "name": "GDPR compliance",
+        "tooltip": "",
+        "master": 1205
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2356,
+    "fields": {
+        "language_code": "en",
+        "name": "Penalty of imprisonment",
+        "tooltip": "",
+        "master": 1206
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2357,
+    "fields": {
+        "language_code": "en",
+        "name": "Administrative fine",
+        "tooltip": "",
+        "master": 1207
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2358,
+    "fields": {
+        "language_code": "en",
+        "name": "Temporary or permanent restriction of processing",
+        "tooltip": "",
+        "master": 1208
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2359,
+    "fields": {
+        "language_code": "en",
+        "name": "Community work",
+        "tooltip": "",
+        "master": 1209
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2360,
+    "fields": {
+        "language_code": "en",
+        "name": "Reminder",
+        "tooltip": "",
+        "master": 1210
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2361,
+    "fields": {
+        "language_code": "en",
+        "name": "Compensation proportionate to the harm suffered by the data subject",
+        "tooltip": "",
+        "master": 1211
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2362,
+    "fields": {
+        "language_code": "en",
+        "name": "Warning",
+        "tooltip": "",
+        "master": 1212
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2363,
+    "fields": {
+        "language_code": "en",
+        "name": "Inaction or unsatisfactory action by the controller",
+        "tooltip": "",
+        "master": 1213
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2364,
+    "fields": {
+        "language_code": "en",
+        "name": "Complaint using the CNPD online form",
+        "tooltip": "",
+        "master": 1214
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2365,
+    "fields": {
+        "language_code": "en",
+        "name": "Handling of the complaint by the competent European authority, known as the lead authority",
+        "tooltip": "",
+        "master": 1215
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2366,
+    "fields": {
+        "language_code": "en",
+        "name": "Complaint directly to the data controller",
+        "tooltip": "",
+        "master": 1216
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2367,
+    "fields": {
+        "language_code": "en",
+        "name": "Analysis of the complaint by the CNPD",
+        "tooltip": "",
+        "master": 1217
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2368,
+    "fields": {
+        "language_code": "en",
+        "name": "Transmission of the resolution of the violation, which is the subject of the complaint, to the CNPD by the lead authority",
+        "tooltip": "",
+        "master": 1218
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2369,
+    "fields": {
+        "language_code": "en",
+        "name": "Appearance of a foreign element and declaration of material and territorial incompetence of the CNPD",
+        "tooltip": "",
+        "master": 1219
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2370,
+    "fields": {
+        "language_code": "en",
+        "name": "Violation of the GDPR by a controller or processor",
+        "tooltip": "",
+        "master": 1220
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2371,
+    "fields": {
+        "language_code": "en",
+        "name": "Transmission of the resolution to the complainant by the CNPD",
+        "tooltip": "",
+        "master": 1221
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2372,
+    "fields": {
+        "language_code": "en",
+        "name": "Informing the complainant of the CNPD’s lack of competence to deal with the complaint",
+        "tooltip": "",
+        "master": 1222
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2373,
+    "fields": {
+        "language_code": "en",
+        "name": "Communication of the file corresponding to the complaint at the European level for the competent authority to take up",
+        "tooltip": "",
+        "master": 1223
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2374,
+    "fields": {
+        "language_code": "en",
+        "name": "The processor has specialized knowledge, reliability and resources for the implementation of technical and organizational measures that meet the requirements of the GDPR, including the security of processing.",
+        "tooltip": "",
+        "master": 1224
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2375,
+    "fields": {
+        "language_code": "en",
+        "name": "The processor has at least 10 years’ experience in its field of activity.",
+        "tooltip": "",
+        "master": 1225
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2376,
+    "fields": {
+        "language_code": "en",
+        "name": "The processor shall apply an approved code of conduct that can be used to demonstrate compliance with the obligations of the controller.",
+        "tooltip": "",
+        "master": 1226
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2377,
+    "fields": {
+        "language_code": "en",
+        "name": "The processor shall apply an approved certification mechanism that can be used to demonstrate compliance with the obligations of the controller.",
+        "tooltip": "",
+        "master": 1227
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2378,
+    "fields": {
+        "language_code": "en",
+        "name": "Adjust – improve and adjust as necessary salaries, documentation, staff training, etc.",
+        "tooltip": "",
+        "master": 1228
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2379,
+    "fields": {
+        "language_code": "en",
+        "name": "Implement – draft data protection procedures and notices and resource functions, including",
+        "tooltip": "",
+        "master": 1229
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2380,
+    "fields": {
+        "language_code": "en",
+        "name": "Planning – agreeing on the purposes, legal bases, assessing the risks vis-à-vis the data subjects, in particular",
+        "tooltip": "",
+        "master": 1230
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2381,
+    "fields": {
+        "language_code": "en",
+        "name": "Check – regularly check the compliance of the processing with the GDPR from start to finish, check the knowledge of the staff, check the updates of the CNPD recommendations, in particular",
+        "tooltip": "",
+        "master": 1231
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2382,
+    "fields": {
+        "language_code": "en",
+        "name": "The data needs to be exact and if necessary, be kept up to date.",
+        "tooltip": "",
+        "master": 1232
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2383,
+    "fields": {
+        "language_code": "en",
+        "name": "It's a basis of lawfulness",
+        "tooltip": "",
+        "master": 1233
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2384,
+    "fields": {
+        "language_code": "en",
+        "name": "The technical and organisational measures need to be updated if necessary",
+        "tooltip": "",
+        "master": 1234
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2385,
+    "fields": {
+        "language_code": "en",
+        "name": "This makes some work for the DPO",
+        "tooltip": "",
+        "master": 1235
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2386,
+    "fields": {
+        "language_code": "en",
+        "name": "It is necessary to have a register of data breaches",
+        "tooltip": "",
+        "master": 1236
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2387,
+    "fields": {
+        "language_code": "en",
+        "name": "As soon as possible after the incident occurred",
+        "tooltip": "",
+        "master": 1237
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2388,
+    "fields": {
+        "language_code": "en",
+        "name": "Monthly deadline",
+        "tooltip": "",
+        "master": 1238
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2389,
+    "fields": {
+        "language_code": "en",
+        "name": "Half-yearly deadline",
+        "tooltip": "",
+        "master": 1239
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2390,
+    "fields": {
+        "language_code": "en",
+        "name": "Yearly deadline.",
+        "tooltip": "",
+        "master": 1240
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2391,
+    "fields": {
+        "language_code": "en",
+        "name": "Where, because of their ‘value’ and interest, certain personal data require permanent and perennial archiving.",
+        "tooltip": "",
+        "master": 1241
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2392,
+    "fields": {
+        "language_code": "en",
+        "name": "Where the personal data is no longer used to achieve the intended purpose but are still of administrative interest to the organisation or must be retained in order to fulfil a legal obligation.",
+        "tooltip": "",
+        "master": 1242
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2393,
+    "fields": {
+        "language_code": "en",
+        "name": "Where personal data is no longer used to achieve the stated purpose, are of no administrative interest and do not fulfil a legal obligation.",
+        "tooltip": "",
+        "master": 1243
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2394,
+    "fields": {
+        "language_code": "en",
+        "name": "A customer requests the deletion of their billing data. The customer data is less than 10 years old.",
+        "tooltip": "",
+        "master": 1244
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2395,
+    "fields": {
+        "language_code": "en",
+        "name": "Some customer data has been in the file for 5 years.",
+        "tooltip": "",
+        "master": 1245
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2396,
+    "fields": {
+        "language_code": "en",
+        "name": "Some customer data has been in the file for 15 years.",
+        "tooltip": "",
+        "master": 1246
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2397,
+    "fields": {
+        "language_code": "en",
+        "name": "Stored for 1 and a half years after the day of the interview",
+        "tooltip": "",
+        "master": 1247
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2398,
+    "fields": {
+        "language_code": "en",
+        "name": "stored for 2 and a half years after the day of the interview.",
+        "tooltip": "",
+        "master": 1248
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2399,
+    "fields": {
+        "language_code": "en",
+        "name": "The doctor notes that his oldest file is 9 years old.",
+        "tooltip": "",
+        "master": 1249
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2400,
+    "fields": {
+        "language_code": "en",
+        "name": "A patient exercises their right to erasure with regard to the data contained in the medical file. The doctor notes that the file in question has been kept for 9 years from the date of the end of the care",
+        "tooltip": "",
+        "master": 1250
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2401,
+    "fields": {
+        "language_code": "en",
+        "name": "A patient exercises their right to erasure with regard to the data contained in the medical file. The doctor notes that the file in question has been kept for 21 years from the date of the end of care.",
+        "tooltip": "",
+        "master": 1251
+    }
+},
+{
+    "model": "elearning.answerchoicetranslation",
+    "pk": 2402,
+    "fields": {
+        "language_code": "en",
+        "name": "Stored for 6 months after the day of the interview.",
+        "tooltip": "",
+        "master": 1252
     }
 },
 {
@@ -22428,7 +23548,7 @@
     "pk": 3042,
     "fields": {
         "language_code": "en",
-        "description": "Download the practical sheet",
+        "description": "Download the factsheet",
         "hyperlink": "media/documents/level1/FR/Fiche_Pratique_Nv2_1.pdf",
         "master": 731
     }
@@ -22438,7 +23558,7 @@
     "pk": 3043,
     "fields": {
         "language_code": "en",
-        "description": "Download the practical sheet",
+        "description": "Download the factsheet",
         "hyperlink": "media/documents/level1/FR/Fiche_Pratique_Nv2_2.pdf",
         "master": 732
     }
@@ -22448,7 +23568,7 @@
     "pk": 3044,
     "fields": {
         "language_code": "en",
-        "description": "Download the practical sheet",
+        "description": "Download the factsheet",
         "hyperlink": "media/documents/level1/FR/Fiche_Pratique_Nv2_3.pdf",
         "master": 733
     }
@@ -22458,7 +23578,7 @@
     "pk": 3045,
     "fields": {
         "language_code": "en",
-        "description": "Download the practical sheet",
+        "description": "Download the factsheet",
         "hyperlink": "media/documents/level1/FR/Fiche_Pratique_Nv2_4.pdf",
         "master": 734
     }
@@ -22508,7 +23628,7 @@
     "pk": 3050,
     "fields": {
         "language_code": "en",
-        "description": "Practical document",
+        "description": "Factsheet !",
         "hyperlink": "",
         "master": 318
     }
@@ -22518,7 +23638,7 @@
     "pk": 3051,
     "fields": {
         "language_code": "en",
-        "description": "This allows you to unlock a practical sheet!",
+        "description": "This allows you to unlock a factsheet !",
         "hyperlink": "",
         "master": 317
     }
@@ -22528,7 +23648,7 @@
     "pk": 3052,
     "fields": {
         "language_code": "en",
-        "description": "Download the practical sheet",
+        "description": "Download the factsheet",
         "hyperlink": "",
         "master": 316
     }
@@ -22538,7 +23658,7 @@
     "pk": 3053,
     "fields": {
         "language_code": "en",
-        "description": "You have completed quiz 1!",
+        "description": "You have completed the first quiz !",
         "hyperlink": "",
         "master": 319
     }
@@ -24138,7 +25258,7 @@
     "pk": 3376,
     "fields": {
         "language_code": "en",
-        "description": "Download the practical sheet",
+        "description": "Download the factsheet",
         "hyperlink": "media/documents/level1/FR/Fiche_Pratique_Nv3_1.pdf",
         "master": 1048
     }
@@ -24148,7 +25268,7 @@
     "pk": 3377,
     "fields": {
         "language_code": "en",
-        "description": "Download the practical sheet",
+        "description": "Download the factsheet",
         "hyperlink": "media/documents/level1/FR/Fiche_Pratique_Nv3_2.pdf",
         "master": 1049
     }
@@ -24178,8 +25298,8 @@
     "pk": 3380,
     "fields": {
         "language_code": "en",
-        "description": "Download the practical sheet",
-        "hyperlink": "Télécharger la fiche pratique.\n\nmedia/documents/level1/FR/Fiche_Pratique_Nv3_3.pdf",
+        "description": "Download the factsheet",
+        "hyperlink": "Télécharger la fiche pratique.\r\n\r\nmedia/documents/level1/FR/Fiche_Pratique_Nv3_3.pdf",
         "master": 1052
     }
 },
@@ -24188,7 +25308,7 @@
     "pk": 3381,
     "fields": {
         "language_code": "en",
-        "description": "Download the practical sheet",
+        "description": "Download the factsheet",
         "hyperlink": "media/documents/level1/FR/Fiche_Pratique_Nv3_4.pdf",
         "master": 1053
     }
@@ -24201,6 +25321,1806 @@
         "description": "Dominique reads the model for a sub-processing contract drafted by Judith.\n\nWhile he's reading, a question suddenly pops into his mind!",
         "hyperlink": "",
         "master": 1055
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3557,
+    "fields": {
+        "language_code": "en",
+        "description": "Good Morning Judith! So, what are our employees first impressions concerning our new \"customer\" data management strategy?",
+        "hyperlink": "",
+        "master": 1225
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3558,
+    "fields": {
+        "language_code": "en",
+        "description": "On the whole, the feedback is positive, a few employees even seemed to very interested in the training. During the coffee break…",
+        "hyperlink": "",
+        "master": 1226
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3559,
+    "fields": {
+        "language_code": "en",
+        "description": "Ahh, the most interesting things are talked about around a good cup of organic and fair trade coffee!",
+        "hyperlink": "",
+        "master": 1227
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3560,
+    "fields": {
+        "language_code": "en",
+        "description": "Yes, as you can imagine, most of them have teenage or preteen children, or even adults in the case of our oldest employees. As a result, they intend to use their personal data training to protect their children, who they feel are very exposed and not really aware of the issues.",
+        "hyperlink": "",
+        "master": 1228
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3561,
+    "fields": {
+        "language_code": "en",
+        "description": "Yes, many of them deliberately entrust a huge amount of their personal data to social networks, video games or connected objects without suspecting the risks to their rights and freedoms! In fact, many young people are only interested in the appeal and fun of these new means of communication! I know something about this, as I have a niece who couldn't care less about her data!",
+        "hyperlink": "",
+        "master": 1229
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3562,
+    "fields": {
+        "language_code": "en",
+        "description": "Wow! It seems that you have already been converted to the GDPR!",
+        "hyperlink": "",
+        "master": 1230
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3563,
+    "fields": {
+        "language_code": "en",
+        "description": "You too, don't forget about that! And I'm really glad that you have accepted to be LuxXport's DPO!",
+        "hyperlink": "",
+        "master": 1231
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3564,
+    "fields": {
+        "language_code": "en",
+        "description": "I've told you from the start that I'm very concerned about my right to privacy and the privacy of my children!",
+        "hyperlink": "",
+        "master": 1232
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3565,
+    "fields": {
+        "language_code": "en",
+        "description": "I'd like to celebrate your promotion! What do you think about the idea to celebrate the Kleeschen within our company in honour of your promotion? All your employees and their children united around a common cause: data protection!",
+        "hyperlink": "",
+        "master": 1233
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3566,
+    "fields": {
+        "language_code": "en",
+        "description": "Who would have thought this would happen one day? You definitely keep surprising me all the time, Dominique!",
+        "hyperlink": "",
+        "master": 1234
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3567,
+    "fields": {
+        "language_code": "en",
+        "description": "I'll take this as a yes or do I have to document your consent on paper?",
+        "hyperlink": "",
+        "master": 1235
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3568,
+    "fields": {
+        "language_code": "en",
+        "description": "Go ahead, but are the one that will have to handle the organisation and me, I will make sure that the event is GDPR compliant!",
+        "hyperlink": "",
+        "master": 1236
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3569,
+    "fields": {
+        "language_code": "en",
+        "description": "Judith takes her role as DPO very seriously and is well aware of the personal data that such an event requires!\nFirst of all, she asks herself what the nature and what the objectives of the data processing are.",
+        "hyperlink": "",
+        "master": 1237
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3570,
+    "fields": {
+        "language_code": "en",
+        "description": "Judith continues to make the data processing compliant.\nAs a basis for the lawfulness of the processing, Judith knows that consent can rarely be used in a professional setting because of the link of subordination between employer and employee. Still, Judith selects that basis for lawfulness after excluding the other 5.\nThe participation is not mandator anyway and the refusal of employees to participate will not have any negative consequences for them.",
+        "hyperlink": "",
+        "master": 1238
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3571,
+    "fields": {
+        "language_code": "en",
+        "description": "Next, Judith determines  who the data subjects of the processing are, i.e. the company's employees and their children.\n\nShe wonders, however, what data could be requested so that the gifts offered by the company correspond to the gender and age category of the children. The aim is to limit the data collected to what is absolutely necessary, in line with the principle of data minimisation.",
+        "hyperlink": "",
+        "master": 1239
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3572,
+    "fields": {
+        "language_code": "en",
+        "description": "But that's not all!\n\nJudith is discovering the joys of data protection and the commitment and common sense it requires.\n\nShe then decides where the data will be stored and for how long.\n\nShe plans to delete the Excel file containing the data within 2 days of the event.\n\nHowever, she is concerned by the fact that the data relates to employees' children and that most of these children are minors.\n\nShe is therefore wondering what precautions to take according to the GDPR.",
+        "hyperlink": "",
+        "master": 1240
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3573,
+    "fields": {
+        "language_code": "en",
+        "description": "The implementation of the processing is nearing completion.\nWell, almost...\n\nVery meticulous, Judith wonders whether a Data Protection Impact Analysis (DPIA) is required. LuxXport collects very little data for this processing operation, as the company only has around ten employees, but it does affect children's data.\n\nShe is taking advantage of the processing to examine the issue and document the impact on the rights and freedoms concerned and the potential risks!",
+        "hyperlink": "",
+        "master": 1241
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3574,
+    "fields": {
+        "language_code": "en",
+        "description": "Good Morning Dominique! I've sent you my analysis of the data processing in the context of our little \"Kleeschen\" celebration with the snippet of the register of processing activities filled in.",
+        "hyperlink": "",
+        "master": 1242
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3575,
+    "fields": {
+        "language_code": "en",
+        "description": "Thank you Judith. I've just read it and think it's great! I'm so excited this event is very y important to me! It's going to be amazing!",
+        "hyperlink": "",
+        "master": 1243
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3576,
+    "fields": {
+        "language_code": "en",
+        "description": "You've maybe noticed that some information is still missing, namely the name of the external provider, if we decide to use one, as well as the technical and organisational measures to implement? Even if I have an idea bout all of that, I still need to talk to Pavel since it's him that assures the technical security of the company.",
+        "hyperlink": "",
+        "master": 1244
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3577,
+    "fields": {
+        "language_code": "en",
+        "description": "Yes, yes, I've noticed! Concerning the category \"Data recipient\", the supplier for this event that I chose for this event is Choc'event: they are professionals in the event industry in the Greater Region and are based in Thionville.",
+        "hyperlink": "",
+        "master": 1245
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3578,
+    "fields": {
+        "language_code": "en",
+        "description": "Very good! Any other information?",
+        "hyperlink": "",
+        "master": 1246
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3579,
+    "fields": {
+        "language_code": "en",
+        "description": "Yes, but that's a surprise! A little patience, Judith!",
+        "hyperlink": "",
+        "master": 1247
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3580,
+    "fields": {
+        "language_code": "en",
+        "description": "Dominique, I'm talking about the information about data protection we need to provide!!",
+        "hyperlink": "",
+        "master": 1248
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3581,
+    "fields": {
+        "language_code": "en",
+        "description": "Ahh ok, sorry! Where's my head? Know that the salesperson for Choc'event insisted that there should be an individual photo with the Kleeschen for every Child, which will be given to them immediately: the option is included in our package!",
+        "hyperlink": "",
+        "master": 1249
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3582,
+    "fields": {
+        "language_code": "en",
+        "description": "Pictures of the children with the Kleeschen!! Dominique this changes everything! Till now, we've only mentioned specific gifts according to the gender and age categories of the children! I'll have to redefine the basis of lawfulness as well as the risks for the children's rights.. in fact I'll get started right  away!",
+        "hyperlink": "",
+        "master": 1250
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3583,
+    "fields": {
+        "language_code": "en",
+        "description": "Dominique forwards the invitation regading the “Kleeschen” event to all employees, which includes the privacy policy to be provided according to article 13 of the GDPR, as well as the flyer allowing employees to specify, via a specific box check, in particular: \n\n▪ Would you like to participate? \n\n□ Yes □ No \n\n▪ If applicable, the number of children present? \n\n□ 1 □ 2 □ 3 □ others, please specify \n\n▪ Do you consent to the processing of your child(ren)’s data so that they benefit from a suitable gift \n\n□ Yes □ No \n\n▪ if applicable, please specify the gender of the child(ren) \n\n□ M □ F \n\n▪ if applicable, please specify the age category of the child(ren) \n\n□ 0-3 years □ 4-7 years □ 8-12 years □ 13-16 years □ 16 years and over \n\n▪ do you consent to the photography of your child(ren)? \n\n□ Yes □ No \n\nDominique specifies that all information on data management can be consulted on the company's intranet site under the “Data Protection” section.",
+        "hyperlink": "",
+        "master": 1251
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3584,
+    "fields": {
+        "language_code": "en",
+        "description": "Dominique is very happy for Judith, the employees having given valid consent for the data processing of their and their children's data.\nJudith is very grateful and Dominique is very happy with the way the \"Kleeschen\" event unfolds.\nThe parents really enjoyed the evening and the children were happy about the presents offered by the company and flashed their best smiles for the picture with the Kleeschen.",
+        "hyperlink": "",
+        "master": 1252
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3585,
+    "fields": {
+        "language_code": "en",
+        "description": "The morning after the \"Kleeschen\", in the coffee-corner….",
+        "hyperlink": "",
+        "master": 1253
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3586,
+    "fields": {
+        "language_code": "en",
+        "description": "From his office, Dominique notices a lot of commotion coming from the coffee-corner. Time to have his coffee, he approaches.\nThe employees, very unhappy, are waiting for him there.",
+        "hyperlink": "",
+        "master": 1254
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3587,
+    "fields": {
+        "language_code": "en",
+        "description": "Hello everybody! Happy to see you again! Why are you so agitate this early in the morning!",
+        "hyperlink": "",
+        "master": 1255
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3588,
+    "fields": {
+        "language_code": "en",
+        "description": "Boss, it's that the pictures of the children have been published on two very important social networks…",
+        "hyperlink": "",
+        "master": 1256
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3589,
+    "fields": {
+        "language_code": "en",
+        "description": "What!!!!! But that's a scandal!",
+        "hyperlink": "",
+        "master": 1257
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3590,
+    "fields": {
+        "language_code": "en",
+        "description": ".. And with the thanks of LuxXport!",
+        "hyperlink": "",
+        "master": 1258
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3591,
+    "fields": {
+        "language_code": "en",
+        "description": "I can't believe it! Show me the pictures, I need to see this with my own eyes!",
+        "hyperlink": "",
+        "master": 1259
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3592,
+    "fields": {
+        "language_code": "en",
+        "description": "Here, there's my son Grégoire and my daughter Anna!",
+        "hyperlink": "",
+        "master": 1260
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3593,
+    "fields": {
+        "language_code": "en",
+        "description": "Here, my sons Alexandre and Hugo, it's the same for Judith's daughter, Hélène and her son Arnaud!",
+        "hyperlink": "",
+        "master": 1261
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3594,
+    "fields": {
+        "language_code": "en",
+        "description": "Please, I'd like to have all of your attention! Choc'event neither had your nor my consent to publish the pictures of our event.\nJudith, our DPO, will be back tomorrow and we will find a solution. Rest assured that this is not going to be like that and that they will hear from me!",
+        "hyperlink": "",
+        "master": 1262
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3595,
+    "fields": {
+        "language_code": "en",
+        "description": "We demand the immediate deletion of these pictures!!!",
+        "hyperlink": "",
+        "master": 1263
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3596,
+    "fields": {
+        "language_code": "en",
+        "description": "Listen, it's not my fault that our processor isn't compliant with the GDPR!",
+        "hyperlink": "",
+        "master": 1264
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3597,
+    "fields": {
+        "language_code": "en",
+        "description": "As far as we know, you are the data controller, no?",
+        "hyperlink": "",
+        "master": 1265
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3598,
+    "fields": {
+        "language_code": "en",
+        "description": "The data controller, yes. The one responsible….\nWell , listen. I'll take care of it immediately… This is about your children and I can understand…",
+        "hyperlink": "",
+        "master": 1266
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3599,
+    "fields": {
+        "language_code": "en",
+        "description": "Thank you Boss! If I may: the policy notices states you are the direct contact in your capacity as data controller!",
+        "hyperlink": "",
+        "master": 1267
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3600,
+    "fields": {
+        "language_code": "en",
+        "description": "Thank you for that clarification. I'm well aware that this has been my job so far… But Judith wanted to wait till after yesterday's event to communicate her contact details as DPO!",
+        "hyperlink": "",
+        "master": 1268
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3601,
+    "fields": {
+        "language_code": "en",
+        "description": "Pavel, do you agree that under the RGPD, if we haven't consented to publication, Choc'event has no right to publish the photos online?",
+        "hyperlink": "",
+        "master": 1269
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3602,
+    "fields": {
+        "language_code": "en",
+        "description": "Exactly, our consent to take a picture of our kids doesn't allow the processor to publish these pictures on the internet. Those are 2 distinct processing activities!",
+        "hyperlink": "",
+        "master": 1270
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3603,
+    "fields": {
+        "language_code": "en",
+        "description": "I'm questioning if not one of the other 5 basis of lawfulness could justify the publication?",
+        "hyperlink": "",
+        "master": 1271
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3604,
+    "fields": {
+        "language_code": "en",
+        "description": "It's a shame that Judith isn't here today, she could have told us. Personally, I rue out the safeguarding of v ital interests and the performance of a mission in the public interest as a basis in our case. We're not a public authority!",
+        "hyperlink": "",
+        "master": 1272
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3605,
+    "fields": {
+        "language_code": "en",
+        "description": "For my part, the legal obligation and the contract cannot justify publication in this case. What about legitimate interest?",
+        "hyperlink": "",
+        "master": 1273
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3606,
+    "fields": {
+        "language_code": "en",
+        "description": "Choc'event's legitimate interest? Their need to market themselves and prove their expertise in event management? Compared to respecting our children's right to privacy and image, it doesn't weigh much in the balance!",
+        "hyperlink": "",
+        "master": 1274
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3607,
+    "fields": {
+        "language_code": "en",
+        "description": "Please Dominique, do you have a moment for me? Can I come in?",
+        "hyperlink": "",
+        "master": 1275
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3608,
+    "fields": {
+        "language_code": "en",
+        "description": "Of course, Bruno! What is it about? Do you have e to give me something?",
+        "hyperlink": "",
+        "master": 1276
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3609,
+    "fields": {
+        "language_code": "en",
+        "description": "No, Boss, it's about the pictures, the GDPR and the exercise of our rights.",
+        "hyperlink": "",
+        "master": 1277
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3610,
+    "fields": {
+        "language_code": "en",
+        "description": "How can I help you?",
+        "hyperlink": "",
+        "master": 1278
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3611,
+    "fields": {
+        "language_code": "en",
+        "description": "Simply by handling our requests for erasure of the pictures illegally posted on social networks.",
+        "hyperlink": "",
+        "master": 1279
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3612,
+    "fields": {
+        "language_code": "en",
+        "description": "And what is inside the envelope that you've just handed me?",
+        "hyperlink": "",
+        "master": 1280
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3613,
+    "fields": {
+        "language_code": "en",
+        "description": "It's letters by employees, who, just like me, have children and are asking you directly to delete these pictures.",
+        "hyperlink": "",
+        "master": 1281
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3614,
+    "fields": {
+        "language_code": "en",
+        "description": "Don't worry, I'm looking into it! But at this stage, I don't think it's appropriate to make a complaint to the CNPD. Let's wait and see if Choc'event responds favourably to the request.",
+        "hyperlink": "",
+        "master": 1282
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3615,
+    "fields": {
+        "language_code": "en",
+        "description": "Thank you very much Dominique!",
+        "hyperlink": "",
+        "master": 1283
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3616,
+    "fields": {
+        "language_code": "en",
+        "description": "It's normal the picture of the children only belongs to them and not to Choc'event after all!",
+        "hyperlink": "",
+        "master": 1284
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3617,
+    "fields": {
+        "language_code": "en",
+        "description": "Your support in this matter is very important to us and we thank you for it. All our hopes rest on you!",
+        "hyperlink": "",
+        "master": 1285
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3618,
+    "fields": {
+        "language_code": "en",
+        "description": "Don't you worry! I intend to have the photos removed tomorrow. My letter to this effect was very clear! In addition to the deletion requests and the reminder of the obligations arising from the GDPR for a data processor, I also mentioned the damaging civil and criminal consequences for Choc'event!",
+        "hyperlink": "",
+        "master": 1286
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3619,
+    "fields": {
+        "language_code": "en",
+        "description": "Let's hope they understand that it's in their own best interests!",
+        "hyperlink": "",
+        "master": 1287
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3620,
+    "fields": {
+        "language_code": "en",
+        "description": "I hope so too!",
+        "hyperlink": "",
+        "master": 1288
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3621,
+    "fields": {
+        "language_code": "en",
+        "description": "Over coffee, Dominique reads the reply letter from Choc'event...\n\nAfter reading the letter, he wanted to discuss it with Judith prior to a collective meeting with the employees concerned.\n\nAt this meeting, Dominique informed the employees that Choc'event claimed to have a legitimate interest linked to its marketing strategy, which justified the publication of the photos on its online accounts.\n\nThe employees, convinced that the balance between Choc'event's legitimate interests and their rights and freedoms had not been struck, discussed the advisability of lodging a complaint with the CNPD.",
+        "hyperlink": "",
+        "master": 1289
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3622,
+    "fields": {
+        "language_code": "en",
+        "description": "All employees concerned submit an individual claim using the form published on the CNPD website.",
+        "hyperlink": "",
+        "master": 1290
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3623,
+    "fields": {
+        "language_code": "en",
+        "description": "Good Morning, Dominique!",
+        "hyperlink": "",
+        "master": 1291
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3624,
+    "fields": {
+        "language_code": "en",
+        "description": "Good Morning, Judith!",
+        "hyperlink": "",
+        "master": 1292
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3625,
+    "fields": {
+        "language_code": "en",
+        "description": "This morning, at the coffee-corner, there was a lively discussion about the CNPD!",
+        "hyperlink": "",
+        "master": 1293
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3626,
+    "fields": {
+        "language_code": "en",
+        "description": "I know, Bruno and Pavel have informed that the CNPD has acknowledged receipt of their and their colleagues'' complaints. I think that we will be contacted very soon.",
+        "hyperlink": "",
+        "master": 1294
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3627,
+    "fields": {
+        "language_code": "en",
+        "description": "Normally, in my capacity as DPO declared to the CNPD, it is I who should be contacted by them. I'm already preparing the ground and will be closely monitoring the handling of complaints.",
+        "hyperlink": "",
+        "master": 1295
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3628,
+    "fields": {
+        "language_code": "en",
+        "description": "Thank you, but I wonder whether the CNPD is the competent authority, given that Choc'event is domiciled in France?",
+        "hyperlink": "",
+        "master": 1296
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3629,
+    "fields": {
+        "language_code": "en",
+        "description": "The CNPD will certainly let us know!",
+        "hyperlink": "",
+        "master": 1297
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3630,
+    "fields": {
+        "language_code": "en",
+        "description": "The CNPD contacts LuxXport's DPO",
+        "hyperlink": "",
+        "master": 1298
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3631,
+    "fields": {
+        "language_code": "en",
+        "description": "Hello, Mrs Rossi! I'm Grégoire Schmit, I work for the CNPD's Complaint Division. Do you have a moment? I'd like to talk to you about the complaints against you.",
+        "hyperlink": "",
+        "master": 1299
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3632,
+    "fields": {
+        "language_code": "en",
+        "description": "Hello. Yes, how can I help you?",
+        "hyperlink": "",
+        "master": 1300
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3633,
+    "fields": {
+        "language_code": "en",
+        "description": "We'd like to understand why the pictures haven't been deleted in response to the requests by your employees?",
+        "hyperlink": "",
+        "master": 1301
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3634,
+    "fields": {
+        "language_code": "en",
+        "description": "In fact, the photos were published without our permission by the event company we hired for this event, which is based in France! Can you believe it? Of course, we don't have access to our data processor's online accounts, and they refused to comply with our employees' requests, claiming that they had a legitimate interest in publishing the photos, namely advertising. All our employees are shocked and are taking this incident very hard!",
+        "hyperlink": "",
+        "master": 1302
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3635,
+    "fields": {
+        "language_code": "en",
+        "description": "Could you please detail this incident in an email? As soon as I receive it, I will submit it to the Head of the European Complaints Department. I do understand that the conditions for the CNPD's jurisdiction do not seem to have been met, given that your processor is domiciled in France and does not appear to be processing your personal data on your behalf but, on the contrary, is acting as a controller in the case of the disputed processing.",
+        "hyperlink": "",
+        "master": 1303
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3636,
+    "fields": {
+        "language_code": "en",
+        "description": "You're welcome! I'll send you the explanatory e-mail as soon as possible. You can count on our cooperation!",
+        "hyperlink": "",
+        "master": 1304
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3637,
+    "fields": {
+        "language_code": "en",
+        "description": "The next day",
+        "hyperlink": "",
+        "master": 1305
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3638,
+    "fields": {
+        "language_code": "en",
+        "description": "Judith, I've just received an e-mail y the CNPD informing us that they have forwarded our complaint on a European platform so that the competent authority can deal with our complaints. Did you receive the same information?",
+        "hyperlink": "",
+        "master": 1306
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3639,
+    "fields": {
+        "language_code": "en",
+        "description": "Yes, the same! What's more, my daughter asks me every day how things are going - she's so ashamed! 2 classmates are teasing her about it on Taktik!",
+        "hyperlink": "",
+        "master": 1307
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3640,
+    "fields": {
+        "language_code": "en",
+        "description": "Ah, how embarrassing! But why have our complaints been forwarded to the European level?",
+        "hyperlink": "",
+        "master": 1308
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3641,
+    "fields": {
+        "language_code": "en",
+        "description": "From what I understand, Choc'event is acting as the data controller for the pictures of our children, and as they are based in France, the French supervisory authority, the CNIL, seems to have jurisdiction rather than the CNPD.",
+        "hyperlink": "",
+        "master": 1309
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3642,
+    "fields": {
+        "language_code": "en",
+        "description": "This will add a few steps to the data processing and be more time consuming!",
+        "hyperlink": "",
+        "master": 1310
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3643,
+    "fields": {
+        "language_code": "en",
+        "description": "In principle, yes, because we are only at the beginning of a mechanism known as \"One-Stop-Shop\", which gives a European authority the power to deal with our complaints in order to reach a consensus. Can't wait for the end! I'm not going to be able to put up with this situation for much longer... and neither will my daughter!",
+        "hyperlink": "",
+        "master": 1311
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3644,
+    "fields": {
+        "language_code": "en",
+        "description": "If Luxembourg is the country of short paths, I hope that the CNIL is the authority of fast procedures!",
+        "hyperlink": "",
+        "master": 1312
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3645,
+    "fields": {
+        "language_code": "en",
+        "description": "A week later at the coffee corner",
+        "hyperlink": "",
+        "master": 1313
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3646,
+    "fields": {
+        "language_code": "en",
+        "description": "Judith, how are you? You seem preoccupied!",
+        "hyperlink": "",
+        "master": 1314
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3647,
+    "fields": {
+        "language_code": "en",
+        "description": "I'm fine, thanks Bruno! Listen, I'm not going to lie to you, I'm really looking forward to the Christmas holidays so I can send my children to their grandparents'. Without a smartphone and in contact with nature, they'll be able to switch off and I'll be able to get some rest from all this and start the New Year on the right foot!",
+        "hyperlink": "",
+        "master": 1315
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3648,
+    "fields": {
+        "language_code": "en",
+        "description": "So you haven't heard the good news yet?",
+        "hyperlink": "",
+        "master": 1316
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3649,
+    "fields": {
+        "language_code": "en",
+        "description": "No, what are you talking about?",
+        "hyperlink": "",
+        "master": 1317
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3650,
+    "fields": {
+        "language_code": "en",
+        "description": "Well the CNIL has declared itself to be the lead authority! Yesss!!! I haven't figured it all out yet, but it's still worth a cup of coffee!",
+        "hyperlink": "",
+        "master": 1318
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3651,
+    "fields": {
+        "language_code": "en",
+        "description": "Yes, Judith, the situation finally seems to be settling down! It's probably because the magic of Christmas is just around the corner!",
+        "hyperlink": "",
+        "master": 1319
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3652,
+    "fields": {
+        "language_code": "en",
+        "description": "You're right, that's great news! If only….",
+        "hyperlink": "",
+        "master": 1320
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3653,
+    "fields": {
+        "language_code": "en",
+        "description": "If only what? All we have to do is wish each other Happy Holidays and everything will be back to normal!",
+        "hyperlink": "",
+        "master": 1321
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3654,
+    "fields": {
+        "language_code": "en",
+        "description": "I'm too old to believe in Father Christmas, you know... Clearly not everyone does! If only the CNIL could quickly contact our 'data delinquent' and inform his Luxembourg counterpart…",
+        "hyperlink": "",
+        "master": 1322
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3655,
+    "fields": {
+        "language_code": "en",
+        "description": "In the meantime, hand me your cup so I can make you a nice cup of coffee ... ",
+        "hyperlink": "",
+        "master": 1323
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3656,
+    "fields": {
+        "language_code": "en",
+        "description": "Still at the coffee corner…...",
+        "hyperlink": "",
+        "master": 1324
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3657,
+    "fields": {
+        "language_code": "en",
+        "description": "Thank you for the coffee, Pavel!",
+        "hyperlink": "",
+        "master": 1325
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3658,
+    "fields": {
+        "language_code": "en",
+        "description": "It's Dominique who's spoiling us with his well-balanced, full-bodied organic Arabica coffees!",
+        "hyperlink": "",
+        "master": 1326
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3659,
+    "fields": {
+        "language_code": "en",
+        "description": "It's not just the coffee that's strong!",
+        "hyperlink": "",
+        "master": 1327
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3660,
+    "fields": {
+        "language_code": "en",
+        "description": "You're right! When you read Article 58.2 of the GDPR on corrective measures, I'm expecting a really tough decision against Choc'event!",
+        "hyperlink": "",
+        "master": 1328
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3661,
+    "fields": {
+        "language_code": "en",
+        "description": "Choc'event! With a name like that! I hope the penalties will be a deterrent! There's no way they are going to repeat this with other children!",
+        "hyperlink": "",
+        "master": 1329
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3662,
+    "fields": {
+        "language_code": "en",
+        "description": "The list of penalties that Choc'event could face is a long one, ranging from a warning to a fine, not to mention a restriction or outright ban on data processing!",
+        "hyperlink": "",
+        "master": 1330
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3663,
+    "fields": {
+        "language_code": "en",
+        "description": "Well done, Pavel! Thanks to you, we've just rediscovered Judith as we know her!",
+        "hyperlink": "",
+        "master": 1331
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3664,
+    "fields": {
+        "language_code": "en",
+        "description": "Ah, thank you both! You've put a smile back on my face!",
+        "hyperlink": "",
+        "master": 1332
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3665,
+    "fields": {
+        "language_code": "en",
+        "description": "It's normal, we have to help each other, we're all affected when our DPO has the blues!!!!",
+        "hyperlink": "",
+        "master": 1333
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3666,
+    "fields": {
+        "language_code": "en",
+        "description": "See you later, I'm going to check my mail and emails - you can never be sure of a good surprise!",
+        "hyperlink": "",
+        "master": 1334
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3667,
+    "fields": {
+        "language_code": "en",
+        "description": "On Christmas Eve, the CNPD go back to LuxXport's claimants. The employees were informed that the complaints had all been closed.\n\nOn receipt of the complaints, the CNIL had sent a formal notice signed by its Chairman to Choc'event, ordering it to cease the breaches of the GDPR that had been observed. Given the sensitivity of the personal data involved, the deadline for removing the photos was exceptionally reduced to 24 hours. Non respect would trigger an investigation.\n\nThis letter of formal notice was taken seriously by Choc'event, which immediately cooperated with the CNIL and complied by removing the disputed photos from the social networks.\n\nDominique and the employees are satisfied and will be able to enjoy the magic of Christmas, which already seems to have worked.\n\nFor the new year, Dominique and Judith want to focus on continuous improvements to the GDPR processes so that they are more effective and better understood and applied within LuxXport by its employees and processors.",
+        "hyperlink": "",
+        "master": 1335
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3668,
+    "fields": {
+        "language_code": "en",
+        "description": "With the start of the new year, LuxXport is slowly getting back to work, and Dominique has organised a meeting with the heads of the main departments.",
+        "hyperlink": "",
+        "master": 1336
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3669,
+    "fields": {
+        "language_code": "en",
+        "description": "Happy New Year and best wishes to you all! I hope you had a good festive season and that you're ready for a promising new year. Given the various trials and tribulations of the past year, I've invited you all here to take stock of the problems encountered and the areas for improvement.",
+        "hyperlink": "",
+        "master": 1337
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3670,
+    "fields": {
+        "language_code": "en",
+        "description": "I propose that we get started with data protection!",
+        "hyperlink": "",
+        "master": 1338
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3671,
+    "fields": {
+        "language_code": "en",
+        "description": "Very good, anyways I wanted to start with that!",
+        "hyperlink": "",
+        "master": 1339
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3672,
+    "fields": {
+        "language_code": "en",
+        "description": "During the last incident, I noticed that employees didn't know who to contact if they had a complaint. However, a DPO has been appointed internally, but this is not yet reflected in the documentation. It should be updated.",
+        "hyperlink": "",
+        "master": 1340
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3673,
+    "fields": {
+        "language_code": "en",
+        "description": "For my part, I'm going to continue working with Judith to put in place IT security measures and intend to adapt them regularly and as necessary.",
+        "hyperlink": "",
+        "master": 1341
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3674,
+    "fields": {
+        "language_code": "en",
+        "description": "Thank you Bruno and Pavel! I would add that all processing operations must be correctly listed in the data processing register, and we need to make sure that this register is regularly updated. On this point, Judith and I would like to set up a continuous improvement process for data protection.",
+        "hyperlink": "",
+        "master": 1342
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3675,
+    "fields": {
+        "language_code": "en",
+        "description": "By the way, I've still got to update all our processor's contracts - the 'Kleeschen' event delayed me on this point! What happened with the cloud provider and Choc'event should be a lesson to us all!",
+        "hyperlink": "",
+        "master": 1343
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3676,
+    "fields": {
+        "language_code": "en",
+        "description": "Any other suggestions?",
+        "hyperlink": "",
+        "master": 1344
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3677,
+    "fields": {
+        "language_code": "en",
+        "description": "Not right now…",
+        "hyperlink": "",
+        "master": 1345
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3678,
+    "fields": {
+        "language_code": "en",
+        "description": "Same for me!",
+        "hyperlink": "",
+        "master": 1346
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3679,
+    "fields": {
+        "language_code": "en",
+        "description": "Very good, let's move on to the next point then….increase of the meal costs!",
+        "hyperlink": "",
+        "master": 1347
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3680,
+    "fields": {
+        "language_code": "en",
+        "description": "Aahh, finally!",
+        "hyperlink": "",
+        "master": 1348
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3681,
+    "fields": {
+        "language_code": "en",
+        "description": "Dominique and Judith are talking about how to improve the processing contracts",
+        "hyperlink": "",
+        "master": 1349
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3682,
+    "fields": {
+        "language_code": "en",
+        "description": "Judith, I'm on the CNPD website and, as data controller, I must select \"only processors offering sufficient guarantees to ensure the protection of the personal data they process.\" What do they mean by \"sufficient guarantees\"?",
+        "hyperlink": "",
+        "master": 1350
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3683,
+    "fields": {
+        "language_code": "en",
+        "description": "As far as I know, this means finding out more about the data protection knowledge and reliability of processors, particularly with regard to the technical and organisational measures implemented in accordance with the GDPR.",
+        "hyperlink": "",
+        "master": 1351
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3684,
+    "fields": {
+        "language_code": "en",
+        "description": "Well, in practice, how are we gonna check that?",
+        "hyperlink": "",
+        "master": 1352
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3685,
+    "fields": {
+        "language_code": "en",
+        "description": "This can be done by any means: a meeting, a discussion about the processing contract, etc. The most effective way, of course, would be for processors to demonstrate their compliance with the GDPR by adhering to specific codes of conduct or by having their data processing certified.",
+        "hyperlink": "",
+        "master": 1353
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3686,
+    "fields": {
+        "language_code": "en",
+        "description": "I've never heard about that before!",
+        "hyperlink": "",
+        "master": 1354
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3687,
+    "fields": {
+        "language_code": "en",
+        "description": "It's not very common yet. However, the CNPD is a forerunner in certification and encourages the adoption of such codes of conduct. ",
+        "hyperlink": "",
+        "master": 1355
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3688,
+    "fields": {
+        "language_code": "en",
+        "description": "As for the continuous improvement process, can you give me a broad outline of how it will work in terms of data protection?",
+        "hyperlink": "",
+        "master": 1356
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3689,
+    "fields": {
+        "language_code": "en",
+        "description": "I'm going to find out about existing software, otherwise I'll have to create a specific Excel file. The process is based on the 4 stages of the P.D.C.A. Method.",
+        "hyperlink": "",
+        "master": 1357
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3690,
+    "fields": {
+        "language_code": "en",
+        "description": "Keep me in the loop, I have to make sure that you have enough resources and tools or you to be able to accomplish your task as a DPO.",
+        "hyperlink": "",
+        "master": 1358
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3691,
+    "fields": {
+        "language_code": "en",
+        "description": "Bruno and Pavel also need to be made more aware of the problem, so that they can report to me any changes in processes that have an impact on data processing, for example. In any case, I know they're much more concerned about the cause now that I've provided the data protection training!",
+        "hyperlink": "",
+        "master": 1359
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3692,
+    "fields": {
+        "language_code": "en",
+        "description": "Judith, thank you for your explanation of the continuous improvement process! I'd now like to come back to the reactions of employees when they learned that pictures of their children were published on 2 major social media sites...",
+        "hyperlink": "",
+        "master": 1360
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3693,
+    "fields": {
+        "language_code": "en",
+        "description": "You mean Bruno's reaction, among others? By the way, I obviously intend to improve the internal process for reporting incidents by means of a clear and comprehensible procedure, accompanied by a form to be returned directly to me.",
+        "hyperlink": "",
+        "master": 1361
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3694,
+    "fields": {
+        "language_code": "en",
+        "description": "Excellent initiative! What about Pavel's suggestion about appropriate safety measures?",
+        "hyperlink": "",
+        "master": 1362
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3695,
+    "fields": {
+        "language_code": "en",
+        "description": "Pavel and I have already discussed the strategy and the recurrence of improvements. The idea is to review and update the technical and organisational measures as necessary.",
+        "hyperlink": "",
+        "master": 1363
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3696,
+    "fields": {
+        "language_code": "en",
+        "description": "Other points we need to discuss?",
+        "hyperlink": "",
+        "master": 1364
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3697,
+    "fields": {
+        "language_code": "en",
+        "description": "Generally speaking, you need to set up a whole updating routine.",
+        "hyperlink": "",
+        "master": 1365
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3698,
+    "fields": {
+        "language_code": "en",
+        "description": "I have every confidence in you! Before closing this meeting, I'd like to mention the compliance of our website. Did you know that the European Data Protection Committee has made available to the public an audit tool for websites?",
+        "hyperlink": "",
+        "master": 1366
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3699,
+    "fields": {
+        "language_code": "en",
+        "description": "No, but I will have a look at it with Pavel.",
+        "hyperlink": "",
+        "master": 1367
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3700,
+    "fields": {
+        "language_code": "en",
+        "description": "Judith has been working on the continuous improvement processes for GDPR compliance and talks to Dominique about the approach she has implemented.",
+        "hyperlink": "",
+        "master": 1368
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3701,
+    "fields": {
+        "language_code": "en",
+        "description": "Hello Dominique! At our last meeting, we discussed a number of areas for improvement. That's why I've sent you the \"Governance 2.0\" Excel file.",
+        "hyperlink": "",
+        "master": 1369
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3702,
+    "fields": {
+        "language_code": "en",
+        "description": "Thank you very much, Judith! At this stage, I have nothing to add, except that I'm very happy to have you as DPO! It gives me greater peace of mind about our compliance in the future!",
+        "hyperlink": "",
+        "master": 1370
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3703,
+    "fields": {
+        "language_code": "en",
+        "description": "Thank you, Dominique! I've learnt a lot from the latest incidents and have been inspired by them. In fact, the incident register is now up to date and will be completed over time after each incident, if there are any, of course! What's more, I'm proposing an incident management procedure for your approval. ",
+        "hyperlink": "",
+        "master": 1371
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3704,
+    "fields": {
+        "language_code": "en",
+        "description": "I will carefully read this and get back to you as soon as possible!",
+        "hyperlink": "",
+        "master": 1372
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3705,
+    "fields": {
+        "language_code": "en",
+        "description": "Judith and Pavel discuss technical and organisational measures when the issue of data deletion arises…",
+        "hyperlink": "",
+        "master": 1373
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3706,
+    "fields": {
+        "language_code": "en",
+        "description": "Hi Judith, how are you? Since we last spoke, I've adapted all the IT security measures. I've even introduced reminder notifications in line with our 'Governance 2.0' strategy.",
+        "hyperlink": "",
+        "master": 1374
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3707,
+    "fields": {
+        "language_code": "en",
+        "description": "Hi Pavel! This year is off to a great start and the GDPR improvements are coming thick and fast!",
+        "hyperlink": "",
+        "master": 1375
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3708,
+    "fields": {
+        "language_code": "en",
+        "description": "A good pace? I have to admit that the pace is a bit \"coffee-heavy\", so you have to hold on tight!",
+        "hyperlink": "",
+        "master": 1376
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3709,
+    "fields": {
+        "language_code": "en",
+        "description": "Yes, you have to hang on! But when it comes to certain personal data, you're going to have to let go! Some have reached or exceeded the retention period set out in the processing register.",
+        "hyperlink": "",
+        "master": 1377
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3710,
+    "fields": {
+        "language_code": "en",
+        "description": "Is that so? Then I suggest you carry out a personal data audit and delete any obsolete data from the active database. Is that OK with you?",
+        "hyperlink": "",
+        "master": 1378
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3711,
+    "fields": {
+        "language_code": "en",
+        "description": "Yes, carry out a data audit, but don't delete any data without my prior go-ahead. Some data will have to be archived intermediately, or even permanently! For example, the company has to meet legal obligations in terms of accounting and keep invoices for 10 years.",
+        "hyperlink": "",
+        "master": 1379
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3712,
+    "fields": {
+        "language_code": "en",
+        "description": "All the LuxXport staff get together for an after-work party at the Schueberfouer.",
+        "hyperlink": "",
+        "master": 1380
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3713,
+    "fields": {
+        "language_code": "en",
+        "description": "Dominique was strolling down the aisles of the \"Schuebi\" with all the LuxXport employees when he was hit by a misdirected drone!",
+        "hyperlink": "",
+        "master": 1381
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3714,
+    "fields": {
+        "language_code": "en",
+        "description": "can't stop laughing",
+        "hyperlink": "",
+        "master": 1382
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3715,
+    "fields": {
+        "language_code": "en",
+        "description": "The child must have seen you up close thanks to the drone's video feed! ",
+        "hyperlink": "",
+        "master": 1383
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3716,
+    "fields": {
+        "language_code": "en",
+        "description": "calls out to the boy who scrolls the video of the incident",
+        "hyperlink": "",
+        "master": 1384
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3717,
+    "fields": {
+        "language_code": "en",
+        "description": "Hey, stop, don't put that online!",
+        "hyperlink": "",
+        "master": 1385
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3718,
+    "fields": {
+        "language_code": "en",
+        "description": "Ahh no, Judith, please don't tell me that another GDPR related problem has landed at my feet!",
+        "hyperlink": "",
+        "master": 1386
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3719,
+    "fields": {
+        "language_code": "en",
+        "description": "Just goes to show that misdirected cameras have an impact on everyone! ",
+        "hyperlink": "",
+        "master": 1387
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3720,
+    "fields": {
+        "language_code": "en",
+        "description": "Good point, Régina! Dominique, I really must put a line in our data breach register about this incident! Hahahahaha!",
+        "hyperlink": "",
+        "master": 1388
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3721,
+    "fields": {
+        "language_code": "en",
+        "description": "It's good to be able to laugh about the GDPR with you all! At least we've learned a lot from our experiences over the last year!",
+        "hyperlink": "",
+        "master": 1389
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3722,
+    "fields": {
+        "language_code": "en",
+        "description": "Oh yes, I have an anonymised customer database that allows me to generate a lot of useful statistics for the company.",
+        "hyperlink": "",
+        "master": 1390
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3723,
+    "fields": {
+        "language_code": "en",
+        "description": "As far as I'm concerned, my role has been enhanced and safety measures have been greatly improved!",
+        "hyperlink": "",
+        "master": 1391
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3724,
+    "fields": {
+        "language_code": "en",
+        "description": "The GDPR has been my best ally in improving my working conditions!",
+        "hyperlink": "",
+        "master": 1392
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3725,
+    "fields": {
+        "language_code": "en",
+        "description": "Not forgetting our family spheres, which have all been protected thanks to the GDPR!",
+        "hyperlink": "",
+        "master": 1393
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3726,
+    "fields": {
+        "language_code": "en",
+        "description": "The CNPD",
+        "hyperlink": "",
+        "master": 1394
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3727,
+    "fields": {
+        "language_code": "en",
+        "description": "The employees",
+        "hyperlink": "",
+        "master": 1395
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3728,
+    "fields": {
+        "language_code": "en",
+        "description": "Régina Fischer",
+        "hyperlink": "",
+        "master": 1396
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3729,
+    "fields": {
+        "language_code": "en",
+        "description": "You reached the end of level 4!\n\nNow it's your turn to play!\n\nEstablish or complete your own PDCA in order to insure a continuous improvement of your data processing activities!\n\nIn order to accomplish this task, use the template provided!",
+        "hyperlink": "",
+        "master": 1397
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3730,
+    "fields": {
+        "language_code": "en",
+        "description": "Governance 2.O: new processing - Complaint- Continuous improvement",
+        "hyperlink": "",
+        "master": 1398
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3731,
+    "fields": {
+        "language_code": "en",
+        "description": "You have completed the fourth quiz !",
+        "hyperlink": "",
+        "master": 322
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3732,
+    "fields": {
+        "language_code": "en",
+        "description": "You have completed the second quiz !",
+        "hyperlink": "",
+        "master": 320
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3733,
+    "fields": {
+        "language_code": "en",
+        "description": "You have completed the third quiz !",
+        "hyperlink": "",
+        "master": 321
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3734,
+    "fields": {
+        "language_code": "en",
+        "description": "Download the factsheet",
+        "hyperlink": "media/documents/level1/FR/Fiche_Pratique_Nv1_2.pdf",
+        "master": 323
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3735,
+    "fields": {
+        "language_code": "en",
+        "description": "Download the factsheet",
+        "hyperlink": "media/documents/level1/FR/Fiche_Pratique_Nv1_3.pdf",
+        "master": 324
+    }
+},
+{
+    "model": "elearning.texttranslation",
+    "pk": 3736,
+    "fields": {
+        "language_code": "en",
+        "description": "Download the factsheet",
+        "hyperlink": "media/documents/level1/FR/Fiche_Pratique_Nv1_4.pdf",
+        "master": 325
     }
 },
 {
@@ -29463,7 +32383,7 @@
         "language_code": "fr",
         "name": "Les critères du consentement et autres bases de licéité",
         "description": "Fiche pratique 3",
-        "path": "<install_path>/theme/static/media/documents/level1/FR/Fiche_Pratique_Nv1_3.pdf",
+        "path": "<install_path>/theme/static/media/documents/level1/FR/Fiche_Pratique_N3.pdf",
         "master": 41
     }
 },
@@ -29474,7 +32394,7 @@
         "language_code": "fr",
         "name": "Le traitement d’un droit d’accès",
         "description": "Fiche Pratique 2",
-        "path": "<install_path>/theme/static/media/documents/level1/FR/Fiche_Pratique_Nv1_2.pdf",
+        "path": "<install_path>/theme/static/media/documents/level1/FR/Fiche_Pratique_N2.pdf",
         "master": 42
     }
 },
@@ -29485,7 +32405,7 @@
         "language_code": "fr",
         "name": "Les principales notions du RGPD",
         "description": "Fiche pratique 1",
-        "path": "<install_path>/theme/static/media/documents/level1/FR/Fiche_Pratique_Nv1_1.pdf",
+        "path": "<install_path>/theme/static/media/documents/level1/FR/Fiche_Pratique_N1.pdf",
         "master": 43
     }
 },
@@ -29496,7 +32416,7 @@
         "language_code": "fr",
         "name": "Bases : Les principales notions et principes fondamentaux du RGPD",
         "description": "Fiche récapitulative Niveau 1",
-        "path": "<install_path>/theme/static/media/documents/level1/FR/Fiche_ recap_interactive.pdf",
+        "path": "<install_path>/theme/static/media/documents/level1/FR/Fiche_Recapitulative_N1.pdf",
         "master": 44
     }
 },
@@ -29507,7 +32427,7 @@
         "language_code": "fr",
         "name": "Le registre des activités de traitement",
         "description": "Fiche pratique 4",
-        "path": "<install_path>/theme/static/media/documents/level1/FR/Fiche_Pratique_Nv1_4.pdf",
+        "path": "<install_path>/theme/static/media/documents/level1/FR/Fiche_Pratique_N4.pdf",
         "master": 52
     }
 },
@@ -29518,7 +32438,7 @@
         "language_code": "fr",
         "name": "Les données sensibles et extraits du casier judiciaire",
         "description": "Niveau 2 - Fiche pratique 1",
-        "path": "<install_path>/theme/static/media/documents/level2/FR/Fiche pratique N5.pdf",
+        "path": "<install_path>/theme/static/media/documents/level2/FR/Fiche_Pratique_N5.pdf",
         "master": 53
     }
 },
@@ -29529,7 +32449,7 @@
         "language_code": "fr",
         "name": "Traitement RH et Bases de licéité",
         "description": "Niveau 2 - Fiche pratique 2",
-        "path": "<install_path>/theme/static/media/documents/level2/FR/Fiche pratique N6.pdf",
+        "path": "<install_path>/theme/static/media/documents/level2/FR/Fiche_Pratique_N6.pdf",
         "master": 54
     }
 },
@@ -29540,7 +32460,7 @@
         "language_code": "fr",
         "name": "La vidéosurveillance",
         "description": "Niveau 2 - Fiche pratique 3",
-        "path": "<install_path>/theme/static/media/documents/level2/FR/Fiche pratique N7.pdf",
+        "path": "<install_path>/theme/static/media/documents/level2/FR/Fiche_Pratique_N7.pdf",
         "master": 55
     }
 },
@@ -29551,7 +32471,7 @@
         "language_code": "fr",
         "name": "Les cookies : Consentement, refus et retrait",
         "description": "Niveau 2 - FIche pratique 4",
-        "path": "<install_path>/theme/static/media/documents/level2/FR/Fiche pratique N8.pdf",
+        "path": "<install_path>/theme/static/media/documents/level2/FR/Fiche_Pratique_N8.pdf",
         "master": 56
     }
 },
@@ -29562,7 +32482,7 @@
         "language_code": "fr",
         "name": "Conception : Procédures, routines et documents RGPD",
         "description": "Niveau 2 - Fiche récapitulative",
-        "path": "<install_path>/theme/static/media/documents/level2/FR/20240419_ALTO_fiche recapitulative_Niveau2.pdf",
+        "path": "<install_path>/theme/static/media/documents/level2/FR/Fiche_Recapitulative_N2.pdf",
         "master": 57
     }
 },
@@ -29584,7 +32504,7 @@
         "language_code": "fr",
         "name": "Les mesures de sécurité, techniques et organisationelles",
         "description": "Niveau 3 - Fiche pratique 1",
-        "path": "<install_path>/theme/static/media/documents/level3/FR/Fiche pratique N9.pdf",
+        "path": "<install_path>/theme/static/media/documents/level3/FR/Fiche_Pratique_N9.pdf",
         "master": 59
     }
 },
@@ -29595,7 +32515,7 @@
         "language_code": "fr",
         "name": "La violation de données",
         "description": "Niveau 3 - Fiche pratique 2",
-        "path": "<install_path>/theme/static/media/documents/level3/FR/Fiche pratique N10.pdf",
+        "path": "<install_path>/theme/static/media/documents/level3/FR/Fiche_Pratique_N10.pdf",
         "master": 60
     }
 },
@@ -29606,7 +32526,7 @@
         "language_code": "fr",
         "name": "L'application du principe de responsabilisation aux transferts de données",
         "description": "Niveau 3 - Fiche pratique 3",
-        "path": "<install_path>/theme/static/media/documents/level3/FR/Fiche pratique N11.pdf",
+        "path": "<install_path>/theme/static/media/documents/level3/FR/Fiche_Pratique_N11.pdf",
         "master": 61
     }
 },
@@ -29617,7 +32537,7 @@
         "language_code": "fr",
         "name": "Sous-traitance: choix, forme et fond du contrat",
         "description": "Niveau 3 - Fiche pratique 4",
-        "path": "<install_path>/theme/static/media/documents/level3/FR/Fiche pratique N12.pdf",
+        "path": "<install_path>/theme/static/media/documents/level3/FR/Fiche_Pratique_N12.pdf",
         "master": 62
     }
 },
@@ -29628,7 +32548,7 @@
         "language_code": "fr",
         "name": "Mise en oeuvre : Violation de données, transferts et contrat de sous-traitance",
         "description": "Niveau 3 - Fiche récapitulative",
-        "path": "<install_path>/theme/static/media/documents/level3/FR/20240429_ALTO_fiche_recapitulative_Niveau3.pdf",
+        "path": "<install_path>/theme/static/media/documents/level3/FR/Fiche_Recapitulative_N3.pdf",
         "master": 63
     }
 },
@@ -29650,7 +32570,7 @@
         "language_code": "fr",
         "name": "Le délégué à la protection des données",
         "description": "Niveau 4 - Fiche pratique 1",
-        "path": "<install_path>/theme/static/media/documents/level4/FR/DAAZ_Niv4_Fiche_pratique_1.pdf",
+        "path": "<install_path>/theme/static/media/documents/level4/FR/Fiche_Pratique_N13.pdf",
         "master": 65
     }
 },
@@ -29661,7 +32581,7 @@
         "language_code": "fr",
         "name": "Le traitement de données de mineurs",
         "description": "Niveau 4 - Fiche pratique 2",
-        "path": "<install_path>/theme/static/media/documents/level4/FR/DAAZ_Niv4_Fiche_pratique_2.pdf",
+        "path": "<install_path>/theme/static/media/documents/level4/FR/Fiche_Pratique_N14.pdf",
         "master": 66
     }
 },
@@ -29672,7 +32592,7 @@
         "language_code": "fr",
         "name": "Réclamations, Formulaire, Conditions",
         "description": "Niveau 4 - Fiche pratique 3",
-        "path": "<install_path>/theme/static/media/documents/level4/FR/DAAZ_Niv4_Fiche_pratique_3.pdf",
+        "path": "<install_path>/theme/static/media/documents/level4/FR/Fiche_Pratique_N15.pdf",
         "master": 67
     }
 },
@@ -29683,7 +32603,7 @@
         "language_code": "fr",
         "name": "L'effacement et l'archivage des données personnelles",
         "description": "Niveau 4 - Fiche pratique 4",
-        "path": "<install_path>/theme/static/media/documents/level4/FR/DAAZ_Niv4_Fiche_pratique_4.pdf",
+        "path": "<install_path>/theme/static/media/documents/level4/FR/Fiche_Pratique_N16.pdf",
         "master": 68
     }
 },
@@ -29704,8 +32624,8 @@
     "fields": {
         "language_code": "fr",
         "name": "Gouvernance 2.0 : Nouveau traitement - Réclamation - Amélioration continue",
-        "description": "",
-        "path": "<install_path>/theme/static/media/documents/level4/FR/DAAZ_Niv4_Fiche_recapitulative.pdf",
+        "description": "Niveau 4 - Fiche récapitulative",
+        "path": "<install_path>/theme/static/media/documents/level4/FR/Fiche_Recapitulative_N4.pdf",
         "master": 70
     }
 },
@@ -32543,6 +35463,276 @@
     }
 },
 {
+    "model": "elearning.questiontranslation",
+    "pk": 1509,
+    "fields": {
+        "language_code": "en",
+        "name": "What purposes are applicable to the \"Kleeschen\" processing operation?",
+        "tooltip": "",
+        "master": 314212
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1510,
+    "fields": {
+        "language_code": "en",
+        "name": "Which of the following data on children are required for the \"Kleeschen\" data processing?",
+        "tooltip": "",
+        "master": 314213
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1511,
+    "fields": {
+        "language_code": "en",
+        "name": "What precautions should be taken when processing minors' data?",
+        "tooltip": "",
+        "master": 314214
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1512,
+    "fields": {
+        "language_code": "en",
+        "name": "Which of the following processing operations require a data protection impact assessment?",
+        "tooltip": "",
+        "master": 314215
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1513,
+    "fields": {
+        "language_code": "en",
+        "name": "Would it be possible to process data for further processing, such as taking photographs as a souvenir of the visit to the Kleeschen, on the basis of consent to the processing of data on minors for the preparation and distribution of gifts?",
+        "tooltip": "",
+        "master": 314216
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1514,
+    "fields": {
+        "language_code": "en",
+        "name": "Quiz - Order the steps involved in carrying out a processing operation in a logical and  chronological order.",
+        "tooltip": "",
+        "master": 314217
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1515,
+    "fields": {
+        "language_code": "en",
+        "name": "Who should LuxXport employees contact to complain about the publication of pictures on social networks?",
+        "tooltip": "",
+        "master": 314218
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1516,
+    "fields": {
+        "language_code": "en",
+        "name": "How can employees affected by the processing of personal data exercise their rights?",
+        "tooltip": "",
+        "master": 314219
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1517,
+    "fields": {
+        "language_code": "en",
+        "name": "What grounds for lawfulness can generally be envisaged for the lawful processing of photos by a private SME?",
+        "tooltip": "",
+        "master": 314220
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1518,
+    "fields": {
+        "language_code": "en",
+        "name": "Is it necessary to lodge a complaint directly with the data controller before lodging a complaint with the CNPD if the request is for the data subject to exercise his or her rights?",
+        "tooltip": "",
+        "master": 314221
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1519,
+    "fields": {
+        "language_code": "en",
+        "name": "Is the non-consensual publication of photos protected by legal provisions other than the GDPR?",
+        "tooltip": "",
+        "master": 314222
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1520,
+    "fields": {
+        "language_code": "en",
+        "name": "Quiz: Which of the following processing operations, by their nature, are not in principle based on the legitimate interests of the controller?",
+        "tooltip": "",
+        "master": 314223
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1521,
+    "fields": {
+        "language_code": "en",
+        "name": "Is the CNPD competent to receive complaints about an incident caused by the company Choc'event  located in France?",
+        "tooltip": "",
+        "master": 314224
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1522,
+    "fields": {
+        "language_code": "en",
+        "name": "If the company Choc'event, a subcontractor established in France, behaves like a data controller with regard to photos published on social networks, does the CNPD have the authority to deal with complaints?",
+        "tooltip": "",
+        "master": 314225
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1523,
+    "fields": {
+        "language_code": "en",
+        "name": "What does the notion \"One-Stop-Shop\" mean in the context of data protection?",
+        "tooltip": "",
+        "master": 314226
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1524,
+    "fields": {
+        "language_code": "en",
+        "name": "Which stakeholders will the CNIL be in contact with when dealing with employee complaints?",
+        "tooltip": "",
+        "master": 314227
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1525,
+    "fields": {
+        "language_code": "en",
+        "name": "What corrective powers can be ordered by a data protection authority under the GDPR (non-exhaustive)?",
+        "tooltip": "",
+        "master": 314228
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1526,
+    "fields": {
+        "language_code": "en",
+        "name": "Quiz: Please put the steps in a logical and chronological order.",
+        "tooltip": "",
+        "master": 314229
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1527,
+    "fields": {
+        "language_code": "en",
+        "name": "What does the notion of \"sufficient guaranties\" mean applied to a data processor in the context of the GDPR?",
+        "tooltip": "",
+        "master": 314230
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1528,
+    "fields": {
+        "language_code": "en",
+        "name": "Please put the steps of a P.D.C.A. applied to the management of personal data in order.",
+        "tooltip": "",
+        "master": 314231
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1529,
+    "fields": {
+        "language_code": "en",
+        "name": "Why is it necessary to set up a continuous improvement process in regards to data protection?",
+        "tooltip": "",
+        "master": 314232
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1530,
+    "fields": {
+        "language_code": "en",
+        "name": "What are the required deadlines to update a data breach register?",
+        "tooltip": "",
+        "master": 314233
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1531,
+    "fields": {
+        "language_code": "en",
+        "name": "When should \"intermediate archiving\" be used for personal data?",
+        "tooltip": "",
+        "master": 314234
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1532,
+    "fields": {
+        "language_code": "en",
+        "name": "Quiz: In what situation is the data controller obliged to delete personal data if he processes customer bank details obtained at the time of invoicing for the purchase of clothing products?",
+        "tooltip": "",
+        "master": 314235
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1533,
+    "fields": {
+        "language_code": "en",
+        "name": "Quiz: After applying for a job vacancy and not being successful, applicants are informed and consent to their CVs being retained in the event of a similar vacancy being created within the next 2 years. The data controller checks the retention periods.\nIn what situation are they obliged to delete the personal data they process?",
+        "tooltip": "",
+        "master": 314236
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1534,
+    "fields": {
+        "language_code": "en",
+        "name": "Quiz: After a medical consultation, a patient is informed that their medical records will be held by the doctor for at least 10 years from the date on which the treatment ends, in accordance with his legal obligation. In what situation is the doctor obliged to delete the personal data he processes?",
+        "tooltip": "",
+        "master": 314237
+    }
+},
+{
+    "model": "elearning.questiontranslation",
+    "pk": 1535,
+    "fields": {
+        "language_code": "en",
+        "name": "Did you meet the challenge?",
+        "tooltip": "",
+        "master": 314238
+    }
+},
+{
     "model": "elearning.question",
     "pk": 17,
     "fields": {
@@ -34542,7 +37732,7 @@
     "pk": 142,
     "fields": {
         "language_code": "fr",
-        "name": "Le traitement de données à caractère personnel pour le compte du responsable du traitement requiert, tout d’abord, que l’entité distincte traite les données à caractère personnel au profit du responsable du traitement.\r\nAgir «pour le compte de» signifie également que le sous-traitant ne peut pas effectuer le traitement pour sa ou ses propres finalités. Comme le prévoit l’article 28, paragraphe 10, un sous-traitant viole le RGPD lorsqu’il outrepasse les instructions du responsable du traitement et qu’il commence à déterminer ses propres finalités et moyens. Il sera alors considéré comme un responsable du traitement pour ce traitement et pourra faire l’objet de sanctions pour avoir outrepassé les instructions du responsable du traitement.\r\n\r\nEn l’occurrence, à la suite de l’analyse des réclamations et des échanges avec la DPO de LuxXport, la CNPD a retenu que:\r\n<ul>\r\n<li>l’incident concerne le traitement de photos d’enfants, de sorte que la compétence matérielle est acquise, et que ;</li>\r\n<li>la société Choc’event, située en France, a la qualité de responsable du traitement de sorte que la compétence territoriale n’est pas remplie.</li>\r\n</uk>\r\nLa CNPD, autorité de contrôle au Luxembourg, n’est donc pas compétente pour traiter les réclamations des employés de la société LuxXport.",
+        "name": "Le traitement de données à caractère personnel pour le compte du responsable du traitement requiert, tout d’abord, que l’entité distincte traite les données à caractère personnel au profit du responsable du traitement.\r\nAgir «pour le compte de» signifie également que le sous-traitant ne peut pas effectuer le traitement pour sa ou ses propres finalités. Comme le prévoit l’article 28, paragraphe 10, un sous-traitant viole le RGPD lorsqu’il outrepasse les instructions du responsable du traitement et qu’il commence à déterminer ses propres finalités et moyens. Il sera alors considéré comme un responsable du traitement pour ce traitement et pourra faire l’objet de sanctions pour avoir outrepassé les instructions du responsable du traitement.\r\n\r\nEn l’occurrence, à la suite de l’analyse des réclamations et des échanges avec la DPO de LuxXport, la CNPD a retenu que:\r\n<ul>\r\n<li>l’incident concerne le traitement de photos d’enfants, de sorte que la compétence matérielle est acquise, et que ;</li>\r\n<li>la société Choc’event, située en France, a la qualité de responsable du traitement de sorte que la compétence territoriale n’est pas remplie.</li>\r\n</ul>\r\nLa CNPD, autorité de contrôle au Luxembourg, n’est donc pas compétente pour traiter les réclamations des employés de la société LuxXport.",
         "master": 142
     }
 },
@@ -35156,6 +38346,186 @@
         "language_code": "en",
         "name": "Processors are responsible for putting in place organisational and technical measures to be able to inform the controller(s) of a personal data incident as soon as possible so that the controller(s) is/are able to comply with the notification deadline of 72 hours after detection of the incident.\nA processor [...] has a duty to notify the controller of any personal data breach as soon as possible after becoming aware of it.",
         "master": 110
+    }
+},
+{
+    "model": "elearning.explanationtranslation",
+    "pk": 330,
+    "fields": {
+        "language_code": "en",
+        "name": "Intermediate archiving: Personal data is no longer used to achieve the set objective (\"closed files\") but is still of administrative interest to the organisation (e.g. management of any disputes, etc.) or must be kept to meet a legal obligation (e.g. invoicing data must be kept for ten years under the French Commercial Code, even if the data subject is no longer a customer). The data may then be consulted on an ad hoc basis by specifically authorised persons.",
+        "master": 150
+    }
+},
+{
+    "model": "elearning.explanationtranslation",
+    "pk": 331,
+    "fields": {
+        "language_code": "en",
+        "name": "The data controller must document any personal data breach, stating the facts concerning the personal data breach, its effects and the measures taken to remedy it (even those not required to be notified to the CNPD).\nThe CNPD may request access to this documentation in order to verify compliance by the controller or processor with its obligations relating to the management of data breaches.\nIt is recommended that the data breach register be updated as soon as possible once the controller has become aware of the breach.",
+        "master": 149
+    }
+},
+{
+    "model": "elearning.explanationtranslation",
+    "pk": 332,
+    "fields": {
+        "language_code": "en",
+        "name": "Article 5 of the GDPR - Principles relating to processing of personal data\n1. Personal data shall be:\n[…]\nd)accurate and, where necessary, kept up to date; every reasonable step must be taken to ensure that personal data that are inaccurate, having regard to the purposes for which they are processed, are erased or rectified without delay (‘accuracy’);\n\nArticle 24 of the GPRD - Responsibility of the controller\nTaking into account the nature, scope, context and purposes of processing as well as the risks of varying likelihood and severity for the rights and freedoms of natural persons, the controller shall implement appropriate technical and organisational measures to ensure and to be able to demonstrate that processing is performed in accordance with this Regulation. Those measures shall be reviewed and updated where necessary.",
+        "master": 148
+    }
+},
+{
+    "model": "elearning.explanationtranslation",
+    "pk": 333,
+    "fields": {
+        "language_code": "en",
+        "name": "The Deming wheel, called the “Shewhart cycle”, is an indisputable reference in the continuous improvement of a product or process.\r\nApplied to the GDPR, the wheel is made up of the following 4 cyclical steps:<ul>\r\n\r\n<li>Plan:\r\nPlan your compliance improvement correctly.\r\n1. Identify the problem to be solved and delimit the scope. The root causes of the problem must be clearly identified.\r\n2. Choose the right solutions\r\n3. Create an action plan and a timeline</li>\r\n\r\n\r\n<li>Do:\r\nFollow the action plan. Carry out the defined tasks in order to implement the solution and the selected improvements.</li>\r\n\r\n\r\n<li>Check:\r\nCheck that the result obtained complies with expectations and is respectful of the GDPR.\r\nVerify that formalized data protection expectations are respected.</li>\r\n\r\n<li>Act or Adjust:\r\nDepending on the results of the control step, adjustments may be made to improve the processing's compliance with the principles of the GDPR.\r\nThis search for improvement leads to a review of the degree of maturity and we therefore start a new phase of active planning.</li></ul>",
+        "master": 147
+    }
+},
+{
+    "model": "elearning.explanationtranslation",
+    "pk": 334,
+    "fields": {
+        "language_code": "en",
+        "name": "In order to ensure that the requirements of the General Data Protection Regulation are met in the context of processing carried out by a processor on behalf of the controller, where the controller entrusts processing activities to a processor, he should only use processors offering sufficient guarantees, in particular in terms of expertise, reliability and resources, for the implementation of technical and organisational measures which will meet the requirements of this Regulation, including security of processing. The application by a processor of an approved code of conduct or an approved certification mechanism may serve to demonstrate compliance with the obligations incumbent on the controller.",
+        "master": 146
+    }
+},
+{
+    "model": "elearning.explanationtranslation",
+    "pk": 335,
+    "fields": {
+        "language_code": "en",
+        "name": "Each supervisory authority, including the CNPD, shall have all of the following corrective powers:\na) to warn a controller or processor that the proposed processing operations are likely to infringe the provisions of this Regulation;\nb) calling a controller or processor to order where the processing operations have led to a breach of the provisions of this Regulation;\nc) order the controller or processor to comply with requests made by the data subject with a view to exercising his or her rights under this Regulation;\nd) order the controller or processor to bring the processing operations into conformity with the provisions of this Regulation, where appropriate, in a specific manner and within a specific period;\ne) order the controller to notify the data subject of a personal data breach;\nf) impose a temporary or definitive restriction, including a ban, on processing;\ng) order the rectification or erasure of personal data or the restriction of processing pursuant to Articles 16, 17 and 18 and the notification of such measures to the recipients to whom the personal data have been disclosed pursuant to Articles 17(2) and 19;\nh) withdraw a certification or order the certification body to withdraw a certification issued pursuant to Articles 42 and 43, or order the certification body not to issue a certification if the requirements applicable to the certification are not or are no longer met;\nI) impose an administrative fine pursuant to Article 83, in addition to or instead of the measures referred to in this paragraph, depending on the characteristics of each case;\nj) order the suspension of data flows to a recipient in a third country or to an international organisation.",
+        "master": 145
+    }
+},
+{
+    "model": "elearning.explanationtranslation",
+    "pk": 336,
+    "fields": {
+        "language_code": "en",
+        "name": "The lead supervisory authority must  :\n<ul>\n<li>prepare the decision draft ;</li>\n<li>send this draft to the other data protection authorities concerned ;</li>\n<li>gather their comments and take them into account, with the aim of reaching a rapid and consensual decision between the authorities ;</li>\n<li>in the event of disagreement over the decision to be taken, amend the draft decision and submit a new one to the authorities concerned ;</li>\n<li>in the event of refusal to amend the draft or in the event of persistent disagreement with the authorities concerned, refer the matter to the European Data Protection Committee for a ruling: the Committee, which brings together all the data protection authorities in the European Union, will then adopt a decision that is binding for the lead authority ;</li>\n<li>notify the concerned company of the final decision.</li>\n</ul>\nIn practice, the lead authority is in contact with the initial authority and the controller affected by the complaint.\nThe lead authority does not interact with the complainant.",
+        "master": 144
+    }
+},
+{
+    "model": "elearning.explanationtranslation",
+    "pk": 337,
+    "fields": {
+        "language_code": "en",
+        "name": "Under the RGPD, supervisory authorities have a duty to cooperate in cases with a cross-border component in order to ensure consistent application of the GDPR. Under this \"one-stop-shop\" mechanism, the lead supervisory authority is responsible for preparing draft decisions and works with the other supervisory authorities concerned to reach a consensus.",
+        "master": 143
+    }
+},
+{
+    "model": "elearning.explanationtranslation",
+    "pk": 338,
+    "fields": {
+        "language_code": "en",
+        "name": "Processing personal data on behalf of the controller requires, firstly, that the separate entity processes the personal data for the benefit of the controller.\nActing \"on behalf of\" also means that the processor cannot carry out the processing for its own purpose(s). As set out in Article 28(10), a processor breaches the GDPR when they go beyond the controller's instructions and begins to determine their own purposes and means. The processor will then be considered a controller for that processing operation and may be subject to sanctions for exceeding the controller's instructions.\n\nIn this case, following an analysis of the complaints and discussions with LuxXport's DPO, the CNPD decided that:\n<ul>\n<li>the incident concerns the processing of photographs of children, so that the material competence is acquired, and that ;</li>\n<li>the company Choc'event, located in France, is the data controller, so that territorial jurisdiction is not fulfilled.</li>\n</ul>\nThe CNPD, the supervisory authority in Luxembourg, is therefore not competent to deal with complaints from LuxXport employees.",
+        "master": 142
+    }
+},
+{
+    "model": "elearning.explanationtranslation",
+    "pk": 339,
+    "fields": {
+        "language_code": "en",
+        "name": "Article 77 of the GDPR - Right to lodge a complaint with a supervisory authority\nWithout prejudice to any other administrative or judicial remedy, every data subject shall have the right to lodge a complaint with a supervisory authority, in particular in the Member State of his or her habitual residence, place of work or place of the alleged infringement if the data subject considers that the processing of personal data relating to him or her infringes this Regulation.",
+        "master": 141
+    }
+},
+{
+    "model": "elearning.explanationtranslation",
+    "pk": 340,
+    "fields": {
+        "language_code": "en",
+        "name": "The “right to an image” is not only regulated by the GDPR but by a series of different laws and case law:\n<ul>\n<li>Art. 8, 10, 17 European Convention on Human Rights</li>\n<li>Art. 7, 8, 54 Charter</li>\n<li>Art. 16 Treaty on the Functioning of the European Union</li>\n<li>Art. 6, 85 GDPR</li>\n<li>Art. 11(3), 24 Luxembourgish Constitution </li>\n<li>Act of the 11 August 1982 in regards of the protection of privacy</li>\n<li>Amended Act 8 June 2004 on the freedom of expression in the media</li>\n<li>Amended Act of 18 April 2001 on copy right, neighbouring rights and data bases</li>\n<li>Amended Act 10 August 1992 on the protection of youth (minors : art. 38)</li>\n<li>Art. 383, 383bis, 385 Penal Code</li>\n<li>Art. 1382 et s. Civil Code / action for an injunction</li>\n<li>It is settled case law that \"every person has an exclusive right to his or her image and the use made of it, and may object to unauthorised publication\". Thus, it has been ruled that \"a person's right to his or her private image is total and that anyone may oppose the publication of his or her features without authorisation\".\nCase law in this area holds that a person who gives consent for photos to be taken does not necessarily give consent for them to be published or broadcast. Double consent must therefore be obtained.</li>\n</ul>",
+        "master": 140
+    }
+},
+{
+    "model": "elearning.explanationtranslation",
+    "pk": 341,
+    "fields": {
+        "language_code": "en",
+        "name": "Article 4 of the CNPD Complaints procedure states:\n\"If the purpose of the request is to exercise the rights of the data subject conferred on him by Articles 12 to 22 of the GDPR as well as by Articles 11 to 15 of the Law of 1 August 2018 on the protection of individuals with regard to the processing of personal data in criminal matters as well as in matters of national security, and if the claimant has not himself sought to exercise his rights directly with the controller of the processing in question, the CNPD will send the complainant an e-mail or letter informing him or her of the steps he or she should take, prior to any referral to the CNPD. \"\n\nConsequently, before lodging a complaint with the CNPD, the latter invites the persons concerned to take the first step with the data controller to ensure that their rights are respected (access, rectification, deletion, portability, etc.).",
+        "master": 139
+    }
+},
+{
+    "model": "elearning.explanationtranslation",
+    "pk": 342,
+    "fields": {
+        "language_code": "en",
+        "name": "Most of the time, data processing will be based on the consent of the data subject. Consent must be \"free, specific, informed and unambiguous\". The data subject must therefore have a genuine choice. In the case of minors, the legal representatives must give their consent. \n\nThe processing of photos may also be based on other conditions of lawfulness. This is done on a case-by-case basis.\n\nFor example, a photographer may rely on the condition of lawfulness relating to the performance of a contract when taking identity photos or when hired for a photoshoot.\n\nPublic authorities, unlike private companies, must, in principle, invoke the public interest or the vital interest of the person concerned when they publish photos, such as those of missing persons.",
+        "master": 138
+    }
+},
+{
+    "model": "elearning.explanationtranslation",
+    "pk": 343,
+    "fields": {
+        "language_code": "en",
+        "name": "Companies must provide information on how to exercise rights in clear and simple language at the time the data is collected or, at the latest, within one month of collection.\nWhere personal data is processed, the data controller must provide the data subject with the following information: <ul>\n<li>the identity and contact information of the data controller ;</li> \n<li>if applicable, the contact information for the Data Protection Officer (« DPO »); […].</li>\n</ul>",
+        "master": 137
+    }
+},
+{
+    "model": "elearning.explanationtranslation",
+    "pk": 344,
+    "fields": {
+        "language_code": "en",
+        "name": "Data subjects may exercise their rights of access, erasure and rectification at any time directly with the controller as soon as the data relating to them has been collected, recorded, used or processed.\nThe information requested must be obtained free of charge. The controller may request additional information necessary to confirm the identity of the claimant, if it has reasonable doubts as to the claimant's identity.",
+        "master": 136
+    }
+},
+{
+    "model": "elearning.explanationtranslation",
+    "pk": 345,
+    "fields": {
+        "language_code": "en",
+        "name": "FURTHER PROCESSING OF PERSONAL DATA\n\nData may only be processed for a purpose other than that for which it was collected if the new purpose is compatible with the original purpose, in accordance with the principle of purpose limitation.<ul>\n<li>In order to determine whether or not a purpose is compatible, you must take the following into account (if the initial processing was not based on the consent of the data subject or on Union law or national law adopted pursuant to Article 23 of the GDPR):</li>\n<li>whether there is a link between the purposes for which the personal data was collected and the purposes of the further processing envisaged;</li>\n<li>the context in which the personal data was collected, in particular as regards to the relationship between the data subjects and you;</li>\n<li>the nature of the personal data, in particular if the processing relates to special categories of personal data, pursuant to Article 9 of the GDPR, or if personal data relating to criminal convictions and offences is processed, pursuant to Article 10 of the GDPR;</li>\n<li>The possible consequences for data subjects of the further proposed processing ;</li>\n<li>the existence of appropriate safeguards, which may include encryption or pseudonymisation ...</li></ul>",
+        "master": 135
+    }
+},
+{
+    "model": "elearning.explanationtranslation",
+    "pk": 346,
+    "fields": {
+        "language_code": "en",
+        "name": "A DPIA is required where processing is likely to result in a high risk to the rights and freedoms of individuals.\n\nA DPIA is required in particular in the following cases:\n\nThe systematic and in-depth evaluation of personal aspects relating to natural persons which is based on automated processing, including profiling, and on the basis of which decisions are taken which produce legal effects with respect to a natural person or which significantly affect him or her in a similar way;\nthe large-scale processing of special categories of data referred to in Article 9(1) (GDPR), or of personal data relating to criminal convictions and offences referred to in Article 10 (GDPR); or large-scale systematic surveillance of an area accessible to the public.\nA DPIA may also be carried out on a voluntary basis in order to identify and deal as effectively as possible with the risks, however slight, to the rights and freedoms of natural persons.\n\nWe recommend that you consult the guidelines issued by the European Working Party of Data Protection Authorities on data protection impact assessments and how to determine whether processing is \"likely to result in a high risk\".\nIf you have identified personal data processing operations that are likely to give rise to high risks to the rights and freedoms of data subjects, you must carry out a Data Protection Impact Assessment (DPIA) for each of these operations.\nA data protection impact assessment enables you to:\ndevelop a privacy-friendly personal data processing system or product,\nassess the impact on the privacy of the individuals concerned,\ndemonstrate that the fundamental principles of the Regulation are respected.\nThe challenge is to assess the risks to data protection from the point of view of the people concerned.",
+        "master": 134
+    }
+},
+{
+    "model": "elearning.explanationtranslation",
+    "pk": 347,
+    "fields": {
+        "language_code": "en",
+        "name": "The consent of the data subject constitutes one of the legal bases or \"conditions of lawfulness\" on which the processing of personal data may be based.\nThe provisions concerning the conditions applicable to consent have been expanded by the GDPR, insisting on the \"free, specific, informed and unambiguous\" nature of consent. The data subject must therefore have a genuine choice.\nFurthermore, the data subject has the right to withdraw consent at any time, provided that such withdrawal does not compromise the lawfulness of the processing based on consent carried out prior to the withdrawal.\nWhat about children's consent?\nIf you collect data relating to children, in particular via your commercial website (e.g. online games, social networks), it is necessary to obtain the consent of their parents or legal guardians.\nInformation for users must be easy to understand and formulated in clear and simple terms.",
+        "master": 133
+    }
+},
+{
+    "model": "elearning.explanationtranslation",
+    "pk": 348,
+    "fields": {
+        "language_code": "en",
+        "name": "Principle of data minimisation\nPersonal data must be adequate, relevant and limited to what is necessary for the purposes for which it is processed.\nAlso known as the principle of necessity and proportionality, data minimisation means that you should only process data that is necessary (not just useful) to achieve the purposes.",
+        "master": 132
+    }
+},
+{
+    "model": "elearning.explanationtranslation",
+    "pk": 349,
+    "fields": {
+        "language_code": "en",
+        "name": "In accordance with Article 5.1, b) of the GDPR, personal data must be collected for specified, explicit and legitimate purposes and not further processed in a way incompatible with those purposes.\nWithout claiming to be exhaustive, the following purposes could be envisaged, depending on the case in question and the nature of the data controller's activities :<ul>\n<li>Optimisation of the work process through better allocation of available resources (e.g. dispatch of the vehicle closest to the site, management of the vehicle fleet, etc.). ;</li>\n<li>Tracking goods of a particular nature (hazardous materials, food) ;</li>\n<li>To monitor and provide proof of the performance of a service linked to the use of the vehicle (e.g. work on the road network, household refuse collection, etc.), with a view to invoicing customers for the services provided. ;</li>\n<li>Contribute to the safety of goods (vehicles, transported equipment, etc.) ;</li>\n<li>Ensure the safety of employees (with regard to the risk to which they are exposed, due to the particular nature of the products transported (cash, valuables, hazardous materials, etc.) or the nature of the activity carried out by the employees). ;</li>\n<li>Track employees' working time, only when this cannot be done by other means, such as a \"traditional\" clocking-in system (for example, in the case of an employee in a sales position who is on the move all day and does not pass through the employer's premises in the morning and evening; clocking-in is therefore not possible).;</li>\n<li>Comply with a legal or regulatory obligation, under national or European law, requiring the implementation of a geolocation system, for example because of the type of transport or the nature of the goods being transported, particularly in the field of national and international road transport.</li></ul>",
+        "master": 131
     }
 },
 {
@@ -35956,6 +39326,46 @@
         "name": "15 security measures are proposed to you. Please select the corresponding category, notably: Security of premises (buildings), Security of servers, Security of workspace, ensure the authentification of users and remote access management.",
         "tooltip": null,
         "master": 14
+    }
+},
+{
+    "model": "elearning.quiztranslation",
+    "pk": 65,
+    "fields": {
+        "language_code": "en",
+        "name": "11 steps of implementing a data processing operation are proposed to you.",
+        "tooltip": null,
+        "master": 18
+    }
+},
+{
+    "model": "elearning.quiztranslation",
+    "pk": 66,
+    "fields": {
+        "language_code": "en",
+        "name": "8 data processing operations are proposed to you.",
+        "tooltip": null,
+        "master": 19
+    }
+},
+{
+    "model": "elearning.quiztranslation",
+    "pk": 67,
+    "fields": {
+        "language_code": "en",
+        "name": "11 steps corresponding to the handling of an international complaint are proposed to you.",
+        "tooltip": null,
+        "master": 20
+    }
+},
+{
+    "model": "elearning.quiztranslation",
+    "pk": 68,
+    "fields": {
+        "language_code": "en",
+        "name": "Three types of personal data processing are proposed to you, with different retention periods.",
+        "tooltip": null,
+        "master": 21
     }
 },
 {
@@ -38277,6 +41687,42 @@
         "language_code": "fr",
         "name": "[final] Level 4",
         "master": 655
+    }
+},
+{
+    "model": "elearning.contexttranslation",
+    "pk": 782,
+    "fields": {
+        "language_code": "en",
+        "name": "[fiche pratique] Level 4 Quiz 4",
+        "master": 650
+    }
+},
+{
+    "model": "elearning.contexttranslation",
+    "pk": 783,
+    "fields": {
+        "language_code": "en",
+        "name": "[fiche pratique] Level 4 Quiz 1",
+        "master": 607
+    }
+},
+{
+    "model": "elearning.contexttranslation",
+    "pk": 784,
+    "fields": {
+        "language_code": "en",
+        "name": "[fiche pratique] Level 4 Quiz 2",
+        "master": 620
+    }
+},
+{
+    "model": "elearning.contexttranslation",
+    "pk": 785,
+    "fields": {
+        "language_code": "en",
+        "name": "[fiche pratique] Level 4 Quiz 3",
+        "master": 636
     }
 },
 {
