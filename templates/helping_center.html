@@ -273,17 +273,16 @@
                             </p>
                             {% settings_value "SATISFACTION_SURVEY_URL" as survey_url %}
                             {% if survey_url %}
-                            <li>{% translate "The satisfaction questionnaire" %}</li>
-                            <p>
+                            <li>
                                 {% blocktranslate trimmed %}
                                 The satisfaction questionnaire is accessible after full completion of the DAAZ journey
                                 {% endblocktranslate %}
-                                <ul>
-                                    <li>                            
-                                        <a href="{{ survey_url }}" target="_blank" rel="noopener noreferrer">{{ survey_url }}</a>
-                                    </li>
-                                </ul>
-                            </p>
+                            </li>
+                            <ul>
+                                <li>                            
+                                    <a href="{{ survey_url }}" target="_blank" rel="noopener noreferrer">{{ survey_url }}</a>
+                                </li>
+                            </ul>
                             {% endif %}
                         </ol>
                     </div>
