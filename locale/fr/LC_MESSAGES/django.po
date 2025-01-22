@@ -37,7 +37,7 @@ msgid ""
 "Dominique and his team are delighted to be able to award you this "
 "certificate of achievement for the DAAZ tool!"
 msgstr ""
-"Dominique et son équipe sont heureux de pouvoir vous décerner ce certificate "
+"Dominique et son équipe sont heureux de pouvoir vous décerner ce certificat "
 "d'accomplissement de l'outil DAAZ!"
 
 #: theme/templates/certificate/template.html:24
