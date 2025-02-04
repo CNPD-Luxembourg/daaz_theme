@@ -2,6 +2,7 @@
 {% load static %}
 {% load django_bootstrap5 %}
 {% load custom_filters %}
+{% get_current_language as LANGUAGE_CODE %}
 
 
 {% if slide is None %}
@@ -177,7 +178,7 @@
                             {% generate_survey_token as survey_token %}
                             {% if survey_token %}
                             <div class="col">
-                                <a type="button" href="{{ survey_url }}?token={{ survey_token }}" target="_blank" rel="noopener noreferrer"
+                                <a type="button" href="{{ survey_url }}?token={{ survey_token }}&lang={{ LANGUAGE_CODE }}" target="_blank" rel="noopener noreferrer"
                                     class="btn text-warning course-button fw-bolder border-warning border border-3 shadow rounded final-button">
                                     {% translate "Satisfaction survey" %}
                                 </a>
