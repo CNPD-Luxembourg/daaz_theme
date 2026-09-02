@@ -322,99 +322,99 @@
                         <div className="col-md-12 pb-4">
                             <h4 class="text-center fw-bold">{% translate "What other users said about it" %}</h4>
                         </div>
-                        <div class="col-md-12 py-5">
-                            <div class="row">
-                                <div class="col-md-4 gx-5 pb-4">
-                                    <div class="row testimony-box p-2">
-                                        <div class="col-md-12 text-end">
-                                            <i class="bi bi-quote display-1 light-blue text-end"></i>
-                                        </div>
+                        <div id="carouselTestimony" class="carousel slide py-5" data-bs-ride="carousel">
+                            <div class="col-md-12 text-start">
+                                <i class="bi bi-quote display-1 light-blue"></i>
+                            </div>
+                              <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselTestimony" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Testimonial 1"></button>
+                                <button type="button" data-bs-target="#carouselTestimony" data-bs-slide-to="1" aria-label="Testimonial 2"></button>
+                                <button type="button" data-bs-target="#carouselTestimony" data-bs-slide-to="2" aria-label="Testimonial 3"></button>
+                                <button type="button" data-bs-target="#carouselTestimony" data-bs-slide-to="3" aria-label="Testimonial 4"></button>
+                            </div>
 
-                                        <div class="col-md-12">
-                                            <p class="fst-italic">
-                                                DAAZ est accessible et a été pensé pour tous les entrepreneurs à la tête
-                                                d'une PME quel que soit le domaine d'activité.
-                                                Il n'est pas nécessaire d'être juriste encore moins délégué à la
-                                                protection des données pour l'utiliser (sans modération).
-                                                Nous le recommandons vivement, même à nos clients !
-                                            </p>
-                                        </div>
-
-                                        <div class="col-md-12 d-flex align-items-center">
-                                            <img class="flex-grow-0 rounded-circle align-items-center" width="50px"
-                                                height="50px" src="{% static 'media/images/landing/level-3.svg' %}"
-                                                alt="" class="d-inline-block align-text-top" />
-
-                                            <div class="flex-grow-1 p-3 align-items-center">
-                                                <div class="text-primary fw-bold">Virginie Parré-Fassone</div>
-                                                <div>CEO VPF consulting</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 gx-5 pb-4">
-                                    <div class="row testimony-box p-2">
-                                        <div class="col-md-12 text-end">
-                                            <i class="bi bi-quote display-1 light-blue text-end"></i>
-                                        </div>
-
-                                        <div class="col-md-12">
-                                            <p class="fst-italic">
-                                                Je recommande chaudement DAAZ pour former vos équipes au RGPD. Nous
-                                                avons été séduits par leur approche ludique et interactive, bien loin
-                                                des formations théoriques traditionnelles. La plateforme e-learning de
-                                                DAAZ a rencontré un franc succès auprès de nos collaborateurs qui ont pu
-                                                valider leurs connaissances par un certificat valorisant.
-                                                Plus qu'une simple formation, DAAZ est désormais un pilier de notre
-                                                programme de sensibilisation continue à la protection des données. Leur
-                                                outil complet et pédagogique vient renforcer la culture du respect de la
-                                                vie privée, naturellement ancrée dans l'ADN de notre entreprise. Un
-                                                véritable atout pour être en conformité tout en responsabilisant chacun
-                                                !
-                                            </p>
-                                        </div>
-
-                                        <div class="col-md-12 d-flex align-items-center">
-                                            <img class="flex-grow-0 rounded-circle align-items-center" width="50px"
-                                                height="50px" src="{% static 'media/images/landing/level-3.svg' %}"
-                                                alt="" class="d-inline-block align-text-top" />
-
-                                            <div class="flex-grow-1 p-3 align-items-center">
-                                                <div class="text-primary fw-bold">Pierre VAN WAMBEKE</div>
-                                                <div>CEO de SeeZam</div>
-                                            </div>
+                            <div class="carousel-inner px-5">
+                                <div class="carousel-item active">
+                                    <p class="fst-italic">
+                                        DAAZ est accessible et a été pensé pour tous les entrepreneurs à la tête
+                                        d'une PME quel que soit le domaine d'activité.
+                                        Il n'est pas nécessaire d'être juriste encore moins délégué à la
+                                        protection des données pour l'utiliser (sans modération).
+                                        Nous le recommandons vivement, même à nos clients !
+                                    </p>
+                                    <div class="d-flex align-items-center justify-content-end">
+                                        <img class="rounded-circle align-items-center" width="50px" height="50px"
+                                            src="{% static 'media/images/landing/level-3.svg' %}" alt="" class="d-inline-block align-text-top" />
+                                    
+                                        <div class="p-3 align-items-center">
+                                            <div class="text-primary fw-bold">Virginie Parré-Fassone</div>
+                                            <div>CEO VPF consulting</div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 gx-5 pb-4">
-                                    <div class="row testimony-box p-2">
-                                        <div class="col-md-12 text-end">
-                                            <i class="bi bi-quote display-1 light-blue text-end"></i>
+                                <div class="carousel-item">
+                                    <p class="fst-italic">
+                                        Je recommande chaudement DAAZ pour former vos équipes au RGPD. Nous
+                                        avons été séduits par leur approche ludique et interactive, bien loin
+                                        des formations théoriques traditionnelles. La plateforme e-learning de
+                                        DAAZ a rencontré un franc succès auprès de nos collaborateurs qui ont pu
+                                        valider leurs connaissances par un certificat valorisant.
+                                        Plus qu'une simple formation, DAAZ est désormais un pilier de notre
+                                        programme de sensibilisation continue à la protection des données. Leur
+                                        outil complet et pédagogique vient renforcer la culture du respect de la
+                                        vie privée, naturellement ancrée dans l'ADN de notre entreprise. Un
+                                        véritable atout pour être en conformité tout en responsabilisant chacun
+                                        !
+                                    </p>  
+                                    <div class="d-flex align-items-center justify-content-end">
+                                        <img class="rounded-circle align-items-center" width="50px" height="50px"
+                                            src="{% static 'media/images/landing/level-3.svg' %}" alt="" class="d-inline-block align-text-top" />
+                                    
+                                        <div class="p-3 align-items-center">
+                                            <div class="text-primary fw-bold">Pierre VAN WAMBEKE</div>
+                                            <div>CEO de SeeZam</div>
                                         </div>
-
-                                        <div class="col-md-12">
-                                            <p class="fst-italic">
-                                                DAAZ est sans nul doute l’outil idéal pour faciliter la mise en
-                                                conformité au RGPD et former les équipes d’une PME. Intuitif et ludique,
-                                                cet outil conçu comme un jeu a trouvé l’équilibre entre l’utile et
-                                                l’agréable, l’exigence et la bienveillance. Le storytelling permet un
-                                                apprentissage efficace à travers des mises en situation qui reflètent
-                                                les problématiques concrètes des entreprises et le learning by doing
-                                                apporte une base documentaire pratique. Véritablement « user friendly »,
-                                                il répond tout à fait à une forte demande de nos clients et nous
-                                                n’hésiterons pas à le leur proposer.
-                                            </p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <p class="fst-italic">
+                                        DAAZ est sans nul doute l’outil idéal pour faciliter la mise en
+                                        conformité au RGPD et former les équipes d’une PME. Intuitif et ludique,
+                                        cet outil conçu comme un jeu a trouvé l’équilibre entre l’utile et
+                                        l’agréable, l’exigence et la bienveillance. Le storytelling permet un
+                                        apprentissage efficace à travers des mises en situation qui reflètent
+                                        les problématiques concrètes des entreprises et le learning by doing
+                                        apporte une base documentaire pratique. Véritablement « user friendly »,
+                                        il répond tout à fait à une forte demande de nos clients et nous
+                                        n’hésiterons pas à le leur proposer.
+                                    </p>
+                                    <div class="d-flex align-items-center justify-content-end">
+                                        <img class="rounded-circle align-items-center" width="50px" height="50px"
+                                            src="{% static 'media/images/landing/level-3.svg' %}" alt="" class="d-inline-block align-text-top" />
+                                    
+                                        <div class="p-3 align-items-center">
+                                            <div class="text-primary fw-bold">Nadia Fort et Léah Perez</div>
+                                            <div>Co-fondatrices de Trustem</div>
                                         </div>
-
-                                        <div class="col-md-12 d-flex align-items-center">
-                                            <img class="flex-grow-0 rounded-circle align-items-center" width="50px"
-                                                height="50px" src="{% static 'media/images/landing/level-3.svg' %}"
-                                                alt="" class="d-inline-block align-text-top" />
-
-                                            <div class="flex-grow-1 p-3 align-items-center">
-                                                <div class="text-primary fw-bold">Nadia Fort et Léah Perez</div>
-                                                <div>Co-fondatrices de Trustem</div>
-                                            </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <p class="fst-italic">
+                                        « L’outil DAAZ proposé par la CNPD est à la fois ludique et intuitif. Le découpage en quatre modules distincts et les
+                                        scénarios développés, qui mettent en scène des problématiques concrètes rencontrées par les entreprises sont
+                                        particulièrement bien pensés : cela permet d’avancer à son rythme et de mieux structurer les apprentissages. Les notions
+                                        parfois complexes du RGPD y sont abordées de manière originale et accessible. Pour le secteur intérimaire, cet outil
+                                        ancre les notions principales et offre aux entreprises de travail intérimaire une méthode permettant une meilleure
+                                        compréhension des attentes et un premier pas vers l’application du Code de Conduite RGPD du secteur. Une belle
+                                        initiative, qui mérite d’être partagée, pour sensibiliser efficacement aux enjeux de la protection des données !.
+                                    </p>
+                                    <div class="d-flex align-items-center justify-content-end">
+                                        <img class="rounded-circle align-items-center" width="50px" height="50px"
+                                            src="{% static 'media/images/landing/level-3.svg' %}" alt="" class="d-inline-block align-text-top" />
+                                    
+                                        <div class="p-3 align-items-center">
+                                            <div class="text-primary fw-bold">Roxanne Ugolini</div>
+                                            <div>FEDIL EMPLOYMENT SERVICES</div>
                                         </div>
                                     </div>
                                 </div>
